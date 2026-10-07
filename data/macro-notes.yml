@@ -1,0 +1,345 @@
+# Editorial corrections to the captured metadata. Keep names and examples exact.
+trim:
+  description: 'Used alone, removes newlines immediately around the macro. Used as a block, returns its content with surrounding whitespace removed.'
+  examples: ['{{trim}}  Hello  {{/trim}}']
+  result: '`Hello`.'
+if:
+  description: 'Chooses which text to include. Empty text, false, off and 0 count as false. Only the chosen branch runs its nested macros.'
+  examples: ['{{if::{{hasvar::location}}}}Location: {{getvar::location}}{{else}}Choose a location.{{/if}}']
+  note: 'Use the comparison macros when checking numbers. A plain condition such as 0 > 0 is non-empty text and can count as true. See [conditions](conditions.md).'
+  arguments:
+    condition: 'The value to check. A macro name or variable shorthand can supply it. Put ! before the condition to reverse it.'
+    content: 'The block to include when the condition is true. Use {{else}} for the alternative.'
+else:
+  description: 'Starts the alternative inside an if block. Use it only between the opening and closing if tags.'
+  examples: ['{{if::false}}Day{{else}}Night{{/if}}']
+  result: '`Night`.'
+input:
+  description: 'Reads the text currently in the chat composer. It can be empty after sending or in a request without a browser composer.'
+'//':
+  description: 'Adds a comment for you to read while editing. The comment disappears when the prompt is prepared.'
+  examples: ['{{// Keep this note out of the prompt}}', "{{//}}A longer comment\ncan span lines.{{///}}"]
+  result: 'No text.'
+  arguments:
+    comment: 'Your editing note. For several lines, use the block form shown in the examples.'
+roll:
+  description: 'Rolls dice and returns the total. In 3d6+4, roll three six-sided dice and add 4. A plain number means one die with that many sides.'
+  arguments:
+    formula: 'The dice to roll, such as 1d20 or 3d6+4.'
+noop:
+  description: 'Produces no text. Useful when a template needs an intentionally empty macro.'
+pick:
+  description: 'Chooses an item using the chat, source text and macro position. These inputs determine the result.'
+  examples: ['{{pick::rainy::clear::misty}}']
+  note: 'Editing or moving the macro can change the result. The /reroll-pick command resets the saved choice seed.'
+random:
+  description: 'Chooses one item each time the text is evaluated. It can change several times while preparing one reply.'
+  examples: ['{{random::rainy::clear::misty}}']
+banned:
+  description: 'Adds a word to the banned-word setting for supported Text Completion connections and produces no text.'
+  note: 'This depends on the selected provider supporting banned words. It does not enforce a universal ban on every model.'
+  examples: ['{{banned::suddenly}}']
+outlet:
+  description: 'Inserts the lore text collected for a named custom outlet. An outlet is a location in your prompt where matching lore entries are placed.'
+  examples: ['{{outlet::scene-details}}']
+maxPrompt:
+  description: 'Returns the current input token allowance after reserving space for the reply. This is a configured limit, not the size of the prompt already written.'
+maxContext:
+  description: 'Returns the configured total context limit, measured in tokens. The model must still support that limit.'
+maxResponse:
+  description: 'Returns the configured maximum reply length in tokens.'
+model:
+  description: 'Returns the model selected for the current connection. A separate helper request may use a different connection.'
+original:
+  description: 'In a character prompt override, inserts the original prompt text that the override is replacing.'
+  note: 'Use this where the host supplies an original prompt. It is not a general way to retrieve an earlier chat message.'
+hasExtension:
+  description: 'Checks whether an extension with the given identifier is enabled. Returns true or false.'
+  examples: ['{{hasExtension::expressions}}']
+charFirstMessage:
+  examples: ['{{charFirstMessage}}', '{{charFirstMessage::1}}']
+  note: '0 means the main greeting. 1 is the first alternate greeting. An unavailable index returns empty text.'
+charVersion:
+  description: 'Reads the version field saved in the character card. This is the card version, not the Neconyan version.'
+time:
+  description: 'Returns the current local time in the selected language’s usual time format. An optional UTC offset uses that fixed offset instead.'
+date:
+  description: 'Returns the current date in the selected language’s long date format.'
+datetimeformat:
+  description: 'Formats the current date and time using the format parts listed above.'
+  arguments:
+    format: 'The output pattern, such as YYYY-MM-DD for a date.'
+timeDiff:
+  description: 'Returns a readable difference between two dates or times, including a direction such as ago or in. Reversing the arguments changes that direction.'
+  examples: ['{{timeDiff::2026-01-01 12:00:00::2026-01-01 15:00:00}}']
+  result: '`3 hours ago` with English date formatting.'
+idleDuration:
+  description: 'Returns a readable idle interval from the chat timestamps, such as a few minutes. It skips the latest non-system message before looking for the preceding user message.'
+  note: 'Treat it as an approximate conversational cue. With insufficient history it returns just now.'
+instructStoryStringPrefix:
+  description: 'Returns the text placed before the story information in the active Instruct template.'
+instructStoryStringSuffix:
+  description: 'Returns the text placed after the story information in the active Instruct template.'
+instructUserPrefix:
+  description: 'Returns the Instruct marker placed before a user message.'
+instructUserSuffix:
+  description: 'Returns the Instruct marker placed after a user message.'
+instructAssistantPrefix:
+  description: 'Returns the Instruct marker placed before a character reply.'
+instructAssistantSuffix:
+  description: 'Returns the Instruct marker placed after a character reply.'
+instructSystemPrefix:
+  description: 'Returns the Instruct marker placed before a system message.'
+instructSystemSuffix:
+  description: 'Returns the Instruct marker placed after a system message.'
+instructFirstAssistantPrefix:
+  description: 'Returns the special prefix for the first character reply. Falls back to the ordinary character prefix when no special one is set.'
+instructLastAssistantPrefix:
+  description: 'Returns the special prefix for the final character reply. Falls back to the ordinary character prefix when no special one is set.'
+instructStop:
+  description: 'Returns the stop sequence saved in the Instruct template, a marker used to end generation.'
+instructUserFiller:
+  description: 'Returns the user filler text from the Instruct template. Some model formats use this to maintain the expected order of message roles.'
+instructSystemInstructionPrefix:
+  description: 'Returns the final system-instruction prefix from the Instruct template.'
+instructFirstUserPrefix:
+  description: 'Returns the special prefix for the first user message. Falls back to the ordinary user prefix when no special one is set.'
+instructLastUserPrefix:
+  description: 'Returns the special prefix for the final user message. Falls back to the ordinary user prefix when no special one is set.'
+defaultSystemPrompt:
+  description: 'Returns the default system prompt when system prompts are enabled.'
+systemPrompt:
+  description: 'Returns the active system prompt. This includes a character override when that option is enabled. Returns empty text when system prompts are disabled.'
+authorsNote:
+  description: 'Reads the current chat’s Author’s Note.'
+charAuthorsNote:
+  description: 'Reads the Author’s Note saved for the character.'
+personaAuthorsNote:
+  description: 'Reads the Author’s Note saved for the active persona.'
+defaultAuthorsNote:
+  description: 'Reads the default Author’s Note.'
+reasoningPrefix:
+  description: 'Returns the configured text placed before a reasoning block. It reads a formatting marker, not a model’s private thoughts.'
+reasoningSuffix:
+  description: 'Returns the configured text placed after a reasoning block.'
+reasoningSeparator:
+  description: 'Returns the configured separator between reasoning text and the visible reply.'
+capitalize:
+  description: 'Capitalises the first letter of the text.'
+  result: '`Hello world`.'
+upper:
+  result: '`HELLO`.'
+lower:
+  result: '`hello`.'
+replace:
+  result: '`the dog sat`.'
+substring:
+  result: '`hello` in the first example.'
+split:
+  examples: ['{{split::red,green,blue::,::1}}']
+  result: '`green`.'
+wrap:
+  description: 'Places a prefix and suffix around a value. Produces no text if the value is empty.'
+  examples: ['{{wrap::[::]::ready}}']
+  result: '`[ready]`.'
+length:
+  result: '`5`.'
+repeat:
+  result: '`nananana`.'
+default:
+  description: 'Uses a fallback when the value is empty or only whitespace. A value of 0 is kept.'
+  examples: ['{{default::::unknown}}', '{{default::{{getvar::mood}}::neutral}}']
+  result: '`unknown` in the first example.'
+truncate:
+  examples: ['{{truncate::Hello world::8}}']
+  result: '`Hello w…`.'
+truncatetokens:
+  description: 'Shortens text using an estimate of four characters per token. Actual model token counts can differ substantially; use the model’s token counter for a hard limit.'
+tokencount:
+  description: 'Estimates the token count using about four characters per token. It does not use the selected model’s token counter.'
+  examples: ['{{tokencount::hello world}}']
+  result: '`3`, an estimate.'
+calc:
+  result: '`14` in the first example.'
+round:
+  result: '`3.14`.'
+clamp:
+  examples: ['{{clamp::120::0::100}}']
+  result: '`100`.'
+floor:
+  examples: ['{{floor::3.8}}']
+  result: '`3`.'
+ceil:
+  examples: ['{{ceil::3.2}}']
+  result: '`4`.'
+min:
+  examples: ['{{min::3::8}}']
+  result: '`3`.'
+max:
+  examples: ['{{max::3::8}}']
+  result: '`8`.'
+mod:
+  examples: ['{{mod::17::5}}']
+  result: '`2`.'
+sum:
+  result: '`12`.'
+avg:
+  result: '`4`.'
+listmin:
+  result: '`3`.'
+listmax:
+  result: '`11`.'
+join:
+  examples: ['{{join::,::sword::shield::potion}}']
+  result: '`sword,shield,potion`.'
+item:
+  result: '`red` in the first example.'
+count:
+  result: '`3`.'
+listsort:
+  result: '`apple,banana,cherry`.'
+jsonget:
+  examples: ['{{jsonget::["sword","shield"]::[1]}}']
+  result: '`shield`.'
+freeze:
+  description: 'Evaluates the content once and saves the result under a key in this chat. Calls that reuse the key return the stored result. Clear it with /me-unfreeze.'
+sticky:
+  description: 'Saves a result in this chat and refreshes it after the chosen number of your messages. Between refreshes it returns the saved result.'
+  examples: ['{{sticky::10::mood::{{random::tense::playful::quiet}}}}']
+daily:
+  description: 'Saves a result in this chat and refreshes it on the next evaluation after the local calendar day changes.'
+rollonce:
+  description: 'Rolls dice once and saves the total under a key in this chat. Later calls return the saved total. Clear it with /me-unfreeze.'
+listpick:
+  description: 'Chooses an item from a list using the chat and key. Repeating the call with unchanged inputs gives a consistent result without saving a value.'
+timeofday:
+  description: 'Returns morning, afternoon, evening or night, based on the local clock.'
+season:
+  description: 'Returns the calendar season for the chosen hemisphere. This does not describe the weather or the climate where you live.'
+chatdays:
+  description: 'Returns the number of whole days since the chat’s recorded start.'
+usermsgcount:
+  description: 'Returns the number of user-message events Macro Enhanced has counted in this chat. Reading the value does not increase it.'
+charmsgcount:
+  description: 'Returns the number of character-reply events Macro Enhanced has counted in this chat.'
+swipecount:
+  description: 'Returns the number of swipe events Macro Enhanced has counted in this chat.'
+gencount:
+  description: 'Returns the number of generation events Macro Enhanced has counted in this chat.'
+expr:
+  description: 'Evaluates a written comparison or condition. Supports numbers, quoted text, comparisons and brackets.'
+  examples: ['{{expr::3 > 2}}', '{{if::{{expr::3 > 2}}}}Enough supplies.{{/if}}']
+  result: '`true` in the first example.'
+  note: 'Use the or macro for an either/or condition. Literal pipe characters can be read as macro filter syntax before this expression is evaluated.'
+eq:
+  description: 'Returns true when both values are equal. Compares numbers numerically and other values as text.'
+  examples: ['{{eq::3::3}}']
+  result: '`true`.'
+neq:
+  description: 'Returns true when the values differ.'
+  examples: ['{{neq::3::4}}']
+  result: '`true`.'
+gt:
+  description: 'Returns true when the first value is greater than the second.'
+  examples: ['{{gt::4::3}}']
+  result: '`true`.'
+gte:
+  description: 'Returns true when the first value is greater than or equal to the second.'
+  examples: ['{{gte::3::3}}']
+  result: '`true`.'
+lt:
+  description: 'Returns true when the first value is less than the second.'
+  examples: ['{{lt::2::3}}']
+  result: '`true`.'
+lte:
+  description: 'Returns true when the first value is less than or equal to the second.'
+  examples: ['{{lte::3::3}}']
+  result: '`true`.'
+and:
+  description: 'Returns true when every supplied value counts as true. Empty text, false, off and 0 count as false.'
+  examples: ['{{and::true::false}}']
+  result: '`false`.'
+or:
+  description: 'Returns true when at least one supplied value counts as true.'
+  examples: ['{{or::true::false}}']
+  result: '`true`.'
+not:
+  description: 'Reverses a condition: true becomes false, and false becomes true.'
+  examples: ['{{not::true}}']
+  result: '`false`.'
+isempty:
+  examples: ['{{isempty::hello}}']
+  result: '`false`.'
+switch:
+  description: 'Chooses the result of a matching case=value pair. A default=value pair handles the remaining cases. Only the chosen result runs its nested macros.'
+  examples: ['{{switch::rain::sun=Take a hat.::rain=Take an umbrella.::default=Check the forecast.}}']
+  result: '`Take an umbrella.`'
+listunique:
+  result: '`a,b,c`.'
+listreverse:
+  result: '`c,b,a`.'
+listslice:
+  result: '`a,b` in the first example.'
+listcontains:
+  description: 'Returns true when the list contains the item. Numeric values match by their number.'
+  result: '`true`.'
+listshuffle:
+  description: 'Shuffles the items. A seed makes the order repeatable for an unchanged input list. Without a seed, each evaluation can change it.'
+padstart:
+  result: '`0007`.'
+padend:
+  result: '`7000`.'
+titlecase:
+  result: '`The Winter Market`.'
+wordcount:
+  result: '`5`.'
+regexreplace:
+  description: 'Replaces matches of a regular expression, a text-search pattern. Invalid patterns return the original text with a warning. Complex patterns on long text can be slow.'
+  result: '`a#b#c#`.'
+jsonkeys:
+  examples: ['{{jsonkeys::{{getvar::inventory}}}}']
+  note: 'For an inventory value of `{"weapon":"sword","coins":3}`, the result is `weapon,coins`. Save the JSON in a variable first to avoid adjacent closing braces being read as macro syntax.'
+jsonlength:
+  examples: ['{{jsonlength::["sword","shield"]}}']
+  result: '`2`.'
+jsonset:
+  note: 'Uses the ordinary local or global variable store. It does not write to Macro Enhanced chat variables.'
+setchatvar:
+  description: 'Saves a value in Macro Enhanced’s chat-only variable store. Produces no prompt text. This store is separate from the ordinary local variables.'
+getchatvar:
+  note: 'A fallback is returned when the variable is missing. Reading it does not save that fallback.'
+deletechatvar:
+  examples: ['{{deletechatvar::current_location}}']
+foreachChatVar:
+  examples: ["{{foreachChatVar::supply_::item}}\n{{.item}}: {{.item_value}}\n{{/foreachChatVar}}"]
+  note: 'For variables supply_food=3 and supply_water=2, the block lists food: 3 and water: 2 in name order. The loop names exist while that item is being processed.'
+dateadd:
+  description: 'Adds time to a date using calendar rules. A negative amount subtracts time. An empty starting date means now.'
+  result: '`2026-08-06` in the first example.'
+datediff:
+  description: 'Returns whole units from the first date to the second. The result is negative when the second date is earlier.'
+  result: '`7` in the example.'
+dateformat:
+  description: 'Formats a supplied date. An empty date uses the current time.'
+  result: '`Monday, August 3` with English date formatting.'
+pverb:
+  arguments:
+    singular: 'The verb for singular agreement, such as is.'
+    plural: 'The verb for plural agreement, such as are.'
+charpverb:
+  arguments:
+    singular: 'The verb for singular agreement, such as is.'
+    plural: 'The verb for plural agreement, such as are.'
+loreexists:
+  description: 'Returns true if the entry exists in the searched books. Existence does not mean the entry was activated for the current prompt.'
+  examples: ['{{loreexists::Backstory}}']
+loretokens:
+  description: 'Estimates the tokens in lore content using about four characters per token. Use the actual model token count when checking a strict limit.'
+lorepick:
+  description: 'Inserts one enabled entry from the selected books. The chat, key and available entries determine the choice.'
+dialoguecolors:
+  description: 'Inserts the Dialogue Colors instructions when that included tool is enabled and uses prompt-based colouring. Other colouring methods can return empty text.'
+availableSprites:
+  description: 'Lists the current character’s expression labels that have an available image, separated by commas. Requires Character Expressions.'
+availableExpressions:
+  description: 'Lists expression labels for the current character. It can include labels without an image when automatic expression-image generation is enabled.'

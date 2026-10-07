@@ -1,0 +1,7 @@
+.venv/
+site/
+__pycache__/
+*.pyc
+/screenshots/
+.cache/
+/docs/assets/downloads/scene-note.zip

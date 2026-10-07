@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if page and not page.meta.home %}
+    <p class="handbook-label">The Neconyan handbook</p>
+  {% endif %}
+  {% if page and page.meta.guide in config.extra.guides %}
+    {% set guide_id = page.meta.guide %}
+    {% set guide = config.extra.guides[guide_id] %}
+    <aside class="guide-note" aria-label="A note from {{ guide.name }}">
+      <img class="guide-note__art" src="{{ ('assets/images/guides/' ~ guide.scene ~ '-neutral.webp') | url }}" data-guide="{{ guide_id }}" data-scene="{{ guide.scene }}" alt="{{ guide.name }}, neutral presentation" width="160" height="240">
+      <div class="guide-note__words">
+        <p class="guide-note__byline">{{ guide.name }} <span data-pronouns="{{ guide_id }}">they/them</span></p>
+        <p>{{ page.meta.quote }}</p>
+      </div>
+    </aside>
+  {% endif %}
+  {% if page %}
+    <details class="guide-settings" data-guide-settings>
+      <summary>Your guides <span>Miso, Taro &amp; Nori</span></summary>
+      <p>Choose each guide's gender to change their artwork and pronouns. Your choices stay in this browser, separately from the app.</p>
+      <div class="guide-settings__choices">
+        {% for guide_id, guide in config.extra.guides.items() %}
+          <label>
+            <img src="{{ ('assets/images/icons/' ~ guide_id ~ '-neutral.png') | url }}" data-guide="{{ guide_id }}" alt="" width="48" height="48">
+            <span>{{ guide.name }}</span>
+            <select data-gender-select="{{ guide_id }}" aria-label="{{ guide.name }}'s gender">
+              <option value="neutral">Neutral</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </label>
+        {% endfor %}
+      </div>
+      <p class="guide-settings__status" role="status" aria-live="polite"></p>
+      <noscript><p>Gender changes need JavaScript. All three guides use their neutral appearance while it is off.</p></noscript>
+    </details>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <dialog class="screenshot-dialog" aria-label="Screenshot viewer">
+    <form method="dialog"><button autofocus aria-label="Close screenshot">Close screenshot <span aria-hidden="true">×</span></button></form>
+    <img alt="">
+    <p></p>
+  </dialog>
+{% endblock %}

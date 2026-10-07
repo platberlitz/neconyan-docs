@@ -1,0 +1,36 @@
+#neconyan_scene_note {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  min-width: 0;
+}
+
+#neconyan_scene_note h3,
+#neconyan_scene_note p {
+  margin: 0;
+}
+
+#neconyan_scene_note textarea {
+  width: 100%;
+  min-height: 7rem;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+#neconyan_scene_note .menu_button {
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  background: var(--neco-ginger);
+  color: var(--neco-on-accent);
+  border: 1px solid var(--neco-ginger);
+  justify-self: start;
+}
+
+#neconyan_scene_note .menu_button:hover {
+  background: var(--neco-ginger-hover);
+}
+
+#neconyan_scene_note :focus-visible {
+  outline: 2px solid var(--neco-ginger);
+  outline-offset: 3px;
+}

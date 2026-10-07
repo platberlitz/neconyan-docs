@@ -1,0 +1,16 @@
+{
+  "display_name": "Scene Note",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Neconyan",
+  "version": "1.0.0",
+  "homePage": "https://platberlitz.github.io/neconyan-docs/extensions/first-extension/",
+  "hooks": {
+    "activate": "activate",
+    "disable": "deactivate",
+    "delete": "deactivate"
+  }
+}

@@ -1,0 +1,139 @@
+site_name: Neconyan
+site_description: 'The Neconyan handbook. Learn character chat with Miso, Taro and Nori, from your first reply to custom extensions.'
+site_url: https://platberlitz.github.io/neconyan-docs/
+site_author: Platberlitz
+repo_url: https://github.com/platberlitz/Neconyan
+repo_name: Get Neconyan
+copyright: 'Neconyan by Platberlitz. Documentation and original assets: AGPL-3.0.'
+strict: true
+hooks:
+  - scripts/hooks.py
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false
+  logo: assets/images/cat-head.webp
+  favicon: assets/images/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light colours
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark colours
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+extra:
+  generator: false
+  guides:
+    miso:
+      name: Miso
+      role: Getting you settled
+      scene: tour-07-miso-home
+    taro:
+      name: Taro
+      role: Making things make sense
+      scene: tour-05-taro-agents
+    nori:
+      name: Nori
+      role: Making a little trouble
+      scene: tour-04-nori-lorebooks
+extra_css:
+  - assets/stylesheets/neconyan.css
+extra_javascript:
+  - assets/javascripts/guides.js
+nav:
+  - Meowlcome: index.md
+  - First paws:
+      - Start here: start/index.md
+      - Install on a computer: start/computer.md
+      - Install on Android: start/android.md
+      - Open it on your phone: start/phone.md
+      - Connect a model: start/connections.md
+      - Your first chat: start/first-chat.md
+      - Bring your old data: start/imports.md
+  - Your workspace:
+      - Find your way around: workspace/index.md
+      - Roleplay: workspace/roleplay.md
+      - Conversation: workspace/conversation.md
+      - Meower: workspace/meower.md
+      - Story Mode: workspace/story-mode.md
+      - Characters and personas: workspace/characters.md
+      - Lorebooks: workspace/lorebooks.md
+      - Make it yours: workspace/appearance.md
+  - Writing and helpers:
+      - Choose a helper: helpers/index.md
+      - Meet the assistants: helpers/assistants.md
+      - Notebooks: helpers/notebooks.md
+      - Scratchpad: helpers/scratchpad.md
+      - Agents and Companions: helpers/agents.md
+      - Mewmory: helpers/mewmory.md
+      - Included tools: helpers/tools.md
+  - Help and reference:
+      - Something went wrong: help/troubleshooting.md
+      - Updates and backups: help/backups.md
+      - Words you will meet: help/glossary.md
+      - Common questions: help/faq.md
+      - About these docs: help/about.md
+  - Macros:
+      - Start with macros: macros/index.md
+      - How to write them: macros/syntax.md
+      - Ready-to-use examples: macros/recipes.md
+      - Names and character cards: macros/characters.md
+      - Messages and chat settings: macros/chat.md
+      - Spacing and choices: macros/basics.md
+      - Variables: macros/variables.md
+      - Conditions: macros/conditions.md
+      - Text: macros/text.md
+      - Lists and JSON: macros/lists.md
+      - Maths: macros/maths.md
+      - Dates and times: macros/dates.md
+      - Saved choices and counters: macros/saved-values.md
+      - Lorebooks: macros/lorebooks.md
+      - Pronouns: macros/pronouns.md
+      - Prompt formatting: macros/prompts.md
+      - Included-tool macros: macros/special.md
+      - Place-specific placeholders: macros/placeholders.md
+      - Make your own macros: macros/custom.md
+  - Make extensions:
+      - Start here: extensions/index.md
+      - Your first extension: extensions/first-extension.md
+      - APIs and lifecycle: extensions/api.md
+      - Fit the Neconyan interface: extensions/interface.md
+      - Test and share: extensions/testing.md
