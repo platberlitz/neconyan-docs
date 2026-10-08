@@ -11,6 +11,19 @@ SHOTS = ROOT / 'screenshots'
 KEY = 'neconyan-docs:guide-genders:v1'
 
 
+def handbook_context(browser, *, github_status=200, **options):
+    context = browser.new_context(**options)
+    # Material's optional repository statistics must not depend on the shared
+    # runner's unauthenticated GitHub quota. Exercise failure separately below.
+    context.route('https://api.github.com/repos/platberlitz/Neconyan',
+                  lambda route: route.fulfill(status=github_status, json={
+                      'stargazers_count': 0, 'forks_count': 0,
+                  }))
+    context.route('https://api.github.com/repos/platberlitz/Neconyan/releases/latest',
+                  lambda route: route.fulfill(status=github_status, json={}))
+    return context
+
+
 def contrast(page, selector):
     return page.locator(selector).first.evaluate('''el => {
       const c = getComputedStyle(el);
@@ -40,7 +53,7 @@ def main():
         with sync_playwright() as p:
             executable = os.environ.get('BROWSER_EXECUTABLE')
             browser = p.chromium.launch(headless=True, **({'executable_path': executable} if executable else {}))
-            desktop = browser.new_context(viewport={'width': 1280, 'height': 900}, reduced_motion='reduce')
+            desktop = handbook_context(browser, viewport={'width': 1280, 'height': 900}, reduced_motion='reduce')
             page = desktop.new_page()
             page.on('pageerror', lambda error: errors.append(str(error)))
             page.on('response', lambda response: failures.append(f'{response.status} {response.url}') if response.status >= 400 else None)
@@ -98,7 +111,7 @@ def main():
             expect(page.locator('main')).to_contain_text('export function activate')
             assert page.locator('main a[href$="scene-note.zip"]').count() == 1
             # Visit every content page to catch broken images and narrow-screen overflow.
-            phone = browser.new_context(viewport={'width': 393, 'height': 852}, is_mobile=True, has_touch=True, device_scale_factor=1, reduced_motion='reduce')
+            phone = handbook_context(browser, viewport={'width': 393, 'height': 852}, is_mobile=True, has_touch=True, device_scale_factor=1, reduced_motion='reduce')
             mobile = phone.new_page()
             mobile.on('pageerror', lambda error: errors.append(str(error)))
             mobile.on('response', lambda response: failures.append(f'{response.status} {response.url}') if response.status >= 400 else None)
@@ -122,7 +135,7 @@ def main():
             page.evaluate('(key) => localStorage.setItem(key, "broken json")', KEY)
             page.goto(base, wait_until='networkidle')
             expect(page.locator('[data-gender-select="miso"]')).to_have_value('neutral')
-            blocked = browser.new_context(viewport={'width': 393, 'height': 852})
+            blocked = handbook_context(browser, viewport={'width': 393, 'height': 852})
             blocked.add_init_script('''const get = Storage.prototype.getItem, set = Storage.prototype.setItem;
               Storage.prototype.getItem = function(k) { if (k.startsWith('neconyan-docs:')) throw Error('Blocked'); return get.call(this, k); };
               Storage.prototype.setItem = function(k,v) { if (k.startsWith('neconyan-docs:')) throw Error('Blocked'); return set.call(this, k,v); };''')
@@ -131,7 +144,15 @@ def main():
             blocked_page.locator('.guide-settings summary').click()
             blocked_page.locator('[data-gender-select="nori"]').select_option('female')
             expect(blocked_page.locator('[role="status"]')).to_contain_text('page')
-            offline = browser.new_context(java_script_enabled=False)
+            unavailable = handbook_context(browser, github_status=403)
+            unavailable_page = unavailable.new_page()
+            unavailable_page.on('pageerror', lambda error: errors.append(str(error)))
+            unavailable_page.goto(base, wait_until='networkidle')
+            expect(unavailable_page.locator('h1')).to_contain_text('Make yourself at home')
+            expect(unavailable_page.locator('.md-header a.md-source')).to_have_attribute('href', 'https://github.com/platberlitz/Neconyan')
+            unavailable_page.goto(base + 'workspace/', wait_until='networkidle')
+            expect(unavailable_page.locator('h1')).to_contain_text('Find your way around')
+            offline = handbook_context(browser, java_script_enabled=False)
             fallback = offline.new_page()
             fallback.goto(base, wait_until='networkidle')
             expect(fallback.locator('h1')).to_be_visible()

@@ -81,6 +81,8 @@ A **wait for** relationship makes a helper depend on another helper's result. Us
 
 ## History and visibility
 
+Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
+
 Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. Showing or hiding a note in the interface is separate from feeding it back into context.
 
 Use **More tools → Activity & companions** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
