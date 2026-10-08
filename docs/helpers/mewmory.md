@@ -19,6 +19,8 @@ It is separate from Conversation's summaries, Companion trackers and Scratchpad 
 5. Turn on **Use Mewmory in this chat**.
 6. For an existing history, use **Backfill this chat**, then watch the job and coverage status.
 
+The switches under **Automatic memory** save as soon as you tick them. They include **Turn on Mewmory in every new chat**, which leaves existing chats alone, and **Hide old messages automatically**, which hides older messages past **Hide messages beyond, tokens** after each reply while Mewmory keeps remembering them. Number fields such as that limit still need **Save configuration**.
+
 Original passages remain useful even without every model-powered role enabled. Optional meaning search uses embeddings, numerical representations that help match related wording. Keyword search works without embeddings.
 
 Remote models are allowed by default. **Only use models on this computer** restricts the relevant configuration to permitted local addresses. Choose this based on where you actually want the processing to run.

@@ -34,6 +34,10 @@ Your model may receive more than the visible messages: the card, persona, preset
 
 Selecting an existing swipe changes the current text. Generating a new one makes a model request. Read the selected version before continuing, especially if later events depend on a particular detail.
 
+To compare saved swipes, click the swipe counter on a computer or long-press it on a phone. Each version appears as a card you can read in full, copy, branch into a new chat or delete. Choose a card, then **Show swipe** to put it in the chat. On an earlier reply the cards are for reading, copying and branching only.
+
+With **Guided Regenerate** in the composer, type a direction first and the latest AI reply is replaced with one that follows it. An empty composer gives an ordinary regeneration. Use Guided Swipe instead when you want to keep the old reply as an alternative.
+
 Avoid editing an old message while a generation is still relying on it. Stop the current work first and make your intended history clear.
 
 ## Chat and writing settings

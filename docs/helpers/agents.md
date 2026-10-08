@@ -36,8 +36,11 @@ These helpers are installed but disabled initially. Enable only the ones you nee
 | **Friction Keeper** | Correct unearned agreement and preserve believable disagreement |
 | **Repetition Breaker** | Reduce repeated phrasing, gestures and beats |
 | **Length Trimmer** | Shorten a reply towards its configured **Target length** |
+| **NSFW Enhancer** | Make sex scenes explicit and specific, without fading to black or hedging |
 
 These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides read-only context; zero means the helper receives only the reply being processed.
+
+If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under Agents settings → **Context & notifications**, and it starts on.
 
 ## Short notes before a reply
 
@@ -71,7 +74,9 @@ A cheaper or faster model may suit a simple structured tracker. Check its output
 
 ## Order and dependencies
 
-Reply rewriters always run sequentially in their configured **Order**, so each can work on the previous rewrite. For agents that append material, **Run together** lets their requests use the starting reply concurrently, alongside the rewrite passes. **Run one at a time** uses the configured order instead.
+**Execution rhythm → Reply passes** decides how the helpers that work on a finished reply are scheduled. **Run together**, the starting choice, sends every pass the original reply at once. If two or more rewriters return different versions, one extra request combines them, using the last rewriting helper's connection; it appears as **Combined reply**. If that combined version comes back empty or cut short, the original reply is kept.
+
+**Run one at a time** follows **Order** instead, so each rewriter works on the previous rewrite. It takes longer, but it avoids the combining request.
 
 Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
 
@@ -83,7 +88,7 @@ A **wait for** relationship makes a helper depend on another helper's result. Us
 
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
 
-Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. Showing or hiding a note in the interface is separate from feeding it back into context.
+Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the Companion part of the editor and in **Agent settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
 
 Use **More tools → Activity & companions** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
 

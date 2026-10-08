@@ -47,7 +47,7 @@ For a folder import, the path must exist on the machine running Neconyan. A fold
 
 Import work is saved on the server, so closing the page doesn't automatically cancel accepted work. Return to Import & Restore and use **Choose a saved account import** to recover its status or report. A ZIP import may need you to select the original ZIP again.
 
-After reinstalling or reconnecting, Neconyan checks whether the server still has the retained ZIP before resuming. An old browser record alone doesn't mean the archive is still available. If asked, select the original archive again and follow the current import status rather than starting several copies.
+After reinstalling or reconnecting, Neconyan checks whether the server still has the retained ZIP before resuming. An old browser record alone doesn't mean the archive is still available. If asked, select the original archive again and follow the current import status rather than starting several copies. Choosing a different ZIP starts its own saved upload and leaves the earlier one alone.
 
 The report separates deliberately excluded files from damaged files. Supported damaged items can be skipped while the remaining selected data imports. Use **Download skipped-files report** to keep the details, then **Reload to use the imported data** when you're ready.
 

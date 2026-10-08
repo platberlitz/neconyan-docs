@@ -54,6 +54,8 @@ cd ~/Neconyan
 bash start.sh
 ```
 
-Keep the project under Termux's home directory. Shared storage such as `/sdcard` doesn't support all the file links required by the installation. Leave Termux running; its wake lock can help prevent sleep. Press ++ctrl+c++ there to stop the server.
+Keep the project under Termux's home directory. Shared storage such as `/sdcard` doesn't support all the file links required by the installation. Leave Termux running; Neconyan asks Android for a wake lock at startup to help prevent sleep. Press ++ctrl+c++ there to stop the server.
+
+Some phones report file times wrongly. Neconyan checks the data folder at startup and switches on a compatibility mode when needed; that data then has to be started with Node.js, not Bun. If you used the Termux import recovery, the usual `bash start.sh` carries on with the saved recovery folder on port 5534. The [Termux import recovery guide](https://github.com/platberlitz/Neconyan/blob/staging/docs/termux-import-recovery.md) has the details.
 
 If the server is already on a computer, you can simply [open that installation in your phone's browser](phone.md) instead. Its data stays on the computer.

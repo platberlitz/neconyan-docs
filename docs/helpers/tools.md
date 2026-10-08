@@ -16,8 +16,8 @@ Included code updates with Neconyan. Third-party extensions you install separate
 
 | Tool | Use it for |
 | --- | --- |
-| **Guided Generations** | Give a response, swipe, correction or impersonation specific guidance |
-| **Input History** | Revisit previous composer input |
+| **Guided Generations** | Give a response, swipe, regeneration, correction or impersonation specific guidance |
+| **Input History** | Search earlier composer input and pick one to replace your draft |
 | **Deep Swipe** | Work with message alternatives, including supported user-message alternatives |
 | **Preset Tools** | Search and organise prompt sections |
 | **Chat Completion Tabs** | Separate parameter and prompt controls |
@@ -29,7 +29,7 @@ Prompt reconstruction and dry diagnostics don't generate replies. Prompting Lab'
 
 ## Lore and saved work
 
-**World Info Lab** traces lore activation and supports reviewed batch changes. **Lorebook Distiller** proposes lore entries from a saved chat. **Chat Archive** searches and organises chats; its organisation export doesn't contain the chat contents themselves.
+**World Info Lab** traces lore activation and supports reviewed batch changes. It and Prompting Lab can open saved chats up to 64 MiB. **Lorebook Distiller** proposes lore entries from a saved chat. **Chat Archive** searches and organises chats; its organisation export doesn't contain the chat contents themselves.
 
 **Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Compare before restoring, because a restore replaces newer edits.
 
@@ -47,7 +47,7 @@ Speech, captioning, translation, attachments and galleries each have their own s
 
 ## Find characters or diagnose a problem
 
-**BotSearcher** searches supported card sources. Available filters, accounts and downloads depend on the source site. External-site errors can occur independently of your model connection.
+**BotSearcher** searches supported card sources. Available filters, accounts and downloads depend on the source site. External-site errors can occur independently of your model connection. A failed JannyAI link import names its reason, such as a missing login on the server or a hidden card definition. Logging in to JannyAI in your own browser doesn't count; use **Refresh status** or **Open JannyAI login window** in BotSearcher.
 
 **Debugger** provides a diagnostic report and layout snapshot. Reproduce the problem first, then open its report, read it and copy or download it. **Prompt Inspector** helps inspect supported outgoing requests; those prompts may contain private chat material.
 

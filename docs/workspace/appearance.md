@@ -16,6 +16,7 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 | **Accent Profiles** | Accent palettes and custom primary/secondary colours |
 | **Shell Style** | The shape and treatment of controls, panels and navigation |
 | **Chat Style** | Message presentation |
+| **Desktop response controls** | Whether swipe arrows and the counter sit inside the bubble or below it on wide screens |
 | **Theme Colors** | Individual colour values, including ordinary quoted text |
 
 Colour edits apply immediately. **Save as a new theme** stores a broader named theme; **Save Current** under saved accent pairs stores the accent pair. Those are separate saves.
