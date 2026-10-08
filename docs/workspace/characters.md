@@ -22,6 +22,8 @@ A practical starting set is:
 
 Put each instruction where it belongs. Duplicating it across fields uses context space and can make future edits inconsistent.
 
+The editor uses **Basics**, **Definition**, **Greetings** and **Advanced** tabs. Creator's Notes are on Basics, and the favourite star sits beside the name. Field token counts show how much text those fields contain; they aren't the size of the complete model request.
+
 ## Keep changing facts out of the permanent description
 
 A card works well for stable identity. Keep changing details, such as a current injury, in the chat or a suitable [writing tool](../helpers/index.md).
@@ -37,6 +39,8 @@ Check the active persona when a conversation seems wrong. Conversation histories
 ## Move and copy a card
 
 Characters' **Import** action accepts supported card files, including PNG files with embedded card data. Use **Duplicate Character** when you want a separate version to experiment with.
+
+For chats from another installation, see [Import as new instance](../start/imports.md#bring-chats-from-another-installation). That explicit option creates a separate character instance and chat history rather than attaching foreign history to an existing identity.
 
 **Export and Download** offers PNG or JSON. A card export carries character information; it isn't a complete archive of chats, galleries, connection secrets or settings. Use [the appropriate backup](../help/backups.md) for those.
 

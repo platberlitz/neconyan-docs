@@ -33,6 +33,8 @@ Prompt reconstruction and dry diagnostics don't generate replies. Prompting Lab'
 
 **Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Compare before restoring, because a restore replaces newer edits.
 
+If the item changes again after comparison, the restore stops rather than overwriting the intervening edit. Compare the current item again before retrying. A snapshot that fails its integrity check can't be used as a trusted restore source.
+
 Several tools keep accepted work and results on the server. Closing the page stops watching it; use the explicit Stop action when you want to request cancellation.
 
 ## Appearance and media

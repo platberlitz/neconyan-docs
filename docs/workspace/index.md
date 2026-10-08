@@ -29,9 +29,21 @@ The **Fine-tuning** area contains controls such as model presets, sampling, form
 
 **Settings** includes appearance, device behaviour, account controls and import tools. **Included tools** opens features that ship with Neconyan; **Extensions → Manage extensions** manages whether extensions are enabled.
 
+## Search everything
+
+Use **Search** at the bottom of the workspace sidebar, press **/** while you're not typing, or choose **Find a setting** on Home. Search finds pages, tools, modes and settings alongside saved content in your current account. Small spelling mistakes and missing accents can still match; exact matches rank higher.
+
+Saved results include character definitions, persona descriptions, Roleplay messages and swipes, Conversation messages, notebook notes and lorebook entries. Try a distinctive phrase from the thing you remember. Use **More saved results** to see further matches.
+
+Selecting a result opens its page, item or chat. A chat result opens the chat rather than promising a jump to the matching message. If its original character is missing, use the offered **Find in Chat Archive** action.
+
+Search doesn't make a model request or give an assistant permission to read your notes. It searches saved content, not unsaved drafts or other accounts. Settings results depend on which controls and extensions are currently loaded. If some saved content couldn't be searched, treat that warning as an incomplete result, not proof that the item is missing.
+
 ## Tours and everyday navigation
 
 Home offers **Replay First paws tour**. Several full-page tools also have a character-led Tour. Follow the highlighted controls yourself; the tour explains the next action while you keep control of the page.
+
+Look beside a page's heading for **Tour**, with its expandable description below. Dismissing a tour invitation leaves the description and Tour button available. **Settings → Appearance → Page tours** lets you restore invitations or separately hide all tour buttons.
 
 On a phone, a sheet or panel may take the full screen. Use its Back or close control to return to the chat. Opening every panel at once is rarely helpful on a small display.
 

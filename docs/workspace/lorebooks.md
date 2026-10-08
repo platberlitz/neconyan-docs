@@ -21,6 +21,12 @@ They help keep a large world usable without placing every detail in every prompt
 
 For example, an entry about 'Glassmarket Station' might use that name and its common nickname as keys. Its content can describe the station's location, purpose and one important constraint. Unrelated history is easier to maintain in another entry.
 
+## Attach additional books to a character
+
+Open the character editor, then choose **Link to Lorebook** from its management menu. The additional-books picker lets you search for and select several lorebooks, including on phones and tablets. Confirm the dialog to save the selection. Reopen it to check the saved choices or clear them.
+
+To find an entry by its title, keywords or saved text across your account, use [Search everything](index.md#search-everything). Finding an entry doesn't activate it in the current chat.
+
 ## Why an entry might not appear
 
 The book must be available to the current chat, the entry must be enabled and its activation conditions must be satisfied. Scanning settings determine which recent text is examined. Budget and ordering settings can also prevent an otherwise relevant entry from fitting.

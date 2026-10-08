@@ -26,6 +26,10 @@ Use **Show preview** before asking about private or large material. Context cont
 
 Selected saved notes follow notebook permissions. Linking to another note doesn't automatically include it. Scratchpad doesn't automatically read Mewmory records or Companion notes.
 
+Story context is rebuilt from the open chat on each send. Saved-note text and permissions are also checked again on the server. The Context list updates when shared notes change during a session. If a note changes while a reply is being prepared, send again using the new version; unavailable, private or expired notes show **Not shared** without their text.
+
+Where notebook AI access is allowed, the preview also lists the notebook's name, access level, permitted actions and readable-note count. That list doesn't include note titles or contents by itself. Removing access can't withdraw material already sent to a model.
+
 A discussion opened from **Ask Scratchpad** in a note is note-specific. It uses the shared note or selection and doesn't silently add the story beside it.
 
 ## Ask more than one assistant
@@ -52,6 +56,8 @@ Message-edit proposals are available for Roleplay, not Conversation. **Copy repl
 ## Sessions and saved results
 
 Scratchpad keeps sessions associated with the current work, with options for new or temporary sessions, searching and export/import. Server-backed replies can continue after the page closes while the server remains available.
+
+Renaming a saved Roleplay chat keeps its Scratchpad sessions, context settings and replies in progress. A different chat that later uses the old name gets its own sessions.
 
 You can save a selection, message or session into a notebook. This copies the discussion text, excluding reasoning and change cards; it doesn't grant ongoing access to that notebook.
 

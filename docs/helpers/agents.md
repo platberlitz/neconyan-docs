@@ -13,7 +13,7 @@ A **Companion** is a separate helper request, often run after a reply, that prod
 ## Start with one helper
 
 1. Open **Agents** in the workspace.
-2. Use **Browse library** for a bundled starting point, or **Create agent** for your own.
+2. Choose an installed helper, use **Browse library** for another starting point, or **Create agent** for your own.
 3. Read its purpose and running conditions.
 4. Open **Settings** for common controls, or **Edit** for the full configuration.
 5. Check its connection and output limit.
@@ -21,6 +21,37 @@ A **Companion** is a separate helper request, often run after a reply, that prod
 7. Inspect the result and activity before making it automatic everywhere.
 
 The global **Agents On/Off** control affects whether configured Agents run. An individual Agent's enabled state is another thing to check.
+
+## Bundled reply rewriters
+
+These helpers are installed but disabled initially. Enable only the ones you need. Each enabled model-based rewrite adds a request after the main reply, so it can increase waiting and cost.
+
+| Helper | Intended job |
+| --- | --- |
+| **Proofreader** | Edit prose while preserving its meaning; this replaces the older Prose Polisher |
+| **Dialogue Humaniser** | Make spoken lines sound natural and fit the exchange |
+| **Format Fixer** | Repair formatting without changing the scene |
+| **User Agency Guard** | Remove actions, thoughts or decisions invented for the user |
+| **Knowledge Guard** | Remove claims a character shouldn't know |
+| **Friction Keeper** | Correct unearned agreement and preserve believable disagreement |
+| **Repetition Breaker** | Reduce repeated phrasing, gestures and beats |
+| **Length Trimmer** | Shorten a reply towards its configured **Target length** |
+
+These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides read-only context; zero means the helper receives only the reply being processed.
+
+## Short notes before a reply
+
+Five more bundled helpers are installed disabled. Each makes an extra model request before the main reply and supplies a short prompt note, with a 400-token output limit by default.
+
+| Helper | What its note covers |
+| --- | --- |
+| **Intent Reader** | What the latest user message is asking for |
+| **Continuity Pins** | Up to three immediate facts the next reply should preserve |
+| **Repeat Spotter** | Recent phrasing or beats to avoid repeating |
+| **Beat Planner** | A concise plan for the next story beat |
+| **Pace Setter** | Reply length and where to stop |
+
+They don't rewrite the whole prompt or produce a separate Companion note. Start with one. Intent Reader and Beat Planner can overlap; Repeat Spotter with Repetition Breaker, or Pace Setter with Length Trimmer, may also duplicate work. Deleted bundled helpers can be added again from **Browse library**.
 
 ## Instructions or extra requests?
 
@@ -40,7 +71,11 @@ A cheaper or faster model may suit a simple structured tracker. Check its output
 
 ## Order and dependencies
 
-**Run together** allows parallel work, which can reduce waiting but increases simultaneous requests and may hit provider limits. Running one at a time uses the configured order.
+Reply rewriters always run sequentially in their configured **Order**, so each can work on the previous rewrite. For agents that append material, **Run together** lets their requests use the starting reply concurrently, alongside the rewrite passes. **Run one at a time** uses the configured order instead.
+
+Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
+
+Parallel work can reduce waiting but increases simultaneous requests and may hit provider limits. The Companion parallel setting is separate from this reply-processing choice.
 
 A **wait for** relationship makes a helper depend on another helper's result. Use this when the result is required; list order alone doesn't express that dependency. Keep chains short until you've verified each stage.
 

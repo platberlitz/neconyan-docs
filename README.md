@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 52 pages, a reference for 201 registered macros, twelve real demonstration screenshots and a downloadable extension starter. The reviewed application source is Neconyan staging at `33e9d09`, dated 7 October 2026.
+The site includes 52 pages, a reference for 201 registered macros, twelve real demonstration screenshots and a downloadable extension starter. The practical guides were reviewed for Neconyan 1.2.1 against source `35ef872` on 8 October 2026. The macro catalogue and extension examples retain their reviewed 7 October snapshots.
 
 ## Preview locally
 
@@ -92,10 +92,11 @@ The configured destination is:
 https://platberlitz.github.io/neconyan-docs/
 ```
 
-1. Create the `platberlitz/neconyan-docs` repository and push the reviewed source to `main`.
-2. In the repository, open **Settings → Pages** and choose **GitHub Actions** as the source.
-3. Run the documentation workflow, or push a change to `main`.
-4. Wait for the build, browser checks and deployment to finish, then open the address above.
+1. Run the checks above and push the reviewed source to `main` in `platberlitz/neconyan-docs`.
+2. Wait for the documentation workflow's build, browser checks and deployment to finish.
+3. Open the address above and check the changed guides.
+
+GitHub Pages is configured to publish through GitHub Actions. The documentation workflow can also be run manually.
 
 The workflow checks pull requests without publishing them. It builds the starter ZIP from the example’s source files, so the download matches the tutorial. Generated output stays out of Git.
 

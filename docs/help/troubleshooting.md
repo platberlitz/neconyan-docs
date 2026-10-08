@@ -48,9 +48,17 @@ Streaming displays output as it arrives; it doesn't guarantee that the provider 
 
 Confirm the server address and account. An Android installation and a computer installation have separate data unless you've transferred it. In Conversation, also check the persona and branch.
 
+Try [Search everything](../workspace/index.md#search-everything) with a distinctive phrase. It searches saved chats, notes, character definitions and lorebook entries in the current account. A warning that some content couldn't be searched means results are incomplete. Unsaved drafts aren't included.
+
 For Roleplay, check the selected character or group and saved chat history. Chat Archive can help find saved files, including orphaned files no longer linked to an existing card. Temporary chats aren't saved.
 
 For notes, check the notebook, Trash, history and save status. **Saved on this device only** isn't confirmation that another device can retrieve the note from the server.
+
+## A chat import is refused
+
+For a chat from another installation, read [Import as new instance](../start/imports.md#bring-chats-from-another-installation) and explicitly select it when you want a separate character instance. A normal import doesn't automatically bypass origin checks. Keep the source files and read the error before retrying.
+
+If a saved ZIP import asks for its archive again after reinstalling, select the original ZIP. The browser may remember an import whose uploaded source is no longer on the server.
 
 ## A setting or panel looks broken
 

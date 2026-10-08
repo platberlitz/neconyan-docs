@@ -36,6 +36,14 @@ Selecting an existing swipe changes the current text. Generating a new one makes
 
 Avoid editing an old message while a generation is still relying on it. Stop the current work first and make your intended history clear.
 
+## Chat and writing settings
+
+**Settings → Chat & Writing** separates controls into **Chat & messages**, **Characters**, **Auto-swipe & auto-continue**, **Autocomplete** and **Fine-tuning**. Start with the drawer that matches the behaviour you want to change. Script controls live under Fine-tuning; appearance-only switches live under [Appearance](appearance.md).
+
+For reopening and linking chats, use **Chat & messages → Chat window**. **Reopen your last chat** and **Chat links in address bar** are separate choices, initially off. A chat link refers to a chat on that installation and account; it isn't a public copy of the conversation.
+
+You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
+
 ## Keep the model informed
 
 - Put stable character traits in the [character card](characters.md).

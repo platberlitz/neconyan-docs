@@ -32,6 +32,16 @@ Start with a bundled light or dark theme and a readable font size. Check a real 
 
 **AMOLED Black** is available under UI Theme for a pure-black interface. Switch to another theme if you want its hidden wallpaper and cloud artwork back.
 
+## Visual Toggles
+
+**Visual Toggles** groups its switches into **Comfort**, **Message details**, **Chat layout**, **Characters**, and **Settings and sliders**. Read the description beside a switch to see which part of the interface it affects. These display choices are separate from the sending and generation controls in **Chat & Writing**.
+
+## Movable panels
+
+Open **Appearance → Movable panels** to enable dragging and resizing supported pop-outs. Drag a panel by its top edge to move it, or its corner to resize it.
+
+The built-in layouts are **Pop-outs on the Right**, **Writing Desk**, **Centred Card** and **Compact Corner**. They place supported pop-outs such as Author's Note, CFG and token probabilities. They don't move the main chat or workspace side panels. Save your own layout after arranging the pop-outs you use.
+
 ## Change dialogue colours
 
 For one ordinary quotation colour, use **Theme Colors → Quote Text**. Accent Profiles can replace this colour when you apply an accent.

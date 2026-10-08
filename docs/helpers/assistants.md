@@ -48,3 +48,5 @@ In Neconyan itself, use the assistant or gender controls on Home, Scratchpad or 
 The handbook's dialogue is written documentation. Reading it doesn't call a model or charge credits. For an actual back-and-forth discussion about your work, open [Scratchpad](scratchpad.md) in the app with a working connection.
 
 Your choice of Scratchpad assistant changes the conversation's personality. Available tools and access permissions depend on the feature's settings.
+
+In assistant chats and Scratchpad, the bundled app-help reference includes [Search everything](../workspace/index.md#search-everything), Agent defaults, import choices and current settings locations. Ask for the steps to a named task. Help knowledge doesn't give the assistant unrestricted access to your account, notes or settings.
