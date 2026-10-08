@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 52 pages, a reference for 201 registered macros, twelve real demonstration screenshots and a downloadable extension starter. The practical guides were reviewed for Neconyan 1.2.1 against source `35ef872` on 8 October 2026. The macro catalogue and extension examples retain their reviewed 7 October snapshots.
+The site includes 52 pages, a reference for 201 registered macros, twelve real demonstration screenshots and a downloadable extension starter. The practical guides were reviewed for Neconyan 1.2.1 against source `f467dbf` on 8 October 2026. The macro catalogue and extension examples retain their reviewed 7 October snapshots.
 
 ## Preview locally
 

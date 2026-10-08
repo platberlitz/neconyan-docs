@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides were reviewed for **Neconyan 1.2.1**, against source **35ef872 on 8 October 2026**. The macro catalogue and extension examples retain their reviewed 7 October snapshots. Check your installed version if a named option is missing.
+The practical guides were reviewed for **Neconyan 1.2.1**, against source **f467dbf on 8 October 2026**. The macro catalogue and extension examples retain their reviewed 7 October snapshots. Check your installed version if a named option is missing.
 
 The practical guides explain common workflows, with links to longer technical references in the app repository. Those source links follow staging and may evolve after this edition. A documented provider feature still depends on the provider and model supporting it.
 
