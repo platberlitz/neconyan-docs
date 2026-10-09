@@ -55,6 +55,8 @@ If a blank chat works but an existing chat crashes, include that detail with the
 
 From 1.2.4.1 a crash leaves a proper crash record. Earlier builds only reported `signal 11`, because the server's WebAssembly handler took the fault before Android's crash dumper could write anything. Now the dumper keeps it, and after the restart the app decodes the record: the signal and fault address, the thread that crashed, a backtrace with library names and offsets, and the last log lines. The server also keeps a short trace of its most recent requests, and the trace from the run that crashed is kept across the restart. Both appear in **Copy details for a bug report**, so the report names the request that was running when the server died. Copy the details after the app has reopened; the record can take a few seconds to arrive.
 
+Up to 1.2.4.1, chats with Mewmory switched on could crash the server on every send or regenerate. Memory search splits text into words, and the APK's built-in language data didn't include the rules for that, so the server died instead of reporting an error. A fresh chat where Mewmory is off didn't hit it. 1.2.4.2 ships the full language data. Update over the existing app; the chat and its memories stay as they are. If a crash still happens after that, send the copied details again.
+
 ## Update without losing your library
 
 Install the newer official APK **over the existing app**. This preserves the app's private data when Android accepts it as an update. Export a backup before updating, especially before changing devices.
