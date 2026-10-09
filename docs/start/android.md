@@ -42,10 +42,16 @@ If the server still can't start, the app shows a recovery screen:
 
 - **Try again** starts the server again.
 - **Save a backup of my data** saves a ZIP of your account folder: characters, chats, personas, lorebooks and settings. It works even though the server isn't running. Saved API keys are left out unless you choose **Include API keys**; keep that file private if you do.
-- **Copy details for a bug report** copies the reason Android gave for stopping the server and the last lines of its log. Paste them into a [GitHub issue](https://github.com/platberlitz/Neconyan/issues).
+- **Copy details for a bug report** copies the reason Android gave for stopping the server and the last lines of its log. From 1.2.4 it also includes the native server's stack size. Paste the full report into a [GitHub issue](https://github.com/platberlitz/Neconyan/issues).
 - **Close Neconyan** stops the app.
 
 To bring the backup into another installation, such as Termux or a computer, open **Settings > System & Device > Import & Restore** there and choose **Import Backup ZIP**. It brings across chats, personas, character cards and lorebooks; other settings, presets and API keys stay in the ZIP and aren't applied. Save the backup before you consider uninstalling; uninstalling removes the app's data.
+
+### If sending or regenerating crashes
+
+A report saying **signal 11** means the native server crashed. It doesn't prove your chat is damaged or that the phone ran out of memory. Keep the chat and save a backup before trying changes.
+
+If a blank chat works but an existing chat crashes, include that detail with the full copied report, your model and provider, and whether sending, regenerating or both trigger it. I need that distinction to investigate the crash. Install the latest APK over the existing app; you don't need to delete the old chat to update.
 
 ## Update without losing your library
 
