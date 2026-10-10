@@ -31,6 +31,12 @@ Other Agent values are:
 | `{{assistantName}}` | Name attached to the supplied message, when available |
 | `{{agentName}}` | Name of the Agent running |
 | `{{generationType}}` | Kind of request, such as normal, swipe or continue |
+| `{{full-mewmory}}` | The combined NPC and memory context prepared for the writer, not the whole memory archive |
+| `{{mewmory-facts}}` | Prepared character sheets, story records and source passages |
+| `{{mewmory-interview}}` | Prepared interviews and subjective character views |
+| `{{group-cards}}` | Every group member's description, personality and scenario, in group order, including muted members marked as muted |
+
+The Mewmory values are empty when it is off for the chat and don't start a fresh search. Group cards are empty outside a group. A character's interview opinions aren't automatically established story events. These are Agent-specific values added in 1.2.5; they don't change the generally registered macro catalogue's count.
 
 Keep the Agent’s [run timing](../helpers/agents.md) in mind. A prompt prepared before a reply exists cannot read that future reply.
 

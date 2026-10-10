@@ -15,12 +15,16 @@ A **Companion** is a separate helper request, often run after a reply, that prod
 1. Open **Agents** in the workspace.
 2. Choose an installed helper, use **Browse library** for another starting point, or **Create agent** for your own.
 3. Read its purpose and running conditions.
-4. Open **Settings** for common controls, or **Edit** for the full configuration.
+4. Open **Quick settings** for common controls, or **Edit** for the full configuration.
 5. Check its connection and output limit.
 6. Enable it and try one short saved chat turn.
 7. Inspect the result and activity before making it automatic everywhere.
 
 The global **Agents On/Off** control affects whether configured Agents run. An individual Agent's enabled state is another thing to check.
+
+**Manage agents** holds the list, with All, Pinned, Before reply, After reply and Companions views, search and a category filter. **Connections & defaults** holds the shared settings. On each card, **More actions** contains less frequent actions such as Export and Delete.
+
+Quick settings includes the connection, model override, run timing and order. An empty model override uses the connection's model. **Save changes** applies your edits; **Open full editor** saves them before opening the complete editor. For several selected Agents, fields stay unchanged unless you change them. Tick **Set model for selected agents** to apply a shared model override.
 
 ## Bundled reply rewriters
 
@@ -33,14 +37,17 @@ These helpers are installed but disabled initially. Enable only the ones you nee
 | **Format Fixer** | Repair formatting without changing the scene |
 | **User Agency Guard** | Remove actions, thoughts or decisions invented for the user |
 | **Knowledge Guard** | Remove claims a character shouldn't know |
+| **Character Authenticity Checker** | Repair out-of-character lines while preserving earned character growth |
 | **Friction Keeper** | Correct unearned agreement and preserve believable disagreement |
 | **Repetition Breaker** | Reduce repeated phrasing, gestures and beats |
 | **Length Trimmer** | Shorten a reply towards its configured **Target length** |
 | **NSFW Enhancer** | Make sex scenes explicit and specific, without fading to black or hedging |
 
-These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides read-only context; zero means the helper receives only the reply being processed.
+These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides up to 30 earlier messages as read-only context; zero means the helper receives only the reply being processed.
 
-If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under Agents settings → **Context & notifications**, and it starts on.
+Character Authenticity Checker uses the card, example dialogue, group cards and available Mewmory context. Its instructions put story-earned growth ahead of the original card and distinguish a character's interview opinions from events that happened. It edits the reply, not the saved card.
+
+If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
 
 ## Short notes before a reply
 
@@ -74,7 +81,7 @@ A cheaper or faster model may suit a simple structured tracker. Check its output
 
 ## Order and dependencies
 
-**Execution rhythm → Reply passes** decides how the helpers that work on a finished reply are scheduled. **Run together**, the starting choice, sends every pass the original reply at once. If two or more rewriters return different versions, one extra request combines them, using the last rewriting helper's connection; it appears as **Combined reply**. If that combined version comes back empty or cut short, the original reply is kept.
+**Connections & defaults → Execution rhythm → After-reply agents** decides how the helpers that work on a finished reply are scheduled. This replaces the earlier **Reply passes** and **Append agents** labels. **Run together**, the starting choice, sends every pass the original reply at once. If two or more rewriters return different versions, one extra request combines them, using the last rewriting helper's connection; it appears as **Combined reply**. If that combined version comes back empty or cut short, the original reply is kept.
 
 **Run one at a time** follows **Order** instead, so each rewriter works on the previous rewrite. It takes longer, but it avoids the combining request.
 
@@ -84,13 +91,21 @@ Parallel work can reduce waiting but increases simultaneous requests and may hit
 
 A **wait for** relationship makes a helper depend on another helper's result. Use this when the result is required; list order alone doesn't express that dependency. Keep chains short until you've verified each stage.
 
+## Batch Companions and share notes
+
+Select at least two Companions in **Manage agents**, then choose **Batch & connect**. **Batch in one request** links them for shared requests when their connections, models and context settings are compatible. They must still be enabled and scheduled to run; incompatible Companions run separately.
+
+**Share latest notes → Share between selected companions** lets them read each other's latest completed notes. It doesn't wait for a new note. For one Companion, **Quick settings → Companion connections** offers **Shares one request with**, **Sends notes to** and **Runs after**. Turn on **Wait for linked companions** when a scheduled dependency must finish first, then **Save changes**.
+
+Agent prompts can also read prepared Mewmory context and group-card fields through [place-specific placeholders](../macros/placeholders.md#agents-and-companions). Those placeholders don't perform a fresh memory search.
+
 ## History and visibility
 
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
 
-Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the Companion part of the editor and in **Agent settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
+Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the editor's **Companion notes** tab and in **Quick settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
 
-Use **More tools → Activity & companions** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
+Use **More tools → Companion activity** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
 
 !!! nori "Nori"
     A 'notice continuity errors' helper and an 'invent a surprise' helper may disagree about a scene. Give each a clear job before asking both to run.

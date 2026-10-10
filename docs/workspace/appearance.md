@@ -27,6 +27,10 @@ Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ear
 
 Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal and several quieter styles. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace the portraits of characters you've imported.
 
+For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows XP Olive Green Dark** under UI Theme. Shell Style and UI Theme are separate selections.
+
+**Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once; changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
+
 ## Make text comfortable to read
 
 Start with a bundled light or dark theme and a readable font size. Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
@@ -36,6 +40,8 @@ Start with a bundled light or dark theme and a readable font size. Check a real 
 ## Visual Toggles
 
 **Visual Toggles** groups its switches into **Comfort**, **Message details**, **Chat layout**, **Characters**, and **Settings and sliders**. Read the description beside a switch to see which part of the interface it affects. These display choices are separate from the sending and generation controls in **Chat & Writing**.
+
+Use **Reduced Motion** to disable interface animations and transitions. Supported styles also respect the operating system's reduced-motion preference.
 
 ## Movable panels
 
@@ -54,5 +60,7 @@ Per-card settings aren't automatically embedded in an exported character file. U
 ## Small custom changes
 
 **CSS Snippets** manages named visual rules, with global, theme and chat scopes. CSS is the language that controls the page's appearance. Keep changes small and test them on a phone as well as a desktop.
+
+**Appearance → Custom CSS → Generate CSS with AI** asks a model for a visual change. **Replace** requests a complete updated stylesheet; **Append** requests additions to the existing rules. This uses a model request. The result applies only if the saved CSS hasn't changed while the request runs. Keep a copy of your rules before trying a generated change.
 
 If something becomes unreadable or stops responding after a visual change, disable the relevant snippet or return to a known theme before changing model settings. See [troubleshooting](../help/troubleshooting.md).

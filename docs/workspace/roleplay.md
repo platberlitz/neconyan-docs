@@ -48,6 +48,30 @@ For reopening and linking chats, use **Chat & messages → Chat window**. **Reop
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
 
+## Formatting and scripts
+
+**Fine-tuning → Formatting** groups controls into **Context & cleanup**, **Instruct template**, **System prompt**, **Reasoning** and **Reply controls**. Use the section for the request or reply behaviour you want to change. Instruct templates define message markers for supported local-model connections; Chat Completion prompt lists still belong to that connection's preset controls. **Tour** explains the page.
+
+STscript, Neconyan's slash-command scripting language, can run commands from the composer while a reply is being written. These commands help coordinate it:
+
+| Command | What it does |
+| --- | --- |
+| `/is-generating` | Returns whether a solo or group reply is being generated |
+| `/wait-generation timeout=60000` | Waits up to 60 seconds for the current reply; returns false on timeout. Use `timeout=0` to wait indefinitely |
+| `/stop` | Stops the current reply; `/generate-stop` is an alias |
+| `/getinput` | Reads the existing composer draft without changing it |
+| `/trigger` | Requests another reply without sending or clearing the draft |
+
+Use a wait before triggering another reply when the current one may take time. **Stop script** cancels a script's wait. Checking and waiting don't request a reply; generating does.
+
+From a Quick Reply or automation, this replaces the existing draft with uppercase text:
+
+```text
+/getinput | /upper | /setinput
+```
+
+Typing and submitting that script directly in the composer clears the submitted script before it runs, so it can't recover an earlier draft. `/trigger`, `/gen` and `/genraw` preserve text already in the composer. A failed submitted command is restored only if the composer is still empty, keeping text you've since typed.
+
 ## Keep the model informed
 
 - Put stable character traits in the [character card](characters.md).

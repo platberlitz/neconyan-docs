@@ -45,9 +45,21 @@ Several tools keep accepted work and results on the server. Closing the page sto
 
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't automatically configure all of them.
 
+### Separate expression sets for a shared card
+
+Open a chat, then **Fine-tuning → Character Expressions → Sprites for this character**. Under **Character in this card**, use **Add character** to give each person in a multi-character card a separate expression set. **Whole card** selects the shared set. This is separate from group-chat membership and the card's avatar.
+
+Under **Character appearance**, enter **Appearance notes for image generation**, then **Save appearance**. **Follow the first named speaker in each reply** picks a set from explicit speaker names or `Name:` dialogue labels, not an ordinary mention. If no name matches, it uses your chosen set. Selecting a set manually turns following off. **Remove character set** removes the choice from the card but leaves its image folder.
+
+Use **Add expressions** for several labels separated by commas or new lines. **Find an expression**, **With images** and **Missing images** help find the ones you need. A label doesn't create artwork: open **Import, generate and manage images** to upload a sprite pack or character sheet, or **Generate missing sprites** with Quick Image Gen.
+
+Under **How expressions are picked → Image generation and cleanup**, **Sprite generation mode** offers separate images or an automatically split character sheet. **Sprite framing** chooses a bust or full-body view. Use **Remove background (white/solid-color sheets only)** only for a plain background; leave it off when the artwork fills the image. **Redo crop/cleanup** processes the existing set. Generating images can incur provider charges.
+
 ## Find characters or diagnose a problem
 
 **BotSearcher** searches supported card sources. Available filters, accounts and downloads depend on the source site. External-site errors can occur independently of your model connection. A failed JannyAI link import names its reason, such as a missing login on the server or a hidden card definition. Logging in to JannyAI in your own browser doesn't count; use **Refresh status** or **Open JannyAI login window** in BotSearcher.
+
+**JannyAI card blocks proxies** means the creator has hidden the definition and disabled proxy access. Logging in again won't remove that setting. If JannyAI offers a card download, download it there and import the file; not every hidden card offers one.
 
 **Debugger** provides a diagnostic report and layout snapshot. Reproduce the problem first, then open its report, read it and copy or download it. **Prompt Inspector** helps inspect supported outgoing requests; those prompts may contain private chat material.
 

@@ -47,13 +47,27 @@ Each answer can mean a separate paid request. **Stop all** stops the round, and 
 
 ## Review a proposed change
 
-Scratchpad can offer change cards for supported characters, lorebooks, Roleplay messages and notebook notes. Read **Now** against **Proposed text**. Nothing is saved merely because a card appeared.
+Scratchpad can offer change cards for supported characters, lorebooks, Roleplay messages and notebook notes. Open **Review** and read **Now** against **Proposed text**. **Changes** highlights additions and removals and updates as you edit the proposed text. Nothing is saved merely because a card appeared.
 
 For supported non-notebook proposals, you can adjust the proposed text before **Save change**. Notebook proposals save the exact reviewed proposal; ask for a revised proposal if it needs changing. Scratchpad always requires review for notebook changes.
 
 If the target changed after the proposal was prepared, saving is refused so an old suggestion doesn't overwrite newer work. Reopen or regenerate the proposal against the current content.
 
-Message-edit proposals are available for Roleplay, not Conversation. **Copy reply to chat draft** places text in the composer without sending it.
+Message-edit proposals are available for Roleplay, not Conversation. **Use as draft in the chat box** places text in the composer without sending it.
+
+## Create a character
+
+Ask Scratchpad to create a character, including while discussing a shared notebook note. It returns a **New character card** proposal. Open **Review**, adjust the fields in the JSON draft, the structured text used for the card, then choose **Save change**. Check that the proposal says **Saved** before looking for the new card.
+
+The draft can include the character's name, description, personality, scenario, first message, example dialogue, instructions and alternate greetings. Leave `avatarPrompt` empty for the default picture. An explicitly requested generated avatar needs Quick Image Gen configured and can cost an image request.
+
+Compatible Chat Completion models can use a creation tool. Models without tool calling can still return a change card for you to review and save.
+
+## Edit an assistant's instructions
+
+Open **Context → Assistant prompts**, then **View or edit Miso's prompt**, or the equivalent for Taro or Nori. **Save prompt** applies the complete instructions to that assistant in the current session. New sessions in that chat inherit the choice. To restore the built-in instructions, choose **Reset to default**, then **Save prompt**.
+
+These instructions belong to Scratchpad, not the assistant's ordinary character card. The product-help reference and notebook permission rules are still added automatically; editing the prompt doesn't grant access to private notes.
 
 ## Sessions and saved results
 
