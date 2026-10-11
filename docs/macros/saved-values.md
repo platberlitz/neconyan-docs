@@ -8,6 +8,8 @@ quote: 'Choose the weather once and let it rain for a scene. I can find other wa
 
 These Macro Enhanced macros keep choices stable or read counters recorded in the current chat.
 
+**Not for Roleplay prompts.** These macros, including `freeze`, `listpick` and `rollonce`, only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry.
+
 ## Pick the right lifetime
 
 | Need | Use |

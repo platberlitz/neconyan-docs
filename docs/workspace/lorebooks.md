@@ -35,7 +35,7 @@ A constant or always-active entry behaves differently from a keyword-triggered o
 
 ## Inspect activation with World Info Lab
 
-Open **Included tools → World Info Lab → Open**. In **Scan**, choose the current chat or pasted text, select the reply action to simulate and use **Run scan**.
+Press **World Info Lab** in the Lorebooks library or in an open book. You can also use **Included tools → World Info Lab → Open**. Closing the workspace, or pressing ++escape++, returns you to the book you were in. In **Scan**, choose the current chat or pasted text, select the reply action to simulate and use **Run scan**.
 
 **Trace** explains why entries activated, were skipped or didn't fit. This diagnostic rebuilds context without generating a reply or editing the lorebook. It's more reliable than asking the model whether it remembers an entry by name.
 

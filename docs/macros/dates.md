@@ -8,6 +8,8 @@ quote: 'For a story date, save the date you chose. The real-world clock keeps mo
 
 Core time macros read the real-world clock. Macro Enhanced adds `dateadd`, `datediff` and `dateformat` for working with a date you supply.
 
+**Not for Roleplay prompts.** `dateadd`, `datediff` and `dateformat` only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry. The core time macros still work.
+
 Use an unambiguous date such as `2026-10-07`. Local time and language depend on the environment processing the prompt. A server and a browser can have different time zones.
 
 ## Common format parts

@@ -44,6 +44,22 @@ Check [Agent activity](../helpers/agents.md), Mewmory jobs and the selected conn
 
 Streaming displays output as it arrives; it doesn't guarantee that the provider begins immediately. Closing the tab also doesn't cancel work already accepted by the server. Use the explicit Stop control when you want cancellation.
 
+If a Guided Generations preview seemed stuck on 'Writing reply…' after you switched tabs, update to 1.3.0. The preview now reconnects when you return and catches up with the server's text.
+
+## A Roleplay reply stops with a macro error
+
+This message means a Roleplay prompt uses a macro that only works in the browser:
+
+```text
+The {{name}} macro is browser-only in Macro Enhanced and cannot run in a server prompt. Remove it or use a supported core macro.
+```
+
+Roleplay builds its prompts on the server, so the reply stops before anything is sent to the model. Find the named macro in the card, preset, lorebook entry or message and replace it with a core macro, or remove it. See [Macro Enhanced in Roleplay prompts](../macros/index.md#macro-enhanced-in-roleplay-prompts) for what still works.
+
+## The page freezes after a reply in a long chat
+
+Before 1.3.0, a long chat with a lot of Agent history could freeze the page for minutes after each reply, long enough for Android to close the app. Update to 1.3.0, then try the chat again. If it still freezes, collect a report as described below.
+
 ## A chat or note seems missing
 
 Confirm the server address and account. An Android installation and a computer installation have separate data unless you've transferred it. In Conversation, also check the persona and branch.
@@ -59,6 +75,19 @@ For notes, check the notebook, Trash, history and save status. **Saved on this d
 For a chat from another installation, read [Import as new instance](../start/imports.md#bring-chats-from-another-installation) and explicitly select it when you want a separate character instance. A normal import doesn't automatically bypass origin checks. Keep the source files and read the error before retrying.
 
 If a saved ZIP import asks for its archive again after reinstalling, select the original ZIP. The browser may remember an import whose uploaded source is no longer on the server.
+
+## Chats stopped opening after copying folders
+
+Copying data folders into an installation by hand can break the records Neconyan uses to track saved files, even when the chat text is fine.
+
+1. Open **Settings → System & Device → Import & Restore → Repair transferred data**.
+2. Press **Check transferred data** and read the report. Nothing changes yet.
+3. Press **Back up and repair**. Neconyan backs up your chats, character cards, groups and tracking records first, then accepts the files on disk.
+4. Press **Reload repaired account** before opening or saving chats.
+
+A chat or character card that can't be read, or whose file name ends in a space or a full stop, no longer blocks the whole repair. The report lists it under 'Repair will leave out this file and keep it unchanged on disk:', and everything else is repaired. Rename or fix the file, then check and repair again to include it. A broken group file still blocks the repair, because it affects the whole group list. Leftover import uploads and saved backup downloads are skipped. Any other refusal names the file it couldn't check.
+
+For future transfers, use **Import Folder** or **Import Backup ZIP** instead of copying files into a running installation.
 
 ## A setting or panel looks broken
 
