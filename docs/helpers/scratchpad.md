@@ -55,7 +55,7 @@ Your own assistants work everywhere the included three do: round tables, connect
 
 ## Check exactly what it will read
 
-Use **Show preview** before asking about private or large material. Context controls can include recent or selected chat messages, selected swipes and optional character, persona, Author's Note or lore content.
+Use **Show preview** before asking about private or large material. Context controls can include recent or selected chat messages, selected swipes and optional character, persona, Author's Note or lore content. Shared character cards are sent complete and exactly as saved, including greetings, example messages, creator's notes and the card's own instructions, with `{{char}}` and `{{user}}` left in place.
 
 Selected saved notes follow notebook permissions. Linking to another note doesn't automatically include it. Scratchpad doesn't automatically read Mewmory records or Companion notes.
 
