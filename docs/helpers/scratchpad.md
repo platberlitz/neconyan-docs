@@ -10,6 +10,20 @@ Scratchpad is a side conversation with an assistant you choose: Miso, Taro, Nori
 
 Every assistant stays in character while helping. Miso, Taro and Nori keep their own voices, and your own assistants use the personality you give them.
 
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![Scratchpad on desktop, open beside a Story Mode chat with a round table of three assistants](../assets/images/screenshots/desktop-scratchpad.webp)](../assets/images/screenshots/desktop-scratchpad.webp)
+    <figcaption>A staged round table beside the story. Nothing said here goes into the chat.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![Scratchpad on a phone, with the assistants it is talking with and a reply](../assets/images/screenshots/phone-scratchpad.webp)](../assets/images/screenshots/phone-scratchpad.webp)
+    <figcaption>On a phone Scratchpad fills the screen; Back to chat returns to the story.</figcaption>
+    </figure>
+
 ## Open a discussion
 
 Open **Scratchpad** in the workspace, through the chat tools or through **Ask Scratchpad** in Notebooks. On desktop it can sit beside the chat or use the full width. On a phone it uses the screen and provides a way back to the chat or note.
@@ -20,7 +34,7 @@ Open **Scratchpad** in the workspace, through the chat tools or through **Ask Sc
 
 Normal Scratchpad use works without a model's special tool-call support.
 
-Quick prompts fill the composer with requests such as Read scene, Plot ideas, Catch up, Continuity check and Lore gaps. Read or edit the draft, then send it.
+Quick prompts fill the composer with requests such as **Read the scene**, **Plot ideas**, **Catch me up**, **Continuity check** and **Lore gaps**. Read or edit the draft, then send it.
 
 Each reply shows its output and thought token counts beside the assistant's name, labelled **Output tokens** and **Thought tokens**. The counts grow while the reply is written and stay on the saved reply. Thought tokens only appear when the provider reports the model's thinking.
 
