@@ -4,7 +4,7 @@ The application source used for this edition is [Neconyan at 33e9d09](https://gi
 
 ## Screenshots
 
-The twelve files under `docs/assets/images/screenshots/` come from `docs/readme/` in Neconyan. They show Home, Roleplay, Conversation, Meower, Story Mode and Notebooks, each on desktop and phone. They contain staged demonstration content with the bundled assistants.
+The fourteen files under `docs/assets/images/screenshots/` come from `docs/readme/` in Neconyan 1.3.0. They show Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad, each on desktop and phone. They contain staged demonstration content with the bundled assistants.
 
 ## Assistant artwork
 

@@ -16,7 +16,7 @@ The practical guides explain common workflows, with links to longer technical re
 
 ## Screenshots and artwork
 
-The twelve workspace screenshots come from the Neconyan repository's README collection. They show real desktop and phone layouts with staged demonstration content using the bundled assistants. They are illustrative, rather than a claim that every future release will have identical spacing or labels.
+The fourteen workspace screenshots come from the Neconyan repository's README collection. They show real desktop and phone layouts with staged demonstration content using the bundled assistants. They are illustrative, rather than a claim that every future release will have identical spacing or labels.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is authored guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 
