@@ -53,9 +53,28 @@ For a complete example, start with [ready-to-use examples](recipes.md). For punc
 
 ## Core macros and Macro Enhanced
 
-Simple names such as `{{user}}` and `{{char}}` are built in. Many of the text, maths, pronoun and saved-choice tools come from **Macro Enhanced**, an included extension.
+Simple names such as `{{user}}` and `{{char}}` are built in. Many of the text, maths, pronoun and saved-choice tools come from **Macro Enhanced**, an included extension. Roleplay prompts can't use Macro Enhanced macros; see [below](#macro-enhanced-in-roleplay-prompts).
 
 Open **Included tools → Macro Enhanced → Settings**. If its notice asks you to enable experimental macro support, follow the named setting in **User Settings**, then return. The **Reference** in Macro Enhanced shows what your installed version currently supports. The **Macro Workbench** provides a Playground for checking expansions without asking a model for a reply.
+
+## Macro Enhanced in Roleplay prompts
+
+Roleplay builds its prompts on the server, so a reply can finish after you close the page. The server only runs core macros. The 102 Macro Enhanced macros in this reference, and macros you make yourself, only work in the browser.
+
+If a Roleplay prompt uses one, for example in a character description, preset prompt, lorebook entry or earlier message, the reply stops before anything is sent to the model:
+
+```text
+The {{name}} macro is browser-only in Macro Enhanced and cannot run in a server prompt. Remove it or use a supported core macro.
+```
+
+Macro Enhanced's settings for working out comparisons in conditions and fixing imported syntax are refused in the same way when a prompt relies on them. Agent prompts that run with a Roleplay reply follow the same rules.
+
+Core macros such as `{{user}}`, `{{char}}`, `{{getvar}}` and `{{setvar}}` still work. Local variable writes are saved together with the accepted reply; a failed request doesn't save them. Global variables can be read, but writing one is refused. Lorebook scanning can read variables but not change them, so put a write in a preset prompt or a message instead. See [Variables](variables.md#in-roleplay-prompts).
+
+The Macro Enhanced drawer shows **Server prompts have a smaller macro vocabulary.** Its **Server prompts and saved variables** help gives the full explanation. The Playground can still evaluate Macro Enhanced macros, but a result there doesn't mean a Roleplay prompt will accept them.
+
+!!! taro "Taro"
+    Before you share a card, search it for Macro Enhanced names. Someone who chats with it in Roleplay will get the error above instead of a reply.
 
 ## What this reference covers
 

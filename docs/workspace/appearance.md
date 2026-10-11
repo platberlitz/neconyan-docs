@@ -31,6 +31,10 @@ For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows 
 
 **Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once; changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
 
+There are 34 coats and 21 ready-made pairs. 1.3.0 added Birman, Snowshoe, Cinnamon, Fawn, Caracal and Lynx, with pairs such as **Snow mittens: Birman and Snowshoe** and **Tufted twins: caracal and lynx**. Every coat has pixel-art frames for the Windows 98 style.
+
+To change the picture behind the app, open **Fine-tuning → Background**. The bundled dark backgrounds include **Neconyan - Velvet Moon**, **Neconyan - Rainy Lantern Loft**, **Neconyan - Mosslight Grotto**, **Neconyan - Indigo Tide**, **Neconyan - Ember Hearth** and **Neconyan - Starlit Snow**.
+
 ## Make text comfortable to read
 
 Start with a bundled light or dark theme and a readable font size. Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
@@ -41,7 +45,13 @@ Start with a bundled light or dark theme and a readable font size. Check a real 
 
 **Visual Toggles** groups its switches into **Comfort**, **Message details**, **Chat layout**, **Characters**, and **Settings and sliders**. Read the description beside a switch to see which part of the interface it affects. These display choices are separate from the sending and generation controls in **Chat & Writing**.
 
-Use **Reduced Motion** to disable interface animations and transitions. Supported styles also respect the operating system's reduced-motion preference.
+Pages move from the control you pressed: a top-bar shortcut drops its page down from under the bar, and a desktop sidebar page slides out from behind the sidebar. Opening a chat lets the messages rise into place, and swiping slides the next or previous reply in from the side you are moving towards.
+
+Use **Reduced Motion** to disable interface animations and transitions, including these. Supported styles also respect the operating system's reduced-motion preference.
+
+## Bottom bar width on a computer
+
+**Settings → Appearance → Interface → Bottom Bar Size** sets the width of the bottom chat bar on desktop, from 70 to 150. It works separately from **Page Width**. If the bar is wider than the space available, it scrolls sideways. When the message form is narrower than 300 pixels, the message box moves below its buttons. Phones keep their own layout.
 
 ## Movable panels
 

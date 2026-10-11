@@ -8,6 +8,8 @@ quote: 'Pick the example that solves your problem. You can leave the rest for an
 
 Try these in a test chat. The first uses core macros; the remaining examples use Macro Enhanced too. Macros that save values change the chat when evaluated.
 
+**Check the mode first.** Roleplay prompts only run core macros. The greeting and the `setvar` line work there; the other examples use Macro Enhanced and stop a Roleplay reply before the model request. Try them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card.
+
 ## A greeting that follows the selected names
 
 Put this in a character greeting:

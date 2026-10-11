@@ -30,6 +30,10 @@ They are stored on the Neconyan server you're using, under its account and acces
 
 Accepted server-backed work can keep running while the server is available. Use **Stop** to cancel it; closing the page doesn't request cancellation. Browser-only routes depend on the page staying open, and stopping the whole app interrupts its server.
 
+## Why do notices stay on screen longer now?
+
+From 1.3.0, a notice that closes by itself stays up for at least 5 seconds, so you have time to read it. This includes notices from extensions and scripts that ask for a shorter time. Notices that wait for you to close them are unchanged.
+
 ## Why doesn't Conversation show my Roleplay messages?
 
 They use separate histories. Conversation also has persona-specific histories and branches. Check the mode, persona, server and account before concluding that data was deleted.

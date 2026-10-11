@@ -10,6 +10,8 @@ Macro Enhanced provides one set of pronouns for your **persona** and another for
 
 The default is **they/them**. A chat-specific override takes priority over the saved choice. These settings are separate from the three guide preferences on this documentation site.
 
+**Not for Roleplay prompts.** The pronoun macros only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry. In a Roleplay card, write the character's pronouns out in plain text instead.
+
 ## A sentence that adapts
 
 ```text

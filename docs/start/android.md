@@ -57,6 +57,8 @@ From 1.2.4.1 a crash leaves a proper crash record. Earlier builds only reported 
 
 Up to 1.2.4.1, chats with Mewmory switched on could crash the server on every send or regenerate. Memory search splits text into words, and the APK's built-in language data didn't include the rules for that, so the server died instead of reporting an error. A fresh chat where Mewmory is off didn't hit it. 1.2.4.2 ships the full language data. Update over the existing app; the chat and its memories stay as they are. If a crash still happens after that, send the copied details again.
 
+If the app closed without an error on one long chat with a lot of Agent history, the cause may be a page freeze rather than a server crash. Before 1.3.0, that kind of chat could freeze the page for minutes after each reply, which can be long enough for Android to close the app. 1.3.0 removes the repeated work behind the freeze. Update over the existing app and try the chat again.
+
 ## Update without losing your library
 
 Install the newer official APK **over the existing app**. This preserves the app's private data when Android accepts it as an update. Export a backup before updating, especially before changing devices.
