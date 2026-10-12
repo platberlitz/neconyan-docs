@@ -124,6 +124,8 @@ Options such as **Keep in history**, recent-message limits and Companion note hi
 
 Use **More tools → Companion activity** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
 
+Companion notes and their panel show the model saved with each result. Agent change history also names the model and, when recorded, its connection profile. These labels describe the completed run, not the model selected now. **Settings → Appearance → Visual Toggles → Short Model Name** controls shortening here too. Older results may not have recorded a model.
+
 !!! nori "Nori"
     A 'notice continuity errors' helper and an 'invent a surprise' helper may disagree about a scene. Give each a clear job before asking both to run.
 
