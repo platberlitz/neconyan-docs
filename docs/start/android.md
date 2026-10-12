@@ -61,7 +61,16 @@ If the app closed without an error on one long chat with a lot of Agent history,
 
 ## Update without losing your library
 
-Install the newer official APK **over the existing app**. This preserves the app's private data when Android accepts it as an update. Export a backup before updating, especially before changing devices.
+Export a backup before updating, especially before changing devices. Neconyan 1.3.1 includes an in-app update route:
+
+1. In the Android app, open **Server → Updates & Restart**.
+2. Choose **Check for updates**.
+3. When a compatible release is available, choose **Update APK**. Neconyan downloads the official GitHub release for the app's processor type.
+4. Approve the update in Android's installer. Android may first ask you to allow Neconyan to install apps.
+
+An update notice opens the Server controls; it doesn't install anything by itself. Cancelling the installer leaves the installed app in place. The installer must be opened from the Android app, not an ordinary browser connected to its server.
+
+If your installed version doesn't have these controls, download the newer official APK from the [latest release](https://github.com/platberlitz/Neconyan/releases/latest) and install it **over the existing app**. Both routes preserve the app's private data when Android accepts the package as an update.
 
 Uninstalling the app removes its private data. If Android refuses an update because the package's signature doesn't match, back up before considering an uninstall. Don't treat an uninstall as a harmless troubleshooting step.
 

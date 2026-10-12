@@ -32,13 +32,14 @@ These helpers are installed but disabled initially. Enable only the ones you nee
 
 | Helper | Intended job |
 | --- | --- |
-| **Proofreader** | Edit prose while preserving its meaning; this replaces the older Prose Polisher |
+| **Continuity Corrector** | Repair contradictions with established scene facts, such as location, injuries, clothing or possessions |
+| **Proofreader** | Correct prose and formatting while preserving meaning and tracker blocks; this replaces the older Prose Polisher |
 | **Dialogue Humaniser** | Make spoken lines sound natural and fit the exchange |
 | **Format Fixer** | Repair formatting without changing the scene |
 | **User Agency Guard** | Remove actions, thoughts or decisions invented for the user |
 | **Knowledge Guard** | Remove claims a character shouldn't know |
 | **Character Authenticity Checker** | Repair out-of-character lines while preserving earned character growth |
-| **Friction Keeper** | Correct unearned agreement and preserve believable disagreement |
+| **Friction Keeper** | Correct unearned agreement and preserve believable disagreement, leaving tracker blocks intact |
 | **Repetition Breaker** | Reduce repeated phrasing, gestures and beats |
 | **Length Trimmer** | Shorten a reply towards its configured **Target length** |
 | **NSFW Enhancer** | Make sex scenes explicit and specific, without fading to black or hedging |
@@ -46,6 +47,8 @@ These helpers are installed but disabled initially. Enable only the ones you nee
 These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides up to 30 earlier messages as read-only context; zero means the helper receives only the reply being processed.
 
 Character Authenticity Checker uses the card, example dialogue, group cards and available Mewmory context. Its instructions put story-earned growth ahead of the original card and distinguish a character's interview opinions from events that happened. It edits the reply, not the saved card.
+
+Continuity Corrector starts with 12 recent messages as context. It can also use active lore, the Author's Note, saved tracker values and prepared Mewmory facts. Its instructions favour established recent events and ask it to leave a consistent reply alone. This is an after-reply rewrite; **Continuity Pins**, below, prepares a short note before the writer answers.
 
 If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
 
@@ -78,6 +81,20 @@ Tokens are the text units a model counts for limits and charging. An Agent's vis
 Use **Connections & defaults** for shared choices. An Agent's own connection can override the Companion default, which can override the general default. If one helper fails while the chat works, inspect that helper's actual selection.
 
 A cheaper or faster model may suit a simple structured tracker. Check its output quality rather than assuming the main writing model is required for every job.
+
+## Repair a tracker
+
+Use **Fix trackers** at the top of Agents, beside **Agents On/Off**. It checks the current chat's eligible inline and Companion trackers. Agents and the relevant trackers must be enabled. You don't need to open **More tools** to reach it.
+
+Some repairs, such as putting recognised fields back in order, need no model request. Others ask a model to repair the tracker and can cost another request. Invalid, blank or cut-short repair output isn't accepted as a repaired tracker. Check the saved result afterwards.
+
+Under **Connections & defaults → Connection profiles**:
+
+- **Fix trackers connection profile** starts at **Each tracker's usual connection**. Choose a separate profile to use its model for repairs without changing ordinary Agent runs.
+- Add fallback connections in the order you want them tried. An empty repair fallback list uses the tracker's usual fallbacks.
+- **Fix trackers time limit (seconds)** starts at **180** for each connection. A timed-out request moves to the next available fallback. **0** removes the time limit; the largest setting is **3600** seconds.
+
+The button shows progress while repairs run. If every connection fails, check the reported error and connection settings before trying again.
 
 ## Order and dependencies
 

@@ -10,7 +10,9 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides were reviewed for **Neconyan 1.3.0**, against source **524de2e on 11 October 2026**. The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse. Check your installed version if a named option is missing.
+The practical guides cover **Neconyan 1.3.1**, reviewed against source **9ef5d4c18 on 12 October 2026**. Check your installed version if an option is missing.
+
+The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
 The practical guides explain common workflows, with links to longer technical references in the app repository. Those source links follow staging and may evolve after this edition. A documented provider feature still depends on the provider and model supporting it.
 

@@ -54,7 +54,9 @@ Don't overwrite a running installation with a mixture of old and new source file
 
 ## Update Android
 
-Install the new official APK over the existing app. Export before updating or moving devices. **Uninstalling removes the app's private data.** See [Android installation](../start/android.md) for the supported versions and large-export limit.
+Export before updating or moving devices. Newer builds provide **Server → Updates & Restart → Check for updates**, then **Update APK** inside the Android app. Android still asks you to approve installation. If those controls aren't available, download the official APK and install it over the existing app.
+
+**Uninstalling removes the app's private data.** See [Android installation](../start/android.md#update-without-losing-your-library) for the update steps and large-export limit.
 
 ## Restore deliberately
 

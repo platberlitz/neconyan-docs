@@ -33,6 +33,18 @@ The book must be available to the current chat, the entry must be enabled and it
 
 A constant or always-active entry behaves differently from a keyword-triggered one. Use it deliberately for information that truly belongs in every relevant request, because it consumes space repeatedly.
 
+## Search a whole book by meaning
+
+**Entry tools → Vectorize all** marks entries in the selected book for meaning-based retrieval. This needs the **Vectorization** tool enabled and an embeddings connection configured. Embeddings are numerical descriptions of text used to compare relevance.
+
+1. Open the book, then **Entry tools → Vectorize all**.
+2. Review the entry counts. The action covers the whole book, including entries hidden by search or on another page. Existing keywords stay intact, and disabled entries stay disabled.
+3. Leave **Include constant entries** off to keep those entries always active. Turning it on makes them depend on keyword or meaning-based selection instead.
+4. If offered, check **Turn on lorebook retrieval in replies** deliberately: it affects all active lorebooks, not only this book.
+5. Confirm, then use **Index active lorebooks** or let a reply build the required index. Inspect the resulting context as you would with keyword activation.
+
+Marking entries doesn't enable a disabled Vectorization tool. If **Search all enabled entries** is already on, it also searches enabled entries that haven't been individually marked.
+
 ## Inspect activation with World Info Lab
 
 Press **World Info Lab** in the Lorebooks library or in an open book. You can also use **Included tools → World Info Lab → Open**. Closing the workspace, or pressing ++escape++, returns you to the book you were in. In **Scan**, choose the current chat or pasted text, select the reply action to simulate and use **Run scan**.

@@ -28,6 +28,10 @@ Open Meower through the mode navigation. Use its **Timeline Settings** to choose
 
 Start with a few characters whose voices you know. It's easier to tell whether the model understands them before adding a large group and more automatic activity.
 
+**Add all** invites every available character, including characters hidden by the current search. It keeps existing invitations and offers **Undo** afterwards. **Clear invites** empties the timeline's cast. These choices don't change a Roleplay or Conversation group's membership.
+
+Choose the model connection under **Write posts with** in Timeline Settings.
+
 ## Write and interact
 
 Start with a short post that gives characters something to respond to, such as a question about their day. You can also reply or react to posts in the timeline.
@@ -36,7 +40,9 @@ Model-generated activity uses a configured connection and can cost provider cred
 
 ## Keep the boundaries clear
 
-Meower keeps its own timeline. To use a Roleplay event in a post or a post in Conversation, add the relevant details to that mode yourself.
+Meower keeps its own timeline. Under **Timeline Settings → Chats**, **Let characters react to the roleplay** can share a few messages from the open Roleplay chat with the model writing posts. It starts off, and only characters in that scene should refer to it.
+
+**Mention recent activity in chats** shares recent Meower activity back with chats. Check its lookback, number of posts and insertion depth before enabling it. These options provide context; they don't copy the timeline into your saved chat history.
 
 Likewise, 'private timeline' describes where posts are published. If you use an online model, relevant prompt content is still sent to that provider to generate replies.
 

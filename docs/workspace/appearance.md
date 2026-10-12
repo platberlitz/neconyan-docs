@@ -21,6 +21,8 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 
 Colour edits apply immediately. **Save as a new theme** stores a broader named theme; **Save Current** under saved accent pairs stores the accent pair. Those are separate saves.
 
+Character tags in the library and character editor follow the selected accent colours too.
+
 ## Choose a style
 
 Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ears and paws while retaining your chats and installed characters. You can also use **Hide cats (Kittyless)** beneath the style choices while keeping another shell style.
@@ -51,7 +53,9 @@ Use **Reduced Motion** to disable interface animations and transitions, includin
 
 ## Bottom bar width on a computer
 
-**Settings → Appearance → Interface → Bottom Bar Size** sets the width of the bottom chat bar on desktop, from 70 to 150. It works separately from **Page Width**. If the bar is wider than the space available, it scrolls sideways. When the message form is narrower than 300 pixels, the message box moves below its buttons. Phones keep their own layout.
+**Settings → Appearance → Interface → Bottom Bar Size** sets the width of the bottom chat bar on desktop, from 70 to 150. It works separately from **Page Width**. If the bar is wider than the space available, it scrolls sideways. When the message form is narrower than 300 pixels, the message box moves below its buttons.
+
+On a phone, the setting keeps the phone layout but changes the control size. Increase it if the slim default buttons feel too small. In the standard phone layout, Send is 38 pixels at 100 and grows to 44 pixels at 150.
 
 ## Movable panels
 

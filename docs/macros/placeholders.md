@@ -35,8 +35,15 @@ Other Agent values are:
 | `{{mewmory-facts}}` | Prepared character sheets, story records and source passages |
 | `{{mewmory-interview}}` | Prepared interviews and subjective character views |
 | `{{group-cards}}` | Every group member's description, personality and scenario, in group order, including muted members marked as muted |
+| `{{active-lore}}` | Lore selected for the current reply or prepared for the Agent's run |
+| `{{active-authors-note}}` | The active Author's Note text |
+| `{{tracker-state}}` | Saved values from enabled trackers that extract their results into chat metadata, the chat's stored extra information |
 
-The Mewmory values are empty when it is off for the chat and don't start a fresh search. Group cards are empty outside a group. A character's interview opinions aren't automatically established story events. These are Agent-specific values added in 1.2.5; they don't change the generally registered macro catalogue's count.
+The Mewmory values are empty when it is off for the chat and don't start a fresh memory search. Group cards are empty outside a group. A character's interview opinions aren't automatically established story events.
+
+For automatic reply processing, active lore follows the writer's selected lore. A manual Agent run handled by the server can select lore for the current chat and reuse that selection if the run resumes. Browser-run helpers use prepared lore for the current chat, which can be empty if none is available. Tracker state contains saved tracker values, not every Companion note.
+
+These values belong to Agents and Companions. Neconyan 1.3.1 adds the three scene-context values; they don't change the generally registered macro catalogue's count.
 
 Keep the Agent’s [run timing](../helpers/agents.md) in mind. A prompt prepared before a reply exists cannot read that future reply.
 
