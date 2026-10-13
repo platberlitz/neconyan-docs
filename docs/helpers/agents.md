@@ -24,6 +24,8 @@ The global **Agents On/Off** control affects whether configured Agents run. An i
 
 **Manage agents** holds the list, with All, Pinned, Before reply, After reply and Companions views, search and a category filter. **Connections & defaults** holds the shared settings. On each card, **More actions** contains less frequent actions such as Export and Delete.
 
+The version beside an installed Agent's name describes that saved Agent. **Browse library** shows the available template's version beside its name, so you can compare them before updating.
+
 Quick settings includes the connection, model override, run timing and order. An empty model override uses the connection's model. **Save changes** applies your edits; **Open full editor** saves them before opening the complete editor. For several selected Agents, fields stay unchanged unless you change them. Tick **Set model for selected agents** to apply a shared model override.
 
 ## Bundled reply rewriters
@@ -49,6 +51,8 @@ These are instructions to a model, not guarantees. Review the result before cont
 Character Authenticity Checker uses the card, example dialogue, group cards and available Mewmory context. Its instructions put story-earned growth ahead of the original card and distinguish a character's interview opinions from events that happened. It edits the reply, not the saved card.
 
 Continuity Corrector starts with 12 recent messages as context. It can also use active lore, the Author's Note, saved tracker values and prepared Mewmory facts. Its instructions favour established recent events and ask it to leave a consistent reply alone. This is an after-reply rewrite; **Continuity Pins**, below, prepares a short note before the writer answers.
+
+Knowledge Guard can read the card, persona, active lore, Author's Note and saved Secrets Tracker values. Its `{{secrets-tracker}}` placeholder reads enabled saved tracker templates, including renamed copies, without rerunning the tracker. A fact existing in lore doesn't mean every character knows it. Unchanged bundled copies update to version 2 automatically; customised copies keep your edits and offer **Update**.
 
 If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
 
@@ -101,6 +105,8 @@ The button shows progress while repairs run. If every connection fails, check th
 **Connections & defaults → Execution rhythm → After-reply agents** decides how the helpers that work on a finished reply are scheduled. This replaces the earlier **Reply passes** and **Append agents** labels. **Run together**, the starting choice, sends every pass the original reply at once. If two or more rewriters return different versions, one extra request combines them, using the last rewriting helper's connection; it appears as **Combined reply**. If that combined version comes back empty or cut short, the original reply is kept.
 
 **Run one at a time** follows **Order** instead, so each rewriter works on the previous rewrite. It takes longer, but it avoids the combining request.
+
+Manually started after-reply Agents run one at a time regardless of that automatic setting. Later rewrites wait, then read the saved result of the earlier rewrite. Their queue is separate from Companions, so a slow Companion doesn't hold up a manual rewrite. **Stop** cancels active work and clears waiting runs.
 
 Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
 

@@ -76,6 +76,14 @@ Uninstalling the app removes its private data. If Android refuses an update beca
 
 The native Android export bridge accepts files up to **1 GiB**. For a very large collection, use smaller individual exports or another supported transfer route rather than relying on one oversized download.
 
+## Read a saved crash report
+
+After relaunch, the app opens an unseen saved report before signing into its local server. That native reader still works when WebView is outdated. If the page renderer stops while the app survives, the failure screen gains the completed report; a local-server report remains available while the server restarts.
+
+**Saved crash reports** lists up to ten reports individually. Each shows the recorded error, time, earlier activity and available memory measurements. **Copy report** and **Share report** use only the selected report and leave the reader open. If a report couldn't be saved, copy or share it before closing.
+
+The separate **Copy details for a bug report** action combines more evidence, including bounded log tails that can contain private application text. Review that copy before sharing. Nothing is uploaded automatically. Activity or a signal number alone doesn't establish the cause, and a severe memory failure can prevent a final report. Browser simulations don't establish how these controls behave on your actual phone.
+
 ## Prefer Termux?
 
 Termux is an alternative installation, separate from the official app. Get it from [F-Droid](https://f-droid.org/packages/com.termux/) or [Termux's official releases](https://github.com/termux/termux-app/releases), then run:

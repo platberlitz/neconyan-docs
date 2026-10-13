@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.3.1**, reviewed against source **9ef5d4c18 on 12 October 2026**. Check your installed version if an option is missing.
+The practical guides cover **Neconyan 1.3.2**, reviewed against source **89a85865c on 13 October 2026**. Check your installed version if an option is missing.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
