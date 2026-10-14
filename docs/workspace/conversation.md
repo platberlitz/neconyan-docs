@@ -36,7 +36,7 @@ Conversation looks like a messaging app. Messages from the same sender within 10
 
 Each bubble has a tail. The time, read receipt, token counts and message menu sit in one row along its bottom edge. The header label shows the branch name when you are on a branch. On a phone, **Pals** is an icon button beside the avatar, and character portraits are requested at phone size.
 
-To keep long threads responsive, Conversation renders the most recent 200 messages at a time, or 25 when [Low-memory mode](appearance.md#low-memory-mode) is active. Use **Show older messages** at the top of the thread to load earlier history without losing your reading position.
+To keep long threads responsive, Conversation renders the most recent 200 messages at a time, or 25 when [Low-memory mode](appearance.md#low-memory-mode) is active. Use **Older messages** at the top of the thread, and **Newer messages** or **Latest messages** at the bottom, to page through history without losing your reading position.
 
 The Windows 98 and Windows XP shell styles, and Termeownal, keep their own Conversation look.
 
