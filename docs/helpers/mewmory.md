@@ -47,7 +47,7 @@ Starting an unrelated chat doesn't silently share all memory. **Link this contin
 
 ## Processing and waiting
 
-Extraction and some AI-assisted recall can run in the background. The current reply may use local or already completed selections while newly prepared AI results become available to later replies.
+Extraction and some AI-assisted recall can run in the background, and background memory work continues when after-reply Agents rewrite a reply. The current reply may use local or already completed selections while newly prepared AI results become available to later replies.
 
 Failed jobs don't count as completed coverage. Check the job error and model configuration before repeatedly backfilling. Changing models or processing settings can require work to run again and incur more charges.
 

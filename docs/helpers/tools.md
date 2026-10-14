@@ -1,14 +1,14 @@
 ---
 title: Included tools
 guide: nori
-quote: "Check Included tools before installing a second copy. Duplicate extensions can leave one inactive, which is a tedious way to discover it was already here."
+quote: "Check the sidebar or Extensions → Built-in before installing a second copy. Duplicate extensions can leave one inactive, which is a tedious way to discover it was already here."
 ---
 
 # Included tools
 
 Find documented macros in the [macro reference](../macros/index.md).
 
-Neconyan ships with a collection of writing, appearance and diagnostic tools. Open **Included tools** to reach them, or **Extensions → Manage extensions** to inspect versions, authors, licences and enabled states.
+Neconyan ships with a collection of writing, appearance and diagnostic tools. They sit alongside the rest of the workspace in the **Workspace**, **Fine-tuning**, **Characters & Lore**, **Appearance** and **Troubleshooting** sidebar sections. Open **Extensions → Built-in** for their settings pages, or **Extensions → Manage extensions** to inspect versions, authors, licences and enabled states. If a bundled tool is switched off, its sidebar button shows **Off** and opens **Manage extensions** so you can turn it on.
 
 Included code updates with Neconyan. Third-party extensions you install separately have their own update path. A bundled tool can still use a paid model or an external service.
 
@@ -20,7 +20,7 @@ Included code updates with Neconyan. Third-party extensions you install separate
 | **Input History** | Search earlier composer input and pick one to replace your draft |
 | **Deep Swipe** | Work with message alternatives, including supported user-message alternatives |
 | **Preset Tools** | Search and organise prompt sections |
-| **Chat Completion Tabs** | Separate parameter and prompt controls |
+| **Chat Completion Tabs** | Switch separate **Parameters** and **Prompts** tabs on and off from the sidebar, or open its settings in **Extensions → Built-in** |
 | **Prompt Tags** | Manage tags and defaults for supported prompt sections |
 | **Macro Enhanced** | Look up and manage supported placeholders and pronoun controls |
 | **Prompting Lab** | Build prompt tests, compare requests and run selected model comparisons |
@@ -47,7 +47,7 @@ Speech, captioning, translation, attachments and galleries each have their own s
 
 ### Separate expression sets for a shared card
 
-Open a chat, then **Fine-tuning → Character Expressions → Sprites for this character**. Under **Character in this card**, use **Add character** to give each person in a multi-character card a separate expression set. **Whole card** selects the shared set. This is separate from group-chat membership and the card's avatar.
+Open a chat, then **Characters & Lore → Character Expressions → Sprites for this character**. Under **Character in this card**, use **Add character** to give each person in a multi-character card a separate expression set. **Whole card** selects the shared set. This is separate from group-chat membership and the card's avatar.
 
 Under **Character appearance**, enter **Appearance notes for image generation**, then **Save appearance**. **Follow the first named speaker in each reply** picks a set from explicit speaker names or `Name:` dialogue labels, not an ordinary mention. If no name matches, it uses your chosen set. Selecting a set manually turns following off. **Remove character set** removes the choice from the card but leaves its image folder.
 

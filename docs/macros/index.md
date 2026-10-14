@@ -55,7 +55,7 @@ For a complete example, start with [ready-to-use examples](recipes.md). For punc
 
 Simple names such as `{{user}}` and `{{char}}` are built in. Many of the text, maths, pronoun and saved-choice tools come from **Macro Enhanced**, an included extension. Roleplay prompts can't use Macro Enhanced macros; see [below](#macro-enhanced-in-roleplay-prompts).
 
-Open **Included tools → Macro Enhanced → Settings**. If its notice asks you to enable experimental macro support, follow the named setting in **User Settings**, then return. The **Reference** in Macro Enhanced shows what your installed version currently supports. The **Macro Workbench** provides a Playground for checking expansions without asking a model for a reply.
+Open **Fine-tuning → Macro Enhanced** in the sidebar. If its notice asks you to enable experimental macro support, follow the named setting in **User Settings**, then return. The **Reference** in Macro Enhanced shows what your installed version currently supports. The **Macro Workbench** provides a Playground for checking expansions without asking a model for a reply.
 
 ## Macro Enhanced in Roleplay prompts
 

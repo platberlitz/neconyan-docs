@@ -21,13 +21,13 @@ Conversation keeps its own histories, so switching there opens a separate conver
 
 ## Where things live
 
-**Characters** holds the cast. **Persona** describes who you are when you speak. **Connections** selects the model service. **Lorebooks** adds relevant world information to requests.
+**Characters** holds the cast, and **Characters & Lore** holds **Persona**, **Character Expressions**, **Quick Image Gen**, **BotSearcher**, **Pawthfinder**, **World Info Lab**, **Lorebook Distiller** and **Card & Lorebook Time Machine**. **Connections** selects the model service. **Lorebooks** adds relevant world information to requests.
 
-**Notebooks** stores your own writing and files. **Scratchpad** gives you a side discussion with an assistant. **Agents** adds configured helpers around replies, and **Mewmory** handles source-backed recall for saved Roleplay histories.
+**Notebooks** stores your own writing and files. **Scratchpad** gives you a side discussion with an assistant. **Agents** adds configured helpers around replies, **Mewmory** handles source-backed recall for saved Roleplay histories, and **Chat Archive** searches and organises saved chats.
 
-The **Fine-tuning** area contains controls such as model presets, sampling, formatting and regex scripts. A regex is a text-matching rule used to find or replace patterns. You can leave these controls alone while you learn the main chat.
+The **Fine-tuning** area contains model presets, sampling, formatting, regex scripts and prompt tools such as **Preset Tools**, **Chat Completion Tabs**, **Prompt Tags**, **Macro Enhanced**, **Prompting Lab** and **Deep Swipe**. A regex is a text-matching rule used to find or replace patterns. You can leave these controls alone while you learn the main chat.
 
-**Settings** includes appearance, device behaviour, account controls and import tools. **Included tools** opens features that ship with Neconyan; **Extensions → Manage extensions** manages whether extensions are enabled.
+**Appearance** holds **Background**, **Dialogue Colors**, **Termeownal UI**, **CSS Snippets** and **Regex Agent Themes**, and **Troubleshooting** holds **Server**, **Console Logs**, **Debugger** and **Report an Issue**. **Settings** includes appearance, device behaviour, account controls and import tools. **Extensions → Built-in** opens each bundled tool's settings, and **Extensions → Manage extensions** manages whether extensions are enabled. A switched-off sidebar tool shows **Off** and opens **Manage extensions** to turn it on.
 
 ## Search everything
 

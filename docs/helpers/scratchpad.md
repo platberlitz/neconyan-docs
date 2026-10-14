@@ -112,7 +112,7 @@ Compatible Chat Completion models can use a creation tool. Models without tool c
 
 Set up and enable **Quick Image Gen** first. **Image idea** fills an editable request; send it when you're ready. An assistant's image card proposes a prompt. **Generate image** starts the paid image request using your saved image settings. I kept generating a picture separate from replacing a portrait, because asking for one shouldn't quietly change a card.
 
-An unnamed image uses global settings without borrowing the latest story message. A named image uses that shared character's saved image settings. If **Review before generate** is on, use **Review image prompt**, then **Generate reviewed image** to approve the processed prompt. Ask for another suggestion to change its wording.
+An unnamed image uses global settings without borrowing the latest story message. A named image uses that shared character's saved image settings. If **Review before generate** is on in Quick Image Gen, pressing **Generate image** opens the processed prompt review window straight away, with **Stop image** hidden while the review is prepared; choose **Generate reviewed image** to approve it or **Cancel** to decline it before any image request is sent. Ask for another suggestion to change its wording.
 
 The work continues on the server after you close Scratchpad. **Stop image** requests cancellation; finished pictures have **Open image** and **Download**. **Retry saved job** resumes retained work, reusing a saved provider result when only local saving failed. An unknown provider outcome isn't purchased again; check the provider before asking for another image.
 

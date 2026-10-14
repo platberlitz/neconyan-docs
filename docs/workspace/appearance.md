@@ -35,7 +35,7 @@ For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows 
 
 There are 34 coats and 21 ready-made pairs. 1.3.0 added Birman, Snowshoe, Cinnamon, Fawn, Caracal and Lynx, with pairs such as **Snow mittens: Birman and Snowshoe** and **Tufted twins: caracal and lynx**. Every coat has pixel-art frames for the Windows 98 style.
 
-To change the picture behind the app, open **Fine-tuning → Background**. The bundled dark backgrounds include **Neconyan - Velvet Moon**, **Neconyan - Rainy Lantern Loft**, **Neconyan - Mosslight Grotto**, **Neconyan - Indigo Tide**, **Neconyan - Ember Hearth** and **Neconyan - Starlit Snow**.
+To change the picture behind the app, open **Appearance → Background**. The bundled dark backgrounds include **Neconyan - Velvet Moon**, **Neconyan - Rainy Lantern Loft**, **Neconyan - Mosslight Grotto**, **Neconyan - Indigo Tide**, **Neconyan - Ember Hearth** and **Neconyan - Starlit Snow**.
 
 ## Make text comfortable to read
 
@@ -67,9 +67,21 @@ The built-in layouts are **Pop-outs on the Right**, **Writing Desk**, **Centred 
 
 For one ordinary quotation colour, use **Theme Colors → Quote Text**. Accent Profiles can replace this colour when you apply an accent.
 
-For different named speakers, use **Included tools → Dialogue Colors → Settings → Characters**. Select a speaker's swatch or add the missing name. **Colors saved** chooses Per chat, Per card or Global scope.
+For different named speakers, use **Appearance → Dialogue Colors → Characters** in the sidebar. Select a speaker's swatch or add the missing name. **Colors saved** chooses Per chat, Per card or Global scope.
+
+Under **Settings → Automation**, **Don't color a Narrator card** is on by default. It keeps a character card named `Narrator` in the normal text colour even when the model wraps its lines in a colour, stops `Narrator` being added to the speaker list and tells the model not to colour it.
+
+If a scenario card such as `'Your Wife Wants To Divorce You'` or a titled label such as `'Leonard | Actor'` is being coloured as a speaker, add it under **Not characters** with **Add** or **Add this card's name**, or open the speaker row's **More** actions and choose **Not a character**. Listed names leave the character list, are never added or sent to the model as speakers, and their model-written colours render in the normal text colour. Use the Undo notice to put one back immediately, or remove its chip from the list to let it be coloured again.
+
+Under **Settings → Process**, **Clean messages** removes stored colour markup from every character message and swipe in the open chat while leaving your own messages and system or tool messages alone. Choose **Color lines** in **What to remove** to strip standalone `[COLORS: ...]` lines, or **Color lines and tags** to also remove colour-only tags wrapped around dialogue, then confirm with **Remove lines** or **Remove lines and tags**. Click the Undo notice to restore the messages as they were.
 
 Per-card settings aren't automatically embedded in an exported character file. Use the tool's explicit **Save to card** action when you want that transfer. Its local display mode and modes that store colour tags also have different effects on saved text.
+
+## Low-memory mode
+
+**Settings → System & Device → Memory and performance → Low-memory mode** keeps Neconyan responsive on phones and computers with limited memory. It is saved per browser or device and offers **Auto**, **On** and **Off**.
+
+**Auto** turns on when the browser reports 2 GB of memory or less, or when the Android app reports a low-memory device or 3 GiB of total memory or less. When active, it turns on **No Blur Effect** and keeps 25 recent messages rendered in Roleplay and Conversation instead of larger history windows. Any of those settings you change yourself stays as you set it until you press **Use automatic recommendations**. Changing the Roleplay message limit while a chat is open asks you to reopen the chat to apply the new limit.
 
 ## Small custom changes
 

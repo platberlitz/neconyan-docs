@@ -105,13 +105,13 @@ If a lore fact is ignored, inspect World Info Lab or the outgoing prompt. If a m
 
 If the browser finds an unfinished record from its previous visible page, **Read report** opens the retained details, even if the server is offline or Debugger is disabled. Background closures stay available for manual reading. An ordinary reload doesn't repeat a notice you've already seen. A missing close record alone doesn't prove a crash.
 
-Open **Included tools → Debugger → Settings → Saved crash reports** to read browser reports without turning on live debugging. Each has Copy and Download actions. Administrators can also read retained server reports; other accounts can't. **Android crash reports** opens the APK's native reader.
+Open **Extensions → Built-in → Debugger → Saved crash reports** to read browser reports without turning on live debugging. Each has Copy and Download actions. Administrators can also read retained server reports; other accounts can't. **Android crash reports** opens the APK's native reader.
 
 I keep these reports on your installation; nothing is uploaded automatically. They record errors and bounded activity measurements, without deliberately collecting chat text, prompts or credentials. An error message or system trace can still contain private text, so read it before sharing. Recent activity shows what was happening, not what caused the failure. Severe memory loss or unavailable storage can prevent a report from being saved. The [crash diagnostics reference](https://github.com/platberlitz/Neconyan/blob/staging/docs/crash-diagnostics.md) explains the limits.
 
 ## Collect a useful report
 
-Open **Included tools → Debugger → Open**, reproduce the issue, then use **Diagnostic report** to copy or download the report. Read it before sharing. The report omits several sensitive values, but screenshots and surrounding text may still include private information.
+Open **Troubleshooting → Debugger** in the sidebar, reproduce the issue, then use **Diagnostic report** in **Extensions → Built-in → Debugger** to copy or download the report. Read it before sharing. The report omits several sensitive values, but screenshots and surrounding text may still include private information.
 
 Include the app version, device/browser, exact steps, expected result, actual result and error text. Add a screenshot if it explains a layout problem. Remove keys, passwords and private conversation content.
 

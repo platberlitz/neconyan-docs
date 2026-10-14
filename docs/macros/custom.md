@@ -12,7 +12,7 @@ Macro Enhanced lets you save a text template as a macro. Arguments let you reuse
 
 ## Make a scene label
 
-1. Open **Included tools → Macro Enhanced → Settings** and find custom macros.
+1. Open **Fine-tuning → Macro Enhanced** in the sidebar and find custom macros.
 2. Create a macro named `scene_label`.
 3. Give it one argument named `place`.
 4. Use this template:
