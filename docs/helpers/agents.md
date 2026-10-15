@@ -52,6 +52,8 @@ Character Authenticity Checker uses the card, example dialogue, group cards and 
 
 Continuity Corrector starts with 12 recent messages as context. It can also use active lore, the Author's Note, saved tracker values and prepared Mewmory facts. Its instructions favour established recent events and ask it to leave a consistent reply alone. This is an after-reply rewrite; **Continuity Pins**, below, prepares a short note before the writer answers.
 
+When the **Continuity Companion** is enabled too, the two work together. The Corrector reads the Companion's latest note as a list of things to check, and confirms each one against the chat before changing anything. The Companion is told what the Corrector fixed in the current reply, so its card opens with a line starting **Fixed:** and doesn't report those slips again. With either one switched off, nothing passes between them. With **Run companions at the same time as after-reply agents** on, the Companion starts before the Corrector finishes, so it can't list the fixes.
+
 Knowledge Guard can read the card, persona, active lore, Author's Note and saved Secrets Tracker values. Its `{{secrets-tracker}}` placeholder reads enabled saved tracker templates, including renamed copies, without rerunning the tracker. A fact existing in lore doesn't mean every character knows it. Unchanged bundled copies update to version 2 automatically; customised copies keep your edits and offer **Update**.
 
 If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
@@ -127,6 +129,8 @@ Agent prompts can also read prepared Mewmory context and group-card fields throu
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
 
 Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the editor's **Companion notes** tab and in **Quick settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
+
+The **Director's Commentary** Companion is a sceptical critic rather than a fan. It points out what's ridiculous, such as melodrama, convenient coincidences or lines that are funny by accident, says plainly when a moment falls flat or drags, and gives credit only where it's earned. Copies of Director's Commentary, Continuity Companion and Continuity Corrector whose prompt still matches the earlier built-in wording get the new wording automatically, even if you saved them in the editor. A prompt you rewrote keeps your wording.
 
 Use **More tools → Companion activity** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
 

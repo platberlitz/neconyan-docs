@@ -27,7 +27,7 @@ For replies, [connect an online provider or a local model service](connections.m
 
 ## While it's running
 
-Neconyan shows an ongoing notification with controls to return to the app or stop the server. If you want work to continue while the screen is off, check the app's background and battery settings in Android.
+Neconyan shows an ongoing notification with controls to return to the app or stop the server. The app keeps the phone awake only while the server is working, such as writing a reply or updating memory, and for 30 seconds afterwards. When it's idle, the phone can sleep as normal, and idle-time tasks such as automatic Conversation messages wait until the phone wakes. If you want work to continue while the screen is off, check the app's background and battery settings in Android.
 
 Accepted server work can continue after the interface closes, but Android can still stop the entire app. If a provider request was interrupted and its outcome is unknown, don't assume it is free to repeat. Check the task's status and your provider before retrying a costly operation.
 

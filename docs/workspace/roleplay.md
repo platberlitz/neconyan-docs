@@ -48,7 +48,7 @@ For reopening and linking chats, use **Chat & messages → Chat window**. **Reop
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
 
-Roleplay replies and after-reply Agents start and finish on the server even when the browser tab is hidden or in the background. When a reply and its Agents finish, rebuilding the chat keeps your reading position instead of jumping back to the bottom.
+Roleplay replies and after-reply Agents start and finish on the server even when the browser tab is hidden or in the background. When a reply and its Agents finish, the saved reply joins the chat in place, without redrawing earlier messages, and your reading position stays where it was. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
 
 ## Keep prompt switches beside the chat
 
