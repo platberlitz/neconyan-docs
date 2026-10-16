@@ -71,6 +71,14 @@ Normal Roleplay replies and after-reply Agents run on the server while you're wa
 
 The live bubble stays visible until the saved reply is ready to replace it, and the handover preserves your reading position. Cancelling a replacement restores the original reply. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
 
+Completed Agent changes appear while the remaining Agents are still working. Parallel rewrites that need combining show their combined result once it's ready; appended blocks and completed Companion notes can appear earlier. Reopening a running reply restores Stop and keeps Send unavailable until that work settles.
+
+## Recover an interrupted reply
+
+If an Agent fails or the saved chat changes before the reply can be added, a **Recovered reply** keeps the completed text beside your chat. **Copy reply** copies it, **Download reply** saves a text file, and **Dismiss** hides that recovery. I don't want a good reply disappearing just because something after it failed.
+
+Recovery doesn't replace your edited messages or make another model request. The saved copy remains available when you reopen that chat, including after a server restart. Download replies you want to keep permanently: clearing job history or reaching its storage limit can remove old recovery copies. Text still being generated isn't a completed recovery copy.
+
 ## Keep prompt switches beside the chat
 
 For Chat Completion connections, open **Presets → Prompts** and use **Pin** beside a prompt you often switch on or off. On a computer, **Pinned prompts** then appears beside or above the Roleplay chat. Its switches change the prompt's enabled state without opening the preset again.
