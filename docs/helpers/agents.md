@@ -92,7 +92,7 @@ A cheaper or faster model may suit a simple structured tracker. Check its output
 
 Use **Fix trackers** at the top of Agents, beside **Agents On/Off**. It checks the current chat's eligible inline and Companion trackers. Agents and the relevant trackers must be enabled. You don't need to open **More tools** to reach it.
 
-Some repairs, such as putting recognised fields back in order, need no model request. Others ask a model to repair the tracker and can cost another request. Invalid, blank or cut-short repair output isn't accepted as a repaired tracker. Check the saved result afterwards.
+Some repairs, such as putting recognised fields back in order, need no model request. Others ask a model to repair the tracker and can cost another request. A repair succeeds only when its result also matches the display rules that render the tracker: a block whose tags close but that would still show as raw tags isn't accepted, existing blocks must survive, and a tracker with no clear boundaries is refused rather than guessed at. Invalid, blank or cut-short repairs are rejected, the previous text stays and the failure is reported. The same display-aware checks apply to automatic Companion tracker cleanup. Check the saved result afterwards.
 
 Under **Connections & defaults → Connection profiles**:
 
@@ -108,7 +108,7 @@ The button shows progress while repairs run. If every connection fails, check th
 
 **Run one at a time** follows **Order** instead, so each rewriter works on the previous rewrite. It takes longer, but it avoids the combining request.
 
-Manually started after-reply Agents run one at a time regardless of that automatic setting. Later rewrites wait, then read the saved result of the earlier rewrite. Their queue is separate from Companions, so a slow Companion doesn't hold up a manual rewrite. **Stop** cancels active work and clears waiting runs.
+Manually started after-reply Agents run one at a time regardless of that automatic setting. Later rewrites wait, then read the saved result of the earlier rewrite. Their queue is separate from Companions, so a slow Companion doesn't hold up a manual rewrite. **Stop** ends the active work and clears waiting runs. Once the main reply has finished, Stop keeps that completed reply and saves it without another main request; requests already sent to a provider aren't refunded. Stopping before the main reply finishes follows the ordinary cancellation rules for the reply itself.
 
 Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
 
@@ -127,6 +127,8 @@ Agent prompts can also read prepared Mewmory context and group-card fields throu
 ## History and visibility
 
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
+
+Companions finish at their own speeds. Each completed note appears as soon as that companion finishes, while the slower ones keep running. A note shown this way carries the **Live reply** label: it's a preview of the reply being written, so its edit, rerun and Send to lorebook actions wait until the note becomes saved history.
 
 Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the editor's **Companion notes** tab and in **Quick settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
 

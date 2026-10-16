@@ -14,6 +14,8 @@ Keep an independent copy before updating, importing a large library or making br
 | --- | --- | --- |
 | Character card | Moving a character definition | All chats, gallery media and account settings |
 | Chat export | Keeping a conversation | The whole account or every related tool setting |
+| Expression set (ZIP) | The selected character, member or persona artwork | The card, its description or any chat |
+| Image-repair original chat | The transcript as it was before one image repair | A whole-account or image-file backup |
 | Notebook export | Portable Markdown notes and files | Revision history, AI permissions and lore bindings |
 | Mewmory export | Its supported memory records | Connection keys or deleted chat sources |
 | Chat Archive organisation | Folders, collections and saved views | Chat contents |
@@ -21,6 +23,8 @@ Keep an independent copy before updating, importing a large library or making br
 | Stopped-server data/config copy | Recovering a self-managed installation | A guarantee that another app can use the same files |
 
 Read an export's scope before relying on it. Private content and, depending on server settings, credentials can be present in an archive. Keep backups somewhere you control.
+
+The expression **Export ZIP** covers the selected artwork set only. An image-repair **Export original chat** is the pre-repair transcript for one chat, not a whole-account or image-file backup, and Recovery history's undo stops being available once the chat changes afterwards or its backup is removed. [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) explains the expression export, and [Something went wrong](troubleshooting.md#image-input-needs-attention) covers image-repair recovery.
 
 ## Download an account backup
 

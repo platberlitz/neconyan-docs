@@ -47,6 +47,8 @@ Start with a bundled light or dark theme and a readable font size. Check a real 
 
 **Visual Toggles** groups its switches into **Comfort**, **Message details**, **Chat layout**, **Characters**, and **Settings and sliders**. Read the description beside a switch to see which part of the interface it affects. These display choices are separate from the sending and generation controls in **Chat & Writing**.
 
+**Visual Toggles → Chat layout** holds **Compact Input Area**, marked **Phones only**. On a phone, on keeps the message box and its controls to a single row; off places a full-width message box above them. It applies immediately, is saved, and is separate from the shell's **Compact Mode** and from **Bottom Bar Size**.
+
 Pages move from the control you pressed: a top-bar shortcut drops its page down from under the bar, and a desktop sidebar page slides out from behind the sidebar. Opening a chat lets the messages rise into place, and swiping slides the next or previous reply in from the side you are moving towards.
 
 Use **Reduced Motion** to disable interface animations and transitions, including these. Supported styles also respect the operating system's reduced-motion preference.
@@ -77,11 +79,37 @@ Under **Settings → Process**, **Clean messages** removes stored colour markup 
 
 Per-card settings aren't automatically embedded in an exported character file. Use the tool's explicit **Save to card** action when you want that transfer. Its local display mode and modes that store colour tags also have different effects on saved text.
 
+While a server-run Roleplay reply is still being written, its live preview receives dialogue colours as the text arrives. That display pass doesn't save the unfinished message or its speaker overrides.
+
+## Tracker themes
+
+**Appearance → Regex Agent Themes → Browse themes** previews and applies themes for trackers and Companion panels. This is separate from the whole application's UI Theme.
+
+Search with **Search by name, colour or motion**, then filter with **All**, **Dark**, **Light**, **Animated**, **Adaptive**, or **Custom** once you've saved custom themes. **Theme family** narrows the list further, and **Clear filters** resets it.
+
+**Previous**, **Next** and **Surprise me** only move the preview within the filtered list. **Apply this theme** makes the previewed theme the default; **Show current** returns the preview to the current default.
+
+1.3.4 added 40 choices: 14 dark, 13 light and 13 animated. Animated themes stop when the operating system asks for reduced motion.
+
+## Termeownal palettes
+
+**Appearance → Termeownal UI → Palette** offers 44 colour schemes, plus **Inherit Active Theme**.
+
+1.3.4 added **Catppuccin Mocha**, **Tokyo Night**, **Rosé Pine**, **Monokai**, **Commodore 64**, **Tuxedo Cat**, **Solarized Light** and **Sakura Latte**.
+
+**Inherit Active Theme** follows the application's theme instead of using its own colours, and is the default. Checkboxes and radio buttons keep their round appearance.
+
 ## Low-memory mode
 
 **Settings → System & Device → Memory and performance → Low-memory mode** keeps Neconyan responsive on phones and computers with limited memory. It is saved per browser or device and offers **Auto**, **On** and **Off**.
 
 **Auto** turns on when the browser reports 2 GB of memory or less, or when the Android app reports a low-memory device or 3 GiB of total memory or less. When active, it turns on **No Blur Effect** and keeps 25 recent messages rendered in Roleplay and Conversation instead of larger history windows. Any of those settings you change yourself stays as you set it until you press **Use automatic recommendations**. Changing the Roleplay message limit while a chat is open asks you to reopen the chat to apply the new limit.
+
+## Keep images out of replies
+
+**Settings → Appearance → Avatar & Chat Styles** also holds **Keep chat images display-only** and **Review image input and repairs**. The switch keeps image files and attachment descriptions out of new automatic replies across the account; pictures stay visible and existing text stays text. The button opens the review panel for the open chat.
+
+[Roleplay](roleplay.md#images-in-replies) explains the per-message choices, [Conversation](conversation.md#review-image-input) has its own panel, and [Something went wrong](../help/troubleshooting.md#image-input-needs-attention) covers repair and recovery.
 
 ## Small custom changes
 

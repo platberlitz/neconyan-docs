@@ -18,6 +18,8 @@ A character PNG contains hidden character data as well as a picture. An ordinary
 
 Cards don't contain your whole setup. Chats, connection keys, account settings and extension configuration need their own transfer. BYAF imports can include additional scenario and image content, but don't assume every card format carries it.
 
+A card whose embedded sprites are damaged still imports as a character, without those embedded sprites; open **Characters & Lore → Character Expressions** afterwards and add the missing images.
+
 ## Bring chats from another installation
 
 Import or select the source character first. In **Characters → Import**, use **Bring your chats too**, then **Import chat files**. The corresponding action is also available in **Chat History → Import from another instance → Import Chat**. Character chat imports accept JSON or JSONL files, up to 64 files and 64 MiB in total per batch. JSONL files can be selected in the Android file picker too.
@@ -52,6 +54,8 @@ After reinstalling or reconnecting, Neconyan checks whether the server still has
 The report separates deliberately excluded files from damaged files. Supported damaged items can be skipped while the remaining selected data imports. Use **Download skipped-files report** to keep the details, then **Reload to use the imported data** when you're ready.
 
 A completely unreadable archive or a fatal import error can still stop the operation. To recover a damaged card or lorebook, re-export it from the original app and try that file again.
+
+Repaired prompt images travel with their records in a protected bundle. An account backup containing only part of that bundle, or conflicting copies of it, is refused instead of importing references that can't be used. Keep the complete backup; if the import refuses it, use a different, complete source or re-export from the installation that made the repair.
 
 !!! taro "Taro"
     'Skipped' isn't automatically 'broken'. A theme you didn't select and a damaged lorebook are different outcomes. The report separates them so you don't have to guess.

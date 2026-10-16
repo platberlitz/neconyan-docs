@@ -40,6 +40,25 @@ With **Guided Regenerate** in the composer, type a direction first and the lates
 
 Avoid editing an old message while a generation is still relying on it. Stop the current work first and make your intended history clear.
 
+Once the main reply has finished but its after-reply Agents are still running, Stop ends the remaining Agent work and keeps the completed reply: the model isn't asked for the main answer again. Stopping while the main reply is still being written follows the ordinary cancellation rules. [Agents and Companions](../helpers/agents.md#order-and-dependencies) explains which runs each Stop covers.
+
+Quick Replies can put controls such as Continue and steering above the message box. A **Steer the next reply** button asks for a reply that follows a one-use note; unlike an ordinary sent message, the note isn't added to the chat. See [Quick Replies](../helpers/tools.md#quick-replies).
+
+## Images in replies
+
+Pictures in a chat can join future automatic replies as the image itself, as a description, or not at all. Open **Settings → Appearance → Avatar & Chat Styles → Review image input and repairs**, then choose per image:
+
+- **Send the image** sends the file with the request. It also needs **Send inline media** and a connection that accepts images.
+- **Use a description** sends a saved or typed description instead of the file.
+- **Show only** keeps the picture visible and leaves its file and attachment description out of new automatic replies.
+- **Detach from message** removes the reference; the saved image file and the chat backup remain.
+
+Press **Save choice** to apply one, or tick several and use **Save selected choices**. Account and current-chat display-only choices override the individual ones.
+
+Show only changes only what new automatic replies may include. Your own written text, existing memories and already displayed messages stay as they are. Work already accepted keeps the input it captured; use **Stop** to cancel it. Writing a caption by hand and pointing a tool at a specific image are separate actions.
+
+Older messages may need attention before Show only can be applied; [Something went wrong](../help/troubleshooting.md#image-input-needs-attention) explains the repair and recovery controls.
+
 ## Chat and writing settings
 
 **Settings → Chat & Writing** separates controls into **Chat & messages**, **Characters**, **Auto-swipe & auto-continue**, **Autocomplete** and **Fine-tuning**. Start with the drawer that matches the behaviour you want to change. Script controls live under Fine-tuning; appearance-only switches live under [Appearance](appearance.md).
@@ -98,7 +117,7 @@ Adding context uses space. More instructions aren't automatically better if they
 
 ## When you leave the page
 
-Most server-backed Roleplay work can finish after the browser disconnects. Reopening the chat lets the interface recover accepted work and saved results. The server and provider still need to be available; browser-only model or speech routes can require the page to stay open.
+Most server-backed Roleplay work can finish after the browser disconnects. Reopening the chat lets the interface recover accepted work and saved results. After a suspended phone tab returns, the page reconnects to the current saved job, refreshes a stale preview or readback first and only shows the result once that refresh succeeds. The server and provider still need to be available; browser-only model or speech routes can require the page to stay open.
 
 If a reply seems stuck, inspect its status before sending another. [Troubleshooting](../help/troubleshooting.md) explains the difference between slow preparation, a pending provider request and a failed connection.
 

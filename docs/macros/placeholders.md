@@ -69,6 +69,23 @@ A slash-command script can use:
 
 The caption feature supplies this value while turning an image caption into a message. It is not a general way to caption an image from any prompt field.
 
+## Character Expressions
+
+**How expressions are picked → Image generation and cleanup** supplies these values to the **Quick Image Gen Prompt** field:
+
+```text
+{{generationInstructions}}
+{{characterName}}
+{{expression}}
+{{expressions}}
+{{characterCard}}
+{{framingInstructions}}
+{{sheetInstructions}}
+{{backgroundInstructions}}
+```
+
+They are specific to expression generation, not generally registered macros, so the catalogue stays at 201. Substitution is case-insensitive and happens in one pass: text copied out of a character card is never expanded again. Required generation and sheet instructions are included even when your template omits them, and background instructions are appended unless the template places `{{backgroundInstructions}}` itself.
+
 ## Custom macro arguments
 
 A [custom macro](custom.md) can use the argument names you define, along with positional names:

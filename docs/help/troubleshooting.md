@@ -89,6 +89,18 @@ A chat or character card that can't be read, or whose file name ends in a space 
 
 For future transfers, use **Import Folder** or **Import Backup ZIP** instead of copying files into a running installation.
 
+## Image input needs attention
+
+An image input notice means a saved picture can't join new automatic replies yet, usually because its choice needs review or the referenced file changed. Open **Settings → Appearance → Avatar & Chat Styles → Review image input and repairs**, or use the notice itself.
+
+For Roleplay, the review has three views. **Current chat** lists every attachment location in the open chat; choose **Send the image**, **Use a description**, **Show only** or **Detach from message** per image and press **Save choice**. **Choose chats** reviews several saved chats, with **Keep selected chats display-only** and **Save exact embedded-image copies in selected chats** for a batch. Each chat is saved separately with its own backup, so a chat that fails doesn't undo the ones that already finished, and copy-only repairs keep the existing descriptions and choices.
+
+**Recovery history** holds earlier repairs: **Resume saved repair** finishes a prepared repair, **Discard unstarted repair** removes its staging, **Export original chat** downloads the transcript as it was before that repair, **Undo repair** restores the original references and **Remove backup** ends undo availability while keeping original and published images. Undo is refused once the chat has changed after the repair; export the backup instead. A missing original image can't be reconstructed by undo.
+
+Older saved messages may embed images that need a prompt-sized compatible copy first. **Preview compatible copy** prepares one and shows the result before anything changes; choose a local replacement instead of downloading the original from its website, and note that the download asks for confirmation first because the website may refuse browser access. **Save exact compatible copy** keeps the prepared copy for an embedded image, **Use the matching image on this server** points at a matching account file, and **Select this gallery image** fixes a gallery reference. The displayed picture normally stays as it is; only **Use saved copy as the new source**, or ticking **Use this copy as the new displayed image and source** in the preview, explicitly adopts a prepared copy. **Save selected choices** applies the ticked rows, and **Save exact copies of selected embedded images** prepares copies for several embedded images at once. Opening the review and scanning a chat doesn't contact external image websites.
+
+Limits: a replacement you choose can be up to 16 MiB, and a prepared copy is a still PNG, JPEG or WebP of at most 1 MiB and 2048 pixels per side. A batch repair handles up to 128 actions; review larger chats in smaller groups.
+
 ## A setting or panel looks broken
 
 Try a known bundled theme and disable the specific custom CSS or extension you most recently changed. Reload, then repeat the action that failed. If only one third-party extension triggers the issue, record its version and report it to its author with the Neconyan version.
