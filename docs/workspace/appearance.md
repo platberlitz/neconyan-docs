@@ -81,6 +81,8 @@ Per-card settings aren't automatically embedded in an exported character file. U
 
 While a server-run Roleplay reply is still being written, its live preview receives dialogue colours as the text arrives. That display pass doesn't save the unfinished message or its speaker overrides.
 
+If your preset uses `{{dialoguecolors}}`, the page resolves its current colour instructions before submitting the reply. The saved job keeps that value when you close the tab, and through group turns and retries. LLM colouring still depends on the model following those instructions; Local (DOM-only) colours the displayed text instead.
+
 ## Tracker themes
 
 **Appearance → Regex Agent Themes → Browse themes** previews and applies themes for trackers and Companion panels. This is separate from the whole application's UI Theme.

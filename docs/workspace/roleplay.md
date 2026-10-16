@@ -67,7 +67,9 @@ For reopening and linking chats, use **Chat & messages → Chat window**. **Reop
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
 
-Roleplay replies and after-reply Agents start and finish on the server even when the browser tab is hidden or in the background. When a reply and its Agents finish, the saved reply joins the chat in place, without redrawing earlier messages, and your reading position stays where it was. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
+Normal Roleplay replies and after-reply Agents run on the server while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
+
+The live bubble stays visible until the saved reply is ready to replace it, and the handover preserves your reading position. Cancelling a replacement restores the original reply. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
 
 ## Keep prompt switches beside the chat
 
