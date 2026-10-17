@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 52 pages, a reference for 201 registered macros, fourteen real demonstration screenshots and a downloadable extension starter. The practical guides cover Neconyan 1.3.5, reviewed against source `f184548d` on 17 October 2026. The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse.
+The site includes 52 pages, a reference for 201 registered macros, fourteen real demonstration screenshots and a downloadable extension starter. The practical guides cover Neconyan 1.3.5, reviewed against source `b43571c9` on 17 October 2026. This edition also covers replies kept by 1.3.4.1's **Recovered reply** card: 1.3.5 saves a verified reply automatically when the chat still matches. The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse.
 
 ## Preview locally
 

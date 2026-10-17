@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.3.5**, reviewed against source **f184548d on 17 October 2026**. Check your installed version if an option is missing.
+The practical guides cover **Neconyan 1.3.5**, reviewed against source **b43571c9 on 17 October 2026**. Check your installed version if an option is missing. This edition also covers replies kept by 1.3.4.1's **Recovered reply** card: 1.3.5 saves a verified reply automatically when the chat still matches.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

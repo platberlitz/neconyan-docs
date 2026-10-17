@@ -15,7 +15,7 @@ Keep an independent copy before updating, importing a large library or making br
 | Character card | Moving a character definition | All chats, gallery media and account settings |
 | Chat export | Keeping a conversation | The whole account or every related tool setting |
 | Expression set (ZIP) | The selected character, member or persona artwork | The card, its description or any chat |
-| Image-repair original chat | The transcript as it was before one image repair | A whole-account or image-file backup |
+| Image change's **Download backup** | The transcript as it was before that change | A whole-account or image-file backup |
 | Notebook export | Portable Markdown notes and files | Revision history, AI permissions and lore bindings |
 | Mewmory export | Its supported memory records | Connection keys or deleted chat sources |
 | Chat Archive organisation | Folders, collections and saved views | Chat contents |

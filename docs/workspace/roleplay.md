@@ -75,9 +75,17 @@ Completed Agent changes appear while the remaining Agents are still working. Par
 
 ## When an Agent fails
 
-A finished reply isn't thrown away because a helper after it failed. Neconyan retries a failed after-reply Agent or Companion once, keeps the results that already finished and doesn't ask for the main reply again. The retry is another request to that helper's connection, so it can add usage. If the retry fails too, the reply is added with the finished helper changes and without the ones that failed, the same reply-saving result as pressing Stop during Agents, except that translation and speech still run. You don't need to regenerate.
+A finished reply isn't thrown away because a helper after it failed. Neconyan retries a failed after-reply Agent or Companion once while the chat and its accepted Agent settings still match. The retry is another request to that helper's connection, so it can add usage. The main reply isn't requested again.
+
+If the retry fails too, the reply is added with the completed helper changes that can still be applied. If applying those changes fails, for example after restarting with an edited Agent definition, the reply is saved as the main model wrote it. Optional translation and automatic speech are still attempted; either can fail without discarding the reply. If a restart interrupts either step after the main reply is ready, the reply is still saved and that unfinished step isn't requested again. You don't need to regenerate.
 
 A real change to the chat, such as editing or deleting the message the reply is answering, can still stop that reply from being added. [Agents and Companions](../helpers/agents.md#order-and-dependencies) explains which runs Stop covers.
+
+## Replies saved by the previous version
+
+Version 1.3.4.1 kept finished replies that couldn't be added to their chat in the **Recovered reply** card. The first normal start after updating handles those old copies automatically: Neconyan protects the saved copy before routine job cleanup can remove it, checks that the chat still matches, and saves the reply once using the already-paid result. It doesn't ask the main model again and doesn't show a second recovery card or a restore button.
+
+If the chat changed since that reply, or its saved model result is missing or doesn't match, the old copy stays in job history instead of overwriting your edit. Nothing is sent again. Replies you cancelled or dismissed yourself stay that way, and safe mode waits until you start normally. A completed upgrade isn't repeated on later restarts.
 
 ## Keep prompt switches beside the chat
 
