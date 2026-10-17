@@ -110,6 +110,8 @@ The button shows progress while repairs run. If every connection fails, check th
 
 Manually started after-reply Agents run one at a time regardless of that automatic setting. Later rewrites wait, then read the saved result of the earlier rewrite. Their queue is separate from Companions, so a slow Companion doesn't hold up a manual rewrite. **Stop** ends the active work and clears waiting runs. Once the main reply has finished, Stop keeps that completed reply and saves it without another main request; requests already sent to a provider aren't refunded. Stopping before the main reply finishes follows the ordinary cancellation rules for the reply itself.
 
+A failed after-reply Agent or Companion is retried once, with finished results kept and the main reply not requested again. If it fails again, the reply is saved with the changes that finished and without the failed one, like Stop during Agents; translation and speech still run. [Roleplay](../workspace/roleplay.md#when-an-agent-fails) describes the result you see and when a changed chat can still stop the reply from joining it.
+
 Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
 
 Parallel work can reduce waiting but increases simultaneous requests and may hit provider limits. The Companion parallel setting is separate from this reply-processing choice.
@@ -128,13 +130,15 @@ Agent prompts can also read prepared Mewmory context and group-card fields throu
 
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
 
-Companions finish at their own speeds. Each completed note appears as soon as that companion finishes, while the slower ones keep running. A note shown this way carries the **Live reply** label: it's a preview of the reply being written, so its edit, rerun and Send to lorebook actions wait until the note becomes saved history.
+Companions finish at their own speeds. Each completed note appears as soon as that companion finishes, while the slower ones keep running. A note shown this way carries the **Live reply** label: it's a preview of the reply being written, so its edit, rerun and Send to lorebook actions wait until the note becomes saved history. When a later note updates under a saved reply, your reading position stays where it was instead of jumping to the newest message.
 
 Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the editor's **Companion notes** tab and in **Quick settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
 
 The **Director's Commentary** Companion is a sceptical critic rather than a fan. It points out what's ridiculous, such as melodrama, convenient coincidences or lines that are funny by accident, says plainly when a moment falls flat or drags, and gives credit only where it's earned. Copies of Director's Commentary, Continuity Companion and Continuity Corrector whose prompt still matches the earlier built-in wording get the new wording automatically, even if you saved them in the editor. A prompt you rewrote keeps your wording.
 
 Use **More tools → Companion activity** to inspect what ran. Saved setups let you return to a known combination of helpers, but changing a setup doesn't erase the cost or effects of requests already sent.
+
+The **Companion panel** opens from its floating or top bar button, or with **Open Companion panel** in Companion activity. Its **Search companions and notes** box filters by companion name or the text of the latest note, and the status counts the matches. Searching changes only the view: it doesn't run a helper or change its switches.
 
 Companion notes and their panel show the model saved with each result. Agent change history also names the model and, when recorded, its connection profile. These labels describe the completed run, not the model selected now. **Settings → Appearance → Visual Toggles → Short Model Name** controls shortening here too. Older results may not have recorded a model.
 

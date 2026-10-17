@@ -109,7 +109,7 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 ## Keep images out of replies
 
-**Settings → Appearance → Avatar & Chat Styles** also holds **Keep chat images display-only** and **Review image input and repairs**. The switch keeps image files and attachment descriptions out of new automatic replies across the account; pictures stay visible and existing text stays text. The button opens the review panel for the open chat.
+**Settings → Appearance → Avatar & Chat Styles** also holds **Don't send chat images to the model** and **Review chat images**. The switch keeps image files and their saved descriptions out of new automatic replies across the account; pictures stay visible and existing text stays text. The button opens the review panel for the open chat.
 
 [Roleplay](roleplay.md#images-in-replies) explains the per-message choices, [Conversation](conversation.md#review-image-input) has its own panel, and [Something went wrong](../help/troubleshooting.md#image-input-needs-attention) covers repair and recovery.
 

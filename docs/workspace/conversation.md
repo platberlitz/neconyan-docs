@@ -68,19 +68,19 @@ Scheduled actions still depend on the Neconyan server running. Closing a page is
 
 ## Review image input
 
-While a Conversation chat is open, **Settings → Appearance → Avatar & Chat Styles → Review image input and repairs** opens **Images in this Conversation**. It offers **Keep images display-only across this account** and **Keep images display-only in this Conversation branch**, then a row for each picture in the branch.
+While a Conversation chat is open, **Settings → Appearance → Avatar & Chat Styles → Review chat images** opens **Conversation images**. It offers **Don't send chat images to the model** and **Don't send this branch's images to the model**, then a row for each picture in the branch.
 
 Each picture can be **Send the image**, **Use a description** or **Show only**, applied with **Save choice**. A typed description can be up to 16 KiB. The account and branch switches override the individual choices in their scope.
 
-Older messages can combine a picture's description with extracted file text in one saved field. When those parts can't be told apart reliably, the message appears as **older attachment and quoted context** and needs **Use reviewed context** or **Omit this derived context** before Show only will apply. Omitting also omits the extracted file text in that field; the displayed message, your written text and saved memories stay as they are.
+Older messages can combine a picture's description with extracted file text in one saved field. When those parts can't be told apart reliably, the message needs **Use this text** or **Leave it out** before Show only will apply. Omitting also omits the extracted file text in that field. A reply that quotes another message can need the same choice when your image settings require the quote to be reviewed; **Leave it out** sends that reply without the quote. The displayed message, your written text and saved memories stay as they are.
 
-The copy preparation, batch and recovery-history controls belong to the Roleplay review; Conversation pictures are reviewed message by message. [Included tools](../helpers/tools.md#images-in-replies) covers the shared image-input choices.
+The copy preparation, batch and **Change history** controls belong to the Roleplay review; Conversation pictures are reviewed message by message. [Included tools](../helpers/tools.md#images-in-replies) covers the shared image-input choices.
 
 ## Pictures and memory
 
 Conversation pictures use your saved **Quick Image Gen** configuration. A working text connection doesn't configure image generation. Enable the relevant Conversation image setting, set up the image provider and check any image cooldown if a selfie doesn't appear.
 
-A new Conversation picture defaults to **Send the image**; a new Roleplay picture defaults to **Show only**. The choice is **Use in future chat replies** in Quick Image Gen, and its separate default is kept for each mode. See [Included tools](../helpers/tools.md#images-in-replies).
+A new Conversation picture defaults to **Send the image**; a new Roleplay picture defaults to **Show only**. The choice is **Generated images in replies** in Quick Image Gen, and its separate default is kept for each mode. See [Included tools](../helpers/tools.md#images-in-replies).
 
 Conversation's summaries and memories are separate from Roleplay's [Mewmory](../helpers/mewmory.md). A fact remembered in one mode isn't proof it was carried into the other.
 

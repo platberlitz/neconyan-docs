@@ -46,14 +46,14 @@ Quick Replies can put controls such as Continue and steering above the message b
 
 ## Images in replies
 
-Pictures in a chat can join future automatic replies as the image itself, as a description, or not at all. Open **Settings → Appearance → Avatar & Chat Styles → Review image input and repairs**, then choose per image:
+Pictures in a chat can join future automatic replies as the image itself, as a description, or not at all. Open **Settings → Appearance → Avatar & Chat Styles → Review chat images**, then choose per image:
 
 - **Send the image** sends the file with the request. It also needs **Send inline media** and a connection that accepts images.
 - **Use a description** sends a saved or typed description instead of the file.
-- **Show only** keeps the picture visible and leaves its file and attachment description out of new automatic replies.
-- **Detach from message** removes the reference; the saved image file and the chat backup remain.
+- **Show only** keeps the picture visible and sends the model neither the file nor its saved description.
+- **Remove from message** removes the reference; the saved image file and the chat backup remain.
 
-Press **Save choice** to apply one, or tick several and use **Save selected choices**. Account and current-chat display-only choices override the individual ones.
+Press **Save choice** to apply one, or tick several with **Select this image** and use **Save choices for selected images**. The account setting **Don't send chat images to the model** and the chat setting **Don't send this chat's images to the model** override the individual choices.
 
 Show only changes only what new automatic replies may include. Your own written text, existing memories and already displayed messages stay as they are. Work already accepted keeps the input it captured; use **Stop** to cancel it. Writing a caption by hand and pointing a tool at a specific image are separate actions.
 
@@ -71,13 +71,13 @@ Normal Roleplay replies and after-reply Agents run on the server while you're wa
 
 The live bubble stays visible until the saved reply is ready to replace it, and the handover preserves your reading position. Cancelling a replacement restores the original reply. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
 
-Completed Agent changes appear while the remaining Agents are still working. Parallel rewrites that need combining show their combined result once it's ready; appended blocks and completed Companion notes can appear earlier. Reopening a running reply restores Stop and keeps Send unavailable until that work settles.
+Completed Agent changes appear while the remaining Agents are still working. Parallel rewrites that need combining show their combined result once it's ready; appended blocks and completed Companion notes can appear earlier. Reopening a running reply restores Stop and keeps Send unavailable until that work settles. When a later Companion note updates under a saved reply, your reading position stays where it was instead of jumping to the newest message.
 
-## Recover an interrupted reply
+## When an Agent fails
 
-If an Agent fails or the saved chat changes before the reply can be added, a **Recovered reply** keeps the completed text beside your chat. **Copy reply** copies it, **Download reply** saves a text file, and **Dismiss** hides that recovery. I don't want a good reply disappearing just because something after it failed.
+A finished reply isn't thrown away because a helper after it failed. Neconyan retries a failed after-reply Agent or Companion once, keeps the results that already finished and doesn't ask for the main reply again. The retry is another request to that helper's connection, so it can add usage. If the retry fails too, the reply is added with the finished helper changes and without the ones that failed, the same reply-saving result as pressing Stop during Agents, except that translation and speech still run. You don't need to regenerate.
 
-Recovery doesn't replace your edited messages or make another model request. The saved copy remains available when you reopen that chat, including after a server restart. Download replies you want to keep permanently: clearing job history or reaching its storage limit can remove old recovery copies. Text still being generated isn't a completed recovery copy.
+A real change to the chat, such as editing or deleting the message the reply is answering, can still stop that reply from being added. [Agents and Companions](../helpers/agents.md#order-and-dependencies) explains which runs Stop covers.
 
 ## Keep prompt switches beside the chat
 

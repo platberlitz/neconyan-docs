@@ -23,7 +23,7 @@ An endpoint is the address of a service Neconyan can send requests to. 'OpenAI-c
 1. Open **Connections**. On a phone, open the workspace navigation first.
 2. Select the API type and provider that match the service you're using.
 3. Enter its API key when required. Copy the key from that provider's account page, without extra spaces.
-4. Choose an available model, or enter its exact identifier if the connection requires it.
+4. Choose an available model from the searchable list, or enter its exact identifier if the connection requires it.
 5. If you're using a custom or local endpoint, enter the address in the format that connection expects. Follow its example rather than adding an extra path by habit.
 6. Connect, then try a short message with a bundled character.
 
@@ -31,6 +31,16 @@ A model list loading successfully checks only part of the connection. A real rep
 
 !!! miso "Miso"
     Try a tiny request first: 'Give me one cosy scene idea.' Once that works, we can add your lorebook.
+
+## Find a model in a long list
+
+Every chat and text-completion connection with a single model choice shows its models as a list of buttons, with a **Search by name or model ID…** box above it. The list works the same on a phone and a computer.
+
+Type any part of a name or ID to narrow it. Every word you type has to match, and case doesn't matter. **Escape** clears the search, **Enter** chooses the first match when the box has text, and the arrow keys move through the rows. Choosing a row selects that model straight away.
+
+Models marked as favourites move into a **Favourites** group with a star at the right edge. The rest are grouped by family worked out from their IDs, so a new version such as `gemini-3.5-flash` joins **Gemini 3.5** without waiting for an update. OpenRouter and ElectronHub can keep their own vendor groups. NanoGPT labels start with the source, such as **Google/Gemma 4 31B**, because the same model can come from more than one organisation.
+
+The list shows every model the provider returns; scroll to browse or search to narrow it. Searching only changes the view. It saves nothing and makes no model request.
 
 ## Save a connection profile
 

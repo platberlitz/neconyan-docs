@@ -24,7 +24,7 @@ Keep an independent copy before updating, importing a large library or making br
 
 Read an export's scope before relying on it. Private content and, depending on server settings, credentials can be present in an archive. Keep backups somewhere you control.
 
-The expression **Export ZIP** covers the selected artwork set only. An image-repair **Export original chat** is the pre-repair transcript for one chat, not a whole-account or image-file backup, and Recovery history's undo stops being available once the chat changes afterwards or its backup is removed. [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) explains the expression export, and [Something went wrong](troubleshooting.md#image-input-needs-attention) covers image-repair recovery.
+The expression **Export ZIP** covers the selected artwork set only. An image change's **Download backup** is the chat before that change, not a whole-account or image-file backup. **Change history** offers **Undo change** only until the chat changes afterwards or its backup is deleted. [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) explains the expression export, and [Something went wrong](troubleshooting.md#image-input-needs-attention) covers image-repair recovery.
 
 ## Download an account backup
 
