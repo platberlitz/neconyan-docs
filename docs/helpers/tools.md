@@ -23,7 +23,7 @@ Included code updates with Neconyan. Third-party extensions you install separate
 | **Preset Tools** | Search and organise prompt sections |
 | **Chat Completion Tabs** | Switch separate **Parameters** and **Prompts** tabs on and off from the sidebar, or open its settings in **Extensions → Built-in** |
 | **Prompt Tags** | Manage tags and defaults for supported prompt sections |
-| **Macro Enhanced** | Look up and manage supported placeholders and pronoun controls |
+| **Macro Enhanced** | A full page for macros: try them in **Playground**, look them up in **Reference**, save your own in **My macros**, check this chat's saved values in **This chat** and set pronouns in **Setup**. See [Macros](../macros/index.md) |
 | **Prompting Lab** | Build prompt tests, compare requests and run selected model comparisons |
 
 Prompt reconstruction and dry diagnostics don't generate replies. Prompting Lab's model comparisons and optional analysis make real requests. Read the action before running a batch.
@@ -56,7 +56,7 @@ Several tools keep accepted work and results on the server. Closing the page sto
 
 **Dialogue Colors** assigns speaker colours. **Regex Agent Themes** restyles trackers and Companion panels. **CSS Snippets** manages your small visual customisations. **Termeownal UI** offers an optional terminal-style interface with its own command glossary.
 
-**Quick Image Gen** needs its own provider configuration. It can use a manual prompt, a chat scene or supported image tags. Prompt preparation may also call a text model. **Character Expressions** uses separate sprite artwork and classification settings; a character avatar alone isn't a complete expression set.
+**Quick Image Gen** needs its own provider configuration. It can use a manual prompt, a chat scene or supported image tags. Prompt preparation may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short; an install still on the old 500 default moves to the new one once. **Character Expressions** uses separate sprite artwork and classification settings; a character avatar alone isn't a complete expression set.
 
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't automatically configure all of them.
 

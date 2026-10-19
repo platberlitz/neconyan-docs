@@ -103,6 +103,17 @@ You can manage pins in the phone's prompt list, but the chat-side panel is deskt
 
 **Fine-tuning → Formatting** groups controls into **Context & cleanup**, **Instruct template**, **System prompt**, **Reasoning** and **Reply controls**. Use the section for the request or reply behaviour you want to change. Instruct templates define message markers for supported local-model connections; Chat Completion prompt lists still belong to that connection's preset controls. **Tour** explains the page.
 
+### Find-and-replace rules
+
+**Fine-tuning → Regexes** holds find-and-replace rules for messages and prompts. You don't need to know the pattern language to make one:
+
+1. In **Draft a rule with a model** at the top of the page, describe the change in plain words, for example 'turn lines starting with OOC: into small grey text'.
+2. Choose where it's saved with **Save to**: **Global**, **Preset** or **Character**.
+3. Choose a **Connection**: a saved connection profile or **Current connection**. Neconyan remembers the choice.
+4. Press **Draft rule**.
+
+The editor opens with the rule filled in, a short explanation and **Test Mode** running on an example. Nothing is saved until you press **Save**. The editor has the same panel under **Describe it and let a model write it**: once a pattern exists its button reads **Improve rule** and sends the current rule back for revision, and **Show it my last reply** adds the latest message, up to 1,500 characters, as sample text. Each draft is one request on the chosen connection, and a failed draft leaves the form as it was. **Write a rule yourself** opens an empty editor, and **Manage** holds **Import**, **Select several** and the **Debugger**.
+
 STscript, Neconyan's slash-command scripting language, can run commands from the composer while a reply is being written. These commands help coordinate it:
 
 | Command | What it does |
@@ -135,7 +146,9 @@ Adding context uses space. More instructions aren't automatically better if they
 
 ## When you leave the page
 
-Most server-backed Roleplay work can finish after the browser disconnects. Reopening the chat lets the interface recover accepted work and saved results. After a suspended phone tab returns, the page reconnects to the current saved job, refreshes a stale preview or readback first and only shows the result once that refresh succeeds. The server and provider still need to be available; browser-only model or speech routes can require the page to stay open.
+Ordinary Roleplay replies, swipes, **Continue**, group turns and **Guided** replies run in the page. If you close or leave it mid-reply, the server holds most single-character replies: reopen the same chat to collect and save the result without another paid request. A finished reply waits 15 minutes, or 24 hours when the request carried chat context, and a server restart loses it. Agents that run after a reply aren't replayed for a held reply; use [**Rerun agents**](../helpers/agents.md#rerun-agents-on-a-reply) from the message menu if you want them.
+
+Replies that use a selected Notebook context, **Deep Swipe** replacements and protected **Guided** corrections run as saved server jobs and keep going, Agents included, after the browser disconnects. After a suspended phone tab returns, the page reconnects to the current saved job, refreshes a stale preview or readback first and only shows the result once that refresh succeeds. The server and provider still need to be available; browser-only model or speech routes can require the page to stay open.
 
 If a reply seems stuck, inspect its status before sending another. [Troubleshooting](../help/troubleshooting.md) explains the difference between slow preparation, a pending provider request and a failed connection.
 

@@ -8,7 +8,7 @@ quote: 'Give a repeated template a name. You can spend the time saved on the sce
 
 Macro Enhanced lets you save a text template as a macro. Arguments let you reuse it with different inputs, and the template can call other macros.
 
-**Not for Roleplay prompts.** Custom macros only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry.
+**Browser prompts only.** Custom macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list.
 
 ## Make a scene label
 

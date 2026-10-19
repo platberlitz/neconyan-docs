@@ -28,7 +28,13 @@ They are stored on the Neconyan server you're using, under its account and acces
 
 ## Does closing the tab stop a reply?
 
-Accepted server-backed work can keep running while the server is available. Use **Stop** to cancel it; closing the page doesn't request cancellation. Browser-only routes depend on the page staying open, and stopping the whole app interrupts its server.
+Not usually. Ordinary Roleplay replies run in the page, but the server holds most single-character replies when the page closes. Reopen the same chat to collect the result; a finished reply waits for 15 minutes, or 24 hours if the request carried chat context. Agents that run after a reply aren't replayed for a held reply.
+
+Conversation replies, Scratchpad and saved server workflows such as Deep Swipe keep running on the server while it's available. Use **Stop** to cancel any of them; closing the page doesn't request cancellation. Restarting or stopping the whole app interrupts its server and loses held replies.
+
+## Why did my tab reload by itself after an update?
+
+A tab opened before the server was updated keeps running the old page. From 1.3.6, when you come back to that tab or it comes back online, Neconyan checks which version the server now serves. If nothing is happening, it saves your settings and reloads; a reply held on the server while you were away is collected after the reload. If a reply is being written, a message is being edited, a chat is saving or the message box has text in it, nothing is thrown away: an **Update ready** notice says 'Neconyan was updated. Tap here to load the new version.' Tap it when you're ready. Reloading doesn't send anything to the model.
 
 ## Why do notices stay on screen longer now?
 

@@ -32,7 +32,7 @@ Saved chats belong to the server you're using. Visit the same server and account
 
 **Start a temporary chat** on Home is deliberately temporary. Its messages aren't saved. If you're experimenting with something worth keeping, use a normal saved chat or export your work before you close it.
 
-Most server-backed replies can keep running if you close the tab. That doesn't mean the computer, Android app or model service can be shut down safely in the middle of a request. Browser-only providers also depend on the browser staying active.
+Roleplay replies are written in the page, so the first words appear straight away. If you close the tab mid-reply, the server holds most single-character replies for you: reopen the same chat to collect the result without paying for another request. That doesn't mean the computer, Android app or model service can be shut down safely in the middle of a request, and a server restart loses a held reply.
 
 ## If the reply feels wrong
 

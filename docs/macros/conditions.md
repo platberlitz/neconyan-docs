@@ -18,7 +18,7 @@ The party needs more supplies.
 
 Set `supplies` before using this example. The comparison macros treat two numeric values as numbers and other values as text. Use consistent value types for predictable results.
 
-**Not for Roleplay prompts.** The comparison and `switch` macros on this page, and the `expr` macro, only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry. The core `if` block itself still works in Roleplay.
+**Browser prompts only.** The comparison and `switch` macros on this page, and the `expr` macro, only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list. The core `if` block works everywhere.
 
 The plain `if` macro treats empty text, `false`, `off` and `0` as false. A sentence such as `0 > 0` is non-empty text, so wrap written comparisons in `expr` or use `gt`, `eq` and the other comparisons below. Macro Enhanced also offers an optional setting to work out comparisons directly in if conditions.
 

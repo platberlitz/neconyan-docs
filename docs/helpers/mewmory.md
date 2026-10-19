@@ -15,11 +15,13 @@ It is separate from Conversation's summaries, Companion trackers and Scratchpad 
 1. Open a saved Roleplay chat, then **Mewmory** in the workspace.
 2. In **Settings**, configure the roles you want to use, such as **Facts and events** or **Pawspective**.
 3. Choose saved connection profiles or configure supported endpoints directly.
-4. Save and wait for **Configuration saved**.
+4. Wait for **Configuration saved**. Settings save on their own; there's no save button.
 5. Turn on **Use Mewmory in this chat**.
 6. For an existing history, use **Backfill this chat**, then watch the job and coverage status.
 
-The switches under **Automatic memory** save as soon as you tick them. They include **Turn on Mewmory in every new chat**, which leaves existing chats alone, and **Hide old messages automatically**, which hides older messages past **Hide messages beyond, tokens** after each reply while Mewmory keeps remembering them. Number fields such as that limit still need **Save configuration**.
+Every setting saves automatically, including switches, number fields, model roles and credentials. While you're typing, Mewmory waits a moment before saving, and the status line shows **Saving…** and then **Configuration saved**. A change the server rejects, or one that isn't complete yet, stays on screen for you to fix, and the last saved configuration keeps working until it's fixed. **Discard unsaved settings** puts the form back to what was saved.
+
+Under **Automatic memory**, **Turn on Mewmory in every new chat** leaves existing chats alone. **Hide old messages automatically** is off to start with. Once the visible chat reaches **Hide older messages when the visible chat reaches, tokens** (30,000 to start with), it hides the older messages and then waits until the visible chat reaches that size again, rather than trimming after every reply. The latest reply always stays visible, and Mewmory keeps remembering what was hidden.
 
 Original passages remain useful even without every model-powered role enabled. Optional meaning search uses embeddings, numerical representations that help match related wording. Keyword search works without embeddings.
 

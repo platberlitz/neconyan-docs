@@ -36,7 +36,7 @@ Optional arguments can be left off the end. To leave an earlier argument empty w
 {{dateadd::::2::days}}
 ```
 
-The empty starting date means now; the result is two days later. Macro Enhanced is required for these examples. They work in the Playground, but [not in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts).
+The empty starting date means now; the result is two days later. Macro Enhanced is required for these examples. They work in the Playground and ordinary Roleplay replies, but [not in prompts built on the server](index.md#macro-enhanced-in-roleplay-prompts).
 
 ## Put one macro inside another
 

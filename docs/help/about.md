@@ -10,9 +10,9 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.3.5**, reviewed against source **b43571c9 on 17 October 2026**. Check your installed version if an option is missing. This edition also covers replies kept by 1.3.4.1's **Recovered reply** card: 1.3.5 saves a verified reply automatically when the chat still matches.
+The practical guides cover **Neconyan 1.3.6**, reviewed against source **104f489a on 19 October 2026**. Check your installed version if an option is missing. This edition covers browser-first Roleplay replies: ordinary replies now build their prompts in the browser, so Macro Enhanced macros work in them.
 
-The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which macros Roleplay's server-built prompts refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
+The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
 The practical guides explain common workflows, with links to longer technical references in the app repository. Those source links follow staging and may evolve after this edition. A documented provider feature still depends on the provider and model supporting it.
 

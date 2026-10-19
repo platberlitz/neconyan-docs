@@ -82,6 +82,14 @@ They don't rewrite the whole prompt or produce a separate Companion note. Start 
 
 Tokens are the text units a model counts for limits and charging. An Agent's visible prompt count doesn't necessarily include every later Companion request.
 
+## Rerun agents on a reply
+
+When an after-reply rewrite came out wrong, or you've changed an Agent's prompt, open the reply's message menu and press **Rerun agents** (the circular arrow). It only appears while **Agents On** is set and at least one enabled after-reply Agent has a prompt. Companions aren't rerun; they keep their own controls.
+
+The rerun follows **After-reply agents** under **Connections & defaults**: **Run together** starts every Agent on the same reply, and **Run one at a time** passes each result to the next. It starts from the reply as it was before the earlier rewrites, so rewrites are redone rather than stacked, and appended blocks are replaced rather than added twice. Your own edits and **Fix trackers** repairs are kept as the starting point. Activation chance is ignored, because you asked for it.
+
+If an Agent fails or you press **Stop**, the reply stays as it was. If you edit, swipe or leave the reply while the rerun is working, its result is thrown away. The reply's Agent change history keeps the rerun, and its **Undo** button restores the exact text from before it. Each Agent is another model request, so a rerun costs the same as the original run.
+
 ## Choose connections deliberately
 
 Use **Connections & defaults** for shared choices. An Agent's own connection can override the Companion default, which can override the general default. If one helper fails while the chat works, inspect that helper's actual selection.

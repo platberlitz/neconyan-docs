@@ -75,6 +75,29 @@ A discussion opened from **Ask Scratchpad** in a note is note-specific. It uses 
 
 The note is saved before sharing; if autosave is already running, Scratchpad waits for it. The confirmation grants access to the chosen note or selection for 30 minutes without changing permanent notebook permissions. Tick **Allow proposed edits to the shared text** if you want edit suggestions. Use **Stop sharing** under Context to end that temporary access.
 
+## Search the web
+
+Press the globe button beside the message box (**Search the web for this message**) to look something up before the assistants answer. It's off by default, and each session remembers its own choice. The search service only receives the message you're sending, trimmed to 400 characters. Your chat, cards, persona, notes and earlier Scratchpad messages stay out of it.
+
+Pick the provider once for your account under **Context → Web search**:
+
+| Provider | What it needs |
+| --- | --- |
+| **Brave Search** | A Brave Search API key, added with **Manage Brave Search key** |
+| **SearXNG** | Your own instance's address, with JSON output turned on in its `search.formats` setting. A 403 error usually means JSON output is off or the instance refuses this server |
+| **NanoGPT (Linkup)** | Your saved NanoGPT key. It works even when the assistant uses another provider |
+| **Exa** | An Exa API key, added with **Manage Exa key** |
+| **Tavily** | A Tavily API key, added with **Manage Tavily key** |
+| **Custom address** | Any search address that returns JSON. Put `{query}` where the search words go and, optionally, `{count}` for the number of results. Each result needs a `url` or `link` and a `title` or `name` |
+
+A custom address can take a key through **Manage custom search key**. **Key header** decides where it goes: `Authorization`, the default, sends `Bearer <key>`, and any other header, such as `X-API-Key`, sends the key unchanged. A private or local address, for SearXNG or a custom service, has to be on the server's private address list, and only an administrator can save one.
+
+**Results to read** keeps between 1 and 10 results, 5 to start with. If the globe is on but the provider or key is missing, nothing is sent and Scratchpad tells you what to set up.
+
+Scratchpad searches once per message, or once for a whole round table, and waits up to 20 seconds. The assistants cite the results they use as `[1]`, `[2]` and so on. If the search fails, they still answer, with a note saying so. **Stop** also cancels a search in progress.
+
+Finished replies keep a folded **Sources** list with the query and numbered links. The saved reply keeps the provider, query, titles and addresses, but not the result snippets. Session exports don't include sources.
+
 ## Ask more than one assistant
 
 Round table mode lets you select up to three assistants. **Ask 2** or **Ask 3** sends to the selected assistants, each with its own connection and reply limit.

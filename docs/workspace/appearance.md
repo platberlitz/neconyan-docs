@@ -79,9 +79,9 @@ Under **Settings → Process**, **Clean messages** removes stored colour markup 
 
 Per-card settings aren't automatically embedded in an exported character file. Use the tool's explicit **Save to card** action when you want that transfer. Its local display mode and modes that store colour tags also have different effects on saved text.
 
-While a server-run Roleplay reply is still being written, its live preview receives dialogue colours as the text arrives. That display pass doesn't save the unfinished message or its speaker overrides.
+While a server-run reply, such as a Deep Swipe replacement, is still being written, its live preview receives dialogue colours as the text arrives. That display pass doesn't save the unfinished message or its speaker overrides.
 
-If your preset uses `{{dialoguecolors}}`, the page resolves its current colour instructions before submitting the reply. The saved job keeps that value when you close the tab, and through group turns and retries. LLM colouring still depends on the model following those instructions; Local (DOM-only) colours the displayed text instead.
+If your preset uses `{{dialoguecolors}}`, the page resolves its current colour instructions before sending the reply. A server-run reply keeps that value when you close the tab, and through retries. LLM colouring still depends on the model following those instructions; Local (DOM-only) colours the displayed text instead.
 
 ## Tracker themes
 

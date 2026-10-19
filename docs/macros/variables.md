@@ -16,7 +16,7 @@ A **variable** is a saved value with a name, such as `location` containing `Libr
 | Global | Your account, across chats | `setglobalvar` and `getglobalvar` |
 | Macro Enhanced chat variables | A separate store in this chat | `setchatvar` and `getchatvar` |
 
-The two chat-only stores are separate. A value written with `setchatvar` will not appear through `getvar`. For Roleplay, use the local store: Macro Enhanced chat variables don't work in Roleplay prompts.
+The two chat-only stores are separate. A value written with `setchatvar` will not appear through `getvar`. If a value has to survive a Deep Swipe or a reply with a selected Notebook context, use the local store: Macro Enhanced chat variables don't work in prompts built on the server.
 
 ```text
 {{setvar::location::Library}}
@@ -31,12 +31,14 @@ A prompt may be evaluated during preview, preparation or a retry. An increment i
 
 ## In Roleplay prompts
 
-Roleplay builds its prompts on the server. Local variable writes made while preparing the prompt are saved together with the accepted reply. A failed request doesn't save them, and recovering a reply that already finished doesn't repeat them.
+Ordinary Roleplay replies build their prompts in the browser, where every store works. A few kinds of reply build theirs on the server instead: Conversation replies, Deep Swipe replacements, protected Guided corrections and replies with a selected Notebook context. These rules apply to those.
+
+On the server, local variable writes made while preparing the prompt are saved together with the accepted reply. A failed request doesn't save them, and recovering a reply that already finished doesn't repeat them.
 
 - Local variables can be read and written.
 - Global variables can be read. Writing one stops the reply, because it can't be saved together with a chat reply. Use a local variable instead.
 - Lorebook scanning can read variables but not write them. Put the write in a preset prompt or a message, not in a lorebook entry or its keys.
-- The Macro Enhanced chat-variable macros, such as `setchatvar` and `getchatvar`, are browser-only and stop the reply. See [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts).
+- The Macro Enhanced chat-variable macros, such as `setchatvar` and `getchatvar`, are browser-only and stop a server-built reply. See [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts).
 
 ## Short spelling for ordinary variables
 

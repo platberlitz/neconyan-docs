@@ -46,15 +46,15 @@ Streaming displays output as it arrives; it doesn't guarantee that the provider 
 
 If a Guided Generations preview seemed stuck on 'Writing reply…' after you switched tabs, update to 1.3.0. The preview now reconnects when you return and catches up with the server's text.
 
-## A Roleplay reply stops with a macro error
+## A reply stops with a macro error
 
-This message means a Roleplay prompt uses a macro that only works in the browser:
+This message means a prompt built on the server uses a macro that only works in the browser:
 
 ```text
 The {{name}} macro is browser-only in Macro Enhanced and cannot run in a server prompt. Remove it or use a supported core macro.
 ```
 
-Roleplay builds its prompts on the server, so the reply stops before anything is sent to the model. Find the named macro in the card, preset, lorebook entry or message and replace it with a core macro, or remove it. See [Macro Enhanced in Roleplay prompts](../macros/index.md#macro-enhanced-in-roleplay-prompts) for what still works.
+Ordinary Roleplay replies build their prompts in the browser and can use it. Conversation replies, Deep Swipe replacements, protected Guided corrections and Roleplay replies with a selected Notebook context build theirs on the server, so the reply stops before anything is sent to the model. Find the named macro in the card, preset, lorebook entry or message and replace it with a core macro, or remove it. See [Macro Enhanced in Roleplay prompts](../macros/index.md#macro-enhanced-in-roleplay-prompts) for what still works.
 
 ## The page freezes after a reply in a long chat
 

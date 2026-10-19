@@ -10,7 +10,7 @@ These Macro Enhanced macros read lorebooks. An entry can be found by its title, 
 
 Without a book name, the usual search order is the chat’s book, the character’s books, then global books. Loading happens in the background, so a first lookup can be empty while the book is being loaded.
 
-**Not for Roleplay prompts.** These macros only run in the browser. If a Roleplay prompt uses one, the reply stops before the model request. Test them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card, preset or lorebook entry. Ordinary lorebook activation still works in Roleplay.
+**Browser prompts only.** These macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list. Ordinary lorebook activation works everywhere.
 
 ## Reading lore is different from activating it
 
