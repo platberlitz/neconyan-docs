@@ -18,6 +18,10 @@ No. [Connect a supported provider or local model service](../start/connections.m
 
 Yes, through a browser or Home Screen window while Neconyan runs on another computer or host. Follow [Open it on your phone](../start/phone.md). The Android APK doesn't install on iOS.
 
+## What is Simple Mode?
+
+An optional smaller layout. Existing accounts keep their current layout, and a new account keeps the full sidebar unless Nori's offer is accepted. **Yes, keep it simple** hides power tools such as Mewmory, Chat Archive, Extensions and the other Fine-tuning pages without deleting or switching them off. **Show all features** in the sidebar brings everything back, and **Settings → Appearance → Simple Mode** turns it on again. [Find your way around](../workspace/index.md#keep-the-sidebar-simple) explains what stays.
+
 ## Can I keep using my SillyTavern characters?
 
 Compatible cards, chats, lorebooks and other supported files can be imported. Make a backup and follow [Bring your old data](../start/imports.md). Extension compatibility needs a separate check.

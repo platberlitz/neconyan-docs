@@ -36,6 +36,8 @@ Open **Persona** to choose or edit your name, avatar and description. Write what
 
 Check the active persona when a conversation seems wrong. Conversation histories are persona-specific, and persona information can also influence prompts in Roleplay.
 
+Each persona can keep its own expression set, separate from the character's set. See [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) for the setup and background classification.
+
 ## Move and copy a card
 
 Characters' **Import** action accepts supported card files, including PNG files with embedded card data. Use **Duplicate Character** when you want a separate version to experiment with.

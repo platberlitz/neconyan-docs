@@ -30,6 +30,8 @@ Notebooks gives you a writing and reference workspace inside Neconyan. Use it fo
 
 **Write** edits Markdown, plain text with simple formatting marks. **Read** shows the formatted result. **Outline** helps you navigate headings. On a phone, use the Notebooks, Note and Details tabs; **Back to chat** returns to the conversation.
 
+A property block at the start of a note opens with `---` and closes with `---` or `...`. Without the closing line, Neconyan treats it as ordinary text; lists still continue when you press Enter. Details shows a warning and leaves your text untouched so you can fix it in Write view.
+
 Watch the save status:
 
 | Status | What it means |

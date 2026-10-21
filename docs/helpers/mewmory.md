@@ -51,6 +51,8 @@ Starting an unrelated chat doesn't silently share all memory. **Link this contin
 
 Extraction and some AI-assisted recall can run in the background, and background memory work continues when after-reply Agents rewrite a reply. The current reply may use local or already completed selections while newly prepared AI results become available to later replies.
 
+After the server starts, Mewmory waits 30 seconds before its first automatic background scan, so the first page or chat can load without a full catch-up competing for the server. The pause changes only when background work starts; saved memories aren't removed or rewritten. Long catch-ups leave time for page requests to run.
+
 Failed jobs don't count as completed coverage. Check the job error and model configuration before repeatedly backfilling. Changing models or processing settings can require work to run again and incur more charges.
 
 Context limits still apply. Mewmory can refuse a request that would overflow protected input rather than silently remove material you meant to preserve.

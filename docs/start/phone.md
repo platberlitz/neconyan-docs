@@ -83,6 +83,8 @@ Restart the server after changing the configuration. Guest Wi-Fi can isolate dev
 
 On iPhone, open Neconyan in Safari, open Share and choose **Add to Home Screen**. On Android, use the browser's install or Home Screen option when available. This gives you an app-like window; it still needs the server to be running.
 
+On iPhone Safari, turning **Movable panels** off no longer leaves an empty band above the keyboard. The Home Screen app reserves space for the home bar once, rather than leaving a doubled gap. On Android browsers, returning from another app keeps the composer inside the visible screen, including when **Movable panels** is on.
+
 Some app-install and browser features require HTTPS, a secure web address. Plain HTTP on a home network may not expose every browser feature.
 
 ## Away from home

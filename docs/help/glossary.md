@@ -14,6 +14,7 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Provider** | The service or local software supplying the model |
 | **Model** | The system that generates text, images or other output |
 | **Server** | The running part of Neconyan that stores data and handles work |
+| **Simple Mode** | An optional smaller layout that hides power tools without deleting or switching them off |
 | **Localhost / 127.0.0.1** | The device making the connection, not automatically your desktop |
 | **Connection profile** | A saved model connection setup that you can reuse |
 | **Prompt** | The input sent to a model, including instructions and selected context |
@@ -27,11 +28,14 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Persona** | The identity you play in a conversation |
 | **Swipe** | An alternative version of a message |
 | **Branch** | A conversation that diverges from an earlier point or starting history |
+| **Tide** | A chat style that gives each paragraph its own bubble |
 | **Lorebook / World Info** | Entries of world information selected for use in a prompt |
 | **Activation key** | A word or phrase used to make a lore entry relevant |
 | **Author's Note** | Additional guidance about the current scene, style or direction |
 | **Agent** | A configured helper with instructions, timing and output rules |
 | **Companion** | A helper that makes a separate request and produces a note or tracker |
+| **Position Tracker** | A bundled Companion that groups characters by place and shows their distance from you |
+| **Visual Map** | A bundled Companion that draws places, character pins and recent movement as a map |
 | **Mewmory** | Neconyan's source-backed memory and recall system for saved Roleplay |
 | **Pawspective** | Character-specific interpretations and knowledge within Mewmory |
 | **Embedding** | A numerical representation used to match text by related meaning |

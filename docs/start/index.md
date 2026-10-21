@@ -38,4 +38,6 @@ If you choose **Start a temporary chat**, its messages aren't saved. Use it for 
 
 Agents, Mewmory, advanced sampling, custom formatting and extra extensions are optional. Add them when you have a reason to use them. If your basic connection isn't working yet, more helpers will only make the error harder to locate.
 
+If the full sidebar feels like a lot, choose **Yes, keep it simple** when Nori offers **Simple Mode**. **Show all features** in the sidebar brings everything back later.
+
 Already have a character collection? [Bring your old data](imports.md) after making a backup. If you just want to see what Neconyan can do, take the [workspace tour](../workspace/index.md).

@@ -127,7 +127,9 @@ Message-edit proposals are available for Roleplay, not Conversation. Open the or
 
 Ask Scratchpad to create a character, including while discussing a shared notebook note. It returns a **New character card** proposal. Open **Review**, adjust the fields in the JSON draft, the structured text used for the card, then choose **Save change**. Check that the proposal says **Saved** before looking for the new card.
 
-The draft can include the character's name, description, personality, scenario, first message, example dialogue, instructions and alternate greetings. Leave `avatarPrompt` empty for the default picture. An explicitly requested generated avatar needs Quick Image Gen configured and can cost an image request.
+The draft can include the character's name, description, personality, scenario, first message, example dialogue, character note, instructions and alternate greetings. Leave `avatarPrompt` empty for the default picture. An explicitly requested generated avatar needs Quick Image Gen configured and can cost an image request.
+
+If a model puts the character note or alternate greetings inside the character fields, or uses the saved-card spelling `alternate_greetings`, the review card still opens. Two different copies of the same field are refused, and Neconyan doesn't guess which one you meant.
 
 Compatible Chat Completion models can use a creation tool. Models without tool calling can still return a change card for you to review and save.
 

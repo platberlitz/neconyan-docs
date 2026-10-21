@@ -57,6 +57,8 @@ Press **Save choice** to apply one, or tick several with **Select this image** a
 
 Show only changes only what new automatic replies may include. Your own written text, existing memories and already displayed messages stay as they are. Work already accepted keeps the input it captured; use **Stop** to cancel it. Writing a caption by hand and pointing a tool at a specific image are separate actions.
 
+If a send is refused because an image needs a choice, a **Review needed before replying** notice opens the review for that chat directly.
+
 Older messages may need attention before Show only can be applied; [Something went wrong](../help/troubleshooting.md#image-input-needs-attention) explains the repair and recovery controls.
 
 ## Chat and writing settings
@@ -67,7 +69,11 @@ For reopening and linking chats, use **Chat & messages → Chat window**. **Reop
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
 
-Normal Roleplay replies and after-reply Agents run on the server while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
+Server-run Roleplay replies, such as **Deep Swipe** replacements, protected **Guided** corrections and replies that use a selected Notebook context, keep running while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. Ordinary Roleplay replies stream in the page instead; [When you leave the page](#when-you-leave-the-page) explains what happens if you close it. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
+
+While a streamed reply has no text or visible reasoning yet, a **Thinking...** label stays above the empty message. It clears when either appears and isn't saved in the chat.
+
+For OpenRouter and custom OpenAI-compatible connections, **Interleaved Thinking** sits below **Enable function calling** in the Chat Completion settings. Turn on **Request model reasoning** to use it. **Since Last User Message** and **Active Tool Chain** send each saved tool call's own reasoning with later calls; a neighbouring message's thinking is used only when the call has none.
 
 The live bubble stays visible until the saved reply is ready to replace it, and the handover preserves your reading position. Cancelling a replacement restores the original reply. While the tab is hidden, the live preview pauses to save battery and catches up when you come back.
 

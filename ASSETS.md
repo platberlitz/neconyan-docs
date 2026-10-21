@@ -1,10 +1,10 @@
 # Assets and source material
 
-The application source used for this edition is [Neconyan at 33e9d09](https://github.com/platberlitz/Neconyan/tree/33e9d09), reviewed on 7 October 2026. Existing artwork and screenshots were copied from that source; the handbook doesn’t generate replacement application screens.
+The application source used for this edition is [Neconyan at e2e9303e](https://github.com/platberlitz/Neconyan/tree/e2e9303e), reviewed on 21 October 2026. Existing artwork and screenshots were copied from that source; the handbook doesn’t generate replacement application screens.
 
 ## Screenshots
 
-The fourteen files under `docs/assets/images/screenshots/` come from `docs/readme/` in Neconyan 1.3.0. They show Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad, each on desktop and phone. They contain staged demonstration content with the bundled assistants.
+The fifteen files under `docs/assets/images/screenshots/` come from `docs/readme/` in Neconyan. Fourteen were copied for 1.3.0 and show Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad, each on desktop and phone. `desktop-simple.webp` was added for 1.3.7 and shows the shorter Simple Mode sidebar. They contain staged demonstration content with the bundled assistants.
 
 ## Assistant artwork
 
@@ -34,7 +34,7 @@ Both use the SIL Open Font Licence. The copied notices are authoritative for cop
 - [PyMdown Extensions](https://github.com/facelessuser/pymdown-extensions), by Isaac Muse, uses the MIT licence.
 - [Playwright](https://github.com/microsoft/playwright) is used for verification under Apache-2.0.
 
-Dependencies retain the notices shipped in their packages. The root `LICENSE` covers the handbook’s original code and writing. Bundled Neconyan tools keep their original authors and licences; see the application’s [attribution table](https://github.com/platberlitz/Neconyan/blob/33e9d09/docs/neconyan-native-tools.md).
+Dependencies retain the notices shipped in their packages. The root `LICENSE` covers the handbook’s original code and writing. Bundled Neconyan tools keep their original authors and licences; see the application’s [attribution table](https://github.com/platberlitz/Neconyan/blob/e2e9303e/docs/neconyan-native-tools.md).
 
 ## Macro reference and extension example
 

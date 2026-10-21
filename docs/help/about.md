@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.3.6**, reviewed against source **104f489a on 19 October 2026**. Check your installed version if an option is missing. This edition covers browser-first Roleplay replies: ordinary replies now build their prompts in the browser, so Macro Enhanced macros work in them.
+The practical guides cover **Neconyan 1.3.7**, reviewed against source **e2e9303e on 21 October 2026**. Check your installed version if an option is missing. This edition covers opt-in Simple Mode, the Position Tracker and Visual Map Companions, and persona expression sets.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
@@ -18,7 +18,7 @@ The practical guides explain common workflows, with links to longer technical re
 
 ## Screenshots and artwork
 
-The fourteen workspace screenshots come from the Neconyan repository's README collection. They show real desktop and phone layouts with staged demonstration content using the bundled assistants. They are illustrative, rather than a claim that every future release will have identical spacing or labels.
+The fifteen workspace screenshots come from the Neconyan repository's README collection. They show real desktop and phone layouts with staged demonstration content using the bundled assistants. They are illustrative, rather than a claim that every future release will have identical spacing or labels.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is authored guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 

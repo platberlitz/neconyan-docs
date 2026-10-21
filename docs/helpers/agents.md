@@ -72,6 +72,17 @@ Five more bundled helpers are installed disabled. Each makes an extra model requ
 
 They don't rewrite the whole prompt or produce a separate Companion note. Start with one. Intent Reader and Beat Planner can overlap; Repeat Spotter with Repetition Breaker, or Pace Setter with Length Trimmer, may also duplicate work. Deleted bundled helpers can be added again from **Browse library**.
 
+## Bundled maps and trackers
+
+Two bundled Companions keep a record of where people are. **Position Tracker** and **Visual Map** both arrive disabled. Turn on **Agents On/Off** and the Companion you want, then run a reply; their notes open in the **Companion panel**, not under the reply. Neither changes the reply text.
+
+| Companion | What its note shows |
+| --- | --- |
+| **Position Tracker** | People grouped by place, with their exact spot, what they are doing and their distance from you: **In scene**, **Nearby**, **Away** or **Unknown**. It also lists recent moves. Up to 10 characters and 6 places. |
+| **Visual Map** | An illustrated map with your place at the centre, other places laid out by direction, character pins, a travel trail and a compass. Up to 8 places and 10 characters. |
+
+Each note reads the latest reply first, then up to 10 recent messages, with the character card, persona, active lore and Author's Note available. It starts from the previous map, so someone the story leaves alone keeps their last position. Each Companion is a separate model request; running both adds two requests to a reply unless you [batch compatible Companions](#batch-companions-and-share-notes).
+
 ## Instructions or extra requests?
 
 | Behaviour | What happens | Cost implication |

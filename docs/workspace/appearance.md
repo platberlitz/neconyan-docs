@@ -16,8 +16,11 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 | **Accent Profiles** | Accent palettes and custom primary/secondary colours |
 | **Shell Style** | The shape and treatment of controls, panels and navigation |
 | **Chat Style** | Message presentation |
+| **Simple Mode** | An optional smaller layout that hides power tools without deleting or switching them off |
 | **Desktop response controls** | Whether swipe arrows and the counter sit inside the bubble or below it on wide screens |
 | **Theme Colors** | Individual colour values, including ordinary quoted text |
+
+**Simple Mode** is opt-in; [Find your way around](index.md#keep-the-sidebar-simple) explains what it keeps and how to leave it.
 
 Colour edits apply immediately. **Save as a new theme** stores a broader named theme; **Save Current** under saved accent pairs stores the accent pair. Those are separate saves.
 
@@ -30,6 +33,8 @@ Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ear
 Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal and several quieter styles. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace the portraits of characters you've imported.
 
 For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows XP Olive Green Dark** under UI Theme. Shell Style and UI Theme are separate selections.
+
+Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style → Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text; lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width the response arrows and counter stay inside the card; on a wider window, **Desktop response controls** chooses inside or below.
 
 **Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once; changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
 
