@@ -1,6 +1,6 @@
 # Assets and source material
 
-The application source used for this edition is [Neconyan at e2e9303e](https://github.com/platberlitz/Neconyan/tree/e2e9303e), reviewed on 21 October 2026. Existing artwork and screenshots were copied from that source; the handbook doesn’t generate replacement application screens.
+The application source used for this edition is [Neconyan at 6e0269d0](https://github.com/platberlitz/Neconyan/tree/6e0269d0), reviewed on 21 October 2026. Existing artwork and screenshots were copied from that source; the handbook doesn’t generate replacement application screens.
 
 ## Screenshots
 
@@ -34,7 +34,7 @@ Both use the SIL Open Font Licence. The copied notices are authoritative for cop
 - [PyMdown Extensions](https://github.com/facelessuser/pymdown-extensions), by Isaac Muse, uses the MIT licence.
 - [Playwright](https://github.com/microsoft/playwright) is used for verification under Apache-2.0.
 
-Dependencies retain the notices shipped in their packages. The root `LICENSE` covers the handbook’s original code and writing. Bundled Neconyan tools keep their original authors and licences; see the application’s [attribution table](https://github.com/platberlitz/Neconyan/blob/e2e9303e/docs/neconyan-native-tools.md).
+Dependencies retain the notices shipped in their packages. The root `LICENSE` covers the handbook’s original code and writing. Bundled Neconyan tools keep their original authors and licences; see the application’s [attribution table](https://github.com/platberlitz/Neconyan/blob/6e0269d0/docs/neconyan-native-tools.md).
 
 ## Macro reference and extension example
 

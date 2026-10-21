@@ -36,6 +36,8 @@ For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows 
 
 Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style → Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text; lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width the response arrows and counter stay inside the card; on a wider window, **Desktop response controls** chooses inside or below.
 
+Downloaded message images keep the full Tide card, including its last lines and any character profile card at the end.
+
 **Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once; changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
 
 There are 34 coats and 21 ready-made pairs. 1.3.0 added Birman, Snowshoe, Cinnamon, Fawn, Caracal and Lynx, with pairs such as **Snow mittens: Birman and Snowshoe** and **Tufted twins: caracal and lynx**. Every coat has pixel-art frames for the Windows 98 style.
