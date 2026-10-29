@@ -45,6 +45,8 @@ All four are selected initially. Clear anything you don't want to import. Other 
 
 For a folder import, the path must exist on the machine running Neconyan. A folder on the phone visiting a remote server isn't a server-side folder. Use a ZIP upload when you need to send files from the visiting device.
 
+Large account ZIPs no longer stop at the old fixed 8 GiB archive or 32 GiB retained-file quotas. Free space on the server is now the practical limit, so check it before starting an import much bigger than your usual library.
+
 ## Read the result before reloading
 
 Import work is saved on the server, so closing the page doesn't automatically cancel accepted work. Return to Import & Restore and use **Choose a saved account import** to recover its status or report. A ZIP import may need you to select the original ZIP again.

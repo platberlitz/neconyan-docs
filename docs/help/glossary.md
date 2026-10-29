@@ -36,6 +36,10 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Companion** | A helper that makes a separate request and produces a note or tracker |
 | **Position Tracker** | A bundled Companion that groups characters by place and shows their distance from you |
 | **Visual Map** | A bundled Companion that draws places, character pins and recent movement as a map |
+| **Scene Director** | A group reply strategy that asks a model to choose who speaks next, including nobody |
+| **Ensemble replies** | A group option that writes several characters in one request and separates their replies |
+| **Vitals** | A game-style Companion card for your persona's health, food, water, energy and morale |
+| **Where replies are written** | The setting that chooses the browser or a saved server job for ordinary replies |
 | **Mewmory** | Neconyan's source-backed memory and recall system for saved Roleplay |
 | **Pawspective** | Character-specific interpretations and knowledge within Mewmory |
 | **Embedding** | A numerical representation used to match text by related meaning |

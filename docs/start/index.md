@@ -14,7 +14,7 @@ Neconyan gives your characters somewhere to live and your chats somewhere to be 
 | --- | --- | --- |
 | Windows, macOS or Linux | [Install on a computer](computer.md) | The Neconyan launcher on that computer |
 | Android 11 or later | [Install the Android app](android.md) | The app's built-in server |
-| iPhone or iPad | [Open it on your phone](phone.md) | Neconyan on a separate computer or server |
+| iPhone or iPad | [Open it on your phone](phone.md) | A separate computer or server, or the phone itself with the standalone app |
 | A phone visiting an existing setup | [Connect over your home network](phone.md) | The computer that already has your data |
 
 The server is the part that saves your chats and sends requests to your model. It can be running on the same device as the screen you're using, or somewhere else. Closing a browser tab and stopping the server are different things.

@@ -10,6 +10,18 @@ An iPhone or iPad can use Neconyan through a browser while the server runs on an
 
 This guide covers a phone and computer on the **same trusted home network**. Both must be connected, and the computer must stay awake with Neconyan running.
 
+## Use the standalone iPhone app
+
+The project now includes a standalone iPhone app. It bundles Node.js, the server and the interface, so your chats and settings live on the phone and no computer needs to run Neconyan. It needs **iOS 17 or newer**, isn't an App Store build, and is sideloaded with a tool such as [iloader](https://github.com/nab138/iloader), which signs it with your Apple account.
+
+A free Apple account has to re-sign the app every seven days and allows three sideloaded apps. Install a newer IPA over the old one with the same Apple account to keep your chats; deleting the app deletes them with it, so export an account backup first if you're changing tools.
+
+This edition documents the app from the 1.4.0 source. If a release provides an IPA, download the file ending in **-ios-unsigned.ipa** from that same release; it is the build that matches the version this handbook describes. If the release page has no IPA, use the browser setup on this page instead.
+
+Imports keep going when you switch apps or lock the phone. Pick the backup with the app's **Import Backup ZIP** button, confirm, and the server takes it from there. Allow about twice the backup's size in free space while it is copied in. Replies keep going the same way: if you leave mid-reply, the page plays a silent sound until the reply is written, saved and its after-reply Agents have run. You might see 'Neconyan is finishing a reply' on the lock screen, and music from another app can pause until it's done. iOS can still close the app when the phone runs short of memory. [The iPhone setup notes](https://github.com/platberlitz/Neconyan/blob/staging/ios/README.md) cover the build and its limits.
+
+The documented build checks use Apple's iPhone simulator; they don't establish that every feature works on a physical iPhone.
+
 ## Allow connections from your network
 
 1. Stop Neconyan on the computer.
@@ -86,6 +98,12 @@ On iPhone, open Neconyan in Safari, open Share and choose **Add to Home Screen**
 On iPhone Safari, turning **Movable panels** off no longer leaves an empty band above the keyboard. The Home Screen app reserves space for the home bar once, rather than leaving a doubled gap. On Android browsers, returning from another app keeps the composer inside the visible screen, including when **Movable panels** is on.
 
 Some app-install and browser features require HTTPS, a secure web address. Plain HTTP on a home network may not expose every browser feature.
+
+## Keep an Android browser tab open
+
+In an Android browser, **Settings → System & Device → Leaving the tab** offers **Stay open in the background**. It's off by default and applies to that device only. Turning it on plays a sound too quiet to hear while Neconyan is hidden, so Chrome is less likely to unload the tab when you switch away.
+
+It uses more battery, shows a media notification and can pause music in other apps. Start with a short reply to see how your phone's battery manager reacts before relying on it for a long scene. The switch is hidden in the Android app, which manages its own background work.
 
 ## Away from home
 

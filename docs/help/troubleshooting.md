@@ -46,6 +46,10 @@ Streaming displays output as it arrives; it doesn't guarantee that the provider 
 
 If a Guided Generations preview seemed stuck on 'Writing reply…' after you switched tabs, update to 1.3.0. The preview now reconnects when you return and catches up with the server's text.
 
+## A server reply says there is no room
+
+When a server reply, save or import reports that protected Roleplay evidence has no room, it has reached the fixed 16 MiB protected-record capacity, not a disk-space limit. Your chat isn't necessarily damaged. A reply you stopped releases its reservation once the server records the stop; retry after it settles. A reply that failed or was interrupted keeps its reservation until its job leaves saved history, because it may still be collected or retried. Each admission reserves about 72 KiB (64 KiB plus an 8 KiB receipt) while it can still be saved.
+
 ## A reply stops with a macro error
 
 This message means a prompt built on the server uses a macro that only works in the browser:
@@ -54,7 +58,7 @@ This message means a prompt built on the server uses a macro that only works in 
 The {{name}} macro is browser-only in Macro Enhanced and cannot run in a server prompt. Remove it or use a supported core macro.
 ```
 
-Ordinary Roleplay replies build their prompts in the browser and can use it. Conversation replies, Deep Swipe replacements, protected Guided corrections and Roleplay replies with a selected Notebook context build theirs on the server, so the reply stops before anything is sent to the model. Find the named macro in the card, preset, lorebook entry or message and replace it with a core macro, or remove it. See [Macro Enhanced in Roleplay prompts](../macros/index.md#macro-enhanced-in-roleplay-prompts) for what still works.
+Ordinary Roleplay replies build their prompts in the browser and can use it. Conversation replies, Deep Swipe replacements, protected Guided corrections and Roleplay replies with a selected Notebook context build theirs on the server, so the reply stops before anything is sent to the model. That includes an ordinary reply when **On the server** is selected under **Settings → Chat & Writing → Chat & messages → Replies → Where replies are written**. Find the named macro in the card, preset, lorebook entry or message and replace it with a core macro, or remove it. See [Macro Enhanced in Roleplay prompts](../macros/index.md#macro-enhanced-in-roleplay-prompts) for what still works.
 
 ## The page freezes after a reply in a long chat
 

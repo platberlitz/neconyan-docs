@@ -46,7 +46,9 @@ To change the picture behind the app, open **Appearance → Background**. The bu
 
 ## Make text comfortable to read
 
-Start with a bundled light or dark theme and a readable font size. Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
+Start with a bundled light or dark theme and a readable font size. **Settings → Appearance → Google Font** has a separate picker for **Body text**, **Headings**, **Chat messages** and **Code**. Each starts at **Default** and lists a few suggested fonts; **Custom Google Font…** accepts any Google Fonts name, confirmed with the tick or Enter. Headings follow the body font until you choose one, and chat messages do the same. **Reset all fonts** puts them all back. A chosen font that isn't bundled is downloaded from Google Fonts, which is an external request, and a misspelt name shows a warning.
+
+Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
 
 **AMOLED Black** is available under UI Theme for a pure-black interface. Switch to another theme if you want its hidden wallpaper and cloud artwork back.
 

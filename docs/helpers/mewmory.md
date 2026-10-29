@@ -21,13 +21,19 @@ It is separate from Conversation's summaries, Companion trackers and Scratchpad 
 
 Every setting saves automatically, including switches, number fields, model roles and credentials. While you're typing, Mewmory waits a moment before saving, and the status line shows **Saving…** and then **Configuration saved**. A change the server rejects, or one that isn't complete yet, stays on screen for you to fix, and the last saved configuration keeps working until it's fixed. **Discard unsaved settings** puts the form back to what was saved.
 
-Under **Automatic memory**, **Turn on Mewmory in every new chat** leaves existing chats alone. **Hide old messages automatically** is off to start with. Once the visible chat reaches **Hide older messages when the visible chat reaches, tokens** (30,000 to start with), it hides the older messages and then waits until the visible chat reaches that size again, rather than trimming after every reply. The latest reply always stays visible, and Mewmory keeps remembering what was hidden.
+Under **Memory updates**, **Use Mewmory in new chats** leaves existing chats alone. Older chat in replies is controlled by **Replace older chat with Mewmory context**, which is on by default. **Choose recent chat by** offers **Token allowance** (30,000 to start) or **Number of messages**. In message mode, **Keep at least this many recent messages** starts at 10 and **Remove older chat in groups of** starts at 5. At 15 messages, the oldest five leave the reply context only once they are remembered; they are not hidden unless **Also hide omitted messages in the saved chat** is ticked. When memory is behind, **Reply immediately** keeps unrecorded older messages by default; **Wait for memory** records them first, and you can stop waiting. These reply-context choices apply while replacement is on.
+
+Hiding is separate. With **Token allowance**, **Hide old messages automatically at a token threshold** is off to start with, and **Hide older messages at this chat size, tokens** sets when it hides. With **Number of messages**, the hide checkbox above uses the same recent-message window instead.
 
 Original passages remain useful even without every model-powered role enabled. Optional meaning search uses embeddings, numerical representations that help match related wording. Keyword search works without embeddings.
 
-Remote models are allowed by default. **Only use models on this computer** restricts the relevant configuration to permitted local addresses. Choose this based on where you actually want the processing to run.
+Remote models are allowed by default. **Use models running on this computer only** restricts the relevant configuration to permitted local addresses. Choose this based on where you actually want the processing to run.
+
+**Backup connections** is one shared list of up to ten saved profiles for every text role. They are tried in order when a role's connection fails, times out or returns unusable output; each uses its own model, and every attempt can add usage. Embeddings never use a fallback. **Use for every role** copies one profile across the text roles; adjust an individual role afterwards if it needs a different model. **Recall selector** and **Recall fallback** only pick from memories that already exist, and **Use models running on this computer only** applies to every role.
 
 ## Understand the views
+
+Each view opens with a status card for the current chat. **Now** puts the memories prepared for the next reply at the top. **Archive** leads with its search box.
 
 | View | What to inspect |
 | --- | --- |

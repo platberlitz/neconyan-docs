@@ -16,7 +16,7 @@ No. [Connect a supported provider or local model service](../start/connections.m
 
 ## Can I use it on an iPhone?
 
-Yes, through a browser or Home Screen window while Neconyan runs on another computer or host. Follow [Open it on your phone](../start/phone.md). The Android APK doesn't install on iOS.
+Yes, through a browser or Home Screen window while Neconyan runs on another computer or host. Follow [Open it on your phone](../start/phone.md). The project also includes a standalone iPhone app that keeps the server and your chats on the phone; it needs iOS 17 or newer and is sideloaded, not installed from the App Store. If a release provides an IPA, use that release's matching file; otherwise, use the browser setup. The Android APK doesn't install on iOS.
 
 ## What is Simple Mode?
 
@@ -32,9 +32,9 @@ They are stored on the Neconyan server you're using, under its account and acces
 
 ## Does closing the tab stop a reply?
 
-Not usually. Ordinary Roleplay replies run in the page, but the server holds most single-character replies when the page closes. Reopen the same chat to collect the result; a finished reply waits for 15 minutes, or 24 hours if the request carried chat context. Agents that run after a reply aren't replayed for a held reply.
+Not usually. With **In the browser (recommended)** selected under **Settings → Chat & Writing → Chat & messages → Replies → Where replies are written**, ordinary Roleplay replies run in the page, but the server holds most single-character replies when the page closes. Reopen the same chat to collect the result; a finished reply waits for 15 minutes, or 24 hours if the request carried chat context. Agents that run after a reply aren't replayed for a held reply. With **On the server** selected, the ordinary reply and its after-reply Agents keep going after you close the page or your phone sleeps.
 
-Conversation replies, Scratchpad and saved server workflows such as Deep Swipe keep running on the server while it's available. Use **Stop** to cancel any of them; closing the page doesn't request cancellation. Restarting or stopping the whole app interrupts its server and loses held replies.
+Conversation replies, Scratchpad, replies that need a Notebook context and saved server workflows such as Deep Swipe always keep running on the server while it's available. Use **Stop** to cancel any of them; closing the page doesn't request cancellation. Restarting or stopping the whole app interrupts its server and loses held replies.
 
 ## Why did my tab reload by itself after an update?
 

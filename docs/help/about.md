@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.3.7**, reviewed against source **6e0269d0 on 21 October 2026**. Check your installed version if an option is missing. This edition covers opt-in Simple Mode, the Position Tracker and Visual Map Companions, and persona expression sets.
+The practical guides cover **Neconyan 1.4.0**, reviewed against source **4b60373c on 29 October 2026**. Check your installed version if an option is missing. This edition covers group scenes with the Scene Director, where replies are written, the standalone iPhone app and its sideloading limits, Mewmory's recent-message window, Vitals, the Prompt Adherence Checker and Dice Roller.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

@@ -19,6 +19,7 @@ Included code updates with Neconyan. Third-party extensions you install separate
 | **Guided Generations** | Give a response, swipe, regeneration, correction or impersonation specific guidance |
 | **Input History** | Search earlier composer input and pick one to replace your draft |
 | **Quick Replies** | Buttons above the message box for saved messages, steering and commands |
+| **Dice Roller** | Roll d4 to d100 with up to four dice, a bonus, difficulty and advantage or disadvantage, then send the result to the story |
 | **Deep Swipe** | Work with message alternatives, including supported user-message alternatives |
 | **Preset Tools** | Search and organise prompt sections |
 | **Chat Completion Tabs** | Switch separate **Parameters** and **Prompts** tabs on and off from the sidebar, or open its settings in **Extensions → Built-in** |
@@ -42,11 +43,15 @@ The builder asks for a **Button label**, **What should it do?** and the text, fi
 
 The builder refuses a button that doesn't fit the selected set. A set with **Put replies in the message box instead of sending** or **Add what I typed automatically** only accepts send-type buttons; the notice names the set and your options, and the set's own options are left alone.
 
+### Dice Roller
+
+**Dice Roller** is on by default, and its dice button sits first beside the message box. Tap it to open the dice and roll straight away unless **Roll as soon as the dice open** is off; **Roll dice** is also in the wand menu. Type what you're attempting, then pick a **Die** from d4 to d100, up to four **Dice**, a **Bonus** from -20 to +20, a **Difficulty** (Easy, Normal, Hard, Extreme or Custom) and **Luck**: Advantage keeps the higher of two rolls, Disadvantage the lower. **Add to message** puts a line such as `🎲 Pick the lock - rolled 17 vs 12 (1d20+2: 15) - SUCCESS` in the message box, and **Send** sends it. Replies get a short system note telling the model to write that outcome as settled fact without mentioning dice or numbers; continuing or swiping keeps it. It works with browser and server replies. Switch it off in **Extensions → Manage extensions** under Built-in features, or adjust the dice button, **Roll as soon as the dice open**, critical rolls and partial successes in **Extensions → Dice Roller**.
+
 ## Lore and saved work
 
 **World Info Lab** traces lore activation and supports reviewed batch changes. It and Prompting Lab can open saved chats up to 64 MiB. **Lorebook Distiller** proposes lore entries from a saved chat. **Chat Archive** searches and organises chats; its organisation export doesn't contain the chat contents themselves.
 
-**Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Compare before restoring, because a restore replaces newer edits.
+**Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Its window is a list and detail view now: snapshot cards, kind filters, a history timeline and field-by-field comparisons. On a phone it swaps between the list and one snapshot instead of squeezing both. Compare before restoring, because a restore replaces newer edits.
 
 You can keep chatting and save settings while **Snapshot everything now** runs. Its snapshot update keeps your newer local choices and doesn't count as a settings change from another device. A real change from another device still stops a conflicting save.
 
@@ -58,7 +63,7 @@ Several tools keep accepted work and results on the server. Closing the page sto
 
 **Dialogue Colors** assigns speaker colours. **Regex Agent Themes** restyles trackers and Companion panels. **CSS Snippets** manages your small visual customisations. **Termeownal UI** offers an optional terminal-style interface with its own command glossary.
 
-**Quick Image Gen** needs its own provider configuration. It can use a manual prompt, a chat scene or supported image tags. Prompt preparation may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short; an install still on the old 500 default moves to the new one once. **Character Expressions** uses separate sprite artwork and classification settings; a character avatar alone isn't a complete expression set.
+**Quick Image Gen** needs its own provider configuration. Its panel is built around one **Create** card holding status, prompt, **Style**, **Configuration** and **Generate**; **Gallery**, **History**, **Logs** and **Quick setup** sit underneath, and settings are behind tabs. It can use a manual prompt, a chat scene or supported image tags. Prompt preparation may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short; an install still on the old 500 default moves to the new one once. **Character Expressions** uses separate sprite artwork and classification settings; a character avatar alone isn't a complete expression set.
 
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't automatically configure all of them.
 

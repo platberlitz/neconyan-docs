@@ -22,7 +22,7 @@ A **Companion** is a separate helper request, often run after a reply, that prod
 
 The global **Agents On/Off** control affects whether configured Agents run. An individual Agent's enabled state is another thing to check.
 
-**Manage agents** holds the list, with All, Pinned, Before reply, After reply and Companions views, search and a category filter. **Connections & defaults** holds the shared settings. On each card, **More actions** contains less frequent actions such as Export and Delete.
+**Manage agents** holds the list under **All agents**, **Switched on** and **Pinned**, followed by **Types** with counts: **Trackers**, **Randomisers**, **Writing**, **Tools**, **Companions** and **Custom**. Only types present appear. **Any time** filters timing separately, with **Before the reply** and **After the reply** choices. Use **Help me choose** for Taro's four short questions about your game, the reply, anything to track and your extra-request budget. It recommends bundled agents from your answers, marks ones already on, and adds missing library agents with an **Adds to library** badge. It never switches an agent off, adds at most six at once, and changes nothing until you review the picks and press **Switch on N agents**. **Undo** switches off what it switched on; library additions stay, switched off. The guide makes no model request. **Connections & defaults** holds the shared settings. On each card, **More actions** contains less frequent actions such as Export and Delete.
 
 The version beside an installed Agent's name describes that saved Agent. **Browse library** shows the available template's version beside its name, so you can compare them before updating.
 
@@ -45,6 +45,7 @@ These helpers are installed but disabled initially. Enable only the ones you nee
 | **Repetition Breaker** | Reduce repeated phrasing, gestures and beats |
 | **Length Trimmer** | Shorten a reply towards its configured **Target length** |
 | **NSFW Enhancer** | Make sex scenes explicit and specific, without fading to black or hedging |
+| **Prompt Adherence Checker** | Check the reply against the prompts switched on in your Chat Completion preset and fix lines that break their rules. Switched-off prompts are ignored |
 
 These are instructions to a model, not guarantees. Review the result before continuing the scene. They rewrite the new reply, not earlier messages. **Recent messages to read** provides up to 30 earlier messages as read-only context; zero means the helper receives only the reply being processed.
 
@@ -56,7 +57,7 @@ When the **Continuity Companion** is enabled too, the two work together. The Cor
 
 Knowledge Guard can read the card, persona, active lore, Author's Note and saved Secrets Tracker values. Its `{{secrets-tracker}}` placeholder reads enabled saved tracker templates, including renamed copies, without rerunning the tracker. A fact existing in lore doesn't mean every character knows it. Unchanged bundled copies update to version 2 automatically; customised copies keep your edits and offer **Update**.
 
-If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
+If a helper answers with a refusal instead of the text, Neconyan discards it, keeps the original and tells you which helper refused. Refusal wording already in the original reply doesn't count, so a character can still say no in the story. If the main reply itself is a refusal, after-reply Agents and Companions are skipped, so nothing rewrites it or reads it as story material. The switch is **Keep the original when an Agent refuses** under **Connections & defaults → Context & notifications**, and it starts on.
 
 ## Short notes before a reply
 
@@ -82,6 +83,10 @@ Two bundled Companions keep a record of where people are. **Position Tracker** a
 | **Visual Map** | An illustrated map with your place at the centre, other places laid out by direction, character pins, a travel trail and a compass. Up to 8 places and 10 characters. |
 
 Each note reads the latest reply first, then up to 10 recent messages, with the character card, persona, active lore and Author's Note available. It starts from the previous map, so someone the story leaves alone keeps their last position. Each Companion is a separate model request; running both adds two requests to a reply unless you [batch compatible Companions](#batch-companions-and-share-notes).
+
+**Vitals** is another bundled Companion, installed and switched off. After each reply it writes a game-style card for your persona in the Companion panel: Health, Satiety, Hydration, Energy and Morale as 0-100 bars coloured Critical, Low, Fair or Good, each with its change and a short reason, plus up to four status effects. It reads the last few messages, your persona and its own previous card, so values carry forward and drift slowly. Its prompt is short enough for Flash models. Unlike the maps, its latest card feeds the next reply prompt by default so the character can react to your state; untick **Feed recent notes into future generations** in its editor to keep it display-only. The numbers are a model's estimate, not game rules.
+
+**Parallel Off-Screen (Extended)** is a bundled tracker template, installed and switched off; an existing account installs it once. For each reply it asks for three short off-screen scenes of absent characters talking, moving and getting on with their lives, in an `[OFFSCREEN|Scope|Relevance]` block. Each scene has a heading and one 50 to 90 word present-tense paragraph, keeps you out of it, and carries continuity between replies. Do not run it with the shorter Parallel Off-Screen; pick one. Its template bundle also installs the **Replace Parallel Tracker (Extended)** display rule.
 
 ## Instructions or extra requests?
 
@@ -129,7 +134,7 @@ The button shows progress while repairs run. If every connection fails, check th
 
 Manually started after-reply Agents run one at a time regardless of that automatic setting. Later rewrites wait, then read the saved result of the earlier rewrite. Their queue is separate from Companions, so a slow Companion doesn't hold up a manual rewrite. **Stop** ends the active work and clears waiting runs. Once the main reply has finished, Stop keeps that completed reply and saves it without another main request; requests already sent to a provider aren't refunded. Stopping before the main reply finishes follows the ordinary cancellation rules for the reply itself.
 
-A failed after-reply Agent or Companion is retried once, with finished results kept and the main reply not requested again. If it fails again, the reply is saved with the changes that finished and without the failed one, like Stop during Agents; translation and speech still run. [Roleplay](../workspace/roleplay.md#when-an-agent-fails) describes the result you see and when a changed chat can still stop the reply from joining it.
+A failed after-reply Agent or Companion is retried once, with finished results kept and the main reply not requested again. If it fails again, the reply is saved with the changes that finished and without the failed one, like Stop during Agents; translation and speech still run. A tracker run also tries its saved fallback connections when the reply it is reading is unusable, before it reports failure. [Roleplay](../workspace/roleplay.md#when-an-agent-fails) describes the result you see and when a changed chat can still stop the reply from joining it.
 
 Appended blocks are kept separate from the body being rewritten and restored around the finished reply. Neconyan cleans repeated blocks and copied reply text from supported append results. Check the final output when combining custom helpers.
 
@@ -149,7 +154,7 @@ Agent prompts can also read prepared Mewmory context and group-card fields throu
 
 Automatic tracker Companions clean their output down to the tracker block. If a model returns story prose, Neconyan can regenerate once; a broken tracker can also receive one repair pass. These extra requests count towards usage. If repair still produces invalid output, check the reported failure rather than treating the note as a valid tracker.
 
-Companions finish at their own speeds. Each completed note appears as soon as that companion finishes, while the slower ones keep running. A note shown this way carries the **Live reply** label: it's a preview of the reply being written, so its edit, rerun and Send to lorebook actions wait until the note becomes saved history. When a later note updates under a saved reply, your reading position stays where it was instead of jumping to the newest message.
+Companions finish at their own speeds. Each completed note appears as soon as that companion finishes, while the slower ones keep running. Companion notes can also open in draggable, collapsible windows, so you can keep a tracker beside the chat and fold it when it's in the way. A note shown this way carries the **Live reply** label: it's a preview of the reply being written, so its edit, rerun and Send to lorebook actions wait until the note becomes saved history. When a later note updates under a saved reply, your reading position stays where it was instead of jumping to the newest message.
 
 Options such as **Keep in history**, recent-message limits and Companion note history decide what later requests can read. **Where kept notes go**, in the editor's **Companion notes** tab and in **Quick settings**, chooses whether kept notes ride on the **Newest reply**, stay with **Each note's own reply**, or gather in **One labelled block** placed by the helper's Position and Depth. Showing or hiding a note in the interface is separate from feeding it back into context.
 

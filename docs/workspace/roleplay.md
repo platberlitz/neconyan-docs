@@ -44,6 +44,18 @@ Once the main reply has finished but its after-reply Agents are still running, S
 
 Quick Replies can put controls such as Continue and steering above the message box. A **Steer the next reply** button asks for a reply that follows a one-use note; unlike an ordinary sent message, the note isn't added to the chat. See [Quick Replies](../helpers/tools.md#quick-replies).
 
+## Run a group scene
+
+A Roleplay group adds character cards as members and gives each turn to a speaker. **Group Controls → Group reply strategy** offers **Natural order**, **List order**, **Pooled order**, **Manual** and **Scene Director**. Scene Director makes a separate small model request before each reply. It reads the member cards and up to eight recent visible messages, then picks 0 to 3 members in speaking order. It never picks you, and it can choose nobody when the scene should wait for you. Its choice replaces the usual order for that turn. **Director model** gives that request its own saved connection profile without changing the model that writes the character replies. If no usable choice arrives within 3 seconds, the usual order picks and a warning explains the fallback once per chat. The **Scene** panel shows the last pick and its reason. Scene Director is not Director's Commentary, the after-reply agent.
+
+**Let them talk** in the group speaker bar lets enabled members take turns among themselves while you listen. **Group Controls → Let them talk: replies** sets the burst from 1 to 8, with 3 as the default. It needs at least two unmuted members and no reply already running. Each reply is saved as it finishes, and the button reads **Stop** while the burst runs. Stop, sending a message, switching chat or leaving the chat ends it. With Scene Director on, the director keeps choosing and is told that you're only listening. **Ensemble replies** writes a whole scene in one request and splits it into character messages, so it spends one request rather than one per turn. **Keep characters to their own lines** cuts a reply where it starts writing another member's part.
+
+The **Scene** button opens the chat's scene strip. **Location** is an optional label up to 300 characters. Tap a member to **Mark away** or **Bring into the scene**; away members miss what is said meanwhile, and shared memory stays out when it could give the scene away. **Message audience** offers **To everyone** or **Whisper to** one present, unmuted member. A whisper records its audience, and other members cannot hear or react to it; later prompts and Agent work follow the same boundary. If the target becomes away or muted, Neconyan asks you to choose someone present or address everyone. Scene state belongs to the current chat, not the whole group.
+
+Open a member's menu from their avatar in the speaker bar or Scene panel and choose **Use as Narrator / GM**, or **Use as character** to switch back. A Narrator gets a reminder to describe the setting, consequences and supporting characters, advance the scene when it needs an event, leave the members' choices to their own replies, and respect presence and whisper boundaries. It does not add a separate narrator model, narrate while the member is muted or away, or give that member control of the others. To hear the same turn in another voice, regenerate it as a different member.
+
+For a messaging-style group, see [Conversation](conversation.md); for a cast feed, see [Meower](meower.md).
+
 ## Images in replies
 
 Pictures in a chat can join future automatic replies as the image itself, as a description, or not at all. Open **Settings → Appearance → Avatar & Chat Styles → Review chat images**, then choose per image:
@@ -69,7 +81,9 @@ For reopening and linking chats, use **Chat & messages → Chat window**. **Reop
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
 
-Server-run Roleplay replies, such as **Deep Swipe** replacements, protected **Guided** corrections and replies that use a selected Notebook context, keep running while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. Ordinary Roleplay replies stream in the page instead; [When you leave the page](#when-you-leave-the-page) explains what happens if you close it. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
+**Settings → Chat & Writing → Chat & messages → Replies → Where replies are written** chooses the default path for new ordinary replies. **In the browser (recommended)** shows the reply directly in the tab. **On the server** sends ordinary Roleplay replies through a saved server job. Both show text as it arrives. Conversation, replies that need a selected Notebook context, one-to-one guided corrections and Deep Swipe always use the server. Built-in assistant chats, group guided actions and some group turns stay in the browser. Changing the setting doesn't start a reply or make a model request.
+
+Server-run Roleplay replies keep running while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. [When you leave the page](#when-you-leave-the-page) explains what happens if you close it. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
 
 While a streamed reply has no text or visible reasoning yet, a **Thinking...** label stays above the empty message. It clears when either appears and isn't saved in the chat.
 
@@ -152,7 +166,11 @@ Adding context uses space. More instructions aren't automatically better if they
 
 ## When you leave the page
 
-Ordinary Roleplay replies, swipes, **Continue**, group turns and **Guided** replies run in the page. If you close or leave it mid-reply, the server holds most single-character replies: reopen the same chat to collect and save the result without another paid request. A finished reply waits 15 minutes, or 24 hours when the request carried chat context, and a server restart loses it. Agents that run after a reply aren't replayed for a held reply; use [**Rerun agents**](../helpers/agents.md#rerun-agents-on-a-reply) from the message menu if you want them.
+With **In the browser** selected, ordinary Roleplay replies, swipes, **Continue**, group turns and **Guided** replies run in the page. If you close or leave it mid-reply, the server holds most single-character replies: reopen the same chat to collect and save the result without another paid request. A finished reply waits 15 minutes, or 24 hours when the request carried chat context, and a server restart loses it. Agents that run after a reply aren't replayed for a held reply; use [**Rerun agents**](../helpers/agents.md#rerun-agents-on-a-reply) from the message menu if you want them.
+
+With **On the server** selected, the same ordinary replies use a saved job, so they keep writing after you close the page or your phone sleeps, and their after-reply Agents still run. A browser-only macro stops a server reply with an error instead of sending it. A page instruction the server cannot carry falls back to the browser only when no Notebook context requires the server.
+
+A reply that needs a selected Notebook context always goes to the server, even when **In the browser** is selected. The server builds that prompt from saved material, so it can't always include everything the page would. When the route can't include your page prompts, Neconyan explains why and doesn't generate a reply missing those instructions. Fix or remove the page-only instruction, or clear the Notebook context for that reply, then send again.
 
 Replies that use a selected Notebook context, **Deep Swipe** replacements and protected **Guided** corrections run as saved server jobs and keep going, Agents included, after the browser disconnects. After a suspended phone tab returns, the page reconnects to the current saved job, refreshes a stale preview or readback first and only shows the result once that refresh succeeds. The server and provider still need to be available; browser-only model or speech routes can require the page to stay open.
 

@@ -29,6 +29,10 @@ The **Fine-tuning** area contains model presets, sampling, formatting, regex scr
 
 **Appearance** holds **Background**, **Dialogue Colors**, **Termeownal UI**, **CSS Snippets** and **Regex Agent Themes**, and **Troubleshooting** holds **Server**, **Console Logs**, **Debugger** and **Report an Issue**. **Settings** includes appearance, device behaviour, account controls and import tools. **Extensions → Built-in** opens each bundled tool's settings, and **Extensions → Manage extensions** manages whether extensions are enabled. A switched-off sidebar tool shows **Off** and opens **Manage extensions** to turn it on.
 
+## Reorder the sidebar
+
+The **Reorder sidebar** button at the top of the workspace sidebar turns the rail into an editable order. Drag a button by its grip to move it within a section or into another open section; the chat mode buttons stay in their own section. With a grip focused, Alt+ArrowUp and Alt+ArrowDown move it. A live message names the new position. **Reset** restores the default order, and **Done** leaves reorder mode; each move is already saved. The order is saved with this account's settings on the server, not in this browser or a character card, so it is shared across devices signed into the same account. The phone menu uses the same rail and order.
+
 ## Keep the sidebar simple
 
 Simple Mode is opt-in. Existing accounts keep their current layout. On a new account, Nori asks **Want to keep things simple?** before the First paws tour. **Yes, keep it simple** turns on Simple Mode and shortens the tour; **No, show me everything** keeps the full sidebar. You can also use **Settings → Appearance → Simple Mode** later.

@@ -28,7 +28,7 @@ The expression **Export ZIP** covers the selected artwork set only. An image cha
 
 ## Download an account backup
 
-Open **Settings → Cache & Account → Account Settings → Account**, then use **Download Backup**. The accepted backup runs as saved server work, so closing the page doesn't automatically stop it.
+Open **Settings → Cache & Account → Account Settings → Account**, then use **Download Backup**. The accepted backup runs as saved server work, so closing the page doesn't automatically stop it. Downloads no longer stop at the old fixed 8 GiB limit or the 32 GiB retained-file quota; the server needs enough free space for the archive while it is written.
 
 Return to the account controls and use **Choose a saved account backup**, then **Download saved backup**, to recover completed work. **Stop backup** requests cancellation.
 
