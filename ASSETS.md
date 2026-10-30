@@ -1,10 +1,14 @@
 # Assets and source material
 
-The application source used for this edition is [Neconyan at 6e0269d0](https://github.com/platberlitz/Neconyan/tree/6e0269d0), reviewed on 21 October 2026. Existing artwork and screenshots were copied from that source; the handbook doesn’t generate replacement application screens.
+The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/platberlitz/Neconyan/tree/6e0269d0), reviewed on 21 October 2026. Screenshot sources and capture dates are recorded separately below.
 
 ## Screenshots
 
-The fifteen files under `docs/assets/images/screenshots/` come from `docs/readme/` in Neconyan. Fourteen were copied for 1.3.0 and show Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad, each on desktop and phone. `desktop-simple.webp` was added for 1.3.7 and shows the shorter Simple Mode sidebar. They contain staged demonstration content with the bundled assistants.
+The fifteen files under `docs/assets/images/screenshots/` were recaptured on 30 October 2026 from the running application with disposable demonstration data. They replace the 1.3.0 captures and the 1.3.7 Simple Mode capture. Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad each have a desktop and phone image; `desktop-simple.webp` shows the shorter Simple Mode sidebar and composer.
+
+The captures use [Neconyan at a4f53894](https://github.com/platberlitz/Neconyan/tree/a4f53894). Its application interface matches the [1.4.0 release at 5f9229c4](https://github.com/platberlitz/Neconyan/tree/5f9229c4); the later commit only changes the next staging version, its test expectations and the handover record. The captures show the Calico Dark theme, bundled assistants and staged chats, posts, notes and a Scratchpad discussion. No personal account data was used, and capture made no model requests.
+
+Playwright captured Chromium at 1280×900 for desktop and 393×852 with touch emulation for phone, at a pixel ratio of 1. These are browser viewport captures, not physical-phone or Safari verification. The screenshots were converted to WebP at quality 90 without resizing or compositing interface elements.
 
 ## Assistant artwork
 
