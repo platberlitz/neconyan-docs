@@ -96,6 +96,7 @@ nav:
       - Story Mode: workspace/story-mode.md
       - Characters and personas: workspace/characters.md
       - Lorebooks: workspace/lorebooks.md
+      - Model and prompt settings: workspace/model-settings.md
       - Make it yours: workspace/appearance.md
   - Writing and helpers:
       - Choose a helper: helpers/index.md

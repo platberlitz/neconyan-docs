@@ -121,7 +121,7 @@ You can manage pins in the phone's prompt list, but the chat-side panel is deskt
 
 **Allow card scripts** controls interactive card content. Scripts run in an isolated embedded page with restricted Neconyan access and checked slash commands; only the interactive widget the script drives is placed in that sandbox, leaving the surrounding message prose in the chat. Automatic runs require a browser that can block direct connections. If yours can't, each card needs **Run anyway** and could send its own content or anything you type into it to outside servers. Only run cards you trust. An older Android app with an unrestricted native bridge asks you to update instead of offering that override.
 
-**Fine-tuning → Formatting** groups controls into **Context & cleanup**, **Instruct template**, **System prompt**, **Reasoning** and **Reply controls**. Use the section for the request or reply behaviour you want to change. Instruct templates define message markers for supported local-model connections; Chat Completion prompt lists still belong to that connection's preset controls. **Tour** explains the page.
+**Fine-tuning → Formatting** groups controls into **Context & cleanup**, **Instruct template**, **System prompt**, **Reasoning** and **Reply controls**. Use the section for the request or reply behaviour you want to change. Instruct templates define message markers for supported local-model connections; Chat Completion prompt lists still belong to that connection's preset controls. **Tour** explains the page, and [Model and prompt settings](model-settings.md) covers sampling, formatting, stopping strings and the tokenizer in more detail.
 
 ### Find-and-replace rules
 
@@ -133,6 +133,24 @@ You can manage pins in the phone's prompt list, but the chat-side panel is deskt
 4. Press **Draft rule**.
 
 The editor opens with the rule filled in, a short explanation and **Test Mode** running on an example. Nothing is saved until you press **Save**. The editor has the same panel under **Describe it and let a model write it**: once a pattern exists its button reads **Improve rule** and sends the current rule back for revision, and **Show it my last reply** adds the latest message, up to 1,500 characters, as sample text. Each draft is one request on the chosen connection, and a failed draft leaves the form as it was. **Write a rule yourself** opens an empty editor, and **Manage** holds **Import**, **Select several** and the **Debugger**.
+
+### Regex flags {#regex-flags}
+
+Flags are letters after the closing slash of a pattern that change how it matches. **Find Regex** accepts either form:
+
+- `/pattern/flags`, such as `/colour/gi`, uses the flags you list.
+- A plain pattern without slashes, such as `colour`, uses no flags: it changes only the first match and treats capital and small letters as different.
+
+The **Options** row under **Find Regex** sets them for you. Turning a chip on or off rewrites the box as `/pattern/flags`, adding the slashes if the pattern didn't have them.
+
+| Chip | Flag | What it does |
+| --- | --- | --- |
+| **Every match** | `g` | Changes every match, not just the first one |
+| **Ignore case** | `i` | Treats capital and small letters as the same |
+| **Dot matches new lines** | `s` | Lets `.` match line breaks, so a match can span lines |
+| **^ and $ per line** | `m` | Makes `^` and `$` match the start and end of every line, not only the whole text |
+
+The line under the box confirms the result, for example **Applies to all matches** and **Case insensitive**, or **Invalid Find Regex** when the pattern can't be read. Most rules want **Every match**; without it, a rule meant to tidy a whole reply stops after the first change. **Start from a recipe** fills in common patterns with suitable flags already set, and **Test Mode** shows the effect before you save.
 
 STscript, Neconyan's slash-command scripting language, can run commands from the composer while a reply is being written. These commands help coordinate it:
 
@@ -154,6 +172,15 @@ From a Quick Reply or automation, this replaces the existing draft with uppercas
 
 Typing and submitting that script directly in the composer clears the submitted script before it runs, so it can't recover an earlier draft. `/trigger`, `/gen` and `/genraw` preserve text already in the composer. A failed submitted command is restored only if the composer is still empty, keeping text you've since typed.
 
+### Script parser options {#script-parser-options}
+
+Two switches in **Settings → Chat & Writing → Fine-tuning** change how STscript reads a script. Both start off, and most scripts don't need them.
+
+- **STscript: strict escaping** makes a backslash escape any separator, including another backslash. With it on, `/echo abc \| /echo def` shows one message, `abc | /echo def`, because `\|` is a plain pipe rather than the start of a new command. `\\|` is a literal backslash followed by a real separator. Without it, older, looser escaping rules apply.
+- **STscript: literal variables** stops `{{getvar::}}` and `{{getglobalvar::}}` from running macros stored inside a variable. Turn it on when a variable holds text with `{{` braces that should be read as written, not filled in a second time.
+
+A single script can switch either option for itself with `/parser-flag STRICT_ESCAPING on` or `/parser-flag REPLACE_GETVAR on` at the start.
+
 ## Keep the model informed
 
 - Put stable character traits in the [character card](characters.md).
@@ -163,6 +190,29 @@ Typing and submitting that script directly in the composer clears the submitted 
 - Use [Scratchpad](../helpers/scratchpad.md) for planning you don't want inserted as a story message.
 
 Adding context uses space. More instructions aren't automatically better if they contradict each other or push useful history out of the request.
+
+## Manage saved chats {#saved-chats}
+
+Each character keeps its own list of saved chats. Open it with **View chat files** on the chat bar, from the chat tools sheet on a phone, or with **Chat tools → Manage chat files**. The window is titled with the character's name, for example **Miso Chat History**.
+
+- Click a chat to open it. **Search...** filters the list.
+- **New Chat** starts a fresh chat with the character's first message. **Import Chat** brings in a chat file.
+- **Import from another instance → Import as new instance** makes a separate copy of the character that holds the chats chosen in **Import Chat**. Nothing is merged into the existing character.
+
+Each chat row has its own buttons:
+
+| Button | What it does |
+| --- | --- |
+| **Rename** | Renames the chat file |
+| **JSONL** | Downloads the chat file, which Neconyan can import again |
+| **Plain text** | Downloads the chat as a plain text document |
+| **Readable** | Downloads a transcript laid out for reading |
+| **Replies** | Downloads only the character's replies |
+| **Delete** | Deletes the chat file |
+
+**Label current** asks the model to give the open chat a descriptive name, and **Label dated** does the same for chats still named with the date they started. **Cancel** stops a labelling run. Each label is a request on your connection.
+
+To clear out old chats, set **Older than** and **Keep newest**, then press **Preview** to see which chats match. **Dated only**, on by default, limits the clean-up to chats still named with their start date, so chats you've renamed stay. The open chat and the newest chats you asked to keep are never removed. **Clean** asks before it deletes, and deleted chats can't be restored from this window, so make a [backup](../help/backups.md) first if you might want them back.
 
 ## When you leave the page
 

@@ -29,6 +29,19 @@ The **Fine-tuning** area contains model presets, sampling, formatting, regex scr
 
 **Appearance** holds **Background**, **Dialogue Colors**, **Termeownal UI**, **CSS Snippets** and **Regex Agent Themes**, and **Troubleshooting** holds **Server**, **Console Logs**, **Debugger** and **Report an Issue**. **Settings** includes appearance, device behaviour, account controls and import tools. **Extensions → Built-in** opens each bundled tool's settings, and **Extensions → Manage extensions** manages whether extensions are enabled. A switched-off sidebar tool shows **Off** and opens **Manage extensions** to turn it on.
 
+## Settings {#settings}
+
+**Settings** sorts its drawers into four tabs. On a phone, a **Settings category** list replaces the tabs.
+
+| Tab | What it holds |
+| --- | --- |
+| **Appearance** | Themes and colours, avatar and chat styles, layout, theme toggles, Custom CSS, Google Font and Moving UI |
+| **Chat & Writing** | **Chat & messages**, **Characters**, **Auto-swipe & auto-continue**, **Autocomplete** and **Fine-tuning** |
+| **System & Device** | **Import & Restore**, **Desktop** and **Mobile** behaviour, phone streaming options, and anything an extension adds without choosing a tab |
+| **Cache & Account** | **Account Settings**, **Cache & Storage Utilities**, and **Old defaults & recovery** for untouched files left by older installs |
+
+**Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
+
 ## Reorder the sidebar
 
 The **Reorder sidebar** button at the top of the workspace sidebar turns the rail into an editable order. Drag a button by its grip to move it within a section or into another open section; the chat mode buttons stay in their own section. With a grip focused, Alt+ArrowUp and Alt+ArrowDown move it. A live message names the new position. **Reset** restores the default order, and **Done** leaves reorder mode; each move is already saved. The order is saved with this account's settings on the server, not in this browser or a character card, so it is shared across devices signed into the same account. The phone menu uses the same rail and order.

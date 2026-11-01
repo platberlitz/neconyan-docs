@@ -56,6 +56,32 @@ Start the model service before connecting Neconyan. Confirm which API formats it
 
 The endpoint must be reachable **from the machine running the Neconyan server**. If the server is on your computer and you're visiting from a phone, the endpoint is still interpreted from the computer. If Neconyan itself runs on Android, a localhost address refers to the phone.
 
+## Provider notes {#provider-notes}
+
+### OpenAI {#openai}
+
+Choose **Chat Completion**, then `OpenAI` under **Chat Completion Source**. Create a key on the API keys page of your OpenAI platform account; a ChatGPT subscription doesn't include API access or credit. Paste the key into **OpenAI API key**, connect, then pick a model from **Available Models** or type its exact **Model ID**.
+
+**View API Usage Metrics** opens your usage on OpenAI's site. If you're connecting through a proxy, use its **Proxy Password** field; the key box is ignored.
+
+### DreamGen {#dreamgen}
+
+Choose **Text Completion**, then `DreamGen` as the **API Type**. Create an API key in your DreamGen account and paste it into **DreamGen API key**. The **DreamGen Model** list reads `-- Connect to the API --` until the connection succeeds, then lists the models your account can use.
+
+Neconyan doesn't include a DreamGen template. Check DreamGen's documentation for the prompt format its model expects and match it in [Formatting](../workspace/model-settings.md#formatting).
+
+### NovelAI and AI Horde {#novelai-and-ai-horde}
+
+Neconyan no longer offers NovelAI, AI Horde or KoboldAI Classic as reply connections. If saved settings still name one, Neconyan switches to Chat Completion; choose another provider there or under Text Completion. NovelAI is still available for pictures in **Quick Image Gen**.
+
+AI Horde ran requests on computers lent by volunteers, who could see what was sent. Bear that in mind with any shared or community-run service: don't send anything you wouldn't want a stranger to read.
+
+### Where keys are kept {#where-keys-are-kept}
+
+After you connect, the key box empties and shows **Key saved**, or **Missing key** if there's none. Keys are stored by the Neconyan server for your account, not in the page. The key button beside each box opens **Manage API keys**, where you can keep several labelled keys for one provider and choose which is used.
+
+**View hidden API keys** at the bottom of Connections only works if the server owner has allowed it in `config.yaml`. Data imports never bring keys or passwords with them.
+
 ## Understand the limits
 
 **Context capacity** is how much input and output the model can handle together. **Reply limit** is the maximum output you ask it to produce. A larger reply limit doesn't enlarge its context capacity and can leave less room for history.
