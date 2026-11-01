@@ -33,6 +33,20 @@ The book must be available to the current chat, the entry must be enabled and it
 
 A constant or always-active entry behaves differently from a keyword-triggered one. Use it deliberately for information that truly belongs in every relevant request, because it consumes space repeatedly.
 
+## Inclusion groups {#inclusion-groups}
+
+An inclusion group lets only one of several related entries in at a time. Use it for alternatives that would contradict each other, such as three versions of the weather or a character's moods.
+
+Give each entry the same label in **Inclusion Group**. An entry can belong to several groups; separate the labels with commas. When more than one entry from a group activates in the same request, Neconyan keeps one:
+
+1. Entries still active from **Sticky** win over newly activated ones. Entries waiting out a cooldown or delay are left out.
+2. With group scoring on, only the entries that matched the most keywords stay in the running. Turn it on for every book with **Use Group Scoring** in **Global Lorebook activation settings**, or per entry with **Group Scoring**, where **Use global** follows that switch.
+3. If an entry from the group was already added earlier in the same request, the others are skipped.
+4. An entry with **Prioritize** ticked wins. If several are, the one with the highest **Order** is chosen.
+5. Otherwise Neconyan picks at random. **Group Weight**, 100 by default, sets each entry's chance: an entry with 200 is twice as likely as one with 100.
+
+Entries without a group label aren't affected. If an entry you expected is missing, check whether another member of its group won; [World Info Lab](#inspect-activation-with-world-info-lab) shows what activated.
+
 ## Search a whole book by meaning
 
 **Entry tools → Vectorize all** marks entries in the selected book for meaning-based retrieval. This needs the **Vectorization** tool enabled and an embeddings connection configured. Embeddings are numerical descriptions of text used to compare relevance.
