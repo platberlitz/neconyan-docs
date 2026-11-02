@@ -46,13 +46,15 @@ Some Chat Completion models can think before writing their reply. **Reasoning Ef
 
 Set it in **Presets → Advanced & Reasoning**, or press the brain button beside the message box and pick a short label such as **Low** or **Med**. Both change the same setting.
 
-How the choice is sent depends on the provider:
+Across **NanoGPT**, **OpenRouter** and supported native connections (**OpenAI**, **Google AI Studio** on `v1beta`, **Google Vertex AI**, **DeepSeek**, **Moonshot**, **Z.AI**, **MiniMax**, **MistralAI**, **Groq**, **AIMLAPI** and **Fireworks**), Neconyan filters the menu and the composer picker to the effort levels declared or documented for the selected model:
 
-- **OpenAI-style providers** receive the level as a named setting. **None** is only sent where the model accepts it; otherwise no level is sent.
+- If your saved choice isn't supported by the current model, the control warns you and lists the valid choices so you can pick one before sending.
+- When an OpenRouter model doesn't expose an effort setting, the **Reasoning Effort** selector is disabled with a note that your saved choice is kept for other models, and the brain button beside the message box is hidden.
+- When a model requires reasoning, **None** isn't offered.
 - **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. A higher response limit therefore allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
-- **DeepSeek**, **Z.AI** and **NanoGPT** list or hide the levels each model accepts.
+- For unlisted native models or custom proxies where supported levels aren't known, the full list remains available; **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
 
-A model may ignore a level it doesn't support, or reject the request. If a reply fails after changing it, set it back to **None** and test again.
+If a reply fails after changing the level, choose one of the model's supported levels or set it back to **None** where available and test again.
 
 **Request model reasoning** in the same drawer asks the provider to return the thinking so Neconyan can show it. Some providers think without returning anything you can read. **Fine-tuning → Formatting → Reasoning** controls how returned thinking is shown and whether it's added to later prompts.
 

@@ -87,6 +87,15 @@ Check the active persona when a conversation seems wrong. Conversation histories
 
 Each persona can keep its own expression set, separate from the character's set. See [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) for the setup and background classification.
 
+## Organise tags and folders {#tag-management}
+
+Open **Manage tags** (the gear button in the tag filter bar on **Characters**) to open **Tag Management**. It uses the tags already on your cards, shows a live summary of tags, folders and notes at the top, and needs no model request.
+
+- **Tags & Folders**: search tag names and notes, or type `c:` followed by a character or group name (such as `c:Narrator`) to find tags assigned to them; a leading `-` excludes a term and commas mean either. Filter by folder state, **Unused** or **With notes**, and sort manually (drag the grip) or by name or usage count. Create a tag with **No folder**, **Open folder** (shows its characters in the main library even when the folder isn't selected) or **Closed folder** (hides its characters from the main library until you open the folder). Each tag row lets you edit its name, folder type, card visibility, colours, tag note and assigned characters or groups. Under **Folder and bulk tools**, tick **Group library by folder tags** to use folders in the library, **Merge tags** to fold selected tags and their notes into a kept tag, or **Delete tags** to remove several at once.
+- **Characters & Groups**: search cards by name, `t:tag`, `f:folder`, `a:text` (searches the whole card: name, description, personality, scenario, first message, creator's notes, organiser note and tags), `n:note` (organiser note) or `-term`, with quotes keeping a phrase together and commas meaning either. Filter by type, tagged or untagged, folder state, notes or **Favourites**. Each row lets you add or remove tags, write an organiser **Notes** entry, or **Open** the card. Use **Select shown** or tick individual rows, then open **Bulk assign tags** to **Assign tags** or **Remove tags** across the selection at once.
+
+At the top of **Tag Management**, **Prune** removes unused tags plus references and organiser notes left behind by deleted characters or groups, **Backup** downloads a JSON file of your tags, assignments and notes, and **Restore** imports a tag backup or notes file (asking whether to **Overwrite** or **Keep Existing** when items overlap). After a delete, merge or prune, the **Undo** banner at the top of the window restores the previous state.
+
 ## Move and copy a card
 
 Characters' **Import** action accepts supported card files, including PNG files with embedded card data. Use **Duplicate Character** when you want a separate version to experiment with.

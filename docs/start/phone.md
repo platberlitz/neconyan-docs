@@ -16,7 +16,7 @@ The project now includes a standalone iPhone app. It bundles Node.js, the server
 
 A free Apple account has to re-sign the app every seven days and allows three sideloaded apps. Install a newer IPA over the old one with the same Apple account to keep your chats; deleting the app deletes them with it, so export an account backup first if you're changing tools.
 
-This edition documents the app from the 1.4.0 source. If a release provides an IPA, download the file ending in **-ios-unsigned.ipa** from that same release; it is the build that matches the version this handbook describes. If the release page has no IPA, use the browser setup on this page instead.
+This edition documents the app from the 1.4.1 source. If a release provides an IPA, download the file ending in **-ios-unsigned.ipa** from that same release; it is the build that matches the version this handbook describes. If the release page has no IPA, use the browser setup on this page instead.
 
 Imports keep going when you switch apps or lock the phone. Pick the backup with the app's **Import Backup ZIP** button, confirm, and the server takes it from there. Allow about twice the backup's size in free space while it is copied in. Replies keep going the same way: if you leave mid-reply, the page plays a silent sound until the reply is written, saved and its after-reply Agents have run. You might see 'Neconyan is finishing a reply' on the lock screen, and music from another app can pause until it's done. iOS can still close the app when the phone runs short of memory. [The iPhone setup notes](https://github.com/platberlitz/Neconyan/blob/staging/ios/README.md) cover the build and its limits.
 
