@@ -42,9 +42,13 @@ The **Fine-tuning** area contains model presets, sampling, formatting, regex scr
 
 **Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
 
-## Reorder the sidebar
+## Edit and reorder the sidebar {#reorder-sidebar}
 
-The **Reorder sidebar** button at the top of the workspace sidebar turns the rail into an editable order. Drag a button by its grip to move it within a section or into another open section; the chat mode buttons stay in their own section. With a grip focused, Alt+ArrowUp and Alt+ArrowDown move it. A live message names the new position. **Reset** restores the default order, and **Done** leaves reorder mode; each move is already saved. The order is saved with this account's settings on the server, not in this browser or a character card, so it is shared across devices signed into the same account. The phone menu uses the same rail and order.
+Every section heading in the workspace sidebar (**Workspace**, **Fine-tuning**, **Characters & Lore**, **Appearance**, **Troubleshooting** and **Modes**) has an **Edit sidebar** pen button on desktop and in the phone drawer, and **Settings** has the same switch. Drag a button by its grip to move it within a section or into another open section; the chat mode buttons stay in their own section.
+
+Press **X** on a button to hide it from the sidebar. While you're editing, it stays faded in place with a **+** button to add it back, then disappears once you press **Done**. Hiding a button only takes it off the sidebar; its page and saved data stay intact. With a button focused, Alt+ArrowUp and Alt+ArrowDown move it and Delete hides or adds it back. A live message names each change.
+
+**Restore defaults** brings back every hidden button and restores the default order for every section. **Done** leaves editing and returns focus to the pen you started from; each change is already saved. The order and hidden buttons are saved with this account's settings on the server, not in this browser or a character card, so they follow the account across devices. The phone drawer uses the same rail, order and edit controls.
 
 ## Keep the sidebar simple
 

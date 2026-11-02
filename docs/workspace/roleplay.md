@@ -77,15 +77,19 @@ Older messages may need attention before Show only can be applied; [Something we
 
 **Settings → Chat & Writing** separates controls into **Chat & messages**, **Characters**, **Auto-swipe & auto-continue**, **Autocomplete** and **Fine-tuning**. Start with the drawer that matches the behaviour you want to change. Script controls live under Fine-tuning; appearance-only switches live under [Appearance](appearance.md).
 
-For reopening and linking chats, use **Chat & messages → Chat window**. **Reopen your last chat** and **Chat links in address bar** are separate choices, initially off. A chat link refers to a chat on that installation and account; it isn't a public copy of the conversation. **Open keyboard when a chat opens** focuses the message box when you open or switch to a chat so you can type straight away.
+For reopening, linking and naming chats, use **Settings → Chat & Writing → Chat & messages → Chat window**. **Reopen your last chat** and **Chat links in the address bar** are separate choices, initially off. A chat link refers to a chat on that installation and account; it isn't a public copy of the conversation. Under **Chat & messages → Sending**, **Open keyboard when a chat opens** focuses the message box when you open or switch to a chat so you can type straight away.
 
 You can also use **Copy chat link** in desktop Recent Chats, or open **Chat link settings** from the phone's chat tools.
+
+**Name chats automatically** in the same **Chat window** group is on by default, with **Messages before naming** set to **6** (from 1 to 100). It counts visible non-system messages with text, including the greeting, after you've sent at least one message of your own. When the open chat still has its date-and-time name and Neconyan is idle, it asks the current model for a short title; this usually takes one request, though a failed structured attempt on Chat Completion can retry once as plain text. Names you chose yourself are kept, and temporary chats, built-in assistants and Conversation are skipped.
 
 **Settings → Chat & Writing → Chat & messages → Replies → Where replies are written** chooses the default path for new ordinary replies. **In the browser (recommended)** shows the reply directly in the tab. **On the server** sends ordinary Roleplay replies through a saved server job. Both show text as it arrives. Conversation, replies that need a selected Notebook context, one-to-one guided corrections and Deep Swipe always use the server. Built-in assistant chats, group guided actions and some group turns stay in the browser. Changing the setting doesn't start a reply or make a model request.
 
 Server-run Roleplay replies keep running while you're watching the chat as well as when the tab is hidden. **Writing reply…** is the live job's status. [When you leave the page](#when-you-leave-the-page) explains what happens if you close it. With **Settings → Appearance → Visual Toggles → Message Timer** enabled, elapsed seconds keep ticking between incoming chunks and stop when the main reply finishes, even if Agents are still working.
 
 While a streamed reply has no text or visible reasoning yet, a **Thinking...** label stays above the empty message. It clears when either appears and isn't saved in the chat.
+
+If a stream ends early, stalls, loses its connection or hits **Max Response Length** while the model is still reasoning, Neconyan keeps the partial prose or thinking-only reply that arrived, explains why it stopped, and skips automatic after-reply Agents on the incomplete turn so they don't rewrite a cut-off answer. Making room for a new held reply never cancels one that is still being written, and a refused or failed swipe unlocks swiping again.
 
 For OpenRouter and custom OpenAI-compatible connections, **Interleaved Thinking** sits below **Enable function calling** in the Chat Completion settings. Turn on **Request model reasoning** to use it. **Since Last User Message** and **Active Tool Chain** send each saved tool call's own reasoning with later calls; a neighbouring message's thinking is used only when the call has none.
 
@@ -185,15 +189,28 @@ A single script can switch either option for itself with `/parser-flag STRICT_ES
 
 - Put stable character traits in the [character card](characters.md).
 - Put relevant world facts in [lorebooks](lorebooks.md).
-- Use an Author's Note for short guidance about the current scene or style.
+- Use an [Author's Note](#authors-note) for short guidance about the current scene or style.
 - Use [Mewmory](../helpers/mewmory.md) when a long saved history needs structured recall.
 - Use [Scratchpad](../helpers/scratchpad.md) for planning you don't want inserted as a story message.
 
 Adding context uses space. More instructions aren't automatically better if they contradict each other or push useful history out of the request.
 
+### Author's Note {#authors-note}
+
+Open **Chat tools → Author's Note** to steer the current scene, tone or style without editing the character card. A summary line at the top shows which notes are active in the open chat, and four tabs separate where each note lives:
+
+- **This chat**: the open conversation's note, placement, depth, role and **Insertion Frequency** (`1` sends on every reply, `0` disables the Author's Note for this chat), plus the shared **Include in World Info Scanning** switch used across all chats.
+- **Character**: private notes saved for this character or group and left out when you export the card. Add several notes with **New note**, tick every note you want in the mix, and tap a name to edit its text and whether it sits at the **Top of Author's Note**, **Replace Author's Note** or **Bottom of Author's Note**. Tick **Separate notes for each persona** so each persona keeps its own set of ticked notes for this character.
+- **Persona**: a private note that follows your active persona across characters. It keeps named profiles (one active at a time) and its own Top, Replace or Bottom placement. You can also open it straight from **Persona** (**Author's Note** or **Edit note**) or from the **Author's Note → Edit** button inside the composer's persona picker.
+- **New chats**: the default text, placement and frequency copied into new chats when they start.
+
+When both Character and Persona notes are switched on, Top notes run before the chat note (or before any Replace notes), and Bottom notes run after it, with ticked character notes in list order before the persona note. Conversation mode has its own Author's Note setting.
+
 ## Manage saved chats {#saved-chats}
 
-Each character keeps its own list of saved chats. Open it with **View chat files** on the chat bar, from the chat tools sheet on a phone, or with **Chat tools → Manage chat files**. The window is titled with the character's name, for example **Miso Chat History**.
+To switch quickly without leaving the composer, press the current chat's name on the chat bar above the message box (its tooltip and accessible label read **Switch chat**). It opens a searchable popup for the current character or group, showing each chat's title, last-message date, message count, token estimate and a short preview; **Current** marks the open chat.
+
+For the full file manager, open **View chat files** in the bottom chat actions row (shown or hidden with **Show chat actions** / **Hide chat actions**), from the chat tools sheet on a phone, or with **Chat tools → Manage chat files**. The window is titled with the character's name, for example **Miso Chat History**.
 
 - Click a chat to open it. **Search...** filters the list.
 - **New Chat** starts a fresh chat with the character's first message. **Import Chat** brings in a chat file.
@@ -210,7 +227,7 @@ Each chat row has its own buttons:
 | **Replies** | Downloads only the character's replies |
 | **Delete** | Deletes the chat file |
 
-**Label current** asks the model to give the open chat a descriptive name, and **Label dated** does the same for chats still named with the date they started. **Cancel** stops a labelling run. Each label is a request on your connection.
+**Label current** asks the model to give the open chat a descriptive name, and **Label dated** does the same for chats still named with the date they started. **Cancel** stops a labelling run. Each label uses one request on your connection, or two if a structured Chat Completion attempt falls back to plain text. To have dated chats named in the background once they reach a message threshold, keep **Name chats automatically** on under **Settings → Chat & Writing → Chat & messages → Chat window**.
 
 To clear out old chats, set **Older than** and **Keep newest**, then press **Preview** to see which chats match. **Dated only**, on by default, limits the clean-up to chats still named with their start date, so chats you've renamed stay. The open chat and the newest chats you asked to keep are never removed. **Clean** asks before it deletes, and deleted chats can't be restored from this window, so make a [backup](../help/backups.md) first if you might want them back.
 

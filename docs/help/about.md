@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.4.0**, reviewed against source **4b60373c on 29 October 2026**. Check your installed version if an option is missing. This edition covers group scenes with the Scene Director, where replies are written, the standalone iPhone app and its sideloading limits, Mewmory's recent-message window, Vitals, the Prompt Adherence Checker and Dice Roller.
+The practical guides cover **Neconyan 1.4.1**, reviewed against source **9dc34134 on 2 November 2026**. Check your installed version if an option is missing. This edition covers sidebar section editing and hidden buttons, tabbed Author's Notes with mixed character notes per persona, the searchable composer chat browser, automatic chat naming, native Tag Management with folders and bulk tools, the UI Theme palette gallery and tracker-derived UI themes, provider-aware Reasoning Effort controls, Agent update banners and Chatroom polls, events and direct viewer replies.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

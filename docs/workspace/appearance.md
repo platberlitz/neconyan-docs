@@ -12,7 +12,7 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 
 | Control | What it changes |
 | --- | --- |
-| **UI Theme** | A broader saved appearance preset, with import, export and save controls |
+| **UI Theme** | A searchable gallery of full interface themes with five-swatch palette previews, **All**, **Dark** and **Light** filters, and import, export and save controls |
 | **Accent Profiles** | Accent palettes and custom primary/secondary colours |
 | **Shell Style** | The shape and treatment of controls, panels and navigation |
 | **Chat Style** | Message presentation |
@@ -51,6 +51,8 @@ Start with a bundled light or dark theme and a readable font size. **Settings �
 Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
 
 **AMOLED Black** is available under UI Theme for a pure-black interface. Switch to another theme if you want its hidden wallpaper and cloud artwork back.
+
+Under **Settings → Appearance → UI Theme**, the theme gallery shows each theme as a card with five colour swatches (surface, chat, text, primary accent and secondary accent) and a **Dark** or **Light** label. Use **Search themes** and the **All**, **Dark** and **Light** filter buttons to narrow the list; **Clear filters** resets an empty search. The bundled list includes 115 palettes adapted from Regex Agent Themes as full interface themes, alongside the stock Calico and shell palettes. Selecting a **UI Theme** colours the whole application interface; it stays separate from the tracker card style chosen in [Tracker themes](#tracker-themes).
 
 ## Visual Toggles
 
@@ -100,7 +102,7 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 **Previous**, **Next** and **Surprise me** only move the preview within the filtered list. **Apply this theme** makes the previewed theme the default; **Show current** returns the preview to the current default.
 
-1.3.4 added 40 choices: 14 dark, 13 light and 13 animated. Animated themes stop when the operating system asks for reduced motion.
+1.3.4 added 40 choices: 14 dark, 13 light and 13 animated. Animated themes stop when the operating system asks for reduced motion. Relationship and Ethereality tracker cards use their dedicated layouts, and narrow search controls and accent buttons stay readable across shell styles. To use the 115 tracker palettes as full application themes instead, pick them under **Settings → Appearance → UI Theme**.
 
 ## Termeownal palettes
 
