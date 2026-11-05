@@ -10,6 +10,8 @@ A **character card** describes who the model plays. A **persona** describes who 
 
 ## Create a useful card
 
+For a private workspace where you can draft, ask for help and review changes before saving a card, open [Catelier](../helpers/catelier.md). The ordinary character editor still works for quick edits.
+
 Open **Characters**, create a character and fill in the fields you actually need. Give the character a name, a recognisable voice, a motive and a starting situation. Use the first message to demonstrate the kind of interaction you want.
 
 A practical starting set is:
@@ -74,6 +76,16 @@ The editor header shows the card's size as **Tokens** and **Permanent**. A token
 A warning sign appears when the total is more than half the connection's context size. A large card leaves less room for chat history, so the model forgets earlier messages sooner. The counts are estimates and don't include presets, lorebooks or the chat itself.
 
 ## Keep changing facts out of the permanent description
+
+### Switchable traits with Purrks
+
+**Purrks** are small pieces of character instruction you can turn on separately: a mood, a trait or a scene direction. Open **Character Purrks** in the chat tools, or **Prompts** in Catelier.
+
+Choose **Always active**, **Manual switch**, **Keyword trigger** or **Scene AI director**. Check the placement too: character description, system prompt, after chat history or a chosen depth. System and after-history placements follow the **Prefer character prompt** settings.
+
+**Extract from card** finds supported traits without a model request and adds them switched off. **Generate Purrks** asks a model, so it can cost credits. The import setting **Create switchable Purrks on import** also starts extracted traits off. Existing Orb fragments are converted regardless of that switch.
+
+The Purrks travel with the card; their current chat switches belong to the chat. Keep long-term facts in the description and use Purrks for details you want to control separately.
 
 A card works well for stable identity. Keep changing details, such as a current injury, in the chat or a suitable [writing tool](../helpers/index.md).
 

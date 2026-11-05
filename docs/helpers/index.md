@@ -10,6 +10,7 @@ Choose a tool based on the writing task you want help with. Each has its own set
 
 | You want to… | Use | What to know first |
 | --- | --- | --- |
+| Make or revise a character card | [Catelier](catelier.md) | Work stays in a private draft until you save it to the library |
 | Keep an outline or reference library | [Notebooks](notebooks.md) | Writing notes doesn't require a model connection |
 | Ask for ideas without adding planning to the story | [Scratchpad](scratchpad.md) | You choose its context and connection |
 | Run a repeatable helper around replies | [Agents and Companions](agents.md) | Some add instructions; others make extra requests |

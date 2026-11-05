@@ -30,7 +30,7 @@ Character tags in the library and character editor follow the selected accent co
 
 Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ears and paws while retaining your chats and installed characters. You can also use **Hide cats (Kittyless)** beneath the style choices while keeping another shell style.
 
-Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal and several quieter styles. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace the portraits of characters you've imported.
+Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal and **Starlight Conservatory**. Use the previews to choose a layout, then pick a **UI Theme** and accent colours. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace imported character portraits.
 
 For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows XP Olive Green Dark** under UI Theme. Shell Style and UI Theme are separate selections.
 

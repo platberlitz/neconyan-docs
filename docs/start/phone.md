@@ -6,9 +6,9 @@ quote: "The phone needs the address of the computer running Neconyan. 'Localhost
 
 # Open it on your phone
 
-An iPhone or iPad can use Neconyan through a browser while the server runs on another computer or host. Android also supports this setup, or you can [run the Android app itself](android.md).
+You can install Neconyan on an iPhone or [Android phone](android.md), or open it in a browser while it runs on your computer.
 
-This guide covers a phone and computer on the **same trusted home network**. Both must be connected, and the computer must stay awake with Neconyan running.
+For browser access, this guide uses the **same trusted home network**. The computer must stay awake with Neconyan running.
 
 ## Use the standalone iPhone app
 
@@ -16,7 +16,7 @@ The project now includes a standalone iPhone app. It bundles Node.js, the server
 
 A free Apple account has to re-sign the app every seven days and allows three sideloaded apps. Install a newer IPA over the old one with the same Apple account to keep your chats; deleting the app deletes them with it, so export an account backup first if you're changing tools.
 
-This edition documents the app from the 1.4.1 source. If a release provides an IPA, download the file ending in **-ios-unsigned.ipa** from that same release; it is the build that matches the version this handbook describes. If the release page has no IPA, use the browser setup on this page instead.
+Download the file ending in **-ios-unsigned.ipa** from the [release page](https://github.com/platberlitz/Neconyan/releases/latest). If your chosen release has no IPA, use the browser setup below.
 
 Imports keep going when you switch apps or lock the phone. Pick the backup with the app's **Import Backup ZIP** button, confirm, and the server takes it from there. Allow about twice the backup's size in free space while it is copied in. Replies keep going the same way: if you leave mid-reply, the page plays a silent sound until the reply is written, saved and its after-reply Agents have run. You might see 'Neconyan is finishing a reply' on the lock screen, and music from another app can pause until it's done. iOS can still close the app when the phone runs short of memory. [The iPhone setup notes](https://github.com/platberlitz/Neconyan/blob/staging/ios/README.md) cover the build and its limits.
 

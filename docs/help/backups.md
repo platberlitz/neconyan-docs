@@ -28,7 +28,7 @@ The expression **Export ZIP** covers the selected artwork set only. An image cha
 
 ## Download an account backup
 
-Open **Settings → Cache & Account → Account Settings → Account**, then use **Download Backup**. The accepted backup runs as saved server work, so closing the page doesn't automatically stop it. Downloads no longer stop at the old fixed 8 GiB limit or the 32 GiB retained-file quota; the server needs enough free space for the archive while it is written.
+Open **Settings → Cache & Account → Account Settings → Account**, then use **Download Backup**. Once accepted, the backup keeps running if you close the page. The server needs enough free space to write the archive.
 
 Return to the account controls and use **Choose a saved account backup**, then **Download saved backup**, to recover completed work. **Stop backup** requests cancellation.
 
@@ -42,11 +42,15 @@ Keep the old copy until the restored installation opens correctly and you can in
 
 ## Update a Git installation
 
-The launcher checks for updates when a Git installation starts. Local source edits or disabled automatic updating can stop that process. Read the terminal output if it declines to update rather than forcing a reset over your own changes.
+Open **Server → Updates & Restart → Check for updates**, then **Update & Restart**. The launcher also checks at startup. If local edits block an update, read the explanation before replacing anything you've changed. Setting `NECONYAN_AUTO_UPDATE=0` disables the launcher's automatic check.
 
 After updating, reload the browser and check a saved chat and your active connection. Included tools update with the app; separately installed extensions have their own updates and compatibility.
 
 ## Update a ZIP installation
+
+Open **Server → Updates & Restart → Check for updates**, then **Update & Restart**. Supported installations download and verify the official source ZIP, prepare the replacement and restart. Your data and configuration stay in place. Keep a backup anyway.
+
+For an older installation without that updater:
 
 1. Back up, then stop the old Neconyan server.
 2. Download and extract the newer official source release into a new folder.
@@ -60,7 +64,7 @@ Don't overwrite a running installation with a mixture of old and new source file
 
 Export before updating or moving devices. Newer builds provide **Server → Updates & Restart → Check for updates**, then **Update APK** inside the Android app. Android still asks you to approve installation. If those controls aren't available, download the official APK and install it over the existing app.
 
-**Uninstalling removes the app's private data.** See [Android installation](../start/android.md#update-without-losing-your-library) for the update steps and large-export limit.
+**Uninstalling removes the app's private data.** See [Android installation](../start/android.md#update-without-losing-your-library) for the update steps. The same backup-first rule applies before replacing or removing the standalone iPhone app.
 
 ## Restore deliberately
 

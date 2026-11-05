@@ -34,6 +34,7 @@ hide:
 
 [**Get my first reply** <span>Set up Neconyan and start a chat.</span>](start/index.md)
 [**Bring my characters over** <span>Import your existing library.</span>](start/imports.md)
+[**Make a character** <span>Draft, revise and save a card in Catelier.</span>](helpers/catelier.md)
 [**Try a different kind of chat** <span>Roleplay, direct messages, a private timeline or a manuscript.</span>](workspace/index.md)
 [**Plan the next scene** <span>Keep an outline or discuss an idea in Scratchpad.</span>](helpers/index.md)
 [**Fix something** <span>Connections, missing chats, slow replies and phone access.</span>](help/troubleshooting.md)
@@ -45,7 +46,7 @@ hide:
 
 ## A quick look inside
 
-Neconyan is a self-hosted app for character chat and writing. It runs on your computer, your own server or an Android device, and you open it in a browser or the Android app. You choose the model that writes the replies, through an online provider or a model running on your own hardware.
+Neconyan is an app for character chat and writing that you run yourself, on a computer, server, Android phone or iPhone. Open it in a browser or the phone app. You choose the model that writes the replies, through an online provider or your own hardware. Installing Neconyan doesn't include model access or credits.
 
 === "On a computer"
 

@@ -110,6 +110,14 @@ def main():
             page.goto(base + 'extensions/first-extension/', wait_until='networkidle')
             expect(page.locator('main')).to_contain_text('export function activate')
             assert page.locator('main a[href$="scene-note.zip"]').count() == 1
+            page.goto(base + 'helpers/catelier/', wait_until='networkidle')
+            expect(page.locator('h1')).to_have_text('Catelier')
+            expect(page.locator('main')).to_contain_text('Save to library')
+            page.locator('.screenshot a:visible').click()
+            expect(page.locator('.screenshot-dialog img')).to_have_attribute('src', __import__('re').compile('desktop-catelier.webp$'))
+            page.wait_for_function('document.querySelector(".screenshot-dialog img").naturalWidth === 1280')
+            page.get_by_role('button', name='Close screenshot').click()
+            page.screenshot(path=str(SHOTS / 'desktop-catelier.png'), full_page=False)
             # Visit every content page to catch broken images and narrow-screen overflow.
             phone = handbook_context(browser, viewport={'width': 393, 'height': 852}, is_mobile=True, has_touch=True, device_scale_factor=1, reduced_motion='reduce')
             mobile = phone.new_page()
@@ -129,6 +137,13 @@ def main():
                 assert mobile.evaluate('Array.from(document.querySelectorAll("img[src]")).filter(i => i.loading !== "lazy").every(i => i.complete && i.naturalWidth > 0)'), relative
             mobile.goto(base + 'helpers/notebooks/', wait_until='networkidle')
             mobile.screenshot(path=str(SHOTS / 'phone-notebooks.png'), full_page=False)
+            mobile.goto(base + 'helpers/catelier/', wait_until='networkidle')
+            mobile.locator('.tabbed-labels label').filter(has_text='Phone').click()
+            mobile.locator('.screenshot--phone a:visible').click()
+            expect(mobile.locator('.screenshot-dialog img')).to_have_attribute('src', __import__('re').compile('phone-catelier.webp$'))
+            mobile.wait_for_function('document.querySelector(".screenshot-dialog img").naturalWidth > 0')
+            mobile.get_by_role('button', name='Close screenshot').click()
+            mobile.screenshot(path=str(SHOTS / 'phone-catelier.png'), full_page=False)
             mobile.goto(base + 'macros/pronouns/', wait_until='networkidle')
             mobile.screenshot(path=str(SHOTS / 'phone-pronouns.png'), full_page=False)
             # Corrupt and blocked preference storage must leave usable guide controls.

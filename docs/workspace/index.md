@@ -60,10 +60,19 @@ The **Characters & Lore**, **Appearance**, **Quick Actions** and **Troubleshooti
 
 Press **Show all features** in the workspace sidebar to restore everything. The same switch in Settings turns Simple Mode on again, and the choice is saved for your account.
 
-<figure class="screenshot" markdown>
-[![Simple Mode on desktop, with a shorter workspace sidebar and the chat filling the screen](../assets/images/screenshots/desktop-simple.webp)](../assets/images/screenshots/desktop-simple.webp)
-<figcaption>Simple Mode keeps the chat and the tools you use most. <strong>Show all features</strong> restores the full sidebar.</figcaption>
-</figure>
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![Simple Mode on desktop, with a shorter workspace sidebar](../assets/images/screenshots/desktop-simple.webp)](../assets/images/screenshots/desktop-simple.webp)
+    <figcaption>Simple Mode keeps the chat and the tools you use most. <strong>Show all features</strong> restores the full sidebar.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![Simple Mode on a phone, with fewer composer controls](../assets/images/screenshots/phone-simple.webp)](../assets/images/screenshots/phone-simple.webp)
+    <figcaption>Fewer controls beside the message box. Your other features stay enabled.</figcaption>
+    </figure>
 
 ## Search everything
 

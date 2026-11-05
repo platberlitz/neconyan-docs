@@ -101,6 +101,7 @@ nav:
   - Writing and helpers:
       - Choose a helper: helpers/index.md
       - Meet the assistants: helpers/assistants.md
+      - Catelier: helpers/catelier.md
       - Notebooks: helpers/notebooks.md
       - Scratchpad: helpers/scratchpad.md
       - Agents and Companions: helpers/agents.md

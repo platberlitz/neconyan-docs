@@ -6,72 +6,65 @@ quote: "A character's memory can be wrong. Keep the source passage so you can ch
 
 # Mewmory
 
-Mewmory helps saved Roleplay chats recall earlier events using their source passages. **Pawspective** adds a character's interpretation of that history, including beliefs that may be mistaken.
+Mewmory helps a saved Roleplay chat recall earlier events. **Pawspective** adds what individual characters believe about those events, including things they got wrong.
 
-It is separate from Conversation's summaries, Companion trackers and Scratchpad context. Enabling one doesn't enable the others.
+It is separate from Conversation summaries, Companion trackers and Scratchpad. Start with one short chat so you can check what it remembers.
 
 ## Set it up for a chat
 
-1. Open a saved Roleplay chat, then **Mewmory** in the workspace.
-2. In **Settings**, configure the roles you want to use, such as **Facts and events** or **Pawspective**.
-3. Choose saved connection profiles or configure supported endpoints directly.
-4. Wait for **Configuration saved**. Settings save on their own; there's no save button.
-5. Turn on **Use Mewmory in this chat**.
-6. For an existing history, use **Backfill this chat**, then watch the job and coverage status.
+1. Open a saved Roleplay chat, then **Mewmory**.
+2. In **Now → Memory focus and window**, choose what to remember and how much recent chat to keep. **All model settings** opens the detailed connections.
+3. Choose a connection for the roles you use, such as **Facts and events** or **Pawspective**. Wait for **Configuration saved**.
+4. Turn on **Use Mewmory in this chat**. For earlier messages, choose **Backfill this chat** and watch the progress.
 
-Every setting saves automatically, including switches, number fields, model roles and credentials. While you're typing, Mewmory waits a moment before saving, and the status line shows **Saving…** and then **Configuration saved**. A change the server rejects, or one that isn't complete yet, stays on screen for you to fix, and the last saved configuration keeps working until it's fixed. **Discard unsaved settings** puts the form back to what was saved.
+Settings save automatically. If a change is refused, fix the highlighted value or use **Discard unsaved settings**. The last saved configuration keeps working meanwhile.
 
-Under **Memory updates**, **Use Mewmory in new chats** leaves existing chats alone. Older chat in replies is controlled by **Replace older chat with Mewmory context**, which is on by default. **Choose recent chat by** offers **Token allowance** (30,000 to start) or **Number of messages**. In message mode, **Keep at least this many recent messages** starts at 10 and **Remove older chat in groups of** starts at 5. At 15 messages, the oldest five leave the reply context only once they are remembered; they are not hidden unless **Also hide omitted messages in the saved chat** is ticked. When memory is behind, **Reply immediately** keeps unrecorded older messages by default; **Wait for memory** records them first, and you can stop waiting. These reply-context choices apply while replacement is on.
+### Choose a Jev recall model
 
-Hiding is separate. With **Token allowance**, **Hide old messages automatically at a token threshold** is off to start with, and **Hide older messages at this chat size, tokens** sets when it hides. With **Number of messages**, the hide checkbox above uses the same recent-message window instead.
+**Recall decision model** offers Jev presets and a custom model. Jev scores which saved memories belong in a reply; it doesn't write the reply or replace the model that records events.
 
-Original passages remain useful even without every model-powered role enabled. Optional meaning search uses embeddings, numerical representations that help match related wording. Keyword search works without embeddings.
+Choose a saved connection profile, optionally with a model override, or **Manual endpoint & API key** for a separate service. Enter keys in settings, never in chat. Start with the preset's protocol and score threshold. Choosing a preset doesn't supply model access.
 
-Remote models are allowed by default. **Use models running on this computer only** restricts the relevant configuration to permitted local addresses. Choose this based on where you actually want the processing to run.
+### Keep enough recent chat
 
-**Backup connections** is one shared list of up to ten saved profiles for every text role. They are tried in order when a role's connection fails, times out or returns unusable output; each uses its own model, and every attempt can add usage. Embeddings never use a fallback. **Use for every role** copies one profile across the text roles; adjust an individual role afterwards if it needs a different model. **Recall selector** and **Recall fallback** only pick from memories that already exist, and **Use models running on this computer only** applies to every role.
+**Replace older chat with Mewmory context** starts on. Choose a token allowance, the amount of text the model counts, or a number of messages. The message window starts at ten recent messages, removing older ones in groups of five. At fifteen messages, the oldest five leave only once they're remembered.
+
+**Reply immediately** keeps unrecorded older messages when memory is behind. **Wait for memory** records them first; you can stop waiting.
+
+Removing old text from the next request doesn't hide it on screen. **Also hide omitted messages in the saved chat** is a separate choice. In token mode, automatic hiding has its own threshold and starts off.
 
 ## Understand the views
 
-Each view opens with a status card for the current chat. **Now** puts the memories prepared for the next reply at the top. **Archive** leads with its search box.
-
-| View | What to inspect |
+| View | Use it to… |
 | --- | --- |
-| **Now** | The current cast and memory material prepared for the chat |
-| **Pawspective** | Character-specific interpretations and source-backed knowledge |
-| **Archive** | Original passages and objective records |
-| **Recall** | What was included, rejected or left out by the budget |
-| **Settings** | Connections, jobs, coverage, processing and export/restore controls |
+| **Now** | See the memories prepared for the next reply |
+| **Pawspective** | Check what each character believes |
+| **Archive** | Find original passages and recorded events |
+| **Recall** | See what was included or left out |
+| **Settings** | Manage connections, processing, jobs and exports |
 
-Use **Recall** when the model appears to miss a fact. First establish whether that fact was selected and included. Then judge whether the writing model used it correctly.
+If a reply misses a fact, check **Recall** first. Was the fact included? If it was, the writing model may have ignored it.
 
 ## Source history matters
 
-Mewmory follows accepted saved revisions. Rejected swipes and later-deleted material shouldn't be treated as equally current truth. Use its source views, corrections, exclusions and pins when a record needs attention.
+Check a doubtful memory against its source passage. Correct objective records separately from a character's mistaken belief. Deleted messages and rejected swipes aren't equally current history.
 
-A Pawspective record can be a character's mistaken interpretation. Keep that distinction when correcting the objective history.
-
-Starting an unrelated chat doesn't silently share all memory. **Link this continuation** is the deliberate way to connect an appropriate continuation. Branches depend on their matching source history.
+**Link this continuation** deliberately connects an appropriate follow-on chat. Starting an unrelated chat doesn't share everything automatically.
 
 ## Processing and waiting
 
-Extraction and some AI-assisted recall can run in the background, and background memory work continues when after-reply Agents rewrite a reply. The current reply may use local or already completed selections while newly prepared AI results become available to later replies.
+Recording and recalling memories can make model requests. **Backup connections** tries your saved profiles in order when a text role fails; each attempt can add usage. Embeddings, the optional numerical representations used for meaning-based search, don't use those fallbacks. Keyword search works without them.
 
-After the server starts, Mewmory waits 30 seconds before its first automatic background scan, so the first page or chat can load without a full catch-up competing for the server. The pause changes only when background work starts; saved memories aren't removed or rewritten. Long catch-ups leave time for page requests to run.
+**Use models running on this computer only** restricts the relevant roles to permitted local addresses. Otherwise, remote providers may receive the material they process.
 
-Failed jobs don't count as completed coverage. Check the job error and model configuration before repeatedly backfilling. Changing models or processing settings can require work to run again and incur more charges.
-
-Context limits still apply. Mewmory can refuse a request that would overflow protected input rather than silently remove material you meant to preserve.
-
-!!! miso "Miso"
-    Try it on a short history first. Check one remembered event against the original messages, then let it handle the longer story.
+Background work waits briefly after server startup and can continue while after-reply Agents run. A failed job doesn't count as completed memory. Check the error before repeatedly backfilling. Changing models can mean processing the same history again.
 
 ## Avoid duplicate retrieval
 
-If you also use another meaning-based search tool, such as Vectorization, check whether both tools add the same passages. Duplicate passages consume context space. Mewmory can search by keywords, meaning or a combination of both; inspect the result to see what was included.
+If another search tool also adds old passages, check that both aren't sending the same text. Duplicate context leaves less room for the rest of the scene.
 
 ## Export and restore
 
-Use Mewmory's export and restore controls for its records. Exports exclude connection keys. Restoration still checks matching source history; it doesn't revive deleted or rejected chat content as current memory.
+Use Mewmory's export controls for its records. Exports leave out connection keys. Restore checks matching source history; it doesn't make deleted or rejected chat content current again.
 
-See the [full Mewmory reference](https://github.com/platberlitz/Neconyan/blob/staging/docs/mewmory.md) for connection roles, budgets, continuation matching and recovery details.
+See the [full Mewmory reference](https://github.com/platberlitz/Neconyan/blob/staging/docs/mewmory.md) for connection roles, budgets and recovery details.
