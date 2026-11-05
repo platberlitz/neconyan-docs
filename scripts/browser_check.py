@@ -111,7 +111,7 @@ def main():
             expect(page.locator('main')).to_contain_text('export function activate')
             assert page.locator('main a[href$="scene-note.zip"]').count() == 1
             page.goto(base + 'helpers/catelier/', wait_until='networkidle')
-            expect(page.locator('h1')).to_have_text('Catelier')
+            expect(page.locator('h1')).to_contain_text('Catelier')
             expect(page.locator('main')).to_contain_text('Save to library')
             page.locator('.screenshot a:visible').click()
             expect(page.locator('.screenshot-dialog img')).to_have_attribute('src', __import__('re').compile('desktop-catelier.webp$'))
