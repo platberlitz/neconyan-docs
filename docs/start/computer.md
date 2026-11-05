@@ -6,7 +6,7 @@ quote: "Let's get the app open first. I'll walk you through the launcher, then w
 
 # Install on a computer
 
-Neconyan runs on Windows, macOS and Linux. The launcher checks its runtime, the software needed to run the app, and installs missing dependencies on the first start. You need an internet connection for that first setup.
+Neconyan runs on Windows, macOS and Linux. Download it, extract it and run the launcher. The first start needs internet access to install the files it needs.
 
 ## Download and extract
 
@@ -61,9 +61,9 @@ git clone https://github.com/platberlitz/Neconyan.git
 cd Neconyan
 ```
 
-Then run the launcher for your system. The default branch follows releases; the development branch can include newer, unfinished changes. Use a release installation for a first setup.
+Then run the launcher for your system.
 
-Git installations check for updates at launch. The launcher leaves edited source alone, and automatic updates can be disabled with the environment variable `NECONYAN_AUTO_UPDATE=0`. ZIP installations need a manual update; see [Updates and backups](../help/backups.md).
+To update, open **Server → Updates & Restart → Check for updates**, then **Update & Restart**. This works for Git and supported source ZIP installations. Git launchers also check at startup and leave edited source alone. [Updates and backups](../help/backups.md) covers older ZIP copies and backing up first.
 
 ## Stop and restart
 

@@ -49,6 +49,10 @@ The builder refuses a button that doesn't fit the selected set. A set with **Put
 
 ## Lore and saved work
 
+**Pawthfinder** chooses relevant lore with a separate decision model. In its settings, choose a **Jev / decision model preset**, then connect its endpoint or a saved profile. Jev scores which entries to retrieve; summary writing still uses your chat model. **Decision protocol** must match the provider's decision endpoint or chat-completion service.
+
+If Pawthfinder should choose the lore by itself, enable **Disable World Info keyword activation**. Otherwise ordinary keyword matches can add entries too. Start with the preset's threshold and change one setting at a time.
+
 **World Info Lab** traces lore activation and supports reviewed batch changes. It and Prompting Lab can open saved chats up to 64 MiB. **Lorebook Distiller** proposes lore entries from a saved chat. **Chat Archive** searches and organises chats; its organisation export doesn't contain the chat contents themselves.
 
 **Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Its window is a list and detail view now: snapshot cards, kind filters, a history timeline and field-by-field comparisons. On a phone it swaps between the list and one snapshot instead of squeezing both. Compare before restoring, because a restore replaces newer edits.

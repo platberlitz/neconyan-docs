@@ -10,15 +10,15 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.4.1**, reviewed against source **9dc34134 on 2 November 2026**. Check your installed version if an option is missing. This edition covers sidebar section editing and hidden buttons, tabbed Author's Notes with mixed character notes per persona, the searchable composer chat browser, automatic chat naming, native Tag Management with folders and bulk tools, the UI Theme palette gallery and tracker-derived UI themes, provider-aware Reasoning Effort controls, Agent update banners and Chatroom polls, events and direct viewer replies.
+The practical guides cover **Neconyan 1.5.0**, reviewed against source **49b8b916 on 5 November 2026**. This refresh adds Catelier, Purrks, Jev recall setup and automatic source ZIP updates, with shorter guides for everyday writing. Check your installed version if an option is missing.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
-The practical guides explain common workflows, with links to longer technical references in the app repository. Those source links follow staging and may evolve after this edition. A documented provider feature still depends on the provider and model supporting it.
+The practical guides focus on common tasks and link to longer references when you need the details. Those references may change after this edition. Model features still depend on your provider and model supporting them.
 
 ## Screenshots and artwork
 
-The fifteen workspace screenshots come from the Neconyan repository's README collection. They show real desktop and phone layouts with staged demonstration content using the bundled assistants. They are illustrative, rather than a claim that every future release will have identical spacing or labels.
+The workspace screenshots were captured from the reviewed app on desktop and phone-sized screens. They use demonstration content and the bundled assistants, not private chats. Labels and spacing may change in later versions.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is authored guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 

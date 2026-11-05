@@ -76,6 +76,11 @@ def main():
         for alias in macro['aliases']:
             assert alias['alias'] in path.read_text(), f"Missing alias: {alias['alias']}"
     search = json.loads((SITE / 'search/search_index.json').read_text())
+    android_guide = (ROOT / 'docs/start/android.md').read_text()
+    # The detailed repair moved out of the app README. Keep the repository
+    # install separate so the runner is available to the next transaction.
+    assert 'pkg update && pkg install -y glibc-repo && pkg install -y glibc-runner' in android_guide
+    assert 'pkg install glibc-repo glibc-runner' not in android_guide
     assert any('freeze' in entry['text'] for entry in search['docs']), 'Reference missing from search'
     example = ROOT / 'docs/assets/downloads/scene-note'
     with ZipFile(SITE / 'assets/downloads/scene-note.zip') as archive:
