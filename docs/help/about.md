@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.5.0**, reviewed against source **49b8b916 on 5 November 2026**. This refresh adds Catelier, Purrks, Jev recall setup and automatic source ZIP updates, with shorter guides for everyday writing. Check your installed version if an option is missing.
+The practical guides cover **Neconyan 1.5.0**, reviewed against source **b1a488f1 on 6 November 2026**. This refresh adds Scenario Note portraits, Scratchpad edits for personas and notes, bottom bar button layout, the Sunken Reef shell style, optional background memory saving and a safe start after repeated startup crashes, and covers proxy confirmation, DeepSeek Flash reasoning effort and the reworked Hush chat style. Check your installed version if an option is missing.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

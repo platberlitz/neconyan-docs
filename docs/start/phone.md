@@ -20,6 +20,8 @@ Download the file ending in **-ios-unsigned.ipa** from the [release page](https:
 
 Imports keep going when you switch apps or lock the phone. Pick the backup with the app's **Import Backup ZIP** button, confirm, and the server takes it from there. Allow about twice the backup's size in free space while it is copied in. Replies keep going the same way: if you leave mid-reply, the page plays a silent sound until the reply is written, saved and its after-reply Agents have run. You might see 'Neconyan is finishing a reply' on the lock screen, and music from another app can pause until it's done. iOS can still close the app when the phone runs short of memory. [The iPhone setup notes](https://github.com/platberlitz/Neconyan/blob/staging/ios/README.md) cover the build and its limits.
 
+If two starts in a row don't finish, the next load offers a safe start. On iPhone and iPad it turns low-memory mode on automatically unless you've set it off, and that setting is saved until you change it. The button then reads **Start without low-memory mode**. **Read crash report** works before the app loads. [Something went wrong](../help/troubleshooting.md#the-page-wont-open) lists the other buttons.
+
 The documented build checks use Apple's iPhone simulator; they don't establish that every feature works on a physical iPhone.
 
 ## Allow connections from your network

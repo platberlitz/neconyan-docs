@@ -30,11 +30,15 @@ Character tags in the library and character editor follow the selected accent co
 
 Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ears and paws while retaining your chats and installed characters. You can also use **Hide cats (Kittyless)** beneath the style choices while keeping another shell style.
 
-Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal and **Starlight Conservatory**. Use the previews to choose a layout, then pick a **UI Theme** and accent colours. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace imported character portraits.
+Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal, **Starlight Conservatory** and **Sunken Reef**. Each style shows a miniature window with a title bar and message rows, so you can compare the shape before choosing. These previews are illustrations, not your own chat. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace imported character portraits.
+
+**Sunken Reef** adds an animated ocean around the interface: flowing water, ripples under a click or tap, and sea creatures behind the messages. With **Reduced Motion** on, it paints a still reef scene instead.
 
 For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows XP Olive Green Dark** under UI Theme. Shell Style and UI Theme are separate selections.
 
-Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style → Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text; lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width the response arrows and counter stay inside the card; on a wider window, **Desktop response controls** chooses inside or below.
+Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style** shows each layout as a preview card under **Selected style**, with a short description such as **Rounded bubbles around each paragraph** or **Tinted cards with a small side accent**. The cards follow your theme and accent and are illustrations, not your own messages. **Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text; lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width the response arrows and counter stay inside the card; on a wider window, **Desktop response controls** chooses inside or below.
+
+**Hush** draws tinted cards with a small accent bar at the side. Message statistics sit beside the portrait and the reply actions take a full-width row under the name, so reasoning, text and Companion notes use the full card width.
 
 Downloaded message images keep the full Tide card, including its last lines and any character profile card at the end.
 
@@ -70,6 +74,12 @@ Use **Reduced Motion** to disable interface animations and transitions, includin
 
 On a phone, the setting keeps the phone layout but changes the control size. Increase it if the slim default buttons feel too small. In the standard phone layout, Send is 38 pixels at 100 and grows to 44 pixels at 150.
 
+## Choose the bottom bar buttons
+
+**Settings → System & Device → Desktop → Bottom Bar Buttons** (use **Mobile** on a phone) lists the controls below **Show Bottom Chat Bar**. Untick one to hide it; tick it again to bring it back. Use the arrows to move it within **Main bar** or **Chat actions**, and **Reset to defaults** to restore every control and the original order.
+
+One layout covers desktop and phone. It is saved in this browser, so it follows the device rather than your account. Hiding the search field closes an open search. If every chat action is hidden, that row tucks itself away. Simple Mode still hides its own controls on top of your choices.
+
 ## Movable panels
 
 Open **Appearance → Movable panels** to enable dragging and resizing supported pop-outs. Drag a panel by its top edge to move it, or its corner to resize it.
@@ -81,6 +91,8 @@ The built-in layouts are **Pop-outs on the Right**, **Writing Desk**, **Centred 
 For one ordinary quotation colour, use **Theme Colors → Quote Text**. Accent Profiles can replace this colour when you apply an accent.
 
 For different named speakers, use **Appearance → Dialogue Colors → Characters** in the sidebar. Select a speaker's swatch or add the missing name. **Colors saved** chooses Per chat, Per card or Global scope.
+
+The list shows your regular characters and only the equipped persona. Switch persona to see another persona's saved colours; the count, search, bulk selection and legend follow the same filter.
 
 Under **Settings → Automation**, **Don't color a Narrator card** is on by default. It keeps a character card named `Narrator` in the normal text colour even when the model wraps its lines in a colour, stops `Narrator` being added to the speaker list and tells the model not to colour it.
 
@@ -117,6 +129,8 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 **Settings → System & Device → Memory and performance → Low-memory mode** keeps Neconyan responsive on phones and computers with limited memory. It is saved per browser or device and offers **Auto**, **On** and **Off**.
 
 **Auto** turns on when the browser reports 2 GB of memory or less, or when the Android app reports a low-memory device or 3 GiB of total memory or less. When active, it turns on **No Blur Effect** and keeps 25 recent messages rendered in Roleplay and Conversation instead of larger history windows. Any of those settings you change yourself stays as you set it until you press **Use automatic recommendations**. Changing the Roleplay message limit while a chat is open asks you to reopen the chat to apply the new limit.
+
+**Save memory in the background** sits in the same **Memory and performance** group. It starts off and is saved for this device. When it's on, switching away releases reusable caches and older off-screen Roleplay messages, then restores the chat and your reading position when you return. Unsent drafts, unfinished edits and interactive messages are kept, and an active reply, Agent run or message edit prevents chat trimming. Conversation keeps its own message window, though shared token caches can still be released. It reduces memory use without deleting saved chat.
 
 ## Keep images out of replies
 

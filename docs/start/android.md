@@ -38,7 +38,7 @@ Accepted server work can continue after the interface closes, but Android can st
 
 Neconyan watches its local server while it starts. If the server stops, for example because the phone ran out of memory while loading a large library, the app starts it again once in **safe mode**. Safe mode pauses background memory updates and automatic Conversation messages, and any task that was interrupted waits for you to retry it. Your chats load as normal, and the next time you open the app it starts normally again.
 
-If the server still can't start, the app shows a recovery screen:
+If the server still can't start, the app shows a recovery screen. It names the reason the server recorded instead of only a generic stop message, followed by **Saved data has been kept.** Include that line in a bug report.
 
 - **Try again** starts the server again.
 - **Save a backup of my data** saves a ZIP of your account folder: characters, chats, personas, lorebooks and settings. It works even though the server isn't running. Saved API keys are left out unless you choose **Include API keys**; keep that file private if you do.
