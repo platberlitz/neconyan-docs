@@ -87,6 +87,8 @@ Automatic chat names use a model request after a date-named chat has enough mess
 
 The message timer stops when the main reply finishes, rather than counting Agent work afterwards. A cut-off reply keeps any received text or thinking; it doesn't start after-reply Agents as though the answer had completed.
 
+If a reply finishes with thinking but no text, the bundled **Thinking Reply Recovery** Agent can write the missing reply from that thinking and pass it to your other after-reply Agents. It starts switched off; turn it on in Agents. A routine chat save while a long reply is being written no longer makes it skip, and the recovered prose is written into the chat.
+
 ## When an Agent fails
 
 A failed Agent shouldn't cost you the main answer. Neconyan keeps the completed reply and successful changes from other helpers. A failed helper may retry once, which can cost another request. If no rewrite succeeds, the original reply remains.

@@ -20,6 +20,12 @@ If another program is using that port, the terminal should report it. Stop the c
 
 On a phone, use the **computer's network address**, not localhost. Check that both devices share a network, the server is listening for network connections and the firewall permits access. Follow [the phone guide](../start/phone.md) for authentication and address allow-list settings.
 
+### If two starts do not finish
+
+When two browser starts in a row don't finish, the next load shows **Neconyan could not finish starting** instead of the app, with the time of the last recorded activity when one exists. **Start Neconyan** continues a normal start. **Read crash report** opens the retained report before any application work begins. **Clear frontend cache and reload** removes cached frontend files, resets the failed-start count and reloads. **Start in low-memory mode** saves that choice before starting.
+
+On an iPhone or iPad, a startup crash loop turns low-memory mode on automatically unless you set it off. That setting is saved, so low-memory mode stays on until you change it in Settings. When automatic mode is on, the button reads **Start without low-memory mode**. Any start that reaches readiness clears the failed-start count. A clean close or a new tab doesn't inherit another tab's crash loop.
+
 ## The page opens but the model won't reply
 
 Open Connections and check the provider, model, key and endpoint. A loaded model list doesn't prove the selected model accepts generation requests.

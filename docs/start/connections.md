@@ -50,6 +50,12 @@ The main chat and background helpers can use different connections. [Scratchpad]
 
 Switching profiles can also change the model and related request settings. Read the active connection before sending a long or expensive request.
 
+## Confirm a proxy
+
+A connection profile or Chat Completion preset that carries a reverse proxy asks **Connecting To Proxy** when you create or update it, or when you import a preset with one. Choose **Yes** to save it, or **No** to stop: the change isn't saved, and a preset isn't saved or imported, with a message saying why.
+
+Once you confirm an address for this account, Neconyan doesn't ask again. A preset saves the exact address you approved, even if the field changes while the question is open. A profile saved before this change asks once on its first request.
+
 ## Using a local model
 
 Start the model service before connecting Neconyan. Confirm which API formats it offers, the port it's listening on and which model is loaded. Neconyan is the chat interface; your model service manages the actual model files and hardware.

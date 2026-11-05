@@ -38,7 +38,7 @@ Open **Assistants → Your assistants**. **Add a new assistant** takes a name an
 
 ## Check exactly what it will read
 
-**Show preview** lists the current context. Choose recent or selected messages and optional cards, persona, notes, lore or Author's Note. Shared character cards are included as saved, including their greetings, examples and instructions.
+**Show preview** lists the current context. Choose recent or selected messages and optional cards, **Your persona and Scenario Notes**, lore or Author's Note. Shared character cards are included as saved, including their greetings, examples and instructions.
 
 In Roleplay, **Also share → Current preset** adds your preset separately, with prompts marked on or off. It starts off. Conversation doesn't use these presets.
 
@@ -68,7 +68,7 @@ Turn on **Round table** and select up to three assistants. Each answers with its
 
 ## Review a proposed change
 
-An assistant can propose changes to supported cards, lorebooks, Roleplay messages and notebook notes. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
+An assistant can propose changes to supported cards, lorebooks, Roleplay messages and notebook notes. With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat; note edits affect every chat using that note and keep its activation. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
 
 You can adjust supported non-notebook proposals before saving. Notebook changes save the exact reviewed proposal, so ask for a revision if needed. If the original changed meanwhile, reopen or regenerate the proposal rather than overwriting newer work.
 
@@ -85,6 +85,8 @@ A generated avatar is optional and needs Quick Image Gen configured. For a dedic
 **Image idea** drafts a request. **Generate image** starts the image request using Quick Image Gen settings; if prompt review is enabled, approve **Generate reviewed image** first.
 
 Generating a picture doesn't replace a portrait. **Review avatar** compares the pictures and **Save change** applies the replacement to the exact shared card. **Previous avatar** opens the preserved original PNG; it isn't one-click undo.
+
+With **Your persona and Scenario Notes** shared, the assistant can also propose a persona avatar or one saved Scenario Note's avatar. The review shows **Current avatar** and **Proposed avatar**; **Save change** makes the picture live. A persona avatar replaces the portrait across chats and keeps the persona's saved details. A Scenario Note avatar applies while that note is active; ask the assistant to remove its portrait to return to the normal persona picture. The note's text and activation stay as they were.
 
 Image work can continue on the server after you close Scratchpad. **Stop image** requests cancellation. Use **Retry saved job** for retained work rather than buying another image when only local saving failed. An unknown provider outcome isn't automatically purchased again.
 
@@ -119,3 +121,5 @@ Server-backed replies can continue after closing the page while the server stays
 **Delete old sessions automatically** starts off. Enabling it asks you to confirm the number to keep across all lists. Deletions are permanent; the open session and active replies are protected. Export first if you may want the discussion again.
 
 You can copy a message, selection or session to a notebook. This saves discussion text, leaving out reasoning and change cards, and grants no ongoing notebook access.
+
+Each fenced Markdown block in an assistant reply has its own **Copy** button at the top right, with the tooltip **Copy Markdown**. It copies only that block's contents, without the surrounding fences or the rest of the reply. The **Copy** action on the message still copies the whole message.

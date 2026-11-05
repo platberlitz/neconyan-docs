@@ -99,6 +99,14 @@ Check the active persona when a conversation seems wrong. Conversation histories
 
 Each persona can keep its own expression set, separate from the character's set. See [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) for the setup and background classification.
 
+### Scenario Notes
+
+In Persona, open **Scenario Notes** to add details for one chat, such as a modern AU or route-specific facts. Several notes can be active at once, and the counter covers the base persona plus the active notes. **Preview final prompt for this chat** shows what the model will receive.
+
+A note can also carry its own avatar. Choose **Choose avatar** in the note editor, then **Save**; **Remove avatar** returns to the normal persona picture. While the note is active, new Roleplay replies and Conversation messages use that picture, and messages already sent keep their portrait. If several active notes have avatars, the first in the list wins.
+
+The picture is saved as an image file at its full size, so the chat shows the full picture rather than a shrunken copy. Notes created before this change keep their smaller copy until you choose the picture again. A persona card export embeds the full picture, including any Scenario Note portraits. The separate persona backup JSON keeps the saved picture path, not the image file, so the backup alone can't move those portraits to another account. Linked lorebooks still travel separately. Scenario Notes belong to your persona, not to the character's **Scenario** field, Author's Note or Conversation's own instructions.
+
 ## Organise tags and folders {#tag-management}
 
 Open **Manage tags** (the gear button in the tag filter bar on **Characters**) to open **Tag Management**. It uses the tags already on your cards, shows a live summary of tags, folders and notes at the top, and needs no model request.

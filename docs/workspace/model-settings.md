@@ -51,6 +51,7 @@ Across **NanoGPT**, **OpenRouter** and supported native connections (**OpenAI**,
 - If your saved choice isn't supported by the current model, the control warns you and lists the valid choices so you can pick one before sending.
 - When an OpenRouter model doesn't expose an effort setting, the **Reasoning Effort** selector is disabled with a note that your saved choice is kept for other models, and the brain button beside the message box is hidden.
 - When a model requires reasoning, **None** isn't offered.
+- On native **DeepSeek**, **None** turns thinking off for **DeepSeek v4 Pro** and **DeepSeek Flash**. **DeepSeek Flash** offers only **None**, **Low**, **High** and **Maximum**; with no effort sent it still thinks, so its reply keeps reasoning room. Through a reverse proxy, **None** isn't sent and DeepSeek's default applies.
 - **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. A higher response limit therefore allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
 - For unlisted native models or custom proxies where supported levels aren't known, the full list remains available; **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
 
