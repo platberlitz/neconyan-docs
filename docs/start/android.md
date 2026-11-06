@@ -40,6 +40,8 @@ Neconyan watches its local server while it starts. If the server stops, for exam
 
 If the server still can't start, the app shows a recovery screen. It names the reason the server recorded instead of only a generic stop message, followed by **Saved data has been kept.** Include that line in a bug report.
 
+Android can close Neconyan's local server without warning when memory runs short. That used to leave the data folder's ownership record behind, and the next start refused because the folder was already owned, until you cleared the app's data. The app now recognises a lock left by its own earlier run and clears it, logging **Reclaimed a stale data folder lease** in `server.log`. It still refuses when the earlier server may be running or when the record holds something the app never writes, and the message names the lock fields that differ. If the screen asks you to close Neconyan from the recent apps screen or force stop it in Android settings, do that and press **Try again**. If it says the lock needs checking, save a backup from that screen and include the lock details in the report.
+
 - **Try again** starts the server again.
 - **Save a backup of my data** saves a ZIP of your account folder: characters, chats, personas, lorebooks and settings. It works even though the server isn't running. Saved API keys are left out unless you choose **Include API keys**; keep that file private if you do.
 - **Copy details for a bug report** copies the reason Android gave for stopping the server and the last lines of its log. From 1.2.4 it also includes the native server's stack size, and from 1.2.4.1 the decoded crash record and the most recent server requests. Paste the full report into a [GitHub issue](https://github.com/platberlitz/Neconyan/issues).

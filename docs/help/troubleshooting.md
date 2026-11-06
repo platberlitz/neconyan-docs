@@ -26,6 +26,14 @@ When two browser starts in a row don't finish, the next load shows **Neconyan co
 
 On an iPhone or iPad, a startup crash loop turns low-memory mode on automatically unless you set it off. That setting is saved, so low-memory mode stays on until you change it in Settings. When automatic mode is on, the button reads **Start without low-memory mode**. Any start that reaches readiness clears the failed-start count. A clean close or a new tab doesn't inherit another tab's crash loop.
 
+### If a phone app stops at startup
+
+The Android and iPhone apps keep a small ownership record inside their data folder, so two copies can't write to it at once. A run that Android or iOS closed without warning can leave that record behind. Both apps now clear a record left by their own earlier run and log **Reclaimed a stale data folder lease** in `server.log`, and both still refuse when the earlier server may be running or when the record holds something the app never writes.
+
+On Android, the recovery screen names the lock fields that differ. Close Neconyan from the recent apps screen or force stop it in Android settings, then press **Try again**; include the message in a bug report if it comes back. Save a backup from that screen when it says the lock needs checking. On iPhone, **Try again** and **Share startup log** stay available, and the shared report ends with the last part of the server log.
+
+Read the reason on the screen before pressing either button. [Install on Android](../start/android.md#if-the-app-wont-open) and [Open it on your phone](../start/phone.md#use-the-standalone-iphone-app) cover the screens in full.
+
 ## The page opens but the model won't reply
 
 Open Connections and check the provider, model, key and endpoint. A loaded model list doesn't prove the selected model accepts generation requests.

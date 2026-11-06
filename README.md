@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 53 pages, a reference for 201 registered macros, fifteen real demonstration screenshots and a downloadable extension starter. The practical guides cover Neconyan 1.5.0, reviewed against source `b1a488f1` on 6 November 2026. This edition covers Scenario Note portraits that can replace the chat portrait, Scratchpad edits for personas and notes, bottom bar button layout, the Sunken Reef shell style, optional background memory saving, proxy confirmation and a safe start after repeated startup crashes, plus the reworked Hush chat style and DeepSeek Flash reasoning effort. The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse.
+The site includes 54 pages, a reference for 201 registered macros, eighteen real demonstration screenshots and a downloadable extension starter. The practical guides cover Neconyan 1.5.1, reviewed against source `ddd1fb9c` on 6 November 2026. This edition adds Scratchpad drafts that create a persona or a Scenario Note and Quick Actions that can pin any page the main search finds, while the Android and iPhone apps now clear a leftover data folder lock instead of looping on it. It also covers the iPhone recovery screen with its shareable startup log, GPT Image 2.6 Sunburst and Flare through the Responses image route, safer extension update checks and the Pawthfinder setting that reuses the lore it picked when you swipe. The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse.
 
 ## Preview locally
 
@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-All fifteen published screenshots were refreshed on 30 October 2026 against the 1.4.0 interface. When replacing them, record the application commit, capture date and browser setup in [ASSETS.md](ASSETS.md), then check the affected guides and screenshot zoom at both widths.
+All eighteen published screenshots were refreshed on 30 October 2026 against the 1.4.0 interface. When replacing them, record the application commit, capture date and browser setup in [ASSETS.md](ASSETS.md), then check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 

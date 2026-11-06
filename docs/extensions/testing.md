@@ -62,6 +62,8 @@ An extracted local starter isn't automatically a Git-managed installation. To di
 
 Bump the extension's version when you release changes. Test migrations from an older saved-settings object, including missing fields. Don't overwrite existing settings with defaults every time the module loads.
 
+A copy installed for everyone, with its home page set in the manifest, has its update history prepared on the first update check. Neconyan builds that history in a temporary folder beside the extension and moves it into place only after the download succeeds, so a failed download or a locked file leaves the installed files and their history as they were. Two checks started at once share one attempt, and the temporary folder stays out of the extension list.
+
 Avoid an identifier that collides with a bundled tool or another extension. The loader normalises names for some duplicate checks, including case and the third-party prefix. Shipping an old copy of a bundled tool can leave one copy inactive rather than producing the behaviour you expected.
 
 If a change needs new host APIs, document the tested app versions and check for those capabilities at runtime. The manifest's compatibility version isn't a substitute for testing the actual feature.

@@ -68,7 +68,7 @@ Turn on **Round table** and select up to three assistants. Each answers with its
 
 ## Review a proposed change
 
-An assistant can propose changes to supported cards, lorebooks, Roleplay messages and notebook notes. With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat; note edits affect every chat using that note and keep its activation. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
+An assistant can propose changes to supported cards, lorebooks, Roleplay messages and notebook notes. With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat; note edits affect every chat using that note and keep its activation. It can also draft a brand-new persona or note; [Create a persona or Scenario Note](#create-a-persona-or-scenario-note) covers that. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
 
 You can adjust supported non-notebook proposals before saving. Notebook changes save the exact reviewed proposal, so ask for a revision if needed. If the original changed meanwhile, reopen or regenerate the proposal rather than overwriting newer work.
 
@@ -79,6 +79,14 @@ Message edits apply to Roleplay, not Conversation. Return to the original chat t
 Ask for a character and review the **New character card** proposal. Adjust its structured draft if needed, then **Save change**. Wait for **Saved** before looking in Characters.
 
 A generated avatar is optional and needs Quick Image Gen configured. For a dedicated workspace with field-by-field revisions, use [Catelier](catelier.md).
+
+## Create a persona or Scenario Note
+
+Ask an assistant for a new persona and it drafts a name, description and title, even when you haven't shared a chat or a persona. Review the **New persona** proposal and press **Save change**; nothing is saved before that press. Wait for **Saved**, then open **Persona**: the new persona is there with the default portrait, and the persona you're using stays selected.
+
+To draft a new Scenario Note instead, share **Your persona and Scenario Notes** and ask for a note on the shared persona. **Save change** saves the note without switching it on in any chat; it waits under **Persona → Scenario Notes** for that persona until you choose where it applies.
+
+The review shows the draft as JSON you can adjust before saving: the name and description, with the title for a persona or the note's own label and text. Macros in a draft stay exactly as written. Saving the same suggestion again doesn't create a duplicate, so retrying a save that failed won't leave two copies behind.
 
 ## Images and portraits
 

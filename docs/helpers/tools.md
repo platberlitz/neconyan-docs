@@ -53,6 +53,8 @@ The builder refuses a button that doesn't fit the selected set. A set with **Put
 
 If Pawthfinder should choose the lore by itself, enable **Disable World Info keyword activation**. Otherwise ordinary keyword matches can add entries too. Start with the preset's threshold and change one setting at a time.
 
+**Reuse the lore when swiping** is on by default and needs **Tool Mode** or **Predictive Pipeline**. A swipe or regenerate then keeps the lore Pawthfinder already picked for the reply you're changing, instead of paying its decision model to choose that lore again. Turn it off to pick lore fresh for every swipe. A changed message, a changed lorebook, a different chat or a failed retrieval still picks lore again, and the reused answer lives in the open page, so the first swipe after a reload asks again.
+
 **World Info Lab** traces lore activation and supports reviewed batch changes. It and Prompting Lab can open saved chats up to 64 MiB. **Lorebook Distiller** proposes lore entries from a saved chat. **Chat Archive** searches and organises chats; its organisation export doesn't contain the chat contents themselves.
 
 **Card & Lorebook Time Machine** keeps supported snapshots of characters, lorebooks and presets. It isn't a whole-account or chat backup. Its window is a list and detail view now: snapshot cards, kind filters, a history timeline and field-by-field comparisons. On a phone it swaps between the list and one snapshot instead of squeezing both. Compare before restoring, because a restore replaces newer edits.
@@ -68,6 +70,8 @@ Several tools keep accepted work and results on the server. Closing the page sto
 **Dialogue Colors** assigns speaker colours. **Regex Agent Themes** restyles trackers and Companion panels. **CSS Snippets** manages your small visual customisations. **Termeownal UI** offers an optional terminal-style interface with its own command glossary.
 
 **Quick Image Gen** needs its own provider configuration. Its panel is built around one **Create** card holding status, prompt, **Style**, **Configuration** and **Generate**; **Gallery**, **History**, **Logs** and **Quick setup** sit underneath, and settings are behind tabs. It can use a manual prompt, a chat scene or supported image tags. Prompt preparation may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short; an install still on the old 500 default moves to the new one once. **Character Expressions** uses separate sprite artwork and classification settings; a character avatar alone isn't a complete expression set.
+
+With the **GPT Image (OpenAI)** provider, **Model** accepts a model ID the proxy provides, and **Proxy URL** points at that proxy. When your proxy offers `gpt-image-2.6-sunburst` or `gpt-image-2.6-flare`, those names are sent through its Responses image route, as it already did for the 2.5 names, so they generate a picture instead of failing on the plain images endpoint.
 
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't automatically configure all of them.
 

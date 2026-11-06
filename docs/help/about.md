@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.5.0**, reviewed against source **b1a488f1 on 6 November 2026**. This refresh adds Scenario Note portraits, Scratchpad edits for personas and notes, bottom bar button layout, the Sunken Reef shell style, optional background memory saving and a safe start after repeated startup crashes, and covers proxy confirmation, DeepSeek Flash reasoning effort and the reworked Hush chat style. Check your installed version if an option is missing.
+The practical guides cover **Neconyan 1.5.1**, reviewed against source **ddd1fb9c on 6 November 2026**. This refresh adds Scratchpad drafts that create a persona or a Scenario Note, Quick Actions that can pin any page the main search finds, and clearing a leftover data folder lock in the Android and iPhone apps. It also covers the iPhone recovery screen with its shareable startup log, GPT Image 2.6 Sunburst and Flare through the Responses image route, safer extension update checks and **Reuse the lore when swiping** in Pawthfinder. Check your installed version if an option is missing.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

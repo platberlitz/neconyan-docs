@@ -22,6 +22,8 @@ Imports keep going when you switch apps or lock the phone. Pick the backup with 
 
 If two starts in a row don't finish, the next load offers a safe start. On iPhone and iPad it turns low-memory mode on automatically unless you've set it off, and that setting is saved until you change it. The button then reads **Start without low-memory mode**. **Read crash report** works before the app loads. [Something went wrong](../help/troubleshooting.md#the-page-wont-open) lists the other buttons.
 
+If the page stops, a page load fails or the local sign-in doesn't finish, the app stops retrying by itself and shows a recovery screen with what happened. **Try again** starts the server and loads the page again; **Share startup log** prepares a report you can send or save. Both buttons stay available when you come back from another app, so you can look something up without losing the screen. The startup log survives relaunches and records the last startup step, timings, the device and recent activity, hides credentials Neconyan recognises, and can be shared even when the local server never started. The shared report ends with the last part of the server log. The app also clears a data folder lock left behind by a run iOS closed.
+
 The documented build checks use Apple's iPhone simulator; they don't establish that every feature works on a physical iPhone.
 
 ## Allow connections from your network

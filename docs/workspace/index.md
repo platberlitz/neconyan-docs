@@ -50,13 +50,21 @@ Press **X** on a button to hide it from the sidebar. While you're editing, it st
 
 **Restore defaults** brings back every hidden button and restores the default order for every section. **Done** leaves editing and returns focus to the pen you started from; each change is already saved. The order and hidden buttons are saved with this account's settings on the server, not in this browser or a character card, so they follow the account across devices. The phone drawer uses the same rail, order and edit controls.
 
+## Pin pages to Quick Actions {#quick-actions}
+
+The **Quick Actions** group in the workspace sidebar holds shortcuts you choose yourself. Open **Settings → System & Device → Desktop → Desktop Quick Actions**, or use **Mobile** on a phone, then type at least two characters of a page, setting or tool name in the search box and choose the result to add it. **Remove** takes a shortcut out, **Reset to defaults** brings back the starting list, and each list holds up to 12 shortcuts.
+
+The list offers the pages that the main search finds, including Catelier, Notebooks, Scratchpad, the chat modes and the Handbook, as well as settings and bundled tools. The pen beside the **Quick Actions** heading, labelled **Edit Quick Actions**, opens the same settings.
+
+The desktop and phone lists are separate, and they are saved in this browser rather than with your account. A shortcut only opens the page it names; it doesn't change anything on that page.
+
 ## Keep the sidebar simple
 
 Simple Mode is opt-in. Existing accounts keep their current layout. On a new account, Nori asks **Want to keep things simple?** before the First paws tour. **Yes, keep it simple** turns on Simple Mode and shortens the tour; **No, show me everything** keeps the full sidebar. You can also use **Settings → Appearance → Simple Mode** later.
 
 Simple Mode keeps Home, Characters, Connections, Agents, Lorebooks, Notebooks, Scratchpad, Presets, Search, Settings and the composer. It hides Mewmory, Chat Archive, Extensions, the other Fine-tuning pages, the mode switcher, the reasoning-effort button, the wand and image buttons beside the composer, Guided Generations and the rarer items in **Chat tools**.
 
-The **Characters & Lore**, **Appearance**, **Quick Actions** and **Troubleshooting** sidebar groups are hidden too, including Persona, Character Expressions and Quick Image Gen. The top-bar Extensions, Server and Console Logs tabs, Recent's Chat Archive button, and Mass delete and Auto-name controls also step out of view. Nothing is deleted or turned off. Extensions you installed, active lore and running Agents are not removed or disabled.
+The **Characters & Lore**, **Appearance** and **Troubleshooting** sidebar groups are hidden too, including Persona, Character Expressions and Quick Image Gen. **Quick Actions** stays in the sidebar, and its pen still opens the list so you can keep it to the shortcuts you use. The top-bar Extensions, Server and Console Logs tabs, Recent's Chat Archive button, and Mass delete and Auto-name controls also step out of view. Nothing is deleted or turned off. Extensions you installed, active lore and running Agents are not removed or disabled.
 
 Press **Show all features** in the workspace sidebar to restore everything. The same switch in Settings turns Simple Mode on again, and the choice is saved for your account.
 
