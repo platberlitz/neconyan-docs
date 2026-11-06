@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-All eighteen published screenshots were refreshed on 30 October 2026 against the 1.4.0 interface. When replacing them, record the application commit, capture date and browser setup in [ASSETS.md](ASSETS.md), then check the affected guides and screenshot zoom at both widths.
+The published screenshots were last refreshed on 30 October 2026 against the 1.4.0 interface, with Catelier's pair and the phone Simple Mode capture added on 5 November 2026. When replacing them, record the application commit, capture date and browser setup in [ASSETS.md](ASSETS.md), then check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 

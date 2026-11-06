@@ -4,7 +4,7 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-The fifteen files under `docs/assets/images/screenshots/` were recaptured on 30 October 2026 from the running application with disposable demonstration data. They replace the 1.3.0 captures and the 1.3.7 Simple Mode capture. Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad each have a desktop and phone image; `desktop-simple.webp` shows the shorter Simple Mode sidebar and composer.
+The fifteen files published before 5 November 2026 were recaptured on 30 October 2026 from the running application with disposable demonstration data. They replace the 1.3.0 captures and the 1.3.7 Simple Mode capture. Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad each have a desktop and phone image; `desktop-simple.webp` shows the shorter Simple Mode sidebar and composer. The Catelier desktop and phone images and `phone-simple.webp` arrived with the 5 November 2026 handbook simplification, bringing the set to eighteen.
 
 The captures use [Neconyan at a4f53894](https://github.com/platberlitz/Neconyan/tree/a4f53894). Its application interface matches the [1.4.0 release at 5f9229c4](https://github.com/platberlitz/Neconyan/tree/5f9229c4); the later commit only changes the next staging version, its test expectations and the handover record. The captures show the Calico Dark theme, bundled assistants and staged chats, posts, notes and a Scratchpad discussion. No personal account data was used, and capture made no model requests.
 
