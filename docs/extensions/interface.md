@@ -29,9 +29,12 @@ Use Neconyan's colour variables for accent buttons:
 }
 
 #my-extension .my-action:hover {
-  background: var(--neco-ginger-hover);
+  border-color: var(--neco-ginger-hover);
+  box-shadow: inset 0 0 0 1px var(--neco-ginger-hover);
 }
 ```
+
+Keep the solid fill on hover. `--neco-on-accent` is matched to `--neco-ginger`; `--neco-ginger-hover` can be much paler, so swapping the fill can leave the label unreadable. Change the edge or shadow instead.
 
 The on-accent variable matters: a pale accent and a dark accent need different label colours. Test both, as well as the default. Avoid hard-coded colours that assume every user has Calico Dark selected.
 

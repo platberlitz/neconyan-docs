@@ -12,7 +12,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 The practical guides cover the **Neconyan 1.5.2 staging candidate**, reviewed against source **d52b7966 on 8 November 2026**. Neconyan 1.5.2 hasn't been published at the time of writing; if your installed version is 1.5.1 or older, some options here may be missing. This edition adds native Structured Prefill, Scratchpad attachments and preset edits, shared Catelier writing and portrait settings with CCv3 cards, Conversation games, opt-in device notifications and a readable startup failure screen.
 
-The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
+The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide now carry the accent button guidance; the other extension examples are unchanged from their reviewed 7 October snapshots. The macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
 The practical guides focus on common tasks and link to longer references when you need the details. Those references may change after this edition. Model features still depend on your provider and model supporting them.
 

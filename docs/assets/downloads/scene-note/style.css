@@ -27,7 +27,8 @@
 }
 
 #neconyan_scene_note .menu_button:hover {
-  background: var(--neco-ginger-hover);
+  border-color: var(--neco-ginger-hover);
+  box-shadow: inset 0 0 0 1px var(--neco-ginger-hover);
 }
 
 #neconyan_scene_note :focus-visible {
