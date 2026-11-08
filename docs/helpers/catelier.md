@@ -18,18 +18,20 @@ Catelier is where you build character cards. Write one yourself, ask a model to 
 
 **Save as a new copy** keeps the existing card. Reopen unfinished work under **Your drafts**. Discarding a draft doesn't delete a published character.
 
+**Review & save** writes a version 3 character card (CCv3), with complete public fields and its embedded portable lorebook when it has one. JSON export writes the same format. An older imported card keeps its original shape in the comparison until you save or export it.
+
 === "Computer"
 
     <figure class="screenshot" markdown>
-    [![A private character draft in Catelier on desktop](../assets/images/screenshots/desktop-catelier.webp)](../assets/images/screenshots/desktop-catelier.webp)
-    <figcaption>Keep the draft separate while you decide what belongs in the card.</figcaption>
+    [![Catelier's shared Writing instructions on desktop](../assets/images/screenshots/desktop-catelier.webp)](../assets/images/screenshots/desktop-catelier.webp)
+    <figcaption>Writing instructions are saved to your account and used by every Catelier draft.</figcaption>
     </figure>
 
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Catelier's character draft on a phone](../assets/images/screenshots/phone-catelier.webp)](../assets/images/screenshots/phone-catelier.webp)
-    <figcaption>The same draft is available when you return on another device.</figcaption>
+    [![Catelier's shared Prefill and Stream live output settings on a phone](../assets/images/screenshots/phone-catelier.webp)](../assets/images/screenshots/phone-catelier.webp)
+    <figcaption>Prefill and Stream live output are shared too, so the same choices follow your drafts on a phone.</figcaption>
     </figure>
 
 ## Ask for help with the writing
@@ -40,7 +42,17 @@ Choose a connection in **Writing instructions**. Add fallback profiles if you wa
 
 Turn on **Ask questions first** to fill in missing details before a dossier or writing proposal. Answer what you want, then choose **Generate**.
 
-**Custom User Instructions** are directions for Catelier. They stay with the draft and aren't exported as the character's prompt.
+## Settings shared by every draft {#shared-settings}
+
+**Writing instructions** are saved to your account and used by every Catelier draft. That includes the connection, fallback order, **Maximum output tokens**, **Prefill**, **Stream live output**, **Length, tense and style**, **Number of greetings**, **Director prompt**, **Grounded prose prompt**, **Macro guidance prompt**, **NSFW instructions**, **Fields to create** and **Custom user instructions**.
+
+**Prefill** starts the model's reply with text you set. Your provider must support assistant prefills. Kimi K3 and K3.1 Pro models also show **Partial prefill**, used instead of Prefill and sent as a partial assistant prefill; leave it blank to use Prefill. Each fallback connection uses the prefill for its own model. **Stream live output** shows text and available thinking while the reply is written; chat and text completion connections support it, and other connections show the finished reply.
+
+**Custom user instructions** are directions for Catelier's writing, generation and interviews. They are shared across your drafts and aren't exported as the character's prompt.
+
+Under **Identity**, the **Creator** field is shared too. Changing it updates the creator name for your other Catelier drafts; it doesn't publish or rewrite their cards until you save them.
+
+Under **Portrait**, **Image prompt guidelines (optional)** and the **Image provider supports negative prompts** switch are shared across drafts. The **Portrait prompt** and **Negative portrait prompt** stay with each draft.
 
 ## Keep only the changes you want
 

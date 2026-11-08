@@ -24,7 +24,10 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Reply/output limit** | The maximum output requested; it doesn't increase context capacity |
 | **Sampling** | Settings that influence how a model chooses its next text |
 | **Streaming** | Showing output progressively while it arrives |
+| **Structured Prefill** | A reply pattern that shapes the opening of a Chat Completion reply |
+| **Push notification** | An opt-in device notification Neconyan shows outside the page, such as on the lock screen |
 | **Character card** | A character definition, sometimes embedded inside a PNG image |
+| **CCv3** | Character Card V3, the version 3 card format Catelier saves and exports |
 | **Persona** | The identity you play in a conversation |
 | **Swipe** | An alternative version of a message |
 | **Branch** | A conversation that diverges from an earlier point or starting history |

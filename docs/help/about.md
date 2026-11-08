@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-The practical guides cover **Neconyan 1.5.1**, reviewed against source **ddd1fb9c on 6 November 2026**. This refresh adds Scratchpad drafts that create a persona or a Scenario Note, Quick Actions that can pin any page the main search finds, and clearing a leftover data folder lock in the Android and iPhone apps. It also covers the iPhone recovery screen with its shareable startup log, GPT Image 2.6 Sunburst and Flare through the Responses image route, safer extension update checks and **Reuse the lore when swiping** in Pawthfinder. Check your installed version if an option is missing.
+The practical guides cover the **Neconyan 1.5.2 staging candidate**, reviewed against source **d52b7966 on 8 November 2026**. Neconyan 1.5.2 hasn't been published at the time of writing; if your installed version is 1.5.1 or older, some options here may be missing. This edition adds native Structured Prefill, Scratchpad attachments and preset edits, shared Catelier writing and portrait settings with CCv3 cards, Conversation games, opt-in device notifications and a readable startup failure screen.
 
 The macro catalogue and extension examples retain their reviewed 7 October snapshots; the macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
@@ -18,7 +18,7 @@ The practical guides focus on common tasks and link to longer references when yo
 
 ## Screenshots and artwork
 
-The workspace screenshots were captured from the reviewed app on desktop and phone-sized screens. They use demonstration content and the bundled assistants, not private chats. Labels and spacing may change in later versions.
+The workspace screenshots use demonstration content and the bundled assistants, not private chats. Some were captured from earlier reviewed builds, so labels and spacing may differ from your installed version.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is authored guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 
