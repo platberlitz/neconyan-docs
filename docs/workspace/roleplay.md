@@ -170,6 +170,8 @@ From there you can start or import a chat, export it, rename it, or delete it. J
 
 **In the browser** is the default for ordinary Roleplay. Most single-character replies can be held by the server if the page disconnects, then recovered when you return. After-reply Agents aren't replayed automatically; use **Rerun agents** if needed.
 
+If you return while a reply is still being written, it appears after the last saved message rather than above the greeting. A replacement reply keeps its existing place.
+
 Choose **On the server** when you want supported writing and Agents to continue after closing the page. The server must stay running. Conversation, Notebook writing and supported one-to-one guided replies already use server work; some group or page-only features still need the browser.
 
 Instructions that require the browser may prevent a server request or send supported work back to the browser. Notebook writing reports unsupported instructions rather than silently dropping them.

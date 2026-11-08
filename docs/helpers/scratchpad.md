@@ -30,6 +30,8 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
 
 From Home, **General Scratchpad** starts without hidden chat context. Quick prompts such as **Plot ideas** and **Continuity check** fill the message box for you to edit and send. Ordinary discussions don't need special tool-call support from the model.
 
+On a phone or a narrow desktop panel, the header buttons move below the heading when they need room, and longer headings wrap instead of covering them.
+
 ## Add files and images {#scratchpad-attachments}
 
 Press **+** (Message options) beside the message box and choose **Attach files**. You can attach up to eight files to one message, with or without typed text. Each original file can be up to 32 MiB; after resizing and text extraction, the attachments on one message can total 2 MiB.
