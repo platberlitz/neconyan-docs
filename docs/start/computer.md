@@ -74,6 +74,6 @@ Return to the launcher's terminal and press ++ctrl+c++ to stop the server. Run t
 
 ## Manual runtime requirements
 
-If you manage the runtime yourself, use **Node.js 20 or later**, or **Bun 1.3.14 or later**. The launcher can install Bun when it needs a runtime. Don't copy a dependency folder from a different operating system; let the launcher install the appropriate files.
+If you manage the runtime yourself, use **Node.js 20 or later**, or a stable **Bun 1.4.0 or later**. The current launcher refuses older Bun releases, including 1.3.x. The launcher can install Bun when it needs a runtime. Don't copy a dependency folder from a different operating system; let the launcher install the appropriate files.
 
 For a phone on the same Wi-Fi, continue with [Open it on your phone](phone.md). If installation stops with an error, collect the terminal message and check [troubleshooting](../help/troubleshooting.md).
