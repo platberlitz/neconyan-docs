@@ -144,4 +144,6 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 **Appearance → Custom CSS → Generate CSS with AI** asks a model for a visual change. **Replace** requests a complete updated stylesheet; **Append** requests additions to the existing rules. This uses a model request. The result applies only if the saved CSS hasn't changed while the request runs. Keep a copy of your rules before trying a generated change.
 
+The CSS assistant is instructed to preserve your chosen shell, palette, wallpaper, fonts and cat visibility unless your request changes them. Its guidance covers the current shell styles, the Conversation layout and the phone layout rules.
+
 If something becomes unreadable or stops responding after a visual change, disable the relevant snippet or return to a known theme before changing model settings. See [troubleshooting](../help/troubleshooting.md).

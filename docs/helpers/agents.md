@@ -122,6 +122,8 @@ Completed notes appear as each helper finishes. **Live reply** marks a preview; 
 
 **Keep in history** controls future context. **Where kept notes go** chooses the newest reply, each note's own reply or one labelled block. Hiding a note on screen doesn't necessarily remove it from future prompts.
 
+**Insert the block at depth** places that one labelled block a set number of messages from the newest reply. Setting a depth switches kept notes to **One labelled block**; leaving it blank uses the agent's Position and Depth fields.
+
 ## Troubleshoot a helper
 
 Check its global and individual switches, trigger, actual connection, context, output limit and activity. If a tracker repair fails, read the error before trying again. Repairs and retries can add usage.
