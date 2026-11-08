@@ -20,6 +20,12 @@ If another program is using that port, the terminal should report it. Stop the c
 
 On a phone, use the **computer's network address**, not localhost. Check that both devices share a network, the server is listening for network connections and the firewall permits access. Follow [the phone guide](../start/phone.md) for authentication and address allow-list settings.
 
+### If Neconyan cannot finish loading {#if-neconyan-cannot-finish-loading}
+
+When startup fails in a way the page can catch, Neconyan shows **Neconyan could not finish loading** with the recorded error, **Retry startup** and **Read report**. **Retry startup** reloads the page and keeps saved browser data; it doesn't clear the cache or start a reload loop. **Read report** opens the retained error even though the app didn't finish starting.
+
+If the same error returns, read the report and check the launcher terminal before clearing site data. Clearing browser storage can remove the report and other saved settings. A failure that stops the page before this panel can run still uses the recovery screen or saved crash report described below.
+
 ### If two starts do not finish
 
 When two browser starts in a row don't finish, the next load shows **Neconyan could not finish starting** instead of the app, with the time of the last recorded activity when one exists. **Start Neconyan** continues a normal start. **Read crash report** opens the retained report before any application work begins. **Clear frontend cache and reload** removes cached frontend files, resets the failed-start count and reloads. **Start in low-memory mode** saves that choice before starting.

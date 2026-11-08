@@ -34,6 +34,12 @@ Accepted server work can continue after the interface closes, but Android can st
 !!! taro "Taro"
     A battery manager can be extremely good at preventing background work. It has, unfortunately, decided that your background work also counts.
 
+## Notifications {#notifications}
+
+Open **Settings → System & Device → Notifications** and turn on **Push notifications**. It's off by default and applies to this device and account. The Android app uses native notifications, so allow Neconyan to send notifications when Android asks. Its local server must be running to produce new Conversation DMs; stopping it or letting Android stop the app stops new notifications.
+
+Message previews can appear on the lock screen. If notifications don't arrive, check Android's notification permission and battery settings for Neconyan, then turn the switch off and on again. A notification opens or focuses Neconyan, not the individual Conversation thread. [Conversation's device notifications](../workspace/conversation.md#notifications) covers the shared limits.
+
 ## If the app won't open
 
 Neconyan watches its local server while it starts. If the server stops, for example because the phone ran out of memory while loading a large library, the app starts it again once in **safe mode**. Safe mode pauses background memory updates and automatic Conversation messages, and any task that was interrupted waits for you to retry it. Your chats load as normal, and the next time you open the app it starts normally again.

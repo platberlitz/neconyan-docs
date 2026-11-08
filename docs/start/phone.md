@@ -103,6 +103,12 @@ On iPhone Safari, turning **Movable panels** off no longer leaves an empty band 
 
 Some app-install and browser features require HTTPS, a secure web address. Plain HTTP on a home network may not expose every browser feature.
 
+## Notifications {#notifications}
+
+Open **Settings → System & Device → Notifications** and turn on **Push notifications**. It's off by default, belongs to this device and account, and asks for permission when you turn it on.
+
+In a browser, notifications need HTTPS or localhost, browser push support and a service worker. The plain home-network HTTP address in this guide doesn't provide them. On iPhone and iPad, an HTTPS Neconyan site also needs to be added to the Home Screen and opened there. The standalone iPhone app uses native notifications instead; allow them when asked and keep its local server running. Message previews can appear on the lock screen. If the system blocks them, allow notifications in iOS settings, then turn the switch on again. [Conversation's device notifications](../workspace/conversation.md#notifications) covers the shared limits.
+
 ## Keep an Android browser tab open
 
 In an Android browser, **Settings → System & Device → Leaving the tab** offers **Stay open in the background**. It's off by default and applies to that device only. Turning it on plays a sound too quiet to hear while Neconyan is hidden, so Chrome is less likely to unload the tab when you switch away.

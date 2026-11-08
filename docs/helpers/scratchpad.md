@@ -30,6 +30,14 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
 
 From Home, **General Scratchpad** starts without hidden chat context. Quick prompts such as **Plot ideas** and **Continuity check** fill the message box for you to edit and send. Ordinary discussions don't need special tool-call support from the model.
 
+## Add files and images {#scratchpad-attachments}
+
+Press **+** (Message options) beside the message box and choose **Attach files**. You can attach up to eight files to one message, with or without typed text. Each original file can be up to 32 MiB; after resizing and text extraction, the attachments on one message can total 2 MiB.
+
+Images are resized to at most 2048 pixels on the longest side. Choose PNG, JPEG, WebP, GIF or another image your browser can open; Neconyan converts it to PNG or JPEG before sending. Image attachments need a Chat Completion connection with a model that accepts images. Text files, JSON, CSV and Markdown are read as text up to 1 MiB. PDFs use selectable text, up to 300 pages and 1 MiB of extracted text; a scanned PDF needs its pages attached as images. Other binary files are refused rather than sent as broken text.
+
+Press the **X** beside an attachment to remove it before sending. Attachments stay with their message and are included as earlier conversation later in the session. Draft attachments survive switching sessions while the page stays open, but not a browser reload. Session exports keep message text only, so keep attached files and images separately.
+
 ## Add your own assistant
 
 Open **Assistants → Your assistants**. **Add a new assistant** takes a name and personality, with an optional picture and example dialogue. **Use a character card** makes an independent assistant copy; later card edits don't change it.
@@ -40,7 +48,7 @@ Open **Assistants → Your assistants**. **Add a new assistant** takes a name an
 
 **Show preview** lists the current context. Choose recent or selected messages and optional cards, **Your persona and Scenario Notes**, lore or Author's Note. Shared character cards are included as saved, including their greetings, examples and instructions.
 
-In Roleplay, **Also share → Current preset** adds your preset separately, with prompts marked on or off. It starts off. Conversation doesn't use these presets.
+In Roleplay, **Also share → Current preset** adds your preset separately, with prompts marked on or off. It starts off. Sharing it also makes the selected preset an edit target; [Review a proposed change](#review-a-proposed-change) covers that. Conversation doesn't use these presets.
 
 Important boundaries:
 
@@ -56,7 +64,7 @@ Context and note permissions are checked again when you send. Removing permissio
 
 Choose a provider under **Context → Web search**. Brave, Exa and Tavily need their own keys; NanoGPT uses your saved key. SearXNG needs an instance with JSON output enabled. Custom search addresses must return supported JSON results.
 
-The globe beside the message box turns search on for the next message. Only that message, trimmed to 400 characters, goes to the search service. Your cards, notes and earlier conversation stay out of the search query.
+Open **+** (Message options) beside the message box and turn on **Web search** for the next message. Only that message, trimmed to 400 characters, goes to the search service. Your cards, notes and earlier conversation stay out of the search query.
 
 One search serves the whole round table. Replies cite numbered results and keep a folded **Sources** list. If search fails, the assistants can still answer, with a notice. **Stop** cancels an active search too.
 
@@ -68,11 +76,13 @@ Turn on **Round table** and select up to three assistants. Each answers with its
 
 ## Review a proposed change
 
-An assistant can propose changes to supported cards, lorebooks, Roleplay messages and notebook notes. With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat; note edits affect every chat using that note and keep its activation. It can also draft a brand-new persona or note; [Create a persona or Scenario Note](#create-a-persona-or-scenario-note) covers that. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
+An assistant can propose changes to supported cards, lorebooks, Roleplay messages, the shared preset and notebook notes. With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat; note edits affect every chat using that note and keep its activation. It can also draft a brand-new persona or note; [Create a persona or Scenario Note](#create-a-persona-or-scenario-note) covers that. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
+
+With **Current preset** shared in Roleplay, the assistant can replace one field in the selected preset. For Chat Completion, that can be one prompt module's text, name, role, on/off state, in-chat position or depth; a slot filled from the card, chat or persona can only be switched on or off. For Text Completion, it can be one field from the saved system prompt, context template or instruct template. Review the change as usual. **Save change** writes the selected preset, including its current settings, so other chats using that preset get the change too. Sampler, connection and other preset settings aren't available to the proposal, and each proposal changes one field. If the original preset is no longer selected or shared, the review refuses to save.
 
 You can adjust supported non-notebook proposals before saving. Notebook changes save the exact reviewed proposal, so ask for a revision if needed. If the original changed meanwhile, reopen or regenerate the proposal rather than overwriting newer work.
 
-Message edits apply to Roleplay, not Conversation. Return to the original chat to review them. **Use as draft in the chat box** fills the composer without sending.
+Message and preset edits apply to Roleplay, not Conversation. Return to the original chat to review them. **Use as draft in the chat box** fills the composer without sending.
 
 ## Create a character
 
@@ -98,7 +108,7 @@ With **Your persona and Scenario Notes** shared, the assistant can also propose 
 
 Image work can continue on the server after you close Scratchpad. **Stop image** requests cancellation. Use **Retry saved job** for retained work rather than buying another image when only local saving failed. An unknown provider outcome isn't automatically purchased again.
 
-Download pictures separately. Session exports keep text and image prompts, not pictures, jobs or approvals.
+Download pictures separately, and keep the original files you attached. Session exports keep text and image prompts, not pictures, attached files, jobs or approvals.
 
 ## Edit an assistant's instructions
 
