@@ -4,9 +4,9 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-All twenty-two screenshots were recaptured on 9 November 2026 from the running [Neconyan 1.5.3 candidate at efdf32f6](https://github.com/platberlitz/Neconyan/tree/efdf32f6), after the filled Send paw and solid Stop square were added. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents and Proofreader each have a desktop and phone image.
+All twenty-two screenshots were recaptured on 9 November 2026 from the running [Neconyan 1.5.3 candidate at f13d0adf](https://github.com/platberlitz/Neconyan/tree/f13d0adf), after the filled Send paw and solid Stop square were added. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents and Proofreader each have a desktop and phone image.
 
-The captures use disposable demonstration data: Calico Dark with a purple accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
+The captures use disposable demonstration data: Calico Dark with its default accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. The default colours were restored and checked before capture. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
 
 These replace the eighteen images previously captured on 30 October, 5 November and 8 November, and add the four Agents and Proofreader images.
 
