@@ -8,6 +8,20 @@ quote: "Try a helper on one reply before letting it run automatically. A small a
 
 Agents do recurring jobs around a reply: add instructions, rewrite prose or keep a tracker. A **Companion** writes a separate note without replacing the character's reply.
 
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![Agents on desktop with Proofreader switched on](../assets/images/screenshots/desktop-agents.webp)](../assets/images/screenshots/desktop-agents.webp)
+    <figcaption>Start with one helper and check its Quick settings.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![Agents on a phone with Proofreader switched on](../assets/images/screenshots/phone-agents.webp)](../assets/images/screenshots/phone-agents.webp)
+    <figcaption>Apply to reply runs the selected helper on an existing reply.</figcaption>
+    </figure>
+
 ## Start with one helper
 
 1. Open **Agents** and choose a helper. **Help me choose** recommends some from a few questions; **Browse library** has more.
@@ -18,6 +32,8 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
 **Help me choose** makes no model request and changes nothing until you approve its picks. **Undo** switches those picks off; any library additions stay installed.
 
 Use **Manage agents** to filter by type, timing or enabled state. **Connections & defaults** holds shared settings. **More actions** on a card includes Export and Delete.
+
+The page remembers your selected view and folded categories when you return, so reopening Agents doesn't reset the list you were using.
 
 **Save changes** applies Quick settings. **Open full editor** saves them before opening the complete editor. When editing several selected Agents, untouched fields stay as they were.
 
@@ -49,6 +65,28 @@ Continuity Corrector starts with twelve recent messages and can use active lore,
 
 **Keep the original when an Agent refuses** starts on under **Connections & defaults → Context & notifications**. A helper's refusal doesn't replace your reply. If the main reply is itself a refusal, after-reply helpers are skipped.
 
+## See Proofreader's changes
+
+Find **Proofreader** in **Manage agents**, check its **Quick settings**, then switch it on with **Agents On**. It runs after a reply. **Apply to reply** on its card lets you try it on an existing reply first.
+
+Open **Agent changes** on the edited message to compare the removed and added text. **Undo** restores the previous text; **Redo** reapplies the edit. I would read the comparison before continuing the scene.
+
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![Proofreader's desktop change history with removed and added prose](../assets/images/screenshots/desktop-proofreader.webp)](../assets/images/screenshots/desktop-proofreader.webp)
+    <figcaption>The change history keeps the original beside the edit.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![Proofreader's phone change history with Undo and Redo](../assets/images/screenshots/phone-proofreader.webp)](../assets/images/screenshots/phone-proofreader.webp)
+    <figcaption>Check the edit and undo it from the same window.</figcaption>
+    </figure>
+
+This staged example uses a fixed sample response through the real Agent workflow, including working Undo and Redo. Your connected model writes the edit in normal use; each pass can cost another request. The example shortens repeated gestures and corrects 'Its' and 'should of' without changing what happens in the scene.
+
 ## Short notes before a reply
 
 These also arrive switched off. Each makes a request before the main reply and adds a short instruction note.
@@ -72,6 +110,14 @@ Start with one. Several helpers doing the same job can add cost without improvin
 - **Chatroom** gives the scene a reacting audience. **Send reply** asks that audience to answer without adding your line to the main chat. Poll choices fill its reply box; they don't send themselves.
 
 Companion notes appear in the **Companion panel**. Each usually needs its own request. Their estimates are model-written observations, not fixed game rules.
+
+## Give Plot Compass a direction
+
+**Plot Compass** is a Companion that proposes possible developments and a next move. It keeps planning notes instead of writing the next story reply, and feeds its latest note into future replies by default.
+
+Its **Plot Objectives** have separate **Global**, **This character card** (or **This group**) and **This chat only** fields. Enabled objectives add together; untick one to stop using it without deleting the text. Empty fields add nothing. Press **Save and run** to save the objectives and request a fresh note, or save the Agent when editing them in its full editor.
+
+An objective is a desired direction, not a guaranteed ending. You can ask for a slow investigation without deciding every choice the characters will make.
 
 ## Instructions or extra requests?
 
@@ -119,6 +165,8 @@ Sharing latest notes is different from waiting: it reads completed notes already
 Open the **Companion panel** from its floating or top-bar button. **Search companions and notes** filters the view without running anything. **More tools → Companion activity** shows what ran.
 
 Completed notes appear as each helper finishes. **Live reply** marks a preview; editing, rerunning and sending it to a lorebook wait until it is saved. The model label describes the completed request, not your current selection.
+
+In a popped-out Companion window, tap its header to fold or unfold the note. Dragging the header moves the window instead.
 
 **Keep in history** controls future context. **Where kept notes go** chooses the newest reply, each note's own reply or one labelled block. Hiding a note on screen doesn't necessarily remove it from future prompts.
 

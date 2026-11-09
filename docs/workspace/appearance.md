@@ -48,6 +48,8 @@ There are 34 coats and 21 ready-made pairs. 1.3.0 added Birman, Snowshoe, Cinnam
 
 To change the picture behind the app, open **Appearance → Background**. The bundled dark backgrounds include **Neconyan - Velvet Moon**, **Neconyan - Rainy Lantern Loft**, **Neconyan - Mosslight Grotto**, **Neconyan - Indigo Tide**, **Neconyan - Ember Hearth** and **Neconyan - Starlit Snow**.
 
+The library also includes backgrounds matched to the bundled themes. Select several pictures and choose **Delete selected** to remove them together. **Restore defaults** brings back missing bundled backgrounds. **Background Visibility** under **Appearance → Interface** lets the wallpaper show through the Home and chat surfaces, including on phones.
+
 ## Make text comfortable to read
 
 Start with a bundled light or dark theme and a readable font size. **Settings → Appearance → Google Font** has a separate picker for **Body text**, **Headings**, **Chat messages** and **Code**. Each starts at **Default** and lists a few suggested fonts; **Custom Google Font…** accepts any Google Fonts name, confirmed with the tick or Enter. Headings follow the body font until you choose one, and chat messages do the same. **Reset all fonts** puts them all back. A chosen font that isn't bundled is downloaded from Google Fonts, which is an external request, and a misspelt name shows a warning.

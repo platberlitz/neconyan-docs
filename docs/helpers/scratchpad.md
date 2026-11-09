@@ -19,7 +19,7 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
 
     <figure class="screenshot screenshot--phone" markdown>
     [![Scratchpad on a phone with a demonstration discussion](../assets/images/screenshots/phone-scratchpad.webp)](../assets/images/screenshots/phone-scratchpad.webp)
-    <figcaption>Back to chat returns to the story.</figcaption>
+    <figcaption>A round table keeps each assistant's reply separate.</figcaption>
     </figure>
 
 ## Open a discussion
@@ -75,6 +75,18 @@ One search serves the whole round table. Replies cite numbered results and keep 
 Turn on **Round table** and select up to three assistants. Each answers with its own connection and reply limit, without seeing the others' answers from that round. Ask a follow-up to compare their ideas.
 
 **Random** asks just one selected assistant per message. Turn it off to ask everyone again. Each answer can be a separate paid request; **Stop all** stops the round and failed participants can be retried individually.
+
+## Keep alternative replies
+
+**Try again** saves a new version of that assistant's latest reply instead of discarding the previous one. Use the arrows and version counter below the reply to choose an alternative. A reply can keep up to 50 versions; other round-table answers stay as they were.
+
+Under **Context → Reply prefills**, **Reply prefill** starts the assistant's answer with text you supply. It applies to every assistant in the session, including new reply versions, and needs a connection that supports prefills. Leave it empty for normal replies. **Kimi K3 / K3.1 partial prefill** takes precedence for those models; an unclosed `<think>` seeds thinking only and isn't added to the saved reply.
+
+## Preview HTML and CSS
+
+Choose **Preview HTML/CSS** beside a code block to see the HTML with the CSS blocks in that reply. The same button appears in a supported proposed-text review. CSS without HTML is shown on sample content.
+
+This is a static preview: scripts, external resources and links are blocked, macros stay as written, and nothing is saved. Close it to continue editing or review and save the proposed change separately.
 
 ## Review a proposed change
 

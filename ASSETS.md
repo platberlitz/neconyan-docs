@@ -4,13 +4,13 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-The fifteen files published before 5 November 2026 were recaptured on 30 October 2026 from the running application with disposable demonstration data. They replace the 1.3.0 captures and the 1.3.7 Simple Mode capture. Home, Roleplay, Conversation, Meower, Story Mode, Notebooks and Scratchpad each have a desktop and phone image; `desktop-simple.webp` shows the shorter Simple Mode sidebar and composer. The original Catelier desktop and phone images and `phone-simple.webp` arrived with the 5 November 2026 handbook simplification, bringing the set to eighteen.
+All twenty-two screenshots were captured on 9 November 2026 from the running [Neconyan 1.5.3 candidate at ca255d77](https://github.com/platberlitz/Neconyan/tree/ca255d77), using disposable demonstration data. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents and Proofreader each have a desktop and phone image.
 
-The original captures use [Neconyan at a4f53894](https://github.com/platberlitz/Neconyan/tree/a4f53894). Its application interface matches the [1.4.0 release at 5f9229c4](https://github.com/platberlitz/Neconyan/tree/5f9229c4); the later commit only changes the next staging version, its test expectations and the handover record. The captures show the Calico Dark theme, bundled assistants and staged chats, posts, notes and a Scratchpad discussion. No personal account data was used, and capture made no model requests.
+The captures show Calico Dark, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked at both widths. It isn't a live model demonstration. No external model requests were made.
 
-On 8 November 2026, `desktop-scratchpad.webp`, `phone-scratchpad.webp`, `desktop-catelier.webp` and `phone-catelier.webp` were recaptured from the [1.5.2 staging candidate at d52b7966](https://github.com/platberlitz/Neconyan/tree/d52b7966). The Scratchpad pair shows the new **+** message options and an attached file in the composer. The Catelier pair shows the shared **Writing instructions**. The other fourteen images retain the 30 October and 5 November provenance above.
+These replace the eighteen images previously captured on 30 October, 5 November and 8 November, and add the four Agents and Proofreader images.
 
-Playwright captured Chromium at 1280×900 for desktop and 393×852 with touch emulation for phone, at a pixel ratio of 1. These are browser viewport captures, not physical-phone or Safari verification. The screenshots were converted to WebP at quality 90 without resizing or compositing interface elements.
+Playwright captured Chromium at 1280×900 for desktop with a pixel ratio of 1, and 393×852 with touch emulation for phone at a pixel ratio of 1.5. These are browser viewport captures, not physical-phone or Safari verification. The screenshots were converted to WebP at quality 80 without resizing or compositing interface elements.
 
 ## Assistant artwork
 

@@ -94,7 +94,7 @@ While a Conversation chat is open, **Settings → Appearance → Avatar & Chat S
 
 Each picture can be **Send the image**, **Use a description** or **Show only**, applied with **Save choice**. A typed description can be up to 16 KiB. The account and branch switches override the individual choices in their scope.
 
-Older messages can combine a picture's description with extracted file text in one saved field. When those parts can't be told apart reliably, the message needs **Use this text** or **Leave it out** before Show only will apply. Omitting also omits the extracted file text in that field. A reply that quotes another message can need the same choice when your image settings require the quote to be reviewed; **Leave it out** sends that reply without the quote. The displayed message, your written text and saved memories stay as they are.
+Older messages can combine a picture's description with extracted file text in one saved field. When those parts can't be told apart reliably, the message needs **Use this text** or **Leave it out** before Show only will apply. Omitting also omits the extracted file text in that field. A reply quoting a message with an image can need the same choice; **Leave it out** sends that reply without the quote. Ordinary text-only quotations never require image review. The displayed message, your written text and saved memories stay as they are.
 
 The copy preparation, batch and **Change history** controls belong to the Roleplay review; Conversation pictures are reviewed message by message. [Included tools](../helpers/tools.md#images-in-replies) covers the shared image-input choices.
 

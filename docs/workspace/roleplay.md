@@ -81,6 +81,7 @@ Start with **Settings → Chat & Writing**:
 
 - **Chat & messages → Chat window** controls chat links and **Reopen your last chat**. Both start off. Links work on your installation and account; they aren't public copies.
 - **Chat & messages → Sending** includes whether the keyboard opens automatically.
+- **Chat & messages → Messages → Block external media** sets the default for loading images, audio and video from other websites. The character or group's external-media dialog also has **Block external media by default**. **Always allowed** and **Always forbidden** override that default for the selected character or group; outside sites can see your IP address when their media loads.
 - **Replies → Where replies are written** chooses **In the browser** or **On the server**. See [leaving the page](#when-you-leave-the-page) before changing it.
 
 Automatic chat names use a model request after a date-named chat has enough messages and you've sent one. The default is six messages, including the greeting. You can change the threshold or turn naming off. Assistant and temporary chats, and Conversation mode, are excluded.
@@ -152,7 +153,7 @@ Put stable character details in the card, world facts in [lorebooks](lorebooks.m
 Author's Note adds a short instruction to the prompt. Its tabs choose where that instruction belongs:
 
 - **This chat:** the current chat's note. Frequency `1` sends it every turn; `0` stops regular insertion. Lore scanning is a separate setting.
-- **Character:** private notes for this character. Tick the ones to use and choose Top, Replace or Bottom. These can be separate for each persona.
+- **Character:** private notes for this character. Tick the ones to use and choose Top, Replace or Bottom. **Separate notes for each persona** gives each persona its own note library, not just separate ticks. The visible list and edits follow the equipped persona, keeping another persona's notes out of this list and prompt.
 - **Persona:** one active private profile that follows the persona across characters.
 - **New chats:** defaults for chats you create later.
 
