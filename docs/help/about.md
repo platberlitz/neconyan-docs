@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-I've reviewed these guides against the **Neconyan 1.5.3 candidate**, source **e15eef23**, on 9 November 2026. This version is not published yet; [1.5.2 remains the latest release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.2). Some controls described here won't appear until you update. This edition covers Scratchpad reply versions, prefills and HTML/CSS previews, Plot Compass objectives, separate persona note libraries, background controls and the actual text picked by Mewmory. It also refreshes every workspace screenshot and adds Agents and a staged Proofreader demonstration.
+I've reviewed these guides for **Neconyan 1.5.3**, published at commit **39d78676**. [Download the latest release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). The guide review was completed against candidate **e15eef23** on 9 November 2026. Some controls described here won't appear until you update. This edition covers Scratchpad reply versions, prefills and HTML/CSS previews, Plot Compass objectives, separate persona note libraries, background controls and the actual text picked by Mewmory. It also refreshes every workspace screenshot and adds Agents and a staged Proofreader demonstration.
 
 The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide now carry the accent button guidance; the other extension examples are unchanged from their reviewed 7 October snapshots. The macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
