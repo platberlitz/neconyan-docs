@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-All twenty-two screenshots were refreshed on 9 November 2026 from the 1.5.3 candidate at `ca255d77`. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+All twenty-two screenshots were retaken on 9 November 2026 from the 1.5.3 candidate at `efdf32f6`, after the Send paw and Stop icon update. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked again at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 
