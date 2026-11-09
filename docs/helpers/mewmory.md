@@ -45,6 +45,8 @@ Removing old text from the next request doesn't hide it on screen. **Also hide o
 
 If a reply misses a fact, check **Recall** first. Was the fact included? If it was, the writing model may have ignored it.
 
+**Picked** shows the actual memory or passage before its selection reason, score and source links. **Included passages and memories** also shows neighbouring passages that were added automatically. I keep the wording from that recall, so editing a memory later doesn't change what this view says was sent. Older recalls that didn't save the text say so; use **Preview which memories would be picked** to inspect a fresh selection.
+
 ## Source history matters
 
 Check a doubtful memory against its source passage. Correct objective records separately from a character's mistaken belief. Deleted messages and rejected swipes aren't equally current history.

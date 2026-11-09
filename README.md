@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 54 pages, a reference for 201 registered macros, twenty-two real demonstration screenshots and a downloadable extension starter. I've reviewed the practical guides against the **Neconyan 1.5.3 candidate**, source `ca255d77`, on 9 November 2026. It is not published yet; [1.5.2 remains the latest release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.2). This edition covers Scratchpad reply versions, prefills and HTML/CSS previews, Plot Compass objectives, separate persona note libraries and background restoration. Every workspace screenshot is refreshed, with new Agents and staged Proofreader examples. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
+The site includes 54 pages, a reference for 201 registered macros, twenty-two real demonstration screenshots and a downloadable extension starter. I've reviewed the practical guides against the **Neconyan 1.5.3 candidate**, source `e15eef23`, on 9 November 2026. It is not published yet; [1.5.2 remains the latest release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.2). This edition covers Scratchpad reply versions, prefills and HTML/CSS previews, Plot Compass objectives, separate persona note libraries, background controls and the actual text picked by Mewmory. Every workspace screenshot is refreshed, with new Agents and staged Proofreader examples. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
 
 ## Preview locally
 
@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-All twenty-two screenshots were retaken on 9 November 2026 from the 1.5.3 candidate at `f13d0adf`, with the default Calico Dark accent and the updated Send paw and Stop icon. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked again at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+All twenty-two screenshots were retaken on 9 November 2026 from the 1.5.3 candidate at `e15eef23`, with the default Calico Dark accent, thinner Catline details, filled cat-eared Stop and corrected background controls. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked again at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 
