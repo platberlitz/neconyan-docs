@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 55 pages, a reference for 201 registered macros, twenty-four real demonstration screenshots and a downloadable extension starter. I've reviewed the practical guides for the **Neconyan 1.5.4 staging candidate at `dca2266f`** on 10 November 2026. **1.5.4 is not published yet**; [1.5.3 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). This edition adds Device sync guidance, the phone section buttons in Prompting Lab and World Info Lab, and the contained JannyAI browser. Every workspace screenshot is refreshed, including the new Device sync page. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
+The site includes 55 pages, a reference for 201 registered macros, twenty-four real demonstration screenshots and a downloadable extension starter. I've reviewed the practical guides for the **Neconyan 1.5.4 staging candidate at `999b46b3`** on 10 November 2026. **1.5.4 is not published yet**; [1.5.3 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). This edition adds Device sync guidance, the phone section buttons in Prompting Lab and World Info Lab, and the contained JannyAI browser. Every workspace screenshot is refreshed, including the new Device sync page. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
 
 ## Preview locally
 
@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-All twenty-four screenshots were taken on 10 November 2026 from the 1.5.4 candidate at `dca2266f`, with the default Calico Dark accent and the larger, rounder Catline icons. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+All twenty-four screenshots were taken on 10 November 2026 from the 1.5.4 candidate at `999b46b3`, with the default Calico Dark accent and the larger, rounder Catline icons. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 
