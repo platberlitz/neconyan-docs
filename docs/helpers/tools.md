@@ -29,6 +29,8 @@ Included code updates with Neconyan. Third-party extensions you install separate
 
 Prompt reconstruction and dry diagnostics don't generate replies. Prompting Lab's model comparisons and optional analysis make real requests. Read the action before running a batch.
 
+On phones, Prompting Lab and World Info Lab use visible section buttons instead of a section dropdown. Tap a section to open its controls without opening the keyboard.
+
 ### Quick Replies
 
 **Quick Replies** is the bundled extension; its settings header says **Quick Reply**. Buttons sit above the message box, and **Show quick reply buttons** turns the bar on. Sets are listed under **Shown in every chat**, **Only in this chat** and **Only with this character**; a character association is kept in your settings, not in the character card.
@@ -108,6 +110,8 @@ Under **How expressions are picked → Image generation and cleanup**, **Sprite 
 **BotSearcher** searches supported card sources. Available filters, accounts and downloads depend on the source site. External-site errors can occur independently of your model connection. A failed JannyAI link import names its reason, such as a missing login on the server or a hidden card definition. Logging in to JannyAI in your own browser doesn't count; use **Refresh status** or **Open JannyAI login window** in BotSearcher.
 
 **JannyAI card blocks proxies** means the creator has hidden the definition and disabled proxy access. Logging in again won't remove that setting. If JannyAI offers a card download, download it there and import the file; not every hidden card offers one.
+
+The JannyAI panel stays inside BotSearcher's workspace on phones and desktop, including its login and status controls.
 
 **Debugger** provides a diagnostic report and layout snapshot. Reproduce the problem first, then open its report, read it and copy or download it. **Prompt Inspector** helps inspect supported outgoing requests; those prompts may contain private chat material.
 

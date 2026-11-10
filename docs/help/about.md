@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-I've reviewed these guides for **Neconyan 1.5.3**, published at commit **39d78676**. [Download the latest release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). The guide review was completed against candidate **e15eef23** on 9 November 2026. Some controls described here won't appear until you update. This edition covers Scratchpad reply versions, prefills and HTML/CSS previews, Plot Compass objectives, separate persona note libraries, background controls and the actual text picked by Mewmory. It also refreshes every workspace screenshot and adds Agents and a staged Proofreader demonstration.
+I've reviewed these guides against the **Neconyan 1.5.4 staging candidate at dca2266f** on **10 November 2026**. This candidate is **not yet published**; [1.5.3 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). This edition adds Device sync guidance, the phone section buttons in Prompting Lab and World Info Lab, and the contained JannyAI browser. Some controls described here won't appear in 1.5.3.
 
 The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide now carry the accent button guidance; the other extension examples are unchanged from their reviewed 7 October snapshots. The macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 
@@ -18,7 +18,7 @@ The practical guides focus on common tasks and link to longer references when yo
 
 ## Screenshots and artwork
 
-All twenty-two workspace screenshots were captured from the 1.5.3 candidate on 9 November, using demonstration content and the bundled assistants, not private chats. The Proofreader example uses a fixed sample response through the real edit-history workflow; it isn't a live model conversation.
+All twenty-four workspace screenshots were captured from the 1.5.4 candidate on 10 November, using demonstration content and the bundled assistants, not private chats. The Proofreader example uses a fixed sample response through the real edit-history workflow; it isn't a live model conversation.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is authored guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 

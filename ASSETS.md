@@ -4,11 +4,11 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-All twenty-two screenshots were recaptured on 9 November 2026 from the running [Neconyan 1.5.3 candidate at e15eef23](https://github.com/platberlitz/Neconyan/tree/e15eef23), after the thinner Catline details, filled cat-eared Stop and background transparency fixes. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents and Proofreader each have a desktop and phone image.
+All twenty-four screenshots were captured on 10 November 2026 from the running [Neconyan 1.5.4 candidate at dca2266f](https://github.com/platberlitz/Neconyan/tree/dca2266f), with the larger, rounder Catline icons. This candidate is not yet published. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image.
 
 The captures use disposable demonstration data: Calico Dark with its default accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. The default colours were restored and checked before capture. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
 
-These replace the eighteen images previously captured on 30 October, 5 November and 8 November, and add the four Agents and Proofreader images.
+These replace the twenty-two images captured on 9 November and add the two Device sync images.
 
 Playwright captured Chromium at 1280×900 for desktop with a pixel ratio of 1, and 393×852 with touch emulation for phone at a pixel ratio of 1.5. These are browser viewport captures, not physical-phone or Safari verification. The screenshots were converted to WebP at quality 80 without resizing or compositing interface elements.
 

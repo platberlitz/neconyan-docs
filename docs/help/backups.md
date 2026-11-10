@@ -10,6 +10,8 @@ Keep an independent copy before updating, importing a large library or making br
 
 ## Choose the right export
 
+For selected libraries between separate installations, use [Device sync](device-sync.md). Its four manual transfer methods are separate from a whole-account backup; deletions, keys and Conversation chats do not travel.
+
 | Export or copy | Useful for | Doesn't automatically include |
 | --- | --- | --- |
 | Character card | Moving a character definition | All chats, gallery media and account settings |

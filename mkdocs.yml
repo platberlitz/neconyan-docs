@@ -110,6 +110,7 @@ nav:
   - Help and reference:
       - Something went wrong: help/troubleshooting.md
       - Updates and backups: help/backups.md
+      - Device sync: help/device-sync.md
       - Words you will meet: help/glossary.md
       - Common questions: help/faq.md
       - About these docs: help/about.md
