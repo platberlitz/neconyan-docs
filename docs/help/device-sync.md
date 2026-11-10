@@ -8,8 +8,8 @@ quote: 'Choose what travels, save on both sides, then transfer. A newer date alo
 
 **Settings → Device sync** moves selected libraries between separate Neconyan installations. If your phone and computer already open the same server and account, they already share its data.
 
-!!! info 'Available in the 1.5.4 candidate'
-    I've reviewed this guide against candidate commit **999b46b3** on 10 November 2026. Version 1.5.4 is not published yet. The current published release is [1.5.3](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3).
+!!! info 'Available in 1.5.4'
+    I've reviewed this guide against the published [Neconyan 1.5.4 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at commit **e1f05ec6** on 11 November 2026.
 
 === "On desktop"
 

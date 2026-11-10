@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-I've reviewed these guides against the **Neconyan 1.5.4 staging candidate at 999b46b3** on **10 November 2026**. This candidate is **not yet published**; [1.5.3 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.3). This edition adds Device sync guidance, the phone section buttons in Prompting Lab and World Info Lab, and the contained JannyAI browser. Some controls described here won't appear in 1.5.3.
+I've reviewed these guides against the published [Neconyan 1.5.4 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at **e1f05ec6** on **11 November 2026**. This edition adds Device sync guidance, the phone section buttons in Prompting Lab and World Info Lab, and the contained JannyAI browser. Some controls described here won't appear in 1.5.3.
 
 The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide now carry the accent button guidance; the other extension examples are unchanged from their reviewed 7 October snapshots. The macro guides explain which replies are still built on the server and which macros those refuse. The newer Agent-only placeholders are documented separately and don't change the registered macro count.
 

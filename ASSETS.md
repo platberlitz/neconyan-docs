@@ -4,7 +4,7 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-All twenty-four screenshots were captured on 10 November 2026 from the running [Neconyan 1.5.4 candidate at 999b46b3](https://github.com/platberlitz/Neconyan/tree/999b46b3), with the larger, rounder Catline icons. This candidate is not yet published. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image.
+All twenty-four screenshots were captured on 10 November 2026 from the running [Neconyan 1.5.4 candidate at 999b46b3](https://github.com/platberlitz/Neconyan/tree/999b46b3), with the larger, rounder Catline icons. [Neconyan 1.5.4 is now published](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at release commit `e1f05ec6`; the capture source above remains the actual image provenance. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image.
 
 The captures use disposable demonstration data: Calico Dark with its default accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. The default colours were restored and checked before capture. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
 
