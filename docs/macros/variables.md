@@ -16,7 +16,7 @@ A **variable** is a saved value with a name, such as `location` containing `Libr
 | Global | Your account, across chats | `setglobalvar` and `getglobalvar` |
 | Macro Enhanced chat variables | A separate store in this chat | `setchatvar` and `getchatvar` |
 
-The two chat-only stores are separate. A value written with `setchatvar` will not appear through `getvar`. If a value has to survive a Deep Swipe or a reply with a selected Notebook context, use the local store: Macro Enhanced chat variables don't work in prompts built on the server.
+The two chat-only stores are separate. A value written with `setchatvar` will not appear through `getvar`. If a value has to survive a Deep Swipe or a reply with a selected Notebook context, use the local store. Macro Enhanced chat variables don't work in prompts built on the server.
 
 ```text
 {{setvar::location::Library}}
@@ -27,11 +27,11 @@ The setter produces no text. The second line becomes `The scene takes place in L
 
 ## Writes can run more than once
 
-A prompt may be evaluated during preview, preparation or a retry. An increment inside it can therefore run more than once for a single visible reply. Use an explicit action to update a story counter when exact timing matters.
+A prompt may be evaluated during preview, preparation or a retry. So an increment inside it can run more than once for a single visible reply. Use an explicit action to update a story counter when exact timing matters.
 
 ## In Roleplay prompts
 
-Ordinary Roleplay replies build their prompts in the browser, where every store works. A few kinds of reply build theirs on the server instead: Conversation replies, Deep Swipe replacements, protected Guided corrections and replies with a selected Notebook context. These rules apply to those.
+Ordinary Roleplay replies build their prompts in the browser, where every store works. A few kinds of reply build theirs on the server instead: Conversation replies, Deep Swipe replacements, protected Guided corrections and replies with a selected Notebook context. The rules below apply to those replies.
 
 On the server, local variable writes made while preparing the prompt are saved together with the accepted reply. A failed request doesn't save them, and recovering a reply that already finished doesn't repeat them.
 
@@ -78,6 +78,6 @@ The first reads a fallback without saving it. The second saves the fallback when
 
 ## Named macros
 
-The ordinary local and global macros are core features. The six names containing `chatvar` or `ChatVar` belong to Macro Enhanced. In slash-command scripts, use Macro Enhanced’s `/me-chatvar` commands to work with its separate store; similarly named built-in slash commands can use the ordinary store.
+The ordinary local and global macros are core features. The six names containing `chatvar` or `ChatVar` belong to Macro Enhanced. In slash-command scripts, use Macro Enhanced’s `/me-chatvar` commands to work with its separate store. Built-in slash commands with similar names can use the ordinary store.
 
 <!-- macro-reference: variables -->

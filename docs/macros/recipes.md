@@ -6,9 +6,9 @@ quote: 'Pick the example that solves your problem. You can leave the rest for an
 
 # Ready-to-use examples
 
-Try these in a test chat. The first uses core macros; the remaining examples use Macro Enhanced too. Macros that save values change the chat when evaluated.
+Try these in a test chat. The first uses core macros. The remaining examples use Macro Enhanced too. Macros that save values change the chat when evaluated.
 
-**Check where the prompt is built.** The greeting and the `setvar` line use core macros and work anywhere. The other examples use Macro Enhanced: they work in ordinary Roleplay replies, but stop a Conversation reply, a Deep Swipe or a reply with a selected Notebook context before the model request. Try them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card.
+**Check where the prompt is built.** The greeting and the `setvar` line use core macros and work anywhere. The other examples use Macro Enhanced. They work in ordinary Roleplay replies. They stop a Conversation reply, a Deep Swipe or a reply with a selected Notebook context before the model request. Try them in the Macro Enhanced Playground, and read [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) before putting them in a card.
 
 ## A greeting that follows the selected names
 
@@ -48,7 +48,7 @@ The first evaluation chooses the weather. Later evaluations in this chat keep it
 {{Charsub}} {{charpverb::has::have}} {{charposs}} own reasons to stay.
 ```
 
-For she/her, this reads `She has her own reasons to stay.` Set the character’s pronouns first; see [pronouns](pronouns.md) for defaults and group-chat limits.
+For she/her, this reads `She has her own reasons to stay.` Set the character’s pronouns first. See [pronouns](pronouns.md) for defaults and group-chat limits.
 
 ## Keep a number in range
 
@@ -56,7 +56,7 @@ For she/her, this reads `She has her own reasons to stay.` Set the character’s
 Energy: {{clamp::{{getvar::energy}}::0::100}} / 100.
 ```
 
-This displays a number between 0 and 100. It does not save the limited value back to `energy`.
+This displays a number between 0 and 100. It doesn't save the limited value back to `energy`.
 
 ## A short conditional instruction
 
@@ -68,7 +68,7 @@ Use the established weather.
 {{/if}}
 ```
 
-The condition compares the saved value to the text `rain`. It inserts one branch into the prompt; the model then uses that instruction when writing.
+The condition compares the saved value to the text `rain`. It inserts one branch into the prompt. The model then uses that instruction when writing.
 
 ## Find a problem
 

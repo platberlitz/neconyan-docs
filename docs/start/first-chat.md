@@ -13,7 +13,7 @@ Once [your model is connected](connections.md), open **Choose a character** on H
 1. Choose a character and open their chat.
 2. Use **Roleplay** for a normal character-chat transcript. You can explore the other modes later.
 3. Read the character's opening message, then type your reply in the composer at the bottom.
-4. Press Send and wait for the response. Some connections display it as it arrives; others return the completed reply.
+4. Press Send and wait for the response. Some connections show it as it arrives. Others return the completed reply.
 
 On a desktop, keyboard sending follows your preferences. ++shift+enter++ lets you add a line break in the usual composer. On a phone, use the visible Send control.
 
@@ -24,7 +24,7 @@ On a desktop, keyboard sending follows your preferences. ++shift+enter++ lets yo
 
 If the model's reply is close but has one wrong detail, use the message's edit action. If you'd like a different attempt, use the regeneration or swipe controls. A swipe is an alternative version of that reply; it doesn't create a second character.
 
-The chosen version becomes the one your conversation continues from. Once later messages rely on a detail, changing an earlier reply can make the story inconsistent. Branch or start another chat when you want to explore a substantially different direction.
+The chosen version becomes the one your conversation continues from. Once later messages rely on a detail, changing an earlier reply can make the story inconsistent. Branch or start another chat when you want to explore a very different direction.
 
 ## Know what is being saved
 
@@ -32,7 +32,7 @@ Saved chats belong to the server you're using. Visit the same server and account
 
 **Start a temporary chat** on Home is deliberately temporary. Its messages aren't saved. If you're experimenting with something worth keeping, use a normal saved chat or export your work before you close it.
 
-Roleplay replies are written in the page, so the first words appear straight away. If you close the tab mid-reply, the server holds most single-character replies for you: reopen the same chat to collect the result without paying for another request. That doesn't mean the computer, Android app or model service can be shut down safely in the middle of a request, and a server restart loses a held reply.
+Roleplay replies are written in the page, so the first words appear straight away. If you close the tab mid-reply, the server holds most single-character replies for you. Reopen the same chat to collect the result without paying for another request. You still can't safely shut down the computer, Android app or model service in the middle of a request, and a server restart loses a held reply.
 
 ## If the reply feels wrong
 

@@ -18,7 +18,7 @@ Catelier is where you build character cards. Write one yourself, ask a model to 
 
 **Save as a new copy** keeps the existing card. Reopen unfinished work under **Your drafts**. Discarding a draft doesn't delete a published character.
 
-**Review & save** writes a version 3 character card (CCv3), with complete public fields and its embedded portable lorebook when it has one. JSON export writes the same format. An older imported card keeps its original shape in the comparison until you save or export it.
+**Review & save** writes a version 3 character card (CCv3). The card has complete public fields and, when there is one, its embedded portable lorebook. JSON export writes the same format. An older imported card keeps its original shape in the comparison until you save or export it.
 
 === "Computer"
 
@@ -36,7 +36,7 @@ Catelier is where you build character cards. Write one yourself, ask a model to 
 
 ## Ask for help with the writing
 
-Choose a connection in **Writing instructions**. Add fallback profiles if you want another connection tried when the first fails. Generated writing uses your model account; typing your own text makes no request.
+Choose a connection in **Writing instructions**. Add fallback profiles if you want another connection tried when the first fails. Generated writing uses your model account. Typing your own text makes no request.
 
 **Length, tense and style** sets the format, rough length and point of view. **Number of greetings** includes the first greeting and its alternatives. Use **What each greeting should do** to ask for different openings rather than several versions of the same scene.
 
@@ -46,17 +46,19 @@ Turn on **Ask questions first** to fill in missing details before a dossier or w
 
 **Writing instructions** are saved to your account and used by every Catelier draft. That includes the connection, fallback order, **Maximum output tokens**, **Prefill**, **Stream live output**, **Length, tense and style**, **Number of greetings**, **Director prompt**, **Grounded prose prompt**, **Macro guidance prompt**, **NSFW instructions**, **Fields to create** and **Custom user instructions**.
 
-**Prefill** starts the model's reply with text you set. Your provider must support assistant prefills. Kimi K3 and K3.1 Pro models also show **Partial prefill**, used instead of Prefill and sent as a partial assistant prefill; leave it blank to use Prefill. Each fallback connection uses the prefill for its own model. **Stream live output** shows text and available thinking while the reply is written; chat and text completion connections support it, and other connections show the finished reply.
+**Prefill** starts the model's reply with text you set. Your provider must support assistant prefills. Kimi K3 and K3.1 Pro models also show **Partial prefill**. Those models use it instead of Prefill, and it's sent as a partial assistant prefill. Leave it blank to use Prefill. Each fallback connection uses the prefill for its own model.
 
-**Custom user instructions** are directions for Catelier's writing, generation and interviews. They are shared across your drafts and aren't exported as the character's prompt.
+**Stream live output** shows text and available thinking while the reply is written. Chat and text completion connections support it. Other connections show the finished reply.
 
-Under **Identity**, the **Creator** field is shared too. Changing it updates the creator name for your other Catelier drafts; it doesn't publish or rewrite their cards until you save them.
+**Custom user instructions** are directions for Catelier's writing, generation and interviews. They're shared across your drafts and aren't exported as the character's prompt.
+
+Under **Identity**, the **Creator** field is shared too. Changing it updates the creator name for your other Catelier drafts. It doesn't publish or rewrite their cards until you save them.
 
 Under **Portrait**, **Image prompt guidelines (optional)** and the **Image provider supports negative prompts** switch are shared across drafts. The **Portrait prompt** and **Negative portrait prompt** stay with each draft.
 
 ## Keep only the changes you want
 
-Read a proposal before accepting it. **Accept this field** keeps one part; **Regenerate this field** asks for another attempt. Use **Accept all fields** or **Reject proposal** for the whole result.
+Read a proposal before accepting it. **Accept this field** keeps one part. **Regenerate this field** asks for another attempt. Use **Accept all fields** or **Reject proposal** for the whole result.
 
 Accepted text still belongs to the draft. **Review & save** is the separate step that changes your library. If the library card changed while you were working, use **Compare with library** before deciding what to keep.
 
@@ -70,8 +72,8 @@ In a chat, **Chat tools → Character Purrks** opens their controls. System-prom
 
 ## Come back later
 
-With **Where replies are written → On the server**, submitted Catelier writing can continue after you close the page. Return to the draft or **Server requests**, collect the result and review it. **Cancel** stops the work; closing the page doesn't.
+With **Where replies are written → On the server**, submitted Catelier writing can continue after you close the page. Return to the draft or **Server requests**, collect the result and review it. **Cancel** stops the work. Closing the page doesn't.
 
-If you've edited the draft meanwhile, the saved result stays available for review rather than overwriting your newer text. The server still needs to remain running. Browser-written requests don't have the same closed-page behaviour.
+If you've edited the draft in the meantime, the saved result stays available for review rather than overwriting your newer text. The server still needs to stay running. Requests written in the browser don't behave the same way when you close the page.
 
 For a quick conversation about an idea, try [Scratchpad](scratchpad.md). For ordinary card fields and imports, see [Characters and personas](../workspace/characters.md).

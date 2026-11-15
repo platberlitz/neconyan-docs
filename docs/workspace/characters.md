@@ -6,13 +6,13 @@ quote: "A character is easier to write when they want something specific. 'Myste
 
 # Characters and personas
 
-A **character card** describes who the model plays. A **persona** describes who you are in the conversation. Keeping those roles clear helps prevent the model from assigning your character's traits to someone else.
+A **character card** describes who the model plays. A **persona** describes who you are in the conversation. Keeping the two apart helps stop the model giving your character's traits to someone else.
 
 ## Create a useful card
 
-For a private workspace where you can draft, ask for help and review changes before saving a card, open [Catelier](../helpers/catelier.md). The ordinary character editor still works for quick edits.
+[Catelier](../helpers/catelier.md) gives you a private workspace where you can draft, ask for help and review changes before saving a card. The ordinary character editor still works for quick edits.
 
-Open **Characters**, create a character and fill in the fields you actually need. Give the character a name, a recognisable voice, a motive and a starting situation. Use the first message to demonstrate the kind of interaction you want.
+Open **Characters**, create a character and fill in the fields you actually need. Give the character a name, a recognisable voice, a motive and a starting situation. Use the first message to show the kind of interaction you want.
 
 A practical starting set is:
 
@@ -22,9 +22,9 @@ A practical starting set is:
 - **Situation:** where the scene begins and what is happening.
 - **Voice:** a few concrete examples of how they speak.
 
-Put each instruction where it belongs. Duplicating it across fields uses context space and can make future edits inconsistent.
+Put each instruction where it belongs. Repeating it across fields uses up context space, the room a model has for text. It also makes it easy to change one copy later and miss another.
 
-The editor uses **Basics**, **Definition**, **Greetings** and **Advanced** tabs. Creator's Notes are on Basics, and the favourite star sits beside the name. Field token counts show how much text those fields contain; they aren't the size of the complete model request.
+The editor uses **Basics**, **Definition**, **Greetings** and **Advanced** tabs. Creator's Notes are on Basics, and the favourite star sits beside the name. The token counts beside the fields show how much text those fields contain. They aren't the size of the complete model request.
 
 ## What each card field does {#card-fields}
 
@@ -36,7 +36,7 @@ Each field below is sent to the model in its own place in the request. In Chat C
 
 ### Personality summary {#personality}
 
-**Definition → Personality summary** is a short summary of temperament, such as 'dry, loyal, slow to trust'. Many cards leave it empty and put personality in the description instead; use one place, not both. Macro: `{{personality}}`.
+**Definition → Personality summary** is a short summary of temperament, such as 'dry, loyal, slow to trust'. Many cards leave it empty and put personality in the description instead. Use one place, not both. Macro: `{{personality}}`.
 
 ### Scenario {#scenario}
 
@@ -58,13 +58,13 @@ Neconyan adds a missing `<START>` at the very beginning. **Settings → Chat & W
 - **Always include examples** keeps them in every request.
 - **Never include examples** leaves them out.
 
-A few varied examples teach voice better than many similar ones. Examples are also copied faithfully, so don't include facts that shouldn't repeat.
+A few varied examples teach voice better than many similar ones. The model also copies examples closely, so leave out facts that shouldn't be repeated.
 
 ### First message {#first-message}
 
 **Greetings → First message** is the character's opening message in every new chat. It sets the scene, length and style the model will tend to copy, so write it the way you want replies to read.
 
-**Alternate Greetings** offers other openings. They appear as swipes on the first message of a new chat; group members can use them to start the conversation.
+**Alternate Greetings** offers other openings. They appear as swipes on the first message of a new chat. Group members can use them to start the conversation.
 
 ## Token counts {#token-counts}
 
@@ -85,7 +85,15 @@ Choose **Always active**, **Manual switch**, **Keyword trigger** or **Scene AI d
 
 **Extract from card** finds supported traits without a model request and adds them switched off. **Generate Purrks** asks a model, so it can cost credits. The import setting **Create switchable Purrks on import** also starts extracted traits off. Existing Orb fragments are converted regardless of that switch.
 
-The Purrks travel with the card; their current chat switches belong to the chat. Keep long-term facts in the description and use Purrks for details you want to control separately.
+To remove several at once:
+
+1. Press **Bulk Delete** in the character editor's Purrks toolbar.
+2. Tick the ones to go, or use **Select all**.
+3. Confirm.
+
+The button shows how many are ticked. **Clear selection** unticks them, and **Cancel** leaves the card unchanged. This arrives with the Neconyan 1.5.5 staging candidate, which is not published yet.
+
+The Purrks travel with the card. Whether each one is switched on belongs to the chat. Keep long-term facts in the description and use Purrks for details you want to control separately.
 
 A card works well for stable identity. Keep changing details, such as a current injury, in the chat or a suitable [writing tool](../helpers/index.md).
 
@@ -93,9 +101,9 @@ Use [lorebooks](lorebooks.md) for world information that should enter context se
 
 ## Set up your persona
 
-Open **Persona** to choose or edit your name, avatar and description. Write what the model needs to know about your role, rather than assuming your account name is a complete character description.
+Open **Persona** to choose or edit your name, avatar and description. Write what the model needs to know about your role. Your account name alone isn't a complete character description.
 
-Check the active persona when a conversation seems wrong. Conversation histories are persona-specific, and persona information can also influence prompts in Roleplay.
+Check the active persona when a conversation seems wrong. Each persona has its own Conversation histories, and persona information can also affect prompts in Roleplay.
 
 Each persona can keep its own expression set, separate from the character's set. See [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) for the setup and background classification.
 
@@ -103,26 +111,43 @@ Each persona can keep its own expression set, separate from the character's set.
 
 In Persona, open **Scenario Notes** to add details for one chat, such as a modern AU or route-specific facts. Several notes can be active at once, and the counter covers the base persona plus the active notes. **Preview final prompt for this chat** shows what the model will receive.
 
-A note can also carry its own avatar. Choose **Choose avatar** in the note editor, then **Save**; **Remove avatar** returns to the normal persona picture. While the note is active, new Roleplay replies and Conversation messages use that picture, and messages already sent keep their portrait. If several active notes have avatars, the first in the list wins.
+A note can also carry its own avatar. Choose **Choose avatar** in the note editor, then **Save**. **Remove avatar** returns to the normal persona picture. While the note is active, new Roleplay replies and Conversation messages use that picture, and messages already sent keep their portrait. If several active notes have avatars, the first in the list wins.
 
-The picture is saved as an image file at its full size, so the chat shows the full picture rather than a shrunken copy. Notes created before this change keep their smaller copy until you choose the picture again. A persona card export embeds the full picture, including any Scenario Note portraits. The separate persona backup JSON keeps the saved picture path, not the image file, so the backup alone can't move those portraits to another account. Linked lorebooks still travel separately. Scenario Notes belong to your persona, not to the character's **Scenario** field, Author's Note or Conversation's own instructions.
+The picture is saved as an image file at its full size, so the chat shows the full picture rather than a shrunken copy. Notes created before this change keep their smaller copy until you choose the picture again. A persona card export embeds the full picture, including any Scenario Note portraits. The separate persona backup JSON keeps the saved picture path, not the image file, so the backup alone can't move those portraits to another account. Linked lorebooks still travel separately.
+
+Scenario Notes belong to your persona, not to the character's **Scenario** field, Author's Note or Conversation's own instructions.
 
 ## Organise tags and folders {#tag-management}
 
 Open **Manage tags** (the gear button in the tag filter bar on **Characters**) to open **Tag Management**. It uses the tags already on your cards, shows a live summary of tags, folders and notes at the top, and needs no model request.
 
-- **Tags & Folders**: search tag names and notes, or type `c:` followed by a character or group name (such as `c:Narrator`) to find tags assigned to them; a leading `-` excludes a term and commas mean either. Filter by folder state, **Unused** or **With notes**, and sort manually (drag the grip) or by name or usage count. Create a tag with **No folder**, **Open folder** (shows its characters in the main library even when the folder isn't selected) or **Closed folder** (hides its characters from the main library until you open the folder). Each tag row lets you edit its name, folder type, card visibility, colours, tag note and assigned characters or groups. Under **Folder and bulk tools**, tick **Group library by folder tags** to use folders in the library, **Merge tags** to fold selected tags and their notes into a kept tag, or **Delete tags** to remove several at once.
-- **Characters & Groups**: search cards by name, `t:tag`, `f:folder`, `a:text` (searches the whole card: name, description, personality, scenario, first message, creator's notes, organiser note and tags), `n:note` (organiser note) or `-term`, with quotes keeping a phrase together and commas meaning either. Filter by type, tagged or untagged, folder state, notes or **Favourites**. Each row lets you add or remove tags, write an organiser **Notes** entry, or **Open** the card. Use **Select shown** or tick individual rows, then open **Bulk assign tags** to **Assign tags** or **Remove tags** across the selection at once.
+- **Tags & Folders** works on the tags themselves:
+    - Search tag names and notes. Type `c:` followed by a character or group name (such as `c:Narrator`) to find tags assigned to them. A leading `-` excludes a term, and commas mean either.
+    - Filter by folder state, **Unused** or **With notes**. Sort manually by dragging the grip, or by name or usage count.
+    - Create a tag with **No folder**, **Open folder** or **Closed folder**. An open folder shows its characters in the main library even when the folder isn't selected. A closed folder hides its characters from the main library until you open the folder.
+    - Each tag row lets you edit its name, folder type, card visibility, colours, tag note and assigned characters or groups.
+    - Under **Folder and bulk tools**, tick **Group library by folder tags** to use folders in the library. **Merge tags** folds selected tags and their notes into one tag you keep. **Delete tags** removes several at once.
+- **Characters & Groups** works on the cards:
+    - Search cards by name, `t:tag`, `f:folder`, `a:text`, `n:note` or `-term`. `a:text` searches the whole card: name, description, personality, scenario, first message, creator's notes, organiser note and tags. `n:note` searches the organiser note. Quotes keep a phrase together, and commas mean either.
+    - Filter by type, tagged or untagged, folder state, notes or **Favourites**.
+    - Each row lets you add or remove tags, write an organiser **Notes** entry, or **Open** the card.
+    - To change several cards at once, use **Select shown** or tick individual rows. Then open **Bulk assign tags** to **Assign tags** or **Remove tags** across the selection.
 
-At the top of **Tag Management**, **Prune** removes unused tags plus references and organiser notes left behind by deleted characters or groups, **Backup** downloads a JSON file of your tags, assignments and notes, and **Restore** imports a tag backup or notes file (asking whether to **Overwrite** or **Keep Existing** when items overlap). After a delete, merge or prune, the **Undo** banner at the top of the window restores the previous state.
+At the top of **Tag Management**:
+
+- **Prune** removes unused tags, plus references and organiser notes left behind by deleted characters or groups.
+- **Backup** downloads a JSON file of your tags, assignments and notes.
+- **Restore** imports a tag backup or notes file. When items overlap, it asks whether to **Overwrite** or **Keep Existing**.
+
+After a delete, merge or prune, the **Undo** banner at the top of the window restores the previous state.
 
 ## Move and copy a card
 
 Characters' **Import** action accepts supported card files, including PNG files with embedded card data. Use **Duplicate Character** when you want a separate version to experiment with.
 
-For chats from another installation, see [Import as new instance](../start/imports.md#bring-chats-from-another-installation). That explicit option creates a separate character instance and chat history rather than attaching foreign history to an existing identity.
+For chats from another installation, see [Import as new instance](../start/imports.md#bring-chats-from-another-installation). You choose that option yourself. It creates a separate character instance with its own chat history, and doesn't attach the other installation's history to a character you already have.
 
-**Export and Download** offers PNG or JSON. A card export carries character information; it isn't a complete archive of chats, galleries, connection secrets or settings. Use [the appropriate backup](../help/backups.md) for those.
+**Export and Download** offers PNG or JSON. A card export carries character information. It doesn't hold a complete archive of chats, galleries, connection secrets or settings. Use [the appropriate backup](../help/backups.md) for those.
 
 !!! taro "Taro"
     A portrait is an image. A card is data. Sometimes one PNG contains both. If an import gives you only a picture, inspect the file before accusing the character of amnesia.

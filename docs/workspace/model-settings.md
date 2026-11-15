@@ -6,17 +6,53 @@ quote: "Change one setting, send one test message, then decide. Changing nine at
 
 # Model and prompt settings
 
-These controls change how a request is built and how the model is asked to write. None of them are needed for a first chat. Start with the connection's defaults, change one thing at a time and judge it from a short test reply.
+These controls change how a request is built and how the model is asked to write. You don't need any of them for a first chat. Start with the connection's defaults, change one thing at a time and judge it from a short test reply.
 
 | What you want to change | Where it lives |
 | --- | --- |
+| Adding, removing or reordering Chat Completion prompts | **Presets → Prompts** |
+| What loading a preset changes besides its prompts | **Presets → Parameters → Switching Presets** |
 | Randomness, repetition and other sampler values | **Fine-tuning → Sampling** |
 | How much the model thinks before replying | **Presets → Advanced & Reasoning → Reasoning Effort**, or the brain button beside the message box |
 | How messages are merged before sending | **Connections → Prompt Post-Processing** |
 | Templates, system prompts, stop strings, token counting and Structured Prefill | **Fine-tuning → Formatting** |
 | Tools that extensions can let the model call | **Presets → Advanced & Reasoning → Enable function calling** |
 
-**Context Size** and **Max Response Length** stay on **Presets**. For Chat Completion they're in the **Token Budget** drawer; for Text Completion they're near the top of the page as **Context (tokens)** and **Response (tokens)**. [Understand the limits](../start/connections.md#understand-the-limits) explains how the two relate.
+**Context Size** and **Max Response Length** stay on **Presets**. For Chat Completion, they're in the **Token Budget** drawer. For Text Completion, they're near the top of the page as **Context (tokens)** and **Response (tokens)**. [Understand the limits](../start/connections.md#understand-the-limits) explains how the two relate.
+
+## Presets and prompts {#presets-and-prompts}
+
+!!! info "Changed in the 1.5.5 candidate"
+    This section describes the Presets page in the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet. In the current published release, [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4), the same actions sit behind unlabelled icons and prompts are added from the row under the list.
+
+The preset buttons are labelled now: **Save**, **Save as**, **Rename**, **Import**, **Export** and **Delete**. **Save** overwrites the selected preset. **Save as** with a new name keeps the original.
+
+### Add a prompt {#add-a-prompt}
+
+With a Chat Completion connection, open **Presets → Prompts**.
+
+1. Press **New prompt** above the list.
+2. Give the prompt a name and text.
+3. Choose where it goes under **Place after**.
+4. Press **Add prompt**. It lands there switched on.
+
+Open an existing prompt to see **Edit prompt**, or **Inspect** for one that can't be edited. It has an Edit and Preview switch and labelled **Delete**, **Reset**, **Cancel** and **Save** buttons.
+
+Removing a prompt from the list doesn't destroy it. It moves to **Removed prompts** below the list, which only appears once something has been removed. **Add back** returns it after the selected prompt, switched on. **Delete** there removes it for good.
+
+**Lock order** stops prompts being dragged by accident. The summary under the heading counts tokens, the units of text a model counts. It shows **Total Tokens** followed by **Chat History Tokens**, the share taken by the chat itself, so you can tell a heavy preset from a long chat.
+
+### Parameters and Switching Presets {#switching-presets}
+
+**Parameters** is grouped into cards: **Token Budget**, **Output**, **Prompt Templates**, **Advanced & Reasoning** and **Switching Presets**. The settings are the ones you had. They've only moved into clearer groups.
+
+**Switching Presets**, the last card, replaces the old preset linking controls. It holds **Keep API/model linked to preset**, **Keep sampling settings linked to preset** and **Remember sampling settings per model**. Check it when switching presets changes your model or sampler values and you didn't expect it to.
+
+### Searchable lists {#searchable-lists}
+
+Most long lists open in one searchable picker instead of a plain dropdown, on phone and desktop. Press the list, type part of a name, then press an item. The item in use carries a **Current** badge, and **No matches** means nothing fits what you typed.
+
+Pick-one lists include the Chat Completion preset list, the Context, Instruct, System Prompt and Reasoning templates, and **Connection Profile**. Tick-many lists, such as **Active lorebooks** and the OpenRouter and NanoGPT provider lists, stay open while you choose and have a **Clear** button. Choosing from a picker does what the old dropdown did, so a preset or template still needs saving in the usual way.
 
 ## Sampling {#sampling}
 
@@ -46,22 +82,22 @@ Some Chat Completion models can think before writing their reply. **Reasoning Ef
 
 Set it in **Presets → Advanced & Reasoning**, or press the brain button beside the message box and pick a short label such as **Low** or **Med**. Both change the same setting.
 
-Across **NanoGPT**, **OpenRouter** and supported native connections (**OpenAI**, **Google AI Studio** on `v1beta`, **Google Vertex AI**, **DeepSeek**, **Moonshot**, **Z.AI**, **MiniMax**, **MistralAI**, **Groq**, **AIMLAPI** and **Fireworks**), Neconyan filters the menu and the composer picker to the effort levels declared or documented for the selected model:
+Neconyan shows only the effort levels declared or documented for the selected model, in both the menu and the picker beside the message box. This applies to **NanoGPT**, **OpenRouter** and supported native connections (**OpenAI**, **Google AI Studio** on `v1beta`, **Google Vertex AI**, **DeepSeek**, **Moonshot**, **Z.AI**, **MiniMax**, **MistralAI**, **Groq**, **AIMLAPI** and **Fireworks**):
 
-- If your saved choice isn't supported by the current model, the control warns you and lists the valid choices so you can pick one before sending.
-- When an OpenRouter model doesn't expose an effort setting, the **Reasoning Effort** selector is disabled with a note that your saved choice is kept for other models, and the brain button beside the message box is hidden.
+- If the current model doesn't support your saved choice, the control warns you and lists the valid choices so you can pick one before sending.
+- When an OpenRouter model doesn't expose an effort setting, the **Reasoning Effort** selector is disabled. A note says your saved choice is kept for other models. The brain button beside the message box is hidden.
 - When a model requires reasoning, **None** isn't offered.
-- On native **DeepSeek**, **None** turns thinking off for **DeepSeek v4 Pro** and **DeepSeek Flash**. **DeepSeek Flash** offers only **None**, **Low**, **High** and **Maximum**; with no effort sent it still thinks, so its reply keeps reasoning room. Through a reverse proxy, **None** isn't sent and DeepSeek's default applies.
-- **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. A higher response limit therefore allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
-- For unlisted native models or custom proxies where supported levels aren't known, the full list remains available; **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
+- On native **DeepSeek**, **None** turns thinking off for **DeepSeek v4 Pro** and **DeepSeek Flash**. **DeepSeek Flash** offers only **None**, **Low**, **High** and **Maximum**. With no effort sent it still thinks, so its reply keeps reasoning room. Through a reverse proxy, **None** isn't sent and DeepSeek's default applies.
+- **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. So a higher response limit allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
+- For unlisted native models or custom proxies where supported levels aren't known, the full list stays available. **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
 
-If a reply fails after changing the level, choose one of the model's supported levels or set it back to **None** where available and test again.
+If a reply fails after you change the level, choose one of the model's supported levels or set it back to **None** where available. Then test again.
 
 **Request model reasoning** in the same drawer asks the provider to return the thinking so Neconyan can show it. Some providers think without returning anything you can read. **Fine-tuning → Formatting → Reasoning** controls how returned thinking is shown and whether it's added to later prompts.
 
 ## Prompt post-processing {#prompt-post-processing}
 
-**Prompt Post-Processing** sits in the Chat Completion section of **Connections**, just above **Connect**. Some providers reject a request unless the messages follow strict rules, such as starting with your message or never sending two messages from the same side in a row. This setting rewrites the request on the server to fit.
+**Prompt Post-Processing** sits in the Chat Completion section of **Connections**, directly above **Connect**. Some providers reject a request unless the messages follow strict rules, such as starting with your message or never sending two messages from the same side in a row. This setting rewrites the request on the server to fit.
 
 | Option | What it changes |
 | --- | --- |
@@ -85,7 +121,7 @@ Leave it on **None** unless the provider's error asks for alternating or user-fi
 - **Reasoning**: how thinking blocks are recognised, shown and reused.
 - **Reply controls**: reply prefixes, [stopping strings](#stopping-strings) and the [tokenizer](#tokenizer).
 
-Below the five drawers is a separate **Structured Prefill** section, not a sixth drawer. It applies to Chat Completion, and [Structured Prefill](#structured-prefill) covers it. With a Chat Completion connection, the page hides the Text Completion-only sections and says so. Cleanup switches, **Reasoning**, **Custom Stopping Strings** and **Structured Prefill** still apply. Chat Completion prompts are edited in **Presets → Prompts** instead.
+Below the five drawers is a separate **Structured Prefill** section, not a sixth drawer. It applies to Chat Completion, and [Structured Prefill](#structured-prefill) covers it. With a Chat Completion connection, the page hides the Text Completion-only sections and says so. Cleanup switches, **Reasoning**, **Custom Stopping Strings** and **Structured Prefill** still apply. Edit Chat Completion prompts in **Presets → Prompts** instead.
 
 A wrong instruct template is a common cause of a local model writing your lines, repeating markers or never stopping. Check it before changing samplers.
 
@@ -99,7 +135,7 @@ A wrong instruct template is a common cause of a local model writing your lines,
 
 **Replace Macro in Stop Strings**, on by default, turns [macros](../macros/index.md) such as `{{user}}` into their current values first. An entry that isn't valid in that format is ignored.
 
-Use stopping strings when the model keeps writing past its turn, for example by starting a line as you. Keep them specific: a common word in the list will cut replies short.
+Use stopping strings when the model keeps writing past its turn, for example by starting a line as you. Keep them specific. A common word in the list will cut replies short.
 
 ## Tokenizer {#tokenizer}
 
@@ -124,9 +160,9 @@ It's useful when a model keeps opening the same way, slips out of the format you
 3. Review **Starter template** and the controls it filled.
 4. Tick **Use Structured Prefill**, send a test reply, then read the status under the controls.
 
-**Dialogue first** opens with a spoken line. **Action first** opens with a short action. **Choose a mood** offers three openings. **Private scene note** writes a short note, hides it and removes it from the saved reply. **Starter model** asks a separate saved connection to write the opening; that adds one model request.
+**Dialogue first** opens with a spoken line. **Action first** opens with a short action. **Choose a mood** offers three openings. **Private scene note** writes a short note, hides it and removes it from the saved reply. **Starter model** asks a separate saved connection to write the opening. That adds one model request.
 
-The **Saved prefill preset** list is your own and starts empty. Use **Save preset** under **Prefill presets** to add the current controls under a name. **Import prefill presets** adds its names to this list; importing or choosing a saved preset doesn't turn the feature on.
+The **Saved prefill preset** list is your own and starts empty. Use **Save preset** under **Prefill presets** to add the current controls under a name. **Import prefill presets** adds its names to this list. Importing or choosing a saved preset doesn't turn the feature on.
 
 ### Write a small pattern {#structured-prefill-pattern}
 
@@ -136,7 +172,9 @@ A short pattern is easier to debug than a long one. For example:
 I feel [[opt:calm|curious]]. [[keep]]
 ```
 
-The model chooses 'calm' or 'curious', then continues the reply. With **Hide the starter in chat** on, everything before `[[keep]]` is hidden. Without `[[keep]]`, the whole starter is hidden. Hiding alone keeps the text in saved history and later prompts. **Also remove the starter from saved chat** removes the generated prefix from new replies instead; later edits aren't stripped again. Neither option rewrites older replies, and changing presets later doesn't change what an older reply hides.
+The model chooses 'calm' or 'curious', then continues the reply.
+
+With **Hide the starter in chat** on, everything before `[[keep]]` is hidden. Without `[[keep]]`, the whole starter is hidden. Hiding alone keeps the text in saved history and later prompts. **Also remove the starter from saved chat** removes the generated prefix from new replies instead. Later edits aren't stripped again. Neither option rewrites older replies, and changing presets later doesn't change what an older reply hides.
 
 The pattern starts from the last assistant prefill by default. Tick **Use a separate starter template** and write the opening in **Starter template** when you want to set it here instead.
 
@@ -144,7 +182,7 @@ The pattern starts from the last assistant prefill by default. Tick **Use a sepa
 | --- | --- |
 | `[[w:2-5]]` or `[[words:2-5]]` | Two to five words. |
 | `[[opt:calm,curious]]` or `[[options:calm,curious]]` | One listed choice. |
-| `[[re:[A-Z]+]]` or `[[regex:[A-Z]+]]` | A regular expression. Keep it small. |
+| `[[re:[A-Z]+]]` or `[[regex:[A-Z]+]]` | A regular expression, a pattern that describes which text is allowed. Keep it small. |
 | `[[free]]` | Free text. Follow it with a literal separator when the end is ambiguous. |
 | `[[name]]` | A name from the chat, or a capitalised name when none are supplied. |
 | `[[emotion]]` or `[[mood]]` | An emotion word. |
@@ -155,7 +193,7 @@ The pattern starts from the last assistant prefill by default. Tick **Use a sepa
 | `[[pg]]` | Text from the separate starter model. |
 | `[[keep]]` | Where the hidden starter ends and the visible reply begins. |
 
-Unknown slots and invalid ranges stop with an error. **Minimum characters after the starter** rejects very short replies. **Banned phrases (one per line)** takes one phrase per line; entries starting with a letter or digit match at the start of a word, so 'gaze' blocks 'gazed' but not 'stargaze'. The list uses a negative lookahead, which some providers reject. Remove the list or use **Instructions (best effort)** if your provider doesn't support that regex feature.
+Unknown slots and invalid ranges stop with an error. **Minimum characters after the starter** rejects very short replies. **Banned phrases (one per line)** takes one phrase per line. An entry starting with a letter or digit matches at the start of a word, so 'gaze' blocks 'gazed' but not 'stargaze'. The list uses a negative lookahead, which some providers reject. Remove the list or use **Instructions (best effort)** if your provider doesn't support that regex feature.
 
 Leave **Newline marker** at `<NL>` unless a provider returns that text literally.
 
@@ -165,7 +203,9 @@ Leave **Newline marker** at `<NL>` unless a provider returns that text literally
 
 **Instructions (best effort)** asks the model to return the same format without a schema parameter. It works on all Chat Completion connections, including connections such as DeepSeek and AI21 that don't offer the required schema format. Following the pattern is up to the model.
 
-Schema support and regex syntax vary by model. Claude rejects lookaheads, and Cohere rejects anchors and lookaheads; use **Instructions (best effort)** for unsupported patterns. A provider that ignores a rule can't be forced to enforce it by this option. Text Completion connections don't use Structured Prefill. Quiet helper requests, tool or web-search calls, image requests and requests with their own schema keep their usual behaviour.
+Schema support and regex syntax vary by model. Claude rejects lookaheads, and Cohere rejects anchors and lookaheads. Use **Instructions (best effort)** for unsupported patterns. This option can't force a provider to enforce a rule it ignores.
+
+Text Completion connections don't use Structured Prefill. Quiet helper requests, tool or web-search calls, image requests and requests with their own schema keep their usual behaviour.
 
 ### Check the result {#structured-prefill-result}
 
@@ -183,11 +223,11 @@ If a provider stops with malformed JSON, already decoded reply text is kept with
 
 Open **Starter model** and choose a saved Chat Completion profile under **Starter connection profile** to use `[[pg]]`. Its own request runs first, with the conversation and optional **Starter instructions**. You can set **Starter token limit**, **Starter timeout (milliseconds)** and **Starter stops (one per line)**. Generated text is inserted literally, so a starter containing `[[keep]]` doesn't become a template command. If that request fails or times out, the main request continues with an empty slot and a recorded warning. **Stop** still cancels the request.
 
-Under **Prefill presets**, use **Save preset**, **Delete preset**, **Export presets** and **Import prefill presets**. Importing adds names to the list and replaces a saved preset with the same name; it doesn't enable the feature. Selecting a saved preset keeps your current on/off choice. The slash commands are `/sp-preset My starter` and `/sp-preset-list`; their longer forms are `/structuredprefill-preset` and `/structuredprefill-preset-list`.
+Under **Prefill presets**, use **Save preset**, **Delete preset**, **Export presets** and **Import prefill presets**. Importing adds names to the list and replaces a saved preset with the same name. It doesn't switch the feature on. Selecting a saved preset keeps your current on/off choice. The slash commands are `/sp-preset My starter` and `/sp-preset-list`. Their longer forms are `/structuredprefill-preset` and `/structuredprefill-preset-list`.
 
 ### Refusal steering {#structured-prefill-refusal}
 
-One practical use is refusal steering. If a model keeps opening with the same canned refusal, a locked opening and restricted first choices make that opening much less likely where the provider enforces the schema. **Instructions (best effort)** is only a request. Provider safety blocks still stop the reply, and an off-pattern refusal comes back as a mismatch rather than being rewritten. It isn't a policy bypass, and it can't guarantee a reply.
+One practical use is refusal steering. If a model keeps opening with the same canned refusal, a locked opening and restricted first choices make that opening much less likely where the provider enforces the schema. **Instructions (best effort)** is only a request. Provider safety blocks still stop the reply. A refusal that doesn't fit the pattern comes back as a mismatch and isn't rewritten. It isn't a policy bypass, and it can't guarantee a reply.
 
 ## Function tools {#function-tools}
 

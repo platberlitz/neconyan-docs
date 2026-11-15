@@ -11,8 +11,8 @@ Neconyan runs on Windows, macOS and Linux. Download it, extract it and run the l
 ## Download and extract
 
 1. Open the [latest Neconyan release](https://github.com/platberlitz/Neconyan/releases/latest).
-2. Download the release asset whose name ends in **-source.zip**.
-3. Extract the entire archive into a folder you can write to, such as a folder inside your home directory.
+2. Download the file whose name ends in **-source.zip**.
+3. Extract the whole ZIP into a folder you can write to, such as a folder inside your home directory.
 4. Open the extracted Neconyan folder. Don't run the launcher from inside the ZIP preview.
 
 Keep the folder somewhere you can find again. In a standard installation, it also holds your saved data.
@@ -21,13 +21,13 @@ Keep the folder somewhere you can find again. In a standard installation, it als
 
 === "Windows"
 
-    Double-click **Start.bat**. Leave the terminal window open while you use Neconyan. The first run can take longer while it installs dependencies.
+    Double-click **Start.bat**. Leave the terminal window open while you use Neconyan. The first run can take longer while it installs the files it needs.
 
 === "macOS"
 
-    Open **Start.command**. If macOS requires permission, allow the file through the normal security prompt for the copy you downloaded from the official release.
+    Open **Start.command**. If macOS asks for permission, allow the file in the normal security prompt. Do this only for the copy you downloaded from the official release.
 
-    If it isn't executable, open a terminal in the extracted folder and run:
+    If it isn't executable, meaning macOS won't run it as a program, open a terminal in the extracted folder and run:
 
     ```sh
     chmod +x Start.command
@@ -42,7 +42,7 @@ Keep the folder somewhere you can find again. In a standard installation, it als
     bash start.sh
     ```
 
-    Keep the terminal open. If you use WSL on Windows, the app runs inside that environment; keep its data in a folder that environment can write to.
+    Keep the terminal open. If you use WSL, the Linux environment inside Windows, the app runs inside WSL. Keep its data in a folder WSL can write to.
 
 The browser should open automatically. If it doesn't, open this address on the computer running Neconyan:
 
@@ -54,7 +54,7 @@ You should see Home. Next, [connect your model](connections.md).
 
 ## Install with Git instead
 
-Git keeps track of the downloaded source and lets the launcher update a clean installation. If you already have Git installed, this is convenient for regular use.
+Git keeps track of the downloaded source and lets the launcher update a clean installation. It suits regular use if you already have Git installed.
 
 ```sh
 git clone https://github.com/platberlitz/Neconyan.git
@@ -74,6 +74,6 @@ Return to the launcher's terminal and press ++ctrl+c++ to stop the server. Run t
 
 ## Manual runtime requirements
 
-If you manage the runtime yourself, use **Node.js 20 or later**, or a stable **Bun 1.4.0 or later**. The current launcher refuses older Bun releases, including 1.3.x. The launcher can install Bun when it needs a runtime. Don't copy a dependency folder from a different operating system; let the launcher install the appropriate files.
+The runtime is the program that runs Neconyan's server. If you manage it yourself, use **Node.js 20 or later**, or a stable **Bun 1.4.0 or later**. The current launcher refuses older Bun releases, including 1.3.x. The launcher can install Bun when it needs a runtime. Don't copy a dependency folder from a different operating system. Let the launcher install the right files.
 
-For a phone on the same Wi-Fi, continue with [Open it on your phone](phone.md). If installation stops with an error, collect the terminal message and check [troubleshooting](../help/troubleshooting.md).
+For a phone on the same Wi-Fi, continue with [Open it on your phone](phone.md). If installation stops with an error, copy the terminal message and check [troubleshooting](../help/troubleshooting.md).

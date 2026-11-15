@@ -31,7 +31,13 @@ Neconyan/
 
 If your installation uses a custom data root or another account handle, use that account's actual extensions directory. The manifest must be directly inside the extension folder, not hidden inside another extracted wrapper folder.
 
-Reload Neconyan. Check **Extensions → Manage extensions** for Scene Note, enable it if necessary and open its settings through Extensions. Type a note, select **Save note**, wait for normal settings saving, then reload and confirm the text returns.
+Then check that it works:
+
+1. Reload Neconyan.
+2. Check **Extensions → Manage extensions** for Scene Note and enable it if necessary.
+3. Open its settings through Extensions.
+4. Type a note and select **Save note**.
+5. Wait for normal settings saving, then reload and confirm the text returns.
 
 ## 2. Describe the extension
 
@@ -41,7 +47,7 @@ The manifest tells the loader which files to load and which exported functions h
 --8<-- "docs/assets/downloads/scene-note/manifest.json"
 ```
 
-The JavaScript entry is loaded as a module. The named hooks refer to exported functions in that module. The starter performs its setup through **activate**, rather than starting work merely because another lifecycle action imported the file.
+The JavaScript entry is loaded as a module. The named hooks refer to exported functions in that module. The starter does its setup through **activate**. It doesn't start work merely because another lifecycle action imported the file.
 
 Before publishing a derivative, give it your own name, author, project URL and unique settings key. Keep the applicable original licence notices.
 
@@ -53,9 +59,9 @@ Before publishing a derivative, give it your own name, author, project URL and u
 
 The compatibility object is still named **SillyTavern**. That is the actual API name, even in Neconyan. The code asks it for the current context instead of guessing a new global name.
 
-The panel uses normal DOM elements and assigns user text through a textarea's value. It doesn't interpret the note as HTML. Its settings live under one unique key in **extensionSettings**, and the app's debounced settings writer schedules the save.
+The panel uses normal DOM elements and assigns user text through a textarea's value. It doesn't interpret the note as HTML. Its settings live under one unique key in **extensionSettings**. The app's debounced settings writer schedules the save.
 
-**Save requested** is intentional wording. This helper schedules saving; it isn't an acknowledgement from the server that writing has finished. A production feature that promises confirmed persistence needs a suitable confirmed-save path and failure handling.
+**Save requested** is intentional wording. This helper schedules saving. It doesn't mean the server has confirmed that writing finished. A production feature that promises a confirmed save needs a suitable confirmed-save path and failure handling.
 
 ## 4. Style only your panel
 
@@ -67,7 +73,7 @@ Every rule belongs to the extension's own root. The button uses Neconyan's accen
 
 ## 5. Understand startup and cleanup
 
-**activate** subscribes to **APP_READY** once. Neconyan's event source remembers that readiness event, so a listener added after readiness also runs. **deactivate** removes the exact listener and the panel; it leaves the user's saved note intact.
+**activate** subscribes to **APP_READY** once. Neconyan's event source remembers that readiness event, so a listener added after readiness also runs. **deactivate** removes the exact listener and the panel. It leaves the user's saved note intact.
 
 The activation guard prevents duplicate panels and subscriptions. Disabling or deleting should stop runtime behaviour, not silently erase settings. If you later add a separate data-cleaning action, explain that destructive action explicitly.
 

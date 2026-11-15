@@ -4,11 +4,13 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-All twenty-four screenshots were captured on 10 November 2026 from the running [Neconyan 1.5.4 candidate at 999b46b3](https://github.com/platberlitz/Neconyan/tree/999b46b3), with the larger, rounder Catline icons. [Neconyan 1.5.4 is now published](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at release commit `e1f05ec6`; the capture source above remains the actual image provenance. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image.
+Twenty-two of the twenty-four screenshots were captured on 10 November 2026 from the running [Neconyan 1.5.4 candidate at 999b46b3](https://github.com/platberlitz/Neconyan/tree/999b46b3), with the larger, rounder Catline icons. [Neconyan 1.5.4 is now published](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at release commit `e1f05ec6`; the capture source above remains the actual image provenance. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image.
 
 The captures use disposable demonstration data: Calico Dark with its default accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. The default colours were restored and checked before capture. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
 
 These replace the twenty-two images captured on 9 November and add the two Device sync images.
+
+The two Conversation images, `desktop-conversation.webp` and `phone-conversation.webp`, are the exception. They were retaken from Neconyan 1.5.5 staging on 15 November 2026 for the new messenger layout and copied unchanged from the app README's `docs/readme/` folder, where they were added in [commit 3072a26b](https://github.com/platberlitz/Neconyan/commit/3072a26b). Version 1.5.5 is not published yet. They show the same staged Miso demonstration text at the same sizes, 1280×900 and 590×1278 pixels. I didn't capture them for this handbook, so the capture notes in this section describe the other twenty-two; the Conversation pair replaces the 10 November Conversation images.
 
 Playwright captured Chromium at 1280×900 for desktop with a pixel ratio of 1, and 393×852 with touch emulation for phone at a pixel ratio of 1.5. These are browser viewport captures, not physical-phone or Safari verification. The screenshots were converted to WebP at quality 80 without resizing or compositing interface elements.
 

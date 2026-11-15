@@ -21,7 +21,7 @@ The server is the part that saves your chats and sends requests to your model. I
 
 ## 2. Connect a model
 
-You can use an online provider with an API key, which is the credential that lets Neconyan request replies on your account, or a local model service you've already started. Neconyan doesn't download a language model for you.
+You have two choices. One is an online provider with an API key, the credential that lets Neconyan request replies on your account. The other is a local model service you've already started. Neconyan doesn't download a language model for you.
 
 Open **Connections** in the workspace sidebar and follow [Connect a model](connections.md). Start with one connection and keep the provider's recommended settings while you check it works.
 
@@ -36,8 +36,8 @@ If you choose **Start a temporary chat**, its messages aren't saved. Use it for 
 
 ## What can wait?
 
-Agents, Mewmory, advanced sampling, custom formatting and extra extensions are optional. Add them when you have a reason to use them. If your basic connection isn't working yet, more helpers will only make the error harder to locate.
+Agents, Mewmory, advanced sampling, custom formatting and extra extensions are optional. Add them when you have a reason to use them. If your basic connection isn't working yet, more helpers will only make the error harder to find.
 
 If the full sidebar feels like a lot, choose **Yes, keep it simple** when Nori offers **Simple Mode**. **Show all features** in the sidebar brings everything back later.
 
-Already have a character collection? [Bring your old data](imports.md) after making a backup. If you just want to see what Neconyan can do, take the [workspace tour](../workspace/index.md).
+Already have a character collection? [Bring your old data](imports.md) after making a backup. To see what Neconyan can do first, take the [workspace tour](../workspace/index.md).

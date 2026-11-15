@@ -12,7 +12,7 @@ Give the chat most of the space. Put occasional settings in the extension settin
 
 The starter mounts into **extensions_settings2**, one of the shared extension settings hosts. Use a unique root ID and descriptive heading so your panel can be recognised. Check that the host exists and prevent duplicate panels.
 
-The app can reorganise settings into pages and drawers, changing an element's parent. Prefer existing APIs and inspect actual phone behaviour before depending on the surrounding structure.
+The app can reorganise settings into pages and drawers, which changes an element's parent. Prefer existing APIs and inspect actual phone behaviour before depending on the surrounding structure.
 
 ## Scope your CSS
 
@@ -34,7 +34,7 @@ Use Neconyan's colour variables for accent buttons:
 }
 ```
 
-Keep the solid fill on hover. `--neco-on-accent` is matched to `--neco-ginger`; `--neco-ginger-hover` can be much paler, so swapping the fill can leave the label unreadable. Change the edge or shadow instead.
+Keep the solid fill on hover. `--neco-on-accent` is matched to `--neco-ginger`. `--neco-ginger-hover` can be much paler, so swapping the fill can leave the label unreadable. Change the edge or shadow instead.
 
 The on-accent variable matters: a pale accent and a dark accent need different label colours. Test both, as well as the default. Avoid hard-coded colours that assume every user has Calico Dark selected.
 
@@ -58,7 +58,7 @@ If you add motion, respect the system's reduced-motion preference:
 
 ## Popups and drawer boundaries
 
-Use the app's popup helpers when they fit. A floating element appended directly to the document body can be treated as a click outside the drawer, causing that drawer to close. iPhone-specific rules can also place drawers above floating controls that looked fine in ordinary desktop testing.
+Use the app's popup helpers when they fit. A click on a floating element appended directly to the document body can be treated as a click outside the drawer, which closes that drawer. iPhone-specific rules can also place drawers above floating controls that looked fine in ordinary desktop testing.
 
 Keep your UI inside its intended surface, or integrate with the host's actual overlay policy. Arbitrarily increasing a stacking number doesn't solve outside-click behaviour, focus handling or keyboard dismissal.
 
@@ -82,12 +82,12 @@ the displayed class is normally targeted as:
 }
 ```
 
-Use the plain class in the source HTML that will be sanitised; don't pre-prefix it and accidentally create the wrong selector. This rule concerns chat content, not the ordinary DOM panel created by the starter.
+Use the plain class in the source HTML that will be sanitised. Don't add the prefix yourself and accidentally create the wrong selector. This rule concerns chat content, not the ordinary DOM panel created by the starter.
 
 Treat user and model text as text unless it has gone through the appropriate trusted rendering path. Don't bypass sanitisation to make an interactive card work.
 
 ## Labels and translation
 
-The context exposes translation helpers and locale registration. Keep user-facing strings separate enough to translate and preserve exact action names throughout your UI. A button should say what happens when pressed, especially if it sends a request or changes saved data.
+The context exposes translation helpers and locale registration. Keep user-facing strings separate enough to translate, and keep action names exactly the same throughout your UI. A button should say what happens when pressed, especially if it sends a request or changes saved data.
 
 For the current app-wide rules and tokens, read [DESIGN.md](https://github.com/platberlitz/Neconyan/blob/staging/DESIGN.md). The [testing guide](testing.md) covers the checks to run before sharing your extension.

@@ -14,7 +14,7 @@ For Scene Note, verify these outcomes:
 
 1. The extension appears in Manage extensions and mounts one settings panel.
 2. Typing changes the status to **Unsaved changes**.
-3. Saving schedules the app's settings save; after a completed save and reload, the note returns.
+3. Saving schedules the app's settings save. After a completed save and reload, the note returns.
 4. A second account doesn't inherit the first account's note.
 5. Disabling and reloading removes the panel.
 6. Re-enabling and reloading restores the panel and the saved note.
@@ -27,15 +27,15 @@ For a feature with chat-specific state, also switch chats while work is pending 
 
 Use browser developer tools to inspect Console errors and Network requests. A script returning HTML instead of JavaScript often means the asset path is wrong or the server returned an error page.
 
-Neconyan's **Debugger** can capture a diagnostic report and layout snapshot. Server-side failures may require the server terminal's error as well. Keep reports focused on the failing operation and remove private content before publishing them.
+Neconyan's **Debugger** can capture a diagnostic report and layout snapshot. For server-side failures you may need the error from the server terminal as well. Keep reports focused on the failing operation and remove private content before publishing them.
 
-If an edited asset looks unchanged, reload with the browser cache disabled during development and inspect the served file. The extension loader adds the app's asset version to entry URLs; it doesn't turn every source edit into a new application release.
+If an edited asset looks unchanged, reload with the browser cache disabled during development and inspect the served file. The extension loader adds the app's asset version to entry URLs. It doesn't turn every source edit into a new application release.
 
 ## Test the interface
 
 Check phone and desktop sizes, keyboard-only use, light and dark themes, and pale and dark accents. Confirm the page doesn't scroll sideways, labels fit and important actions remain reachable with the phone keyboard open.
 
-Chromium touch emulation is useful but doesn't prove Safari behaviour. For iPhone support, test a real iPhone where possible. Neconyan's repository also includes an iOS emulation helper for the app's platform-specific branches; those results remain emulation.
+Chromium touch emulation is useful but doesn't prove Safari behaviour. For iPhone support, test a real iPhone where possible. Neconyan's repository also includes an iOS emulation helper for the app's platform-specific branches. Those results remain emulation.
 
 Capture screenshots of your extension with demonstration data. For a chat or prompt integration, verify every mode you claim to support and say when a mode is outside the extension's scope.
 
@@ -54,7 +54,7 @@ my-neconyan-extension/
 
 The README should explain installation, supported Neconyan versions, where the controls appear, what data is stored, any external requests and how to disable the extension. Include dependencies and costs when relevant. Set the manifest's author, version and home page to your own project.
 
-Users can install a Git repository through the app's extension installation controls, subject to server settings and account permissions. Personal installations live in the account's extensions directory. Installing for everyone uses the global extension location and requires administrator permission.
+Users can install a Git repository through the app's extension installation controls, if server settings and account permissions allow it. Personal installations live in the account's extensions directory. Installing for everyone uses the global extension location and requires administrator permission.
 
 An extracted local starter isn't automatically a Git-managed installation. To distribute updates, publish a proper repository with the manifest at its root and test installation from that repository URL.
 
@@ -62,11 +62,11 @@ An extracted local starter isn't automatically a Git-managed installation. To di
 
 Bump the extension's version when you release changes. Test migrations from an older saved-settings object, including missing fields. Don't overwrite existing settings with defaults every time the module loads.
 
-A copy installed for everyone, with its home page set in the manifest, has its update history prepared on the first update check. Neconyan builds that history in a temporary folder beside the extension and moves it into place only after the download succeeds, so a failed download or a locked file leaves the installed files and their history as they were. Two checks started at once share one attempt, and the temporary folder stays out of the extension list.
+A copy installed for everyone, with its home page set in the manifest, has its update history prepared on the first update check. Neconyan builds that history in a temporary folder beside the extension and moves it into place only after the download succeeds. A failed download or a locked file therefore leaves the installed files and their history as they were. Two checks started at once share one attempt. The temporary folder stays out of the extension list.
 
 Avoid an identifier that collides with a bundled tool or another extension. The loader normalises names for some duplicate checks, including case and the third-party prefix. Shipping an old copy of a bundled tool can leave one copy inactive rather than producing the behaviour you expected.
 
-If a change needs new host APIs, document the tested app versions and check for those capabilities at runtime. The manifest's compatibility version isn't a substitute for testing the actual feature.
+If a change needs new host APIs, document the tested app versions and check for those capabilities at runtime. The manifest's compatibility version doesn't replace testing the actual feature.
 
 ## Source references
 

@@ -12,7 +12,7 @@ The official Android app includes the Neconyan server. You can keep your charact
 
 - Android **11 or later**.
 - At least **2 GiB of free space**, with more for a large library or image collection.
-- **Android System WebView 124 or later**. WebView is the Android component that displays the app's interface. Update it through your device's app store if necessary.
+- **Android System WebView 124 or later**. WebView is the Android component that displays the app's interface. Update it through your device's app store if you need to.
 - An internet connection for the download and for any online model provider you choose.
 
 ## Install the APK
@@ -27,43 +27,52 @@ For replies, [connect an online provider or a local model service](connections.m
 
 ## While it's running
 
-Neconyan shows an ongoing notification with controls to return to the app or stop the server. The app keeps the phone awake only while the server is working, such as writing a reply or updating memory, and for 30 seconds afterwards. When it's idle, the phone can sleep as normal, and idle-time tasks such as automatic Conversation messages wait until the phone wakes. If you want work to continue while the screen is off, check the app's background and battery settings in Android.
+Neconyan shows an ongoing notification with controls to return to the app or stop the server. The app keeps the phone awake only while the server is working, such as writing a reply or updating memory, and for 30 seconds afterwards. When it's idle, the phone can sleep as normal. Idle-time tasks such as automatic Conversation messages then wait until the phone wakes. If you want work to continue while the screen is off, check the app's background and battery settings in Android.
 
-Accepted server work can continue after the interface closes, but Android can still stop the entire app. If a provider request was interrupted and its outcome is unknown, don't assume it is free to repeat. Check the task's status and your provider before retrying a costly operation.
+Work the server has accepted can continue after the interface closes, but Android can still stop the whole app. If a provider request was interrupted and you don't know how it ended, don't assume repeating it is free. Check the task's status and your provider before retrying anything costly.
 
 !!! taro "Taro"
     A battery manager can be extremely good at preventing background work. It has, unfortunately, decided that your background work also counts.
 
 ## Notifications {#notifications}
 
-Open **Settings → System & Device → Notifications** and turn on **Push notifications**. It's off by default and applies to this device and account. The Android app uses native notifications, so allow Neconyan to send notifications when Android asks. Its local server must be running to produce new Conversation DMs; stopping it or letting Android stop the app stops new notifications.
+Open **Settings → System & Device → Notifications** and turn on **Push notifications**. It's off by default and applies to this device and account. The Android app uses native notifications, so allow Neconyan to send notifications when Android asks. Its local server must be running to produce new Conversation DMs. If you stop it, or Android stops the app, new notifications stop too.
 
-Message previews can appear on the lock screen. If notifications don't arrive, check Android's notification permission and battery settings for Neconyan, then turn the switch off and on again. A notification opens or focuses Neconyan, not the individual Conversation thread. [Conversation's device notifications](../workspace/conversation.md#notifications) covers the shared limits.
+Message previews can appear on the lock screen. If notifications don't arrive, check Android's notification permission and battery settings for Neconyan, then turn the switch off and on again. A notification opens Neconyan or brings it to the front, not the individual Conversation thread. [Conversation's device notifications](../workspace/conversation.md#notifications) covers the shared limits.
 
 ## If the app won't open
 
 Neconyan watches its local server while it starts. If the server stops, for example because the phone ran out of memory while loading a large library, the app starts it again once in **safe mode**. Safe mode pauses background memory updates and automatic Conversation messages, and any task that was interrupted waits for you to retry it. Your chats load as normal, and the next time you open the app it starts normally again.
 
-If the server still can't start, the app shows a recovery screen. It names the reason the server recorded instead of only a generic stop message, followed by **Saved data has been kept.** Include that line in a bug report.
+If the server still can't start, the app shows a recovery screen. It gives the reason the server recorded, not only a generic stop message, followed by **Saved data has been kept.** Include that line in a bug report.
 
-Android can close Neconyan's local server without warning when memory runs short. That used to leave the data folder's ownership record behind, and the next start refused because the folder was already owned, until you cleared the app's data. The app now recognises a lock left by its own earlier run and clears it, logging **Reclaimed a stale data folder lease** in `server.log`. It still refuses when the earlier server may be running or when the record holds something the app never writes, and the message names the lock fields that differ. If the screen asks you to close Neconyan from the recent apps screen or force stop it in Android settings, do that and press **Try again**. If it says the lock needs checking, save a backup from that screen and include the lock details in the report.
+Android can close Neconyan's local server without warning when memory runs short. That used to leave the data folder's ownership record behind. The next start then refused because the folder was already owned, until you cleared the app's data.
+
+The app now recognises a lock left by its own earlier run and clears it. When it does, it logs **Reclaimed a stale data folder lease** in `server.log`. It still refuses in two cases: when the earlier server may be running, or when the record holds something the app never writes. The message names the lock fields that differ. If the screen asks you to close Neconyan from the recent apps screen or force stop it in Android settings, do that and press **Try again**. If it says the lock needs checking, save a backup from that screen and include the lock details in the report.
 
 - **Try again** starts the server again.
-- **Save a backup of my data** saves a ZIP of your account folder: characters, chats, personas, lorebooks and settings. It works even though the server isn't running. Saved API keys are left out unless you choose **Include API keys**; keep that file private if you do.
+- **Save a backup of my data** saves a ZIP of your account folder: characters, chats, personas, lorebooks and settings. It works even though the server isn't running. Saved API keys are left out unless you choose **Include API keys**. Keep that file private if you do.
 - **Copy details for a bug report** copies the reason Android gave for stopping the server and the last lines of its log. From 1.2.4 it also includes the native server's stack size, and from 1.2.4.1 the decoded crash record and the most recent server requests. Paste the full report into a [GitHub issue](https://github.com/platberlitz/Neconyan/issues).
 - **Close Neconyan** stops the app.
 
-To bring the backup into another installation, such as Termux or a computer, open **Settings > System & Device > Import & Restore** there and choose **Import Backup ZIP**. It brings across chats, personas, character cards and lorebooks; other settings, presets and API keys stay in the ZIP and aren't applied. Save the backup before you consider uninstalling; uninstalling removes the app's data.
+To bring the backup into another installation, such as Termux or a computer, open **Settings > System & Device > Import & Restore** there and choose **Import Backup ZIP**. It brings across chats, personas, character cards and lorebooks. Other settings, presets and API keys stay in the ZIP and aren't applied. Save the backup before you consider uninstalling, because uninstalling removes the app's data.
 
 ### If sending or regenerating crashes
 
 A report saying **signal 11** means the native server crashed. It doesn't prove your chat is damaged or that the phone ran out of memory. Keep the chat and save a backup before trying changes.
 
-If a blank chat works but an existing chat crashes, include that detail with the full copied report, your model and provider, and whether sending, regenerating or both trigger it. I need that distinction to investigate the crash. Install the latest APK over the existing app; you don't need to delete the old chat to update.
+If a blank chat works but an existing chat crashes, say so in your report. Send it with the full copied report, your model and provider, and whether sending, regenerating or both trigger it. I need that distinction to investigate the crash. Install the latest APK over the existing app. You don't need to delete the old chat to update.
 
-From 1.2.4.1 a crash leaves a proper crash record. Earlier builds only reported `signal 11`, because the server's WebAssembly handler took the fault before Android's crash dumper could write anything. Now the dumper keeps it, and after the restart the app decodes the record: the signal and fault address, the thread that crashed, a backtrace with library names and offsets, and the last log lines. The server also keeps a short trace of its most recent requests, and the trace from the run that crashed is kept across the restart. Both appear in **Copy details for a bug report**, so the report names the request that was running when the server died. Copy the details after the app has reopened; the record can take a few seconds to arrive.
+From 1.2.4.1 a crash leaves a proper crash record. Earlier builds only reported `signal 11`, because the server's WebAssembly handler took the fault before Android's crash dumper could write anything. Now the dumper keeps it. After the restart the app decodes the record:
 
-Up to 1.2.4.1, chats with Mewmory switched on could crash the server on every send or regenerate. Memory search splits text into words, and the APK's built-in language data didn't include the rules for that, so the server died instead of reporting an error. A fresh chat where Mewmory is off didn't hit it. 1.2.4.2 ships the full language data. Update over the existing app; the chat and its memories stay as they are. If a crash still happens after that, send the copied details again.
+- the signal and fault address
+- the thread that crashed
+- a backtrace, the list of steps the program was in, with library names and offsets
+- the last log lines
+
+The server also keeps a short trace of its most recent requests. The trace from the run that crashed is kept across the restart. Both appear in **Copy details for a bug report**, so the report names the request that was running when the server died. Copy the details after the app has reopened. The record can take a few seconds to arrive.
+
+Up to 1.2.4.1, chats with Mewmory switched on could crash the server on every send or regenerate. Memory search splits text into words. The APK's built-in language data didn't include the rules for that, so the server died instead of reporting an error. A fresh chat where Mewmory is off didn't hit it. 1.2.4.2 ships the full language data. Update over the existing app. The chat and its memories stay as they are. If a crash still happens after that, send the copied details again.
 
 If the app closed without an error on one long chat with a lot of Agent history, the cause may be a page freeze rather than a server crash. Before 1.3.0, that kind of chat could freeze the page for minutes after each reply, which can be long enough for Android to close the app. 1.3.0 removes the repeated work behind the freeze. Update over the existing app and try the chat again.
 
@@ -76,21 +85,21 @@ Export a backup before updating, especially before changing devices. Neconyan 1.
 3. When a compatible release is available, choose **Update APK**. Neconyan downloads the official GitHub release for the app's processor type.
 4. Approve the update in Android's installer. Android may first ask you to allow Neconyan to install apps.
 
-An update notice opens the Server controls; it doesn't install anything by itself. Cancelling the installer leaves the installed app in place. The installer must be opened from the Android app, not an ordinary browser connected to its server.
+An update notice opens the Server controls. It doesn't install anything by itself. Cancelling the installer leaves the installed app in place. The installer must be opened from the Android app, not an ordinary browser connected to its server.
 
-If your installed version doesn't have these controls, download the newer official APK from the [latest release](https://github.com/platberlitz/Neconyan/releases/latest) and install it **over the existing app**. Both routes preserve the app's private data when Android accepts the package as an update.
+If your installed version doesn't have these controls, download the newer official APK from the [latest release](https://github.com/platberlitz/Neconyan/releases/latest) and install it **over the existing app**. Both routes keep the app's private data when Android accepts the package as an update.
 
 Uninstalling the app removes its private data. If Android refuses an update because the package's signature doesn't match, back up before considering an uninstall. Don't treat an uninstall as a harmless troubleshooting step.
 
-The native Android export bridge accepts files up to **1 GiB**. For a very large collection, use smaller individual exports or another supported transfer route rather than relying on one oversized download.
+The native Android export bridge accepts files up to **1 GiB**. For a very large collection, use smaller individual exports or another supported transfer route. Don't rely on one oversized download.
 
 ## Read a saved crash report
 
-After relaunch, the app opens an unseen saved report before signing into its local server. That native reader still works when WebView is outdated. If the page renderer stops while the app survives, the failure screen gains the completed report; a local-server report remains available while the server restarts.
+When you reopen the app, it shows any saved report you haven't seen, before it signs into its local server. That native reader, part of the Android app and not the page, still works when WebView is outdated. If the page renderer stops while the app survives, the failure screen adds the completed report. A local-server report stays available while the server restarts.
 
-**Saved crash reports** lists up to ten reports individually. Each shows the recorded error, time, earlier activity and available memory measurements. **Copy report** and **Share report** use only the selected report and leave the reader open. If a report couldn't be saved, copy or share it before closing.
+**Saved crash reports** lists up to ten reports, one by one. Each shows the recorded error, time, earlier activity and available memory measurements. **Copy report** and **Share report** use only the selected report and leave the reader open. If a report couldn't be saved, copy or share it before closing.
 
-The separate **Copy details for a bug report** action combines more evidence, including bounded log tails that can contain private application text. Review that copy before sharing. Nothing is uploaded automatically. Activity or a signal number alone doesn't establish the cause, and a severe memory failure can prevent a final report. Browser simulations don't establish how these controls behave on your actual phone.
+The separate **Copy details for a bug report** action combines more evidence. That includes the last lines of the logs, cut to a fixed length, which can contain private text from the app. Read that copy before sharing. Nothing is uploaded automatically. Activity or a signal number alone doesn't show the cause, and a severe memory failure can prevent a final report. Browser simulations don't show how these controls behave on your actual phone.
 
 ## Prefer Termux?
 
@@ -104,7 +113,7 @@ cd ~/Neconyan
 bash start.sh
 ```
 
-Keep the project under Termux's home directory. Shared storage such as `/sdcard` doesn't support all the file links required by the installation. Leave Termux running; Neconyan asks Android for a wake lock at startup to help prevent sleep. Press ++ctrl+c++ there to stop the server.
+Keep the project under Termux's home directory. Shared storage such as `/sdcard` doesn't support all the file links required by the installation. Leave Termux running. At startup Neconyan asks Android for a wake lock, a request to keep the phone awake, to help prevent sleep. Press ++ctrl+c++ there to stop the server.
 
 ??? help "Bun can't start or says glibc is missing"
 
@@ -117,6 +126,6 @@ Keep the project under Termux's home directory. Shared storage such as `/sdcard`
 
     To start with Node.js instead, run `bash start-termux-node.sh` from the Neconyan folder.
 
-Some phones report file times wrongly. Neconyan checks the data folder at startup and switches on a compatibility mode when needed; that data then has to be started with Node.js, not Bun. If you used the Termux import recovery, the usual `bash start.sh` carries on with the saved recovery folder on port 5534. The [Termux import recovery guide](https://github.com/platberlitz/Neconyan/blob/staging/docs/termux-import-recovery.md) has the details.
+Some phones report file times wrongly. Neconyan checks the data folder at startup and switches on a compatibility mode when needed. That data then has to be started with Node.js, not Bun. If you used the Termux import recovery, the usual `bash start.sh` carries on with the saved recovery folder on port 5534. The [Termux import recovery guide](https://github.com/platberlitz/Neconyan/blob/staging/docs/termux-import-recovery.md) has the details.
 
-If the server is already on a computer, you can simply [open that installation in your phone's browser](phone.md) instead. Its data stays on the computer.
+If the server is already on a computer, you can [open that installation in your phone's browser](phone.md) instead. Its data stays on the computer.

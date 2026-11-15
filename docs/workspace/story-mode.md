@@ -6,7 +6,7 @@ quote: "Let the scene read like a scene. I promise the dramatic pauses remain en
 
 # Story Mode
 
-Story Mode presents a saved chat as continuous manuscript-style writing. It is useful when you want to read or develop a scene without the ordinary message-bubble layout.
+Story Mode shows a saved chat as continuous, manuscript-style writing. Use it when you want to read or develop a scene without the ordinary message-bubble layout.
 
 === "Computer"
 
@@ -24,19 +24,19 @@ Story Mode presents a saved chat as continuous manuscript-style writing. It is u
 
 ## Open the manuscript view
 
-Open the chat you want to work on, then switch to **Story Mode** using the mode controls. Its preference is saved for that chat. Switching the presentation doesn't clear the draft you've typed.
+Open the chat you want to work on, then switch to **Story Mode** using the mode controls. Its preference is saved for that chat. Switching the view doesn't clear the draft you've typed.
 
 The writing still belongs to the chat. Use the chat's export controls to keep a separate copy.
 
 ## Write for the format
 
-Use the character, scenario and prompt instructions to establish viewpoint, tense and the kind of continuation you want. If you're asking for prose, be clear about whether the model should write only its character or contribute broader narration.
+Use the character, scenario and prompt instructions to set viewpoint, tense and the kind of continuation you want. If you're asking for prose, be clear about whether the model should write only its character or contribute broader narration.
 
-Make small edits when you know the desired wording. Generate a different continuation when you want another possibility. Check that the selected message alternative is the one you intend to carry forward.
+Make small edits when you know the wording you want. Generate a different continuation when you want another possibility. Check that the selected message alternative is the one you want to carry forward.
 
 ## Keep planning outside the manuscript
 
-[Scratchpad](../helpers/scratchpad.md) is useful for discussing pacing or the next scene without adding planning messages to the story. [Notebooks](../helpers/notebooks.md) can hold an outline, character notes and reference material.
+Use [Scratchpad](../helpers/scratchpad.md) to discuss pacing or the next scene without adding planning messages to the story. [Notebooks](../helpers/notebooks.md) can hold an outline, character notes and reference material.
 
 If a stable world detail should reach the writing model when relevant, publish or write it into a [lorebook](lorebooks.md). A note sitting open beside the manuscript isn't automatically included in a model request.
 

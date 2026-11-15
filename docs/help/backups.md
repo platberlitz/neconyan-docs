@@ -10,7 +10,7 @@ Keep an independent copy before updating, importing a large library or making br
 
 ## Choose the right export
 
-For selected libraries between separate installations, use [Device sync](device-sync.md). Its four manual transfer methods are separate from a whole-account backup; deletions, keys and Conversation chats do not travel.
+To move selected libraries between separate installations, use [Device sync](device-sync.md). Its four manual transfer methods are separate from a whole-account backup. Deletions, keys and Conversation chats don't travel.
 
 | Export or copy | Useful for | Doesn't automatically include |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ For selected libraries between separate installations, use [Device sync](device-
 | Account backup | A broader account archive | Main secrets unless the server allows key exposure |
 | Stopped-server data/config copy | Recovering a self-managed installation | A guarantee that another app can use the same files |
 
-Read an export's scope before relying on it. Private content and, depending on server settings, credentials can be present in an archive. Keep backups somewhere you control.
+Check what an export covers before relying on it. An archive can contain private content and, depending on server settings, credentials. Keep backups somewhere you control.
 
 The expression **Export ZIP** covers the selected artwork set only. An image change's **Download backup** is the chat before that change, not a whole-account or image-file backup. **Change history** offers **Undo change** only until the chat changes afterwards or its backup is deleted. [Included tools](../helpers/tools.md#separate-expression-sets-for-a-shared-card) explains the expression export, and [Something went wrong](troubleshooting.md#image-input-needs-attention) covers image-repair recovery.
 
@@ -32,13 +32,13 @@ The expression **Export ZIP** covers the selected artwork set only. An image cha
 
 Open **Settings → Cache & Account → Account Settings → Account**, then use **Download Backup**. Once accepted, the backup keeps running if you close the page. The server needs enough free space to write the archive.
 
-Return to the account controls and use **Choose a saved account backup**, then **Download saved backup**, to recover completed work. **Stop backup** requests cancellation.
+Return to the account controls and use **Choose a saved account backup**, then **Download saved backup**, to recover completed work. **Stop backup** asks the server to cancel it.
 
 Store the downloaded archive on another device or independent storage service, where a disk failure or app uninstall won't remove it.
 
 ## Back up a self-managed installation
 
-Stop Neconyan before copying its live data. In a standard setup, preserve the **data** folder and your actual **config.yaml**. If you configured a different data root, copy that location instead.
+Stop Neconyan before copying its live data. In a standard setup, copy the **data** folder and your actual **config.yaml**. If you configured a different data root, copy that location instead.
 
 Keep the old copy until the restored installation opens correctly and you can inspect the chats, characters and other work you care about. Never run two apps against the same writable data folder.
 
@@ -46,7 +46,7 @@ Keep the old copy until the restored installation opens correctly and you can in
 
 Open **Server → Updates & Restart → Check for updates**, then **Update & Restart**. The launcher also checks at startup. If local edits block an update, read the explanation before replacing anything you've changed. Setting `NECONYAN_AUTO_UPDATE=0` disables the launcher's automatic check.
 
-After updating, reload the browser and check a saved chat and your active connection. Included tools update with the app; separately installed extensions have their own updates and compatibility.
+After updating, reload the browser and check a saved chat and your active connection. Included tools update with the app. Separately installed extensions have their own updates and compatibility.
 
 ## Update a ZIP installation
 
@@ -56,7 +56,7 @@ For an older installation without that updater:
 
 1. Back up, then stop the old Neconyan server.
 2. Download and extract the newer official source release into a new folder.
-3. Copy your data and any changed configuration into the new installation, preserving the originals.
+3. Copy your data and any changed configuration into the new installation, and keep the originals.
 4. Start the new launcher and check the result.
 5. Keep the old folder until you've confirmed the new copy contains your work.
 

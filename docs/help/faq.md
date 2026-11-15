@@ -16,7 +16,7 @@ No. [Connect a supported provider or local model service](../start/connections.m
 
 ## Can I use it on an iPhone?
 
-Yes, through a browser or Home Screen window while Neconyan runs on another computer or host. Follow [Open it on your phone](../start/phone.md). The project also includes a standalone iPhone app that keeps the server and your chats on the phone; it needs iOS 17 or newer and is sideloaded, not installed from the App Store. If a release provides an IPA, use that release's matching file; otherwise, use the browser setup. The Android APK doesn't install on iOS.
+Yes, through a browser or Home Screen window while Neconyan runs on another computer or host. Follow [Open it on your phone](../start/phone.md). The project also includes a standalone iPhone app that keeps the server and your chats on the phone. It needs iOS 17 or newer and is sideloaded, which means you install it yourself, not from the App Store. If a release provides an IPA, use that release's matching file. Otherwise, use the browser setup. The Android APK doesn't install on iOS.
 
 ## What is Simple Mode?
 
@@ -32,13 +32,15 @@ They are stored on the Neconyan server you're using, under its account and acces
 
 ## Does closing the tab stop a reply?
 
-Not usually. With **In the browser (recommended)** selected under **Settings → Chat & Writing → Chat & messages → Replies → Where replies are written**, ordinary Roleplay replies run in the page, but the server holds most single-character replies when the page closes. Reopen the same chat to collect the result; a finished reply waits for 15 minutes, or 24 hours if the request carried chat context. Agents that run after a reply aren't replayed for a held reply. With **On the server** selected, the ordinary reply and its after-reply Agents keep going after you close the page or your phone sleeps.
+Not usually. With **In the browser (recommended)** selected under **Settings → Chat & Writing → Chat & messages → Replies → Where replies are written**, ordinary Roleplay replies run in the page, but the server holds most single-character replies when the page closes. Reopen the same chat to collect the result. A finished reply waits for 15 minutes, or 24 hours if the request carried chat context. Agents that run after a reply aren't replayed for a held reply. With **On the server** selected, the ordinary reply and its after-reply Agents keep going after you close the page or your phone sleeps.
 
-Conversation replies, Scratchpad, replies that need a Notebook context and saved server workflows such as Deep Swipe always keep running on the server while it's available. Use **Stop** to cancel any of them; closing the page doesn't request cancellation. Restarting or stopping the whole app interrupts its server and loses held replies.
+Conversation replies, Scratchpad, replies that need a Notebook context and saved server workflows such as Deep Swipe always keep running on the server while it's available. Use **Stop** to cancel any of them. Closing the page doesn't cancel anything. Restarting or stopping the whole app interrupts its server and loses held replies.
 
 ## Why did my tab reload by itself after an update?
 
-A tab opened before the server was updated keeps running the old page. From 1.3.6, when you come back to that tab or it comes back online, Neconyan checks which version the server now serves. If nothing is happening, it saves your settings and reloads; a reply held on the server while you were away is collected after the reload. If a reply is being written, a message is being edited, a chat is saving or the message box has text in it, nothing is thrown away: an **Update ready** notice says 'Neconyan was updated. Tap here to load the new version.' Tap it when you're ready. Reloading doesn't send anything to the model.
+A tab opened before the server was updated keeps running the old page. From 1.3.6, when you come back to that tab or it comes back online, Neconyan checks which version the server now serves. If nothing is happening, it saves your settings and reloads. A reply held on the server while you were away is collected after the reload.
+
+If a reply is being written, a message is being edited, a chat is saving or the message box has text in it, nothing is thrown away. An **Update ready** notice says 'Neconyan was updated. Tap here to load the new version.' Tap it when you're ready. Reloading doesn't send anything to the model.
 
 ## Why do notices stay on screen longer now?
 
@@ -58,7 +60,7 @@ They can use different saved connections in features such as Scratchpad, or shar
 
 ## Why is an answer still wrong if the correct fact is in memory?
 
-First check whether the fact was included in that request. If it was, the model can still misunderstand or ignore it. Source-backed recall improves the available context; it doesn't guarantee factual generation.
+First check whether the fact was included in that request. If it was, the model can still misunderstand or ignore it. Source-backed recall gives the model better context. It doesn't guarantee a correct answer.
 
 ## Can I make my own extension?
 

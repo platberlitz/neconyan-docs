@@ -6,7 +6,7 @@ quote: "There are three of us, and you can choose how each of us appears. I'll h
 
 # Meet Miso, Taro and Nori
 
-The assistants are part of Neconyan's interface and writing tools. They guide tours, appear in help and can join a Scratchpad discussion. Their personalities differ; their access still depends on the feature and permissions you're using.
+The assistants are part of Neconyan's interface and writing tools. They guide tours, appear in help and can join a Scratchpad discussion. Their personalities differ. What each can access still depends on the feature and permissions you're using.
 
 ## Miso: getting you settled
 
@@ -24,14 +24,14 @@ Taro wants evidence before changing a setting. Expect questions about what happe
 
 ## Nori: ideas with consequences
 
-Nori is a mischievous writing partner with a fondness for plot complications. The mischief follows your tone; it isn't a reason to ignore your instructions.
+Nori is a mischievous writing partner with a fondness for plot complications. The mischief follows your tone. It isn't a reason to ignore your instructions.
 
 !!! nori "Nori"
     I can help you make the scene calmer. I would like the record to show that you specifically requested that.
 
 ## Choose each assistant's gender
 
-In this handbook, open **Your guides** near the top of any page. Each assistant independently offers:
+In this handbook, open **Your guides** near the top of any page. You can set each assistant separately:
 
 | Choice | Pronouns |
 | --- | --- |
@@ -39,7 +39,7 @@ In this handbook, open **Your guides** near the top of any page. Each assistant 
 | Female | she/her |
 | Male | he/him |
 
-The artwork and pronoun labels update together. The default is neutral. Choices stay in this browser when browser storage is available, and are separate from your choices inside the app.
+The artwork and pronoun labels update together. The default is neutral. Your choices stay in this browser when browser storage is available. They're separate from your choices inside the app.
 
 In Neconyan itself, use the assistant or gender controls on Home, Scratchpad or the tool you're using. Model connections and access permissions have their own settings.
 
@@ -47,6 +47,6 @@ In Neconyan itself, use the assistant or gender controls on Home, Scratchpad or 
 
 The handbook's dialogue is written documentation. Reading it doesn't call a model or charge credits. For an actual back-and-forth discussion about your work, open [Scratchpad](scratchpad.md) in the app with a working connection.
 
-Your choice of Scratchpad assistant changes the conversation's personality. Scratchpad can also use [assistants you add yourself](scratchpad.md#add-your-own-assistant), written from scratch or copied from a character card. Available tools and access permissions depend on the feature's settings.
+Your choice of Scratchpad assistant changes the conversation's personality. Scratchpad can also use [assistants you add yourself](scratchpad.md#add-your-own-assistant), written from scratch or copied from a character card. Which tools and access permissions are available depends on the feature's settings.
 
 In assistant chats and Scratchpad, the bundled app-help reference includes [Search everything](../workspace/index.md#search-everything), Agent defaults, import choices and current settings locations. Ask for the steps to a named task. Help knowledge doesn't give the assistant unrestricted access to your account, notes or settings.

@@ -6,7 +6,7 @@ quote: "A private timeline for your cast. Finally, somewhere for a fictional per
 
 # Meower
 
-Meower gives your characters a social-style timeline with posts and interactions. It is part of your own Neconyan setup. Posting there doesn't publish to a public social network.
+Meower gives your characters a social-style timeline with posts and interactions. It belongs to your own Neconyan setup. Posting there doesn't publish to a public social network.
 
 === "Computer"
 
@@ -24,7 +24,7 @@ Meower gives your characters a social-style timeline with posts and interactions
 
 ## Set up a timeline
 
-Open Meower through the mode navigation. Use its **Timeline Settings** to choose the cast and configure the timeline's behaviour. Your persona determines who you are when you post; the participating characters provide the rest of the cast.
+Open Meower through the mode navigation. Use its **Timeline Settings** to choose the cast and configure the timeline's behaviour. Your persona decides who you are when you post. The characters you choose make up the rest of the cast.
 
 Start with a few characters whose voices you know. It's easier to tell whether the model understands them before adding a large group and more automatic activity.
 
@@ -42,12 +42,12 @@ Model-generated activity uses a configured connection and can cost provider cred
 
 Meower keeps its own timeline. Under **Timeline Settings → Chats**, **Let characters react to the roleplay** can share a few messages from the open Roleplay chat with the model writing posts. It starts off, and only characters in that scene should refer to it.
 
-**Mention recent activity in chats** shares recent Meower activity back with chats. Check its lookback, number of posts and insertion depth before enabling it. These options provide context; they don't copy the timeline into your saved chat history.
+**Mention recent activity in chats** shares recent Meower activity back with chats. Check its lookback, number of posts and insertion depth before enabling it. These options provide context. They don't copy the timeline into your saved chat history.
 
 Likewise, 'private timeline' describes where posts are published. If you use an online model, relevant prompt content is still sent to that provider to generate replies.
 
 ## If it looks empty
 
-Check that the intended characters are selected, the relevant connection works and you're looking at the expected account and timeline. An empty feed alone doesn't establish a network error; there may simply be no saved or generated activity yet.
+Check that the intended characters are selected, the relevant connection works and you're looking at the expected account and timeline. An empty feed alone doesn't mean a network error. There may be no saved or generated activity yet.
 
 For a one-to-one messaging experience, use [Conversation](conversation.md). For a scene with sustained narration, use [Roleplay](roleplay.md).

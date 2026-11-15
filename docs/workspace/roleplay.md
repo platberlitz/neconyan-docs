@@ -44,7 +44,19 @@ Choosing a saved swipe doesn't make another model request. Click the swipe count
 
 An empty composer makes Guided Regenerate behave like an ordinary regeneration. Stop current work before editing the history it relies on.
 
-If the main reply has finished, **Stop** ends the remaining Agent work and keeps that reply. A [Quick Reply](../helpers/tools.md#quick-replies) can also steer the next answer with a one-use note that isn't added as a chat message.
+If the main reply has finished, **Stop** ends the remaining Agent work and keeps that reply. From the 1.5.5 candidate, this also covers a server-written reply that runs in several Auto-continue parts. Stopping it keeps the parts that already finished, and a stopped reply stays stopped.
+
+A [Quick Reply](../helpers/tools.md#quick-replies) can also steer the next answer. It adds a one-use note that isn't added as a chat message.
+
+### When a reply fails or comes back empty {#failed-replies}
+
+These apply from the Neconyan 1.5.5 staging candidate, which is not published yet.
+
+A reply that arrives with no text at all counts as a failed attempt, even when the AI service reported success. Neconyan shows **Reply failed**. For a swipe or regenerate, the previous reply goes back where it was with its Companion notes, and Agents don't run on the failed attempt. It no longer becomes an empty swipe.
+
+When the server writes the reply, swiping or regenerating empties the old reply straight away while the new one is written. The chat stays where you were reading. If the attempt fails or you press **Stop**, the old reply and its notes come back.
+
+If a service starts a reply and then sends nothing for five minutes, the attempt ends with **The AI service stopped sending the reply.** The wait for the first words isn't limited, so a slow local model isn't cut off. [Troubleshooting](../help/troubleshooting.md#a-reply-comes-back-empty-or-stops-halfway) covers what to check.
 
 ## Run a group scene
 
@@ -56,9 +68,9 @@ Choose how the group takes turns:
 - **Manual** lets you choose a speaker.
 - **Scene Director** asks a separate model which members should speak. It can choose nobody and falls back to ordinary selection if it fails.
 
-**Let them talk** runs a short exchange between at least two unmuted members. Choose one to eight turns; the default is three. Stop, send a message, switch chats or leave the page to end it. Ensemble writing produces the scene in one request instead of one request per speaker.
+**Let them talk** runs a short exchange between at least two unmuted members. Choose one to eight turns. The default is three. To end it, stop, send a message, switch chats or leave the page. Ensemble writing produces the scene in one request instead of one request per speaker.
 
-Use **Scene** to set the location and mark who is present. **Whisper** targets present, unmuted members; absent characters don't receive it. A member's **Use as Narrator / GM** option adds a reminder for that speaker. It doesn't give them control over everyone else or unmute them.
+Use **Scene** to set the location and mark who is present. **Whisper** reaches members who are present and unmuted. Absent characters don't receive it. A member's **Use as Narrator / GM** option adds a reminder for that speaker. It doesn't give them control over everyone else or unmute them.
 
 ??? info "Scene Director requests"
 
@@ -73,7 +85,7 @@ Open **Settings → Appearance → Avatar & Chat Styles → Review chat images**
 - **Show only** keeps the image visible without sending either.
 - **Remove from message** removes the reference without deleting its file.
 
-Press **Save choice** after choosing. Account or chat settings that say **Don't send** take priority. Changing a choice doesn't alter a request the provider has already accepted; stop and retry if needed. For a stuck review notice, see [troubleshooting](../help/troubleshooting.md#image-input-needs-attention).
+Press **Save choice** after choosing. Account or chat settings that say **Don't send** take priority. Changing a choice doesn't alter a request the provider has already accepted. Stop and retry if needed. For a stuck review notice, see [troubleshooting](../help/troubleshooting.md#image-input-needs-attention).
 
 ## Chat and writing settings
 
@@ -81,12 +93,12 @@ Start with **Settings → Chat & Writing**:
 
 - **Chat & messages → Chat window** controls chat links and **Reopen your last chat**. Both start off. Links work on your installation and account; they aren't public copies.
 - **Chat & messages → Sending** includes whether the keyboard opens automatically.
-- **Chat & messages → Messages → Block external media** sets the default for loading images, audio and video from other websites. The character or group's external-media dialog also has **Block external media by default**. **Always allowed** and **Always forbidden** override that default for the selected character or group; outside sites can see your IP address when their media loads.
+- **Chat & messages → Messages → Block external media** sets the default for loading images, audio and video from other websites. The character or group's external-media dialog also has **Block external media by default**. **Always allowed** and **Always forbidden** override that default for the selected character or group. Outside sites can see your IP address when their media loads.
 - **Replies → Where replies are written** chooses **In the browser** or **On the server**. See [leaving the page](#when-you-leave-the-page) before changing it.
 
-Automatic chat names use a model request after a date-named chat has enough messages and you've sent one. The default is six messages, including the greeting. You can change the threshold or turn naming off. Assistant and temporary chats, and Conversation mode, are excluded.
+Automatic chat naming makes a model request once a date-named chat has enough messages and you've sent one. The default is six messages, including the greeting. You can change that number or turn naming off. Assistant chats, temporary chats and Conversation mode aren't named this way.
 
-The message timer stops when the main reply finishes, rather than counting Agent work afterwards. A cut-off reply keeps any received text or thinking; it doesn't start after-reply Agents as though the answer had completed.
+The message timer stops when the main reply finishes. It doesn't count Agent work afterwards. A cut-off reply keeps any text or thinking it received. It doesn't start after-reply Agents as though the answer had completed.
 
 If a reply finishes with thinking but no text, the bundled **Thinking Reply Recovery** Agent can write the missing reply from that thinking and pass it to your other after-reply Agents. It starts switched off; turn it on in Agents. A routine chat save while a long reply is being written no longer makes it skip, and the recovered prose is written into the chat.
 
@@ -121,7 +133,7 @@ Interactive message scripts run in a separate widget. If a browser can't block t
 3. Choose a connection and select **Draft**.
 4. Read the result in the editor and use **Test Mode** before saving.
 
-**Improve** revises an existing rule. **Show last reply** includes up to 1,500 characters as an example. Each draft or improvement is a model request; a failed request keeps your current rule.
+**Improve** revises an existing rule. **Show last reply** includes up to 1,500 characters as an example. Each draft or improvement is a model request. A failed request keeps your current rule.
 
 ### Regex flags {#regex-flags}
 
@@ -140,7 +152,13 @@ Without flags, a normal match is case-sensitive and stops at the first result. T
 
 **Strict escaping** and **literal variables** start off. A script can set its own behaviour with `/parser-flag` instead of changing the account default. See the [macro and scripting reference](../macros/index.md) for syntax.
 
-For scripts that start replies, `/is-generating` checks whether work is active; `/wait-generation` waits for it. Its default timeout is 60,000 milliseconds, while `0` waits without a limit. `/stop` and `/generate-stop` stop generation. `/getinput` reads the composer; `/trigger`, `/gen` and `/genraw` start writing.
+These commands help scripts that start replies:
+
+- `/is-generating` checks whether work is active.
+- `/wait-generation` waits for it. Its default timeout is 60,000 milliseconds. `0` waits without a limit.
+- `/stop` and `/generate-stop` stop generation.
+- `/getinput` reads the composer.
+- `/trigger`, `/gen` and `/genraw` start writing.
 
 If a composer script fails, its text is restored only while the composer is still empty, so newer typing isn't overwritten.
 
@@ -152,8 +170,8 @@ Put stable character details in the card, world facts in [lorebooks](lorebooks.m
 
 Author's Note adds a short instruction to the prompt. Its tabs choose where that instruction belongs:
 
-- **This chat:** the current chat's note. Frequency `1` sends it every turn; `0` stops regular insertion. Lore scanning is a separate setting.
-- **Character:** private notes for this character. Tick the ones to use and choose Top, Replace or Bottom. **Separate notes for each persona** gives each persona its own note library, not just separate ticks. The visible list and edits follow the equipped persona, keeping another persona's notes out of this list and prompt.
+- **This chat:** the current chat's note. Frequency `1` sends it every turn. `0` stops regular insertion. Lore scanning is a separate setting.
+- **Character:** private notes for this character. Tick the ones to use and choose Top, Replace or Bottom. **Separate notes for each persona** gives each persona its own note library, not just separate ticks. The list you see and the edits you make follow the equipped persona, so another persona's notes stay out of this list and out of the prompt.
 - **Persona:** one active private profile that follows the persona across characters.
 - **New chats:** defaults for chats you create later.
 
@@ -163,17 +181,17 @@ Top notes come before the chat note, character first and persona second. Bottom 
 
 Use **Switch chat** to search and reopen a conversation. For file actions, choose **View chat files** on desktop or **Manage files** in the phone's chat tools.
 
-From there you can start or import a chat, export it, rename it, or delete it. JSONL keeps the chat structure; plain text and Readable Replies are for reading elsewhere. Importing as a new instance keeps it separate from the original.
+From there you can start or import a chat, export it, rename it, or delete it. JSONL keeps the chat structure. Plain text and Readable Replies are for reading elsewhere. Importing as a new instance keeps it separate from the original.
 
 **Label** can name the current chat or date-named chats with a model request. For cleanup, choose **Older than** and **Keep newest**, then **Preview** before **Clean**. Cleanup targets date-named chats by default and protects the open chat and newest one. [Back up first](../help/backups.md).
 
 ## When you leave the page
 
-**In the browser** is the default for ordinary Roleplay. Most single-character replies can be held by the server if the page disconnects, then recovered when you return. After-reply Agents aren't replayed automatically; use **Rerun agents** if needed.
+**In the browser** is the default for ordinary Roleplay. Most single-character replies can be held by the server if the page disconnects, then recovered when you return. After-reply Agents aren't replayed automatically; use **Rerun agents** if needed. From the 1.5.5 candidate, the **Agents did not finish** warning carries its own [**Rerun agents** button](../helpers/agents.md#rerun-agents-on-a-reply).
 
 If you return while a reply is still being written, it appears after the last saved message rather than above the greeting. A replacement reply keeps its existing place.
 
-Choose **On the server** when you want supported writing and Agents to continue after closing the page. The server must stay running. Conversation, Notebook writing and supported one-to-one guided replies already use server work; some group or page-only features still need the browser.
+Choose **On the server** when you want supported writing and Agents to continue after closing the page. The server must stay running. Conversation, Notebook writing and supported one-to-one guided replies already use server work. Some group or page-only features still need the browser.
 
 Instructions that require the browser may prevent a server request or send supported work back to the browser. Notebook writing reports unsupported instructions rather than silently dropping them.
 

@@ -6,16 +6,16 @@ quote: 'Ask for the entry you need. Your character probably does not need the ci
 
 # Lorebook macros
 
-These Macro Enhanced macros read lorebooks. An entry can be found by its title, stored as its memo or comment, or by its numeric identifier. Supplying the book name helps when several books contain the same title.
+These Macro Enhanced macros read lorebooks. You can find an entry by its title, which is stored as its memo or comment, or by its numeric identifier. Giving the book name helps when several books contain the same title.
 
-Without a book name, the usual search order is the chat’s book, the character’s books, then global books. Loading happens in the background, so a first lookup can be empty while the book is being loaded.
+Without a book name, the usual search order is the chat’s book, the character’s books, then global books. Books load in the background, so a first lookup can be empty while the book is still loading.
 
-**Browser prompts only.** These macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list. Ordinary lorebook activation works everywhere.
+**Browser prompts only.** These macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server. If one of those prompts uses one of these macros, the reply stops before the model request. Test the macros in the Macro Enhanced Playground. [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) has the full list. Ordinary lorebook activation works everywhere.
 
 ## Reading lore is different from activating it
 
 `lore` inserts entry content directly. Ordinary [lorebook activation](../workspace/lorebooks.md) selects entries using keywords, conditions and the available budget. A direct macro lookup can duplicate an entry already included elsewhere.
 
-`loreactive` and the active counts describe the **last generation**. They do not predict what will activate on the next reply. An entry’s existence alone does not mean it was included.
+`loreactive` and the active counts describe the **last generation**. They don't predict what will activate on the next reply. An entry existing doesn't mean it was included.
 
 <!-- macro-reference: lorebooks -->

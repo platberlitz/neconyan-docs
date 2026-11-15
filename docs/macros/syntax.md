@@ -36,7 +36,7 @@ Optional arguments can be left off the end. To leave an earlier argument empty w
 {{dateadd::::2::days}}
 ```
 
-The empty starting date means now; the result is two days later. Macro Enhanced is required for these examples. They work in the Playground and ordinary Roleplay replies, but [not in prompts built on the server](index.md#macro-enhanced-in-roleplay-prompts).
+The empty starting date means now, so the result is two days later. These examples need Macro Enhanced. They work in the Playground and ordinary Roleplay replies, but [not in prompts built on the server](index.md#macro-enhanced-in-roleplay-prompts).
 
 ## Put one macro inside another
 
@@ -87,10 +87,10 @@ These lines are removed together.
 
 - Use ordinary straight braces and colons. A rich-text editor can change punctuation while pasting.
 - A literal `::` separates arguments. Use a simpler separator in your input text when possible.
-- A literal pipe can be interpreted as filter syntax. Use the [or macro](conditions.md#or) for either/or conditions.
+- A literal pipe can be read as filter syntax. Use the [or macro](conditions.md#or) for either/or conditions.
 - JSON objects end in braces too. For complicated JSON, save it in a variable and pass that variable into the macro.
 
-The parser recognises some proposed flags whose behaviour is not implemented in this version. Do not rely on `!`, `?`, `~` or `>` before a macro name to change its timing or filter its output. The `!` *inside an if condition* is a separate feature that reverses that condition.
+The parser recognises some proposed flags whose behaviour isn't implemented in this version. Don't rely on `!`, `?`, `~` or `>` before a macro name to change its timing or filter its output. The `!` *inside an if condition* is a separate feature that reverses that condition.
 
 ## An old preset uses different spelling
 

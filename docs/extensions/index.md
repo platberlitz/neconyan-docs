@@ -6,9 +6,9 @@ quote: "Start with one visible action that works. We can add the spectacularly c
 
 # Making extensions for Neconyan
 
-An extension adds JavaScript and optional CSS to Neconyan's browser interface. You can add settings, respond to chat events, provide writing utilities or integrate another service. Neconyan retains much of SillyTavern's extension format and exposes a compatibility context for extension code.
+An extension adds JavaScript and optional CSS to Neconyan's browser interface. You can add settings, respond to chat events, provide writing utilities or integrate another service. Neconyan keeps much of SillyTavern's extension format and gives extension code a compatibility context.
 
-You should know basic JavaScript, HTML and CSS before modifying live chat behaviour. This section starts with a small working example and explains where Neconyan differs from assumptions an older extension might make.
+You should know basic JavaScript, HTML and CSS before modifying live chat behaviour. This section starts with a small working example and explains where Neconyan differs from what an older extension might assume.
 
 ## The route through this section
 
@@ -21,7 +21,7 @@ You should know basic JavaScript, HTML and CSS before modifying live chat behavi
 
 These are **Neconyan frontend extensions**, not Firefox or Chrome add-ons. Their scripts run inside the app page. They don't get Node.js filesystem access just because Neconyan's server uses Node.js or Bun.
 
-A frontend request also doesn't automatically become durable background work. If the feature must keep running after a page closes, it needs an appropriate server-side design. Treat that as a separate integration, with explicit account ownership, saved results, cancellation and recovery.
+A frontend request also doesn't automatically become lasting background work. If the feature must keep running after a page closes, it needs a suitable server-side design. Treat that as a separate integration, with explicit account ownership, saved results, cancellation and recovery.
 
 Don't copy an arbitrary bundled tool's server route and assume it is a public extension API. Several included tools have app-specific server support.
 
@@ -33,6 +33,6 @@ A frontend extension runs with access to the app page and the signed-in account'
 
 ## What compatibility means here
 
-The reviewed source uses a SillyTavern compatibility version of **1.18.1**, separately from Neconyan's own release number. This is an API compatibility signal, not proof that every old extension's selectors, prompt interception or layout will work.
+The reviewed source uses a SillyTavern compatibility version of **1.18.1**, separately from Neconyan's own release number. That number signals API compatibility. It doesn't prove that every old extension's selectors, prompt interception or layout will work.
 
 Check the actual functions you use and test the modes you support. [The compatibility notes](api.md#version-and-dependency-checks) explain the manifest fields and their limits.

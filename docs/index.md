@@ -71,6 +71,6 @@ The screenshots use staged conversations with the bundled assistants. They're re
 Open **Your guides** above to choose male, female or neutral for each of them. Their artwork and pronouns follow your choice throughout the handbook. Their advice stays useful. Taro's puns remain a separate problem.
 
 !!! taro "Taro"
-    Neconyan doesn't include model credits. Check your provider's charges before enabling extra helpers. The small print is now normal-sized print.
+    Neconyan doesn't include model credits. Check your provider's charges before turning on extra helpers. The small print is now normal-sized print.
 
 Already using Neconyan? Keep [the glossary](help/glossary.md) handy, or use the search at the top to jump straight to a feature.

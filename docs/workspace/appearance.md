@@ -20,29 +20,31 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 | **Desktop response controls** | Whether swipe arrows and the counter sit inside the bubble or below it on wide screens |
 | **Theme Colors** | Individual colour values, including ordinary quoted text |
 
-**Simple Mode** is opt-in; [Find your way around](index.md#keep-the-sidebar-simple) explains what it keeps and how to leave it.
+**Simple Mode** stays off until you turn it on. [Find your way around](index.md#keep-the-sidebar-simple) explains what it keeps and how to leave it.
 
-Colour edits apply immediately. **Save as a new theme** stores a broader named theme; **Save Current** under saved accent pairs stores the accent pair. Those are separate saves.
+Colour edits apply immediately. **Save as a new theme** stores a broader named theme. **Save Current** under saved accent pairs stores the accent pair. Those are separate saves.
 
 Character tags in the library and character editor follow the selected accent colours too.
 
 ## Choose a style
 
-Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ears and paws while retaining your chats and installed characters. You can also use **Hide cats (Kittyless)** beneath the style choices while keeping another shell style.
+Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ears and paws. Your chats and installed characters stay. You can also use **Hide cats (Kittyless)** below the style choices and keep another shell style.
 
-Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal, **Starlight Conservatory** and **Sunken Reef**. Each style shows a miniature window with a title bar and message rows, so you can compare the shape before choosing. These previews are illustrations, not your own chat. Windows 98 gives bundled assistant artwork a pixel-art treatment; it doesn't replace imported character portraits.
+Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal, **Starlight Conservatory** and **Sunken Reef**. Each style shows a miniature window with a title bar and message rows, so you can compare the shape before choosing. These previews are illustrations, not your own chat. Windows 98 gives bundled assistant artwork a pixel-art treatment. It doesn't replace imported character portraits.
 
 **Sunken Reef** adds an animated ocean around the interface: flowing water, ripples under a click or tap, and sea creatures behind the messages. With **Reduced Motion** on, it paints a still reef scene instead.
 
 For a dark olive Windows XP look, choose the **Windows XP** shell and **Windows XP Olive Green Dark** under UI Theme. Shell Style and UI Theme are separate selections.
 
-Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style** shows each layout as a preview card under **Selected style**, with a short description such as **Rounded bubbles around each paragraph** or **Tinted cards with a small side accent**. The cards follow your theme and accent and are illustrations, not your own messages. **Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text; lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width the response arrows and counter stay inside the card; on a wider window, **Desktop response controls** chooses inside or below.
+Chat styles are separate from shell styles. **Settings → Appearance → Avatar & Chat Styles → Chat Style** shows each layout as a preview card under **Selected style**. Each card has a short description such as **Rounded bubbles around each paragraph** or **Tinted cards with a small side accent**. The cards follow your theme and accent. They are illustrations, not your own messages.
 
-**Hush** draws tinted cards with a small accent bar at the side. Message statistics sit beside the portrait and the reply actions take a full-width row under the name, so reasoning, text and Companion notes use the full card width.
+**Tide** gives every paragraph its own bubble. On a desktop or a tablet-width window, Tide holds a message in one tinted card with a solid header plate, so the name and reply controls sit on the same card as the text. Lists, quotes, tables and code blocks get matching bubbles. A phone keeps the compact per-paragraph view. At tablet width, the response arrows and counter stay inside the card. On a wider window, **Desktop response controls** chooses inside or below.
+
+**Hush** draws tinted cards with a small accent bar at the side. Message statistics sit beside the portrait. The reply actions take a full-width row under the name, so reasoning, text and Companion notes use the full card width.
 
 Downloaded message images keep the full Tide card, including its last lines and any character profile card at the end.
 
-**Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once; changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
+**Shell Style → Your cat** and **Character cat** choose the sleeping-cat coat on each side of the chat. **Pair** sets both at once. Changing either afterwards selects **Your own mix**. These choices apply immediately and are saved in this browser. **Hide cats (Kittyless)** hides them with the other decorations.
 
 There are 34 coats and 21 ready-made pairs. 1.3.0 added Birman, Snowshoe, Cinnamon, Fawn, Caracal and Lynx, with pairs such as **Snow mittens: Birman and Snowshoe** and **Tufted twins: caracal and lynx**. Every coat has pixel-art frames for the Windows 98 style.
 
@@ -50,27 +52,33 @@ To change the picture behind the app, open **Appearance → Background**. The bu
 
 The library also includes backgrounds matched to the bundled themes. Select several pictures and choose **Delete selected** to remove them together. **Restore defaults** brings back missing bundled backgrounds. **Background Visibility** under **Appearance → Interface** lets the wallpaper show through the Home and chat surfaces, including on phones.
 
-Turn **Background Visibility** up to make those surfaces more transparent. **Background Opacity** controls the picture itself, including the theme's own wallpaper: turn it down to fade the artwork. Message text and controls keep their readable surfaces.
+Turn **Background Visibility** up to make those surfaces more transparent. **Background Opacity** controls the picture itself, including the theme's own wallpaper. Turn it down to fade the artwork. Message text and controls keep their readable surfaces.
 
 ## Make text comfortable to read
 
-Start with a bundled light or dark theme and a readable font size. **Settings → Appearance → Google Font** has a separate picker for **Body text**, **Headings**, **Chat messages** and **Code**. Each starts at **Default** and lists a few suggested fonts; **Custom Google Font…** accepts any Google Fonts name, confirmed with the tick or Enter. Headings follow the body font until you choose one, and chat messages do the same. **Reset all fonts** puts them all back. A chosen font that isn't bundled is downloaded from Google Fonts, which is an external request, and a misspelt name shows a warning.
+Start with a bundled light or dark theme and a readable font size.
+
+**Settings → Appearance → Google Font** has a separate picker for **Body text**, **Headings**, **Chat messages** and **Code**. Each starts at **Default** and lists a few suggested fonts. **Custom Google Font…** accepts any Google Fonts name. Confirm it with the tick or Enter. Headings follow the body font until you choose one, and chat messages do the same. **Reset all fonts** puts them all back.
+
+A chosen font that isn't bundled is downloaded from Google Fonts, which is an external request. A misspelt name shows a warning.
 
 Check a real chat, the composer and a settings panel after changing colours. Neconyan adjusts some theme colours for contrast, but custom CSS and message-level colour tags can override the result.
 
 **AMOLED Black** is available under UI Theme for a pure-black interface. Switch to another theme if you want its hidden wallpaper and cloud artwork back.
 
-Under **Settings → Appearance → UI Theme**, the theme gallery shows each theme as a card with five colour swatches (surface, chat, text, primary accent and secondary accent) and a **Dark** or **Light** label. Use **Search themes** and the **All**, **Dark** and **Light** filter buttons to narrow the list; **Clear filters** resets an empty search. The bundled list includes 115 palettes adapted from Regex Agent Themes as full interface themes, alongside the stock Calico and shell palettes. Selecting a **UI Theme** colours the whole application interface; it stays separate from the tracker card style chosen in [Tracker themes](#tracker-themes).
+Under **Settings → Appearance → UI Theme**, the theme gallery shows each theme as a card with five colour swatches (surface, chat, text, primary accent and secondary accent) and a **Dark** or **Light** label. Use **Search themes** and the **All**, **Dark** and **Light** filter buttons to narrow the list. **Clear filters** resets an empty search.
+
+The bundled list includes 115 palettes adapted from Regex Agent Themes as full interface themes, alongside the stock Calico and shell palettes. Selecting a **UI Theme** colours the whole application interface. It stays separate from the tracker card style chosen in [Tracker themes](#tracker-themes).
 
 ## Visual Toggles
 
 **Visual Toggles** groups its switches into **Comfort**, **Message details**, **Chat layout**, **Characters**, and **Settings and sliders**. Read the description beside a switch to see which part of the interface it affects. These display choices are separate from the sending and generation controls in **Chat & Writing**.
 
-**Visual Toggles → Chat layout** holds **Compact Input Area**, marked **Phones only**. On a phone, on keeps the message box and its controls to a single row; off places a full-width message box above them. It applies immediately, is saved, and is separate from the shell's **Compact Mode** and from **Bottom Bar Size**.
+**Visual Toggles → Chat layout** holds **Compact Input Area**, marked **Phones only**. On a phone, switching it on keeps the message box and its controls to a single row. Switching it off places a full-width message box above them. The change applies immediately and is saved. It is separate from the shell's **Compact Mode** and from **Bottom Bar Size**.
 
-Pages move from the control you pressed: a top-bar shortcut drops its page down from under the bar, and a desktop sidebar page slides out from behind the sidebar. Opening a chat lets the messages rise into place, and swiping slides the next or previous reply in from the side you are moving towards.
+Pages move from the control you pressed. A top-bar shortcut drops its page down from under the bar, and a desktop sidebar page slides out from behind the sidebar. Opening a chat lets the messages rise into place, and swiping slides the next or previous reply in from the side you are moving towards.
 
-Use **Reduced Motion** to disable interface animations and transitions, including these. Supported styles also respect the operating system's reduced-motion preference.
+Use **Reduced Motion** to switch off interface animations and transitions, including these. Supported styles also respect the operating system's reduced-motion preference.
 
 ## Bottom bar width on a computer
 
@@ -80,13 +88,13 @@ On a phone, the setting keeps the phone layout but changes the control size. Inc
 
 ## Choose the bottom bar buttons
 
-**Settings → System & Device → Desktop → Bottom Bar Buttons** (use **Mobile** on a phone) lists the controls below **Show Bottom Chat Bar**. Untick one to hide it; tick it again to bring it back. Use the arrows to move it within **Main bar** or **Chat actions**, and **Reset to defaults** to restore every control and the original order.
+**Settings → System & Device → Desktop → Bottom Bar Buttons** (use **Mobile** on a phone) lists the controls below **Show Bottom Chat Bar**. Untick one to hide it. Tick it again to bring it back. Use the arrows to move it within **Main bar** or **Chat actions**, and **Reset to defaults** to restore every control and the original order.
 
 One layout covers desktop and phone. It is saved in this browser, so it follows the device rather than your account. Hiding the search field closes an open search. If every chat action is hidden, that row tucks itself away. Simple Mode still hides its own controls on top of your choices.
 
 ## Movable panels
 
-Open **Appearance → Movable panels** to enable dragging and resizing supported pop-outs. Drag a panel by its top edge to move it, or its corner to resize it.
+Open **Appearance → Movable panels** to switch on dragging and resizing for supported pop-outs. Drag a panel by its top edge to move it, or its corner to resize it.
 
 The built-in layouts are **Pop-outs on the Right**, **Writing Desk**, **Centred Card** and **Compact Corner**. They place supported pop-outs such as Author's Note, CFG and token probabilities. They don't move the main chat or workspace side panels. Save your own layout after arranging the pop-outs you use.
 
@@ -96,19 +104,21 @@ For one ordinary quotation colour, use **Theme Colors → Quote Text**. Accent P
 
 For different named speakers, use **Appearance → Dialogue Colors → Characters** in the sidebar. Select a speaker's swatch or add the missing name. **Colors saved** chooses Per chat, Per card or Global scope.
 
-The list shows your regular characters and only the equipped persona. Switch persona to see another persona's saved colours; the count, search, bulk selection and legend follow the same filter.
+The list shows your regular characters and only the equipped persona. Switch persona to see another persona's saved colours. The count, search, bulk selection and legend follow the same filter.
 
-Under **Settings → Automation**, **Don't color a Narrator card** is on by default. It keeps a character card named `Narrator` in the normal text colour even when the model wraps its lines in a colour, stops `Narrator` being added to the speaker list and tells the model not to colour it.
+Under **Settings → Automation**, **Don't color a Narrator card** is on by default. It keeps a character card named `Narrator` in the normal text colour, even when the model wraps its lines in a colour. It also stops `Narrator` being added to the speaker list and tells the model not to colour it.
 
-If a scenario card such as `'Your Wife Wants To Divorce You'` or a titled label such as `'Leonard | Actor'` is being coloured as a speaker, add it under **Not characters** with **Add** or **Add this card's name**, or open the speaker row's **More** actions and choose **Not a character**. Listed names leave the character list, are never added or sent to the model as speakers, and their model-written colours render in the normal text colour. Use the Undo notice to put one back immediately, or remove its chip from the list to let it be coloured again.
+Sometimes a scenario card such as `'Your Wife Wants To Divorce You'` or a titled label such as `'Leonard | Actor'` gets coloured as a speaker. To stop that, add it under **Not characters** with **Add** or **Add this card's name**. You can also open the speaker row's **More** actions and choose **Not a character**.
 
-Under **Settings → Process**, **Clean messages** removes stored colour markup from every character message and swipe in the open chat while leaving your own messages and system or tool messages alone. Choose **Color lines** in **What to remove** to strip standalone `[COLORS: ...]` lines, or **Color lines and tags** to also remove colour-only tags wrapped around dialogue, then confirm with **Remove lines** or **Remove lines and tags**. Click the Undo notice to restore the messages as they were.
+Listed names leave the character list. They are never added or sent to the model as speakers, and colours the model writes for them show in the normal text colour. Use the Undo notice to put one back immediately, or remove its chip from the list to let it be coloured again.
 
-Per-card settings aren't automatically embedded in an exported character file. Use the tool's explicit **Save to card** action when you want that transfer. Its local display mode and modes that store colour tags also have different effects on saved text.
+Under **Settings → Process**, **Clean messages** removes stored colour markup from every character message and swipe in the open chat. It leaves your own messages and system or tool messages alone. In **What to remove**, choose **Color lines** to strip standalone `[COLORS: ...]` lines, or **Color lines and tags** to also remove colour-only tags wrapped around dialogue. Then confirm with **Remove lines** or **Remove lines and tags**. Click the Undo notice to restore the messages as they were.
+
+Per-card settings aren't saved into an exported character file automatically. Use the tool's **Save to card** action when you want them included. Its local display mode and modes that store colour tags also have different effects on saved text.
 
 While a server-run reply, such as a Deep Swipe replacement, is still being written, its live preview receives dialogue colours as the text arrives. That display pass doesn't save the unfinished message or its speaker overrides.
 
-If your preset uses `{{dialoguecolors}}`, the page resolves its current colour instructions before sending the reply. A server-run reply keeps that value when you close the tab, and through retries. LLM colouring still depends on the model following those instructions; Local (DOM-only) colours the displayed text instead.
+If your preset uses `{{dialoguecolors}}`, the page resolves its current colour instructions before sending the reply. A server-run reply keeps that value when you close the tab, and through retries. LLM colouring still depends on the model following those instructions. Local (DOM-only) colours the displayed text instead.
 
 ## Tracker themes
 
@@ -116,7 +126,7 @@ If your preset uses `{{dialoguecolors}}`, the page resolves its current colour i
 
 Search with **Search by name, colour or motion**, then filter with **All**, **Dark**, **Light**, **Animated**, **Adaptive**, or **Custom** once you've saved custom themes. **Theme family** narrows the list further, and **Clear filters** resets it.
 
-**Previous**, **Next** and **Surprise me** only move the preview within the filtered list. **Apply this theme** makes the previewed theme the default; **Show current** returns the preview to the current default.
+**Previous**, **Next** and **Surprise me** only move the preview within the filtered list. **Apply this theme** makes the previewed theme the default. **Show current** returns the preview to the current default.
 
 1.3.4 added 40 choices: 14 dark, 13 light and 13 animated. Animated themes stop when the operating system asks for reduced motion. Relationship and Ethereality tracker cards use their dedicated layouts, and narrow search controls and accent buttons stay readable across shell styles. To use the 115 tracker palettes as full application themes instead, pick them under **Settings → Appearance → UI Theme**.
 
@@ -126,7 +136,7 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 1.3.4 added **Catppuccin Mocha**, **Tokyo Night**, **Rosé Pine**, **Monokai**, **Commodore 64**, **Tuxedo Cat**, **Solarized Light** and **Sakura Latte**.
 
-**Inherit Active Theme** follows the application's theme instead of using its own colours, and is the default. Checkboxes and radio buttons keep their round appearance.
+**Inherit Active Theme** is the default. It follows the application's theme instead of using its own colours. Checkboxes and radio buttons keep their round appearance.
 
 ## Low-memory mode
 
@@ -138,7 +148,7 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 ## Keep images out of replies
 
-**Settings → Appearance → Avatar & Chat Styles** also holds **Don't send chat images to the model** and **Review chat images**. The switch keeps image files and their saved descriptions out of new automatic replies across the account; pictures stay visible and existing text stays text. The button opens the review panel for the open chat.
+**Settings → Appearance → Avatar & Chat Styles** also holds **Don't send chat images to the model** and **Review chat images**. The switch keeps image files and their saved descriptions out of new automatic replies across the account. Pictures stay visible and existing text stays text. The button opens the review panel for the open chat.
 
 [Roleplay](roleplay.md#images-in-replies) explains the per-message choices, [Conversation](conversation.md#review-image-input) has its own panel, and [Something went wrong](../help/troubleshooting.md#image-input-needs-attention) covers repair and recovery.
 
@@ -146,8 +156,8 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 **CSS Snippets** manages named visual rules, with global, theme and chat scopes. CSS is the language that controls the page's appearance. Keep changes small and test them on a phone as well as a desktop.
 
-**Appearance → Custom CSS → Generate CSS with AI** asks a model for a visual change. **Replace** requests a complete updated stylesheet; **Append** requests additions to the existing rules. This uses a model request. The result applies only if the saved CSS hasn't changed while the request runs. Keep a copy of your rules before trying a generated change.
+**Appearance → Custom CSS → Generate CSS with AI** asks a model for a visual change. **Replace** requests a complete updated stylesheet. **Append** requests additions to the existing rules. This uses a model request. The result applies only if the saved CSS hasn't changed while the request runs. Keep a copy of your rules before trying a generated change.
 
-The CSS assistant is instructed to preserve your chosen shell, palette, wallpaper, fonts and cat visibility unless your request changes them. Its guidance covers the current shell styles, the Conversation layout and the phone layout rules.
+The CSS assistant is told to keep your chosen shell, palette, wallpaper, fonts and cat visibility unless your request changes them. Its guidance covers the current shell styles, the Conversation layout and the phone layout rules.
 
-If something becomes unreadable or stops responding after a visual change, disable the relevant snippet or return to a known theme before changing model settings. See [troubleshooting](../help/troubleshooting.md).
+If something becomes unreadable or stops responding after a visual change, switch off the relevant snippet or return to a known theme before changing model settings. See [troubleshooting](../help/troubleshooting.md).

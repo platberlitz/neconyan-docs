@@ -8,9 +8,9 @@ quote: 'For a story date, save the date you chose. The real-world clock keeps mo
 
 Core time macros read the real-world clock. Macro Enhanced adds `dateadd`, `datediff` and `dateformat` for working with a date you supply.
 
-**Browser prompts only.** `dateadd`, `datediff` and `dateformat` only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list. The core time macros work everywhere.
+**Browser prompts only.** `dateadd`, `datediff` and `dateformat` only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server. If one of those prompts uses one of these macros, the reply stops before the model request. Test the macros in the Macro Enhanced Playground. [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) has the full list. The core time macros work everywhere.
 
-Use an unambiguous date such as `2026-10-07`. Local time and language depend on the environment processing the prompt. A server and a browser can have different time zones.
+Use an unambiguous date such as `2026-10-07`. Local time and language depend on where the prompt is processed. A server and a browser can have different time zones.
 
 ## Common format parts
 
@@ -26,6 +26,6 @@ Use an unambiguous date such as `2026-10-07`. Local time and language depend on 
 | `ss` | Seconds | 09 |
 | `[at]` | Literal text | at |
 
-Capitalisation matters: `MM` is the month, while `mm` is minutes. Names follow the active language. Date arithmetic accepts units such as days, weeks and months; the short unit `M` means months and `m` means minutes.
+Capitalisation matters: `MM` is the month, while `mm` is minutes. Names follow the active language. Date arithmetic accepts units such as days, weeks and months. The short unit `M` means months and `m` means minutes.
 
 <!-- macro-reference: dates -->

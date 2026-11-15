@@ -6,11 +6,11 @@ quote: 'Set the pronouns you want to use, then let the sentence follow them.'
 
 # Pronouns
 
-Macro Enhanced provides one set of pronouns for your **persona** and another for the **character**. Set the persona’s pronouns in Persona settings or Macro Enhanced; both edit the same saved choice. Character pronouns belong to the card.
+Macro Enhanced provides one set of pronouns for your **persona** and another for the **character**. Set the persona’s pronouns in Persona settings or Macro Enhanced. Both edit the same saved choice. Character pronouns belong to the card.
 
 The default is **they/them**. A chat-specific override takes priority over the saved choice. These settings are separate from the three guide preferences on this documentation site.
 
-**Browser prompts only.** The pronoun macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server and stop before the model request if one is used. Test them in the Macro Enhanced Playground, and see [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) for the full list. If a card also has to work in those server prompts, write the pronouns out in plain text.
+**Browser prompts only.** The pronoun macros only run in the browser. Ordinary Roleplay replies build their prompts there, so they work. Conversation replies, Deep Swipe and replies with a selected Notebook context build their prompts on the server. If one of those prompts uses one of these macros, the reply stops before the model request. Test the macros in the Macro Enhanced Playground. [Macro Enhanced in Roleplay prompts](index.md#macro-enhanced-in-roleplay-prompts) has the full list. If a card also has to work in those server prompts, write the pronouns out in plain text.
 
 ## A sentence that adapts
 
@@ -48,12 +48,12 @@ You can use a preset such as `she/her`, `he/him`, `they/them` or `it/its`, or su
 {{setpronouns::xe/xem/xyr/xyrs/xemself}}
 ```
 
-A custom set can end in `/plural` or `/singular` to choose verb agreement. Clear a chat override with an empty argument:
+A custom set can end in `/plural` or `/singular` to choose whether its verbs are plural or singular. Clear a chat override with an empty argument:
 
 ```text
 {{setpronouns::}}
 ```
 
-In a group, a character-specific context may be unavailable. Character pronouns then fall back to they/them unless a chat override supplies another set. Check the prepared prompt before relying on these macros for several speakers.
+In a group, the context for one specific character may be unavailable. Character pronouns then fall back to they/them unless a chat override supplies another set. Check the prepared prompt before relying on these macros for several speakers.
 
 <!-- macro-reference: pronouns -->

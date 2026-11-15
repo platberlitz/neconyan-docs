@@ -41,13 +41,13 @@ Other Agent values are:
 | `{{continuity-notes}}` | The latest completed note from an enabled Continuity Companion, or empty when it is off |
 | `{{continuity-corrections}}` | What an enabled Continuity Corrector changed in the reply being processed, or empty when it is off |
 
-The Mewmory values are empty when it is off for the chat and don't start a fresh memory search. Group cards are empty outside a group. A character's interview opinions aren't automatically established story events.
+The Mewmory values are empty when Mewmory is off for the chat. Reading them doesn't start a fresh memory search. Group cards are empty outside a group. A character's interview opinions aren't automatically established story events.
 
 For automatic reply processing, active lore follows the writer's selected lore. A manual Agent run handled by the server can select lore for the current chat and reuse that selection if the run resumes. Browser-run helpers use prepared lore for the current chat, which can be empty if none is available. Tracker state contains saved tracker values, not every Companion note.
 
-These values belong to Agents and Companions. Neconyan 1.3.1 adds the three scene-context values and 1.3.3 adds the two continuity values; they don't change the generally registered macro catalogue's count.
+These values belong to Agents and Companions. Neconyan 1.3.1 adds the three scene-context values and 1.3.3 adds the two continuity values. They don't change the count of the generally registered macro catalogue.
 
-Keep the Agent’s [run timing](../helpers/agents.md) in mind. A prompt prepared before a reply exists cannot read that future reply.
+Keep the Agent’s [run timing](../helpers/agents.md) in mind. A prompt prepared before a reply exists can't read that future reply.
 
 ## Slash-command scripts
 
@@ -84,7 +84,7 @@ The caption feature supplies this value while turning an image caption into a me
 {{backgroundInstructions}}
 ```
 
-They are specific to expression generation, not generally registered macros, so the catalogue stays at 201. Substitution is case-insensitive and happens in one pass: text copied out of a character card is never expanded again. Required generation and sheet instructions are included even when your template omits them, and background instructions are appended unless the template places `{{backgroundInstructions}}` itself.
+They belong to expression generation and aren't generally registered macros, so the catalogue stays at 201. Substitution ignores capital letters and happens in one pass: text copied out of a character card is never expanded again. Required generation and sheet instructions are included even when your template leaves them out. Background instructions are added at the end unless the template places `{{backgroundInstructions}}` itself.
 
 ## Custom macro arguments
 
@@ -99,4 +99,4 @@ They exist while that custom template is being expanded. Another person needs th
 
 ## Similar-looking syntax
 
-Regex replacement fields can use capture references such as `$1`. Prompt templates can have their own fields, and extensions can add others. Those formats are not interchangeable with a globally registered macro. Use the reference beside the editor you are working in.
+Regex replacement fields can use capture references such as `$1`. Prompt templates can have their own fields, and extensions can add others. Those formats can't be swapped for a globally registered macro. Use the reference beside the editor you are working in.

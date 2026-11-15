@@ -6,7 +6,7 @@ quote: "Keep the good idea somewhere you'll find it again. Naming six notes 'new
 
 # Notebooks
 
-Notebooks gives you a writing and reference workspace inside Neconyan. Use it for outlines, character research, drafts, files and linked notes. You don't need an open chat or a model connection to write.
+Notebooks is a place to write and keep reference material inside Neconyan. Use it for outlines, character research, drafts, files and linked notes. You don't need an open chat or a model connection to write.
 
 === "Computer"
 
@@ -28,9 +28,9 @@ Notebooks gives you a writing and reference workspace inside Neconyan. Use it fo
 2. Choose **New notebook** for a collection, or start in **Inbox**.
 3. Use **New note**, a template or **Quick note** to begin writing.
 
-**Write** edits Markdown, plain text with simple formatting marks. **Read** shows the formatted result. **Outline** helps you navigate headings. On a phone, use the Notebooks, Note and Details tabs; **Back to chat** returns to the conversation.
+**Write** edits Markdown, which is plain text with simple formatting marks. **Read** shows the formatted result. **Outline** helps you move between headings. On a phone, use the Notebooks, Note and Details tabs. **Back to chat** returns to the conversation.
 
-A property block at the start of a note opens with `---` and closes with `---` or `...`. Without the closing line, Neconyan treats it as ordinary text; lists still continue when you press Enter. Details shows a warning and leaves your text untouched so you can fix it in Write view.
+A property block at the start of a note opens with `---` and closes with `---` or `...`. Without the closing line, Neconyan treats it as ordinary text. Lists still continue when you press Enter. Details shows a warning and leaves your text untouched so you can fix it in Write view.
 
 Watch the save status:
 
@@ -42,11 +42,11 @@ Watch the save status:
 | **Conflict** | Another saved version needs your attention |
 | **Could not save** | Read the error and keep a copy of important text |
 
-You can use ++ctrl+s++ or ++cmd+s++ to save. A browser-local recovery copy is useful, but it isn't an independent backup.
+You can use ++ctrl+s++ or ++cmd+s++ to save. A recovery copy kept in your browser is useful, but it isn't an independent backup.
 
 ## Resolve a conflict
 
-If another device or action changed the note, use **Compare**. Choose **Use server version**, **Save mine as a copy** or **Keep mine** according to which text you want. Don't replace a newer version until you've compared it.
+If another device or action changed the note, use **Compare**. Then choose **Use server version**, **Save mine as a copy** or **Keep mine**, depending on which text you want. Don't replace a newer version until you've compared it.
 
 History and Trash help recover earlier work. Export important notebooks separately as part of your backup routine.
 
@@ -60,7 +60,7 @@ Properties hold tags, aliases, a note type and custom fields. Use folders and cl
 ![[Scene outline]]
 ```
 
-The graph shows saved note links. The property table filters and sorts fields such as tags or note type. JSON Canvas files let you arrange notes and connections visually; use **Save canvas** to save those edits.
+The graph shows saved note links. The property table filters and sorts fields such as tags or note type. JSON Canvas files let you arrange notes and connections visually. Use **Save canvas** to save those edits.
 
 Markdown and supported canvas content can move between Neconyan and compatible tools such as Obsidian. Neconyan doesn't run Obsidian plugins.
 
@@ -79,16 +79,16 @@ Notebook AI permissions begin at **Nothing**. Other choices are **Read** and **R
 
 An assistant proposal appears as **Not saved yet**. Review the current and proposed text, then choose **Save change**, **Not now** or **Decline** where offered.
 
-The setting **Allow assistants to save changes I request** can permit direct saves for eligible notebook actions during a limited period. Scratchpad proposals still require review, and lore publication still requires its own approval. Don't assume one permission changes every writing tool.
+The setting **Allow assistants to save changes I request** can permit direct saves for eligible notebook actions during a limited period. Scratchpad proposals still need review, and lore publication still needs its own approval. Don't assume one permission changes every writing tool.
 
 ## Notes as reference or lore
 
-Reference use is separate from assistant editing permissions. **Not used** is the default; **Available as reference** allows relevant sections, and **Pinned** includes the whole note when it fits. Use **Preview for this chat** to check what would be included.
+Reference use is separate from assistant editing permissions. **Not used** is the default. **Available as reference** allows relevant sections, and **Pinned** includes the whole note when it fits. Use **Preview for this chat** to check what would be included.
 
-**Use as lore** publishes a note or section into a lorebook entry. Merely associating a notebook with a book doesn't publish its contents. Check that the book is attached and enabled for the intended chat afterwards. Sections already published as lore are excluded from note reference selection to avoid duplication.
+**Use as lore** publishes a note or section into a lorebook entry. Associating a notebook with a book doesn't publish its contents by itself. Afterwards, check that the book is attached and enabled for the intended chat. Sections already published as lore are left out of note reference selection to avoid duplication.
 
 ## Import and export
 
-Export a notebook, folder or selected notes as Markdown in a ZIP. The export doesn't include revision history, AI permissions or lore bindings. Importing supported Markdown or ZIP content creates a separate notebook with private defaults, rather than silently granting its notes to assistants.
+Export a notebook, folder or selected notes as Markdown in a ZIP. The export doesn't include revision history, AI permissions or lore bindings. Importing supported Markdown or ZIP content creates a separate notebook with private defaults. It doesn't silently grant its notes to assistants.
 
 For files, advanced properties, canvas details and optional Obsidian Headless support, read the [full notebook reference](https://github.com/platberlitz/Neconyan/blob/staging/docs/notebooks.md).

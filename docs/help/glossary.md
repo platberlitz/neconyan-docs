@@ -8,8 +8,8 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 
 | Term | In plain language |
 | --- | --- |
-| **API** | A defined way for programs to talk to a service, such as requesting a model reply |
-| **API key** | A credential that authorises requests on a service account |
+| **API** | A set way for programs to talk to a service, such as asking for a model reply |
+| **API key** | A credential that lets an app make requests on your service account |
 | **Endpoint** | The service address Neconyan sends a request to |
 | **Provider** | The service or local software supplying the model |
 | **Model** | The system that generates text, images or other output |
@@ -19,22 +19,22 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Connection profile** | A saved model connection setup that you can reuse |
 | **Prompt** | The input sent to a model, including instructions and selected context |
 | **Context** | The material available to the model for one request |
-| **Context capacity** | The model's supported space for input and output together |
+| **Context capacity** | The space a model supports for input and output together |
 | **Token** | A chunk of text used to measure model limits and charges; not the same as a word |
 | **Reply/output limit** | The maximum output requested; it doesn't increase context capacity |
 | **Sampling** | Settings that influence how a model chooses its next text |
-| **Streaming** | Showing output progressively while it arrives |
+| **Streaming** | Showing output bit by bit as it arrives |
 | **Structured Prefill** | A reply pattern that shapes the opening of a Chat Completion reply |
 | **Push notification** | An opt-in device notification Neconyan shows outside the page, such as on the lock screen |
 | **Character card** | A character definition, sometimes embedded inside a PNG image |
 | **CCv3** | Character Card V3, the version 3 card format Catelier saves and exports |
 | **Persona** | The identity you play in a conversation |
 | **Swipe** | An alternative version of a message |
-| **Branch** | A conversation that diverges from an earlier point or starting history |
+| **Branch** | A conversation that splits off from an earlier point or starting history |
 | **Tide** | A chat style that gives each paragraph its own bubble |
 | **Lorebook / World Info** | Entries of world information selected for use in a prompt |
 | **Activation key** | A word or phrase used to make a lore entry relevant |
-| **Author's Note** | Additional guidance about the current scene, style or direction |
+| **Author's Note** | Extra guidance about the current scene, style or direction |
 | **Agent** | A configured helper with instructions, timing and output rules |
 | **Companion** | A helper that makes a separate request and produces a note or tracker |
 | **Position Tracker** | A bundled Companion that groups characters by place and shows their distance from you |
@@ -45,11 +45,11 @@ quote: "Every hobby eventually develops a vocabulary that makes a perfectly norm
 | **Where replies are written** | The setting that chooses the browser or a saved server job for ordinary replies |
 | **Mewmory** | Neconyan's source-backed memory and recall system for saved Roleplay |
 | **Pawspective** | Character-specific interpretations and knowledge within Mewmory |
-| **Embedding** | A numerical representation used to match text by related meaning |
+| **Embedding** | A set of numbers standing for a piece of text, used to match text by related meaning |
 | **Markdown** | Plain text with simple marks for headings, emphasis, links and other formatting |
-| **Macro** | A placeholder or expression replaced with a value when supported text is processed |
+| **Macro** | A placeholder or expression that's swapped for a value when supported text is processed |
 | **Regex** | A pattern for matching and replacing text |
-| **Extension** | Additional code loaded into the app to add or change functionality |
+| **Extension** | Extra code loaded into the app to add or change features |
 | **CSS** | The language used to style the interface |
 | **OOC** | Out of character: discussion outside the roleplayed scene |
 

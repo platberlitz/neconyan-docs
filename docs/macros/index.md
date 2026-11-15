@@ -18,7 +18,7 @@ If your persona is Alex and the character is Miso, it becomes:
 Hello, Alex. I'm Miso.
 ```
 
-You can use macros in fields that prepare prompts, such as character descriptions, greetings, preset prompts and lorebook entries. The field decides when the text is processed. Pasting a macro into an ordinary notebook note does not automatically run it.
+You can use macros in fields that prepare prompts, such as character descriptions, greetings, preset prompts and lorebook entries. The field decides when the text is processed. Pasting a macro into an ordinary notebook note doesn't automatically run it.
 
 ## Try one
 
@@ -27,7 +27,7 @@ You can use macros in fields that prepare prompts, such as character description
 3. Start a new chat with that character.
 4. Check that both names appear correctly.
 
-Changing a card’s greeting affects new chats; it does not rewrite a greeting already saved in a transcript.
+Changing a card’s greeting affects new chats. It doesn't rewrite a greeting already saved in a transcript.
 
 ## Find what you need
 
@@ -53,7 +53,7 @@ For a complete example, start with [ready-to-use examples](recipes.md). For punc
 
 ## Core macros and Macro Enhanced
 
-Simple names such as `{{user}}` and `{{char}}` are built in. Many of the text, maths, pronoun and saved-choice tools come from **Macro Enhanced**, an included extension. Ordinary Roleplay replies can use them; a few kinds of reply build their prompts on the server and can't. See [below](#macro-enhanced-in-roleplay-prompts).
+Simple names such as `{{user}}` and `{{char}}` are built in. Many of the text, maths, pronoun and saved-choice tools come from **Macro Enhanced**, an included extension. Ordinary Roleplay replies can use them. A few kinds of reply build their prompts on the server and can't. See [below](#macro-enhanced-in-roleplay-prompts).
 
 Open **Fine-tuning → Macro Enhanced** in the sidebar. It opens a full page with five tabs:
 
@@ -69,7 +69,7 @@ If its notice asks you to enable experimental macro support, follow the named se
 
 ## Macro Enhanced in Roleplay prompts
 
-Ordinary Roleplay replies build their prompts in the browser. That covers new replies, swipes, regenerations, **Continue**, group turns, **Guided Response** and **Guided Swipe**, so the 102 Macro Enhanced macros in this reference, and macros you make yourself, work in them.
+Ordinary Roleplay replies build their prompts in the browser. That covers new replies, swipes, regenerations, **Continue**, group turns, **Guided Response** and **Guided Swipe**. The 102 Macro Enhanced macros in this reference, and macros you make yourself, work in all of them.
 
 A few kinds of reply still build their prompts on the server, where only core macros run:
 
@@ -84,9 +84,9 @@ If one of those prompts uses a Macro Enhanced macro, for example in a character 
 The {{name}} macro is browser-only in Macro Enhanced and cannot run in a server prompt. Remove it or use a supported core macro.
 ```
 
-Macro Enhanced's settings for working out comparisons in conditions and fixing imported syntax are refused in the same way when a server prompt relies on them.
+Macro Enhanced has settings for working out comparisons in conditions and for fixing imported syntax. A server prompt that relies on either one is refused in the same way.
 
-In server prompts, core macros such as `{{user}}`, `{{char}}`, `{{getvar}}` and `{{setvar}}` still work. Local variable writes are saved together with the accepted reply; a failed request doesn't save them. Global variables can be read, but writing one is refused. Lorebook scanning can read variables but not change them, so put a write in a preset prompt or a message instead. See [Variables](variables.md#in-roleplay-prompts).
+In server prompts, core macros such as `{{user}}`, `{{char}}`, `{{getvar}}` and `{{setvar}}` still work. Local variable writes are saved together with the accepted reply. A failed request doesn't save them. Global variables can be read, but writing one is refused. Lorebook scanning can read variables but not change them, so put a write in a preset prompt or a message instead. See [Variables](variables.md#in-roleplay-prompts).
 
 The Macro Enhanced page shows **Most macros here are browser-only.** Its **Server prompts and saved variables** help gives the full explanation.
 
@@ -95,9 +95,9 @@ The Macro Enhanced page shows **Most macros here are browser-only.** Its **Serve
 
 ## What this reference covers
 
-These pages cover **all 201 primary macros registered by the reviewed Neconyan build**, including **102 from Macro Enhanced**, plus their registered alternative names. Each entry has an example; open **Arguments and other names** for input details and aliases.
+These pages cover **all 201 primary macros registered by the reviewed Neconyan build**, including **102 from Macro Enhanced**, plus their registered alternative names. Each entry has an example. Open **Arguments and other names** for input details and aliases.
 
-The reference was checked against the development version dated **7 October 2026**. Older releases, disabled tools and other extensions can change what is available. Macros you create yourself have names and behaviour chosen by you, so the [custom macro guide](custom.md) explains those separately.
+The reference was checked against the development version dated **7 October 2026**. Older releases, disabled tools and other extensions can change what is available. You choose the names and behaviour of macros you create yourself, so the [custom macro guide](custom.md) explains those separately.
 
 !!! taro "Taro"
-    If a macro stays visible as braces, check its spelling, the field you put it in and whether its included tool is active. Paying for another model reply will not fix a missing macro.
+    If a macro stays visible as braces, check its spelling, the field you put it in and whether its included tool is active. Paying for another model reply won't fix a missing macro.
