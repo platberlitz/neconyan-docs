@@ -73,7 +73,7 @@ If a Guided Generations preview seemed stuck on 'Writing reply…' after you swi
 
 ## A reply comes back empty or stops halfway
 
-From the Neconyan 1.5.5 staging candidate, which is not published yet, an empty Roleplay reply shows **Reply failed** and leaves the chat as it was. A swipe or regenerate puts the previous reply back instead of saving an empty one. An empty reply usually comes from the model or its filters. Try again, check the connection's model and maximum reply length, and look at the service's own status page.
+From Neconyan 1.5.5, an empty Roleplay reply shows **Reply failed** and leaves the chat as it was. A swipe or regenerate puts the previous reply back instead of saving an empty one. An empty reply usually comes from the model or its filters. Try again, check the connection's model and maximum reply length, and look at the service's own status page.
 
 **The AI service stopped sending the reply.** means the service began a reply and then sent nothing for five minutes. That usually points to an overloaded service or a dropped connection, not your prompt. The wait for the first words isn't limited, so a slow local model isn't affected.
 

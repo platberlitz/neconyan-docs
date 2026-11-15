@@ -44,13 +44,13 @@ Choosing a saved swipe doesn't make another model request. Click the swipe count
 
 An empty composer makes Guided Regenerate behave like an ordinary regeneration. Stop current work before editing the history it relies on.
 
-If the main reply has finished, **Stop** ends the remaining Agent work and keeps that reply. From the 1.5.5 candidate, this also covers a server-written reply that runs in several Auto-continue parts. Stopping it keeps the parts that already finished, and a stopped reply stays stopped.
+If the main reply has finished, **Stop** ends the remaining Agent work and keeps that reply. From 1.5.5, this also covers a server-written reply that runs in several Auto-continue parts. Stopping it keeps the parts that already finished, and a stopped reply stays stopped.
 
 A [Quick Reply](../helpers/tools.md#quick-replies) can also steer the next answer. It adds a one-use note that isn't added as a chat message.
 
 ### When a reply fails or comes back empty {#failed-replies}
 
-These apply from the Neconyan 1.5.5 staging candidate, which is not published yet.
+These apply from Neconyan 1.5.5. They aren't in 1.5.4 or earlier.
 
 A reply that arrives with no text at all counts as a failed attempt, even when the AI service reported success. Neconyan shows **Reply failed**. For a swipe or regenerate, the previous reply goes back where it was with its Companion notes, and Agents don't run on the failed attempt. It no longer becomes an empty swipe.
 
@@ -187,7 +187,7 @@ From there you can start or import a chat, export it, rename it, or delete it. J
 
 ## When you leave the page
 
-**In the browser** is the default for ordinary Roleplay. Most single-character replies can be held by the server if the page disconnects, then recovered when you return. After-reply Agents aren't replayed automatically; use **Rerun agents** if needed. From the 1.5.5 candidate, the **Agents did not finish** warning carries its own [**Rerun agents** button](../helpers/agents.md#rerun-agents-on-a-reply).
+**In the browser** is the default for ordinary Roleplay. Most single-character replies can be held by the server if the page disconnects, then recovered when you return. After-reply Agents aren't replayed automatically; use **Rerun agents** if needed. From 1.5.5, the **Agents did not finish** warning carries its own [**Rerun agents** button](../helpers/agents.md#rerun-agents-on-a-reply).
 
 If you return while a reply is still being written, it appears after the last saved message rather than above the greeting. A replacement reply keeps its existing place.
 

@@ -91,7 +91,7 @@ To remove several at once:
 2. Tick the ones to go, or use **Select all**.
 3. Confirm.
 
-The button shows how many are ticked. **Clear selection** unticks them, and **Cancel** leaves the card unchanged. This arrives with the Neconyan 1.5.5 staging candidate, which is not published yet.
+The button shows how many are ticked. **Clear selection** unticks them, and **Cancel** leaves the card unchanged. This arrives with Neconyan 1.5.5. It isn't in 1.5.4 or earlier.
 
 The Purrks travel with the card. Whether each one is switched on belongs to the chat. Keep long-term facts in the description and use Purrks for details you want to control separately.
 

@@ -10,8 +10,8 @@ Mewmory helps a saved Roleplay chat recall earlier events. **Pawspective** adds 
 
 Mewmory is separate from Conversation summaries, Companion trackers and Scratchpad. Start with one short chat so you can check what it remembers.
 
-!!! info "New in the 1.5.5 candidate"
-    The **Story** tab, the Archive tools, the in-chat controls, the estimates and the extra exports below come from the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet. The current published release is [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4), where these controls won't appear.
+!!! info "New in 1.5.5"
+    The **Story** tab, the Archive tools, the in-chat controls, the estimates and the extra exports below are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
 ## Set it up for a chat
 
@@ -116,7 +116,7 @@ Check a doubtful memory against its source passage. Correct objective records se
 
 ## Processing and waiting
 
-Recording and recalling memories can make model requests. **Backup connections** tries your saved profiles in order when a text role fails. Each attempt can add usage. From the 1.5.5 candidate, a backup also takes over when the first connection answers with an error, not only when it can't be reached. Examples are a refused key, a missing model, a rate limit, a server fault or a time-out. Embeddings, the optional numerical representations used for meaning-based search, don't use those fallbacks. Keyword search works without them.
+Recording and recalling memories can make model requests. **Backup connections** tries your saved profiles in order when a text role fails. Each attempt can add usage. From 1.5.5, a backup also takes over when the first connection answers with an error, not only when it can't be reached. Examples are a refused key, a missing model, a rate limit, a server fault or a time-out. Embeddings, the optional numerical representations used for meaning-based search, don't use those fallbacks. Keyword search works without them.
 
 **Use models running on this computer only** restricts the relevant roles to permitted local addresses. Otherwise, remote providers may receive the material they process.
 

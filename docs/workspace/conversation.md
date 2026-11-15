@@ -32,7 +32,7 @@ For a group, choose the members you want. Use **Add member** later to bring in m
 
 ## How messages are laid out
 
-Conversation looks like a messaging app. From the 1.5.5 candidate, the messages sit straight on the background with no framed panel around them, and bubbles have no borders or heavy shadows.
+Conversation looks like a messaging app. From 1.5.5, the messages sit straight on the background with no framed panel around them, and bubbles have no borders or heavy shadows.
 
 Messages from the same sender within 10 minutes form one run and sit close together. The name appears once at the top, with one small sleeping cat for the run. The round avatar appears once at the bottom. Your own avatar isn't shown beside your own messages. Avatars are cropped towards the top of the picture, so portrait cards usually show the face.
 
@@ -42,7 +42,7 @@ If your active persona has a Scenario Note with its own avatar, your new message
 
 The time, read receipt, token counts and message menu sit in one row along the bubble's bottom edge. The header label shows the branch name when you are on a branch. On a phone the header is one row. **Pals**, **Add member**, **New branch** and **DM settings** are icon buttons beside the avatar and name. Character portraits are requested at phone size.
 
-The screenshots above show this layout. It's in the Neconyan 1.5.5 staging candidate, which is not published yet. [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4), the current published release, still draws the older framed layout.
+The screenshots above show this layout. It's in Neconyan 1.5.5. Version 1.5.4 and earlier still draw the older framed layout.
 
 To keep long threads quick, Conversation shows the most recent 200 messages at a time, or 25 when [Low-memory mode](appearance.md#low-memory-mode) is active. To page through history, use **Older messages** at the top of the thread, and **Newer messages** or **Latest messages** at the bottom. You keep your reading position.
 
@@ -54,7 +54,7 @@ Open **DM settings**, then **Timing**. In a group, the same button opens **Group
 
 Token counts for the reply and its thinking appear beside the speaker's name either way, labelled **Output tokens** and **Thought tokens**. Tokens are the units of text a model counts. The counts update while the reply is written and stay on saved replies. When one reply is split into several bubbles, its thinking and thought count appear on the first bubble only. Thought counts depend on the provider reporting the model's thinking.
 
-The typing indicator is back in the 1.5.5 candidate. A typing bubble and '*Name* is writing...' in the header appear as soon as the reply starts and stay until the message lands, including between split bubbles and with **Streaming** off. The first five seconds after you send still show nothing. That's the usual pause while the server waits to see whether you're sending more.
+The typing indicator is back in 1.5.5. A typing bubble and '*Name* is writing...' in the header appear as soon as the reply starts and stay until the message lands, including between split bubbles and with **Streaming** off. The first five seconds after you send still show nothing. That's the usual pause while the server waits to see whether you're sending more.
 
 If a provider starts a reply and then sends nothing for five minutes, the reply fails with **The AI service stopped sending the reply.** instead of waiting forever.
 

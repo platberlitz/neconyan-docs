@@ -68,8 +68,8 @@ Continuity Corrector starts with twelve recent messages and can use active lore,
 
 ## Translate every reply {#translator}
 
-!!! info "New in the 1.5.5 candidate"
-    Translator, the **Rerun agents** button under the saved-reply warning and the version 2 templates below come from the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet. The current published release is [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4).
+!!! info "New in 1.5.5"
+    Translator, the **Rerun agents** button under the saved-reply warning and the version 2 templates below are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. They won't appear in 1.5.4.
 
 **Translator** rewrites each new reply into the language you choose.
 

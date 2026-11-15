@@ -22,8 +22,8 @@ These controls change how a request is built and how the model is asked to write
 
 ## Presets and prompts {#presets-and-prompts}
 
-!!! info "Changed in the 1.5.5 candidate"
-    This section describes the Presets page in the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet. In the current published release, [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4), the same actions sit behind unlabelled icons and prompts are added from the row under the list.
+!!! info "Changed in 1.5.5"
+    I've reviewed this section against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. In 1.5.4, the same actions sit behind unlabelled icons and prompts are added from the row under the list.
 
 The preset buttons are labelled now: **Save**, **Save as**, **Rename**, **Import**, **Export** and **Delete**. **Save** overwrites the selected preset. **Save as** with a new name keeps the original.
 

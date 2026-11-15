@@ -22,8 +22,8 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
     <figcaption>A round table keeps each assistant's reply separate.</figcaption>
     </figure>
 
-!!! info "New in the 1.5.5 candidate"
-    Quick prompts of your own, typed tools, dictation, **Read aloud**, **Read links**, session pins, branching, export choices, **Review all**, **Discuss these answers**, **Saved setups**, **Pinned note**, **Rehearse next reply** and the extra change cards come from the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet. The current published release is [1.5.4](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4), where these controls won't appear.
+!!! info "New in 1.5.5"
+    Quick prompts of your own, typed tools, dictation, **Read aloud**, **Read links**, session pins, branching, export choices, **Review all**, **Discuss these answers**, **Saved setups**, **Pinned note**, **Rehearse next reply** and the extra change cards are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
 ## Open a discussion
 
@@ -132,7 +132,7 @@ Choose a provider under **Context → Web search**. Brave, Exa and Tavily need t
 
 Open **+** (Message options) beside the message box and turn on **Web search**. The choice is saved with the session.
 
-From the 1.5.5 candidate, the reply model writes the search queries itself, using your message and the last few Scratchpad messages. It reads the results and searches again until it has enough. It stops after four rounds or ten queries. The search service receives only those queries. Your chat, cards, persona and notes never go to it. **Results to read** is the total kept across every search, from 1 to 30, and starts at 5. Press **Save web search** after changing the provider settings.
+From 1.5.5, the reply model writes the search queries itself, using your message and the last few Scratchpad messages. It reads the results and searches again until it has enough. It stops after four rounds or ten queries. The search service receives only those queries. Your chat, cards, persona and notes never go to it. **Results to read** is the total kept across every search, from 1 to 30, and starts at 5. Press **Save web search** after changing the provider settings.
 
 The research runs once for the whole round table. Replies cite numbered results and keep a folded **Sources** list with the queries used. If search fails, the assistants can still answer, with a notice. **Stop** cancels an active search too. Search providers may charge for each search, and several searches per message add up.
 
@@ -152,7 +152,7 @@ Once at least two assistants have answered your latest message, **Discuss these 
 
 ## Keep alternative replies
 
-**Try again** saves a new version of that assistant's reply instead of discarding the previous one. From the 1.5.5 candidate it works on any reply to one of your messages, not only the latest, and later messages stay as they are. Use the arrows and version counter below the reply to choose an alternative. A reply can keep up to 50 versions. Other round-table answers stay as they were.
+**Try again** saves a new version of that assistant's reply instead of discarding the previous one. From 1.5.5 it works on any reply to one of your messages, not only the latest, and later messages stay as they are. Use the arrows and version counter below the reply to choose an alternative. A reply can keep up to 50 versions. Other round-table answers stay as they were.
 
 Under **Context → Reply prefills**, **Reply prefill** starts the assistant's answer with text you supply. It applies to every assistant in the session, including new reply versions, and needs a connection that supports prefills. Leave it empty for normal replies. **Kimi K3 / K3.1 partial prefill** takes precedence for those models. An unclosed `<think>` only starts the thinking and isn't added to the saved reply.
 
@@ -195,7 +195,7 @@ With **Current preset** shared in Roleplay, the assistant can replace one field 
 
 Review the change as usual. **Save change** writes the selected preset, including its current settings, so other chats using that preset get the change too. Sampler, connection and other preset settings aren't available to the proposal, and each proposal changes one field. If the original preset is no longer selected or shared, the review refuses to save.
 
-The 1.5.5 candidate adds more kinds of change card. Each needs its box ticked under **Context → Also share**, starts off, and stays ticked while you review:
+Version 1.5.5 adds more kinds of change card. Each needs its box ticked under **Context → Also share**, starts off, and stays ticked while you review:
 
 | Share | The assistant can suggest… | It can't… |
 | --- | --- | --- |

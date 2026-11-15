@@ -11,8 +11,8 @@ quote: 'Choose what travels, save on both sides, then transfer. A newer date alo
 !!! info "Available in 1.5.4"
     I've reviewed this guide against the published [Neconyan 1.5.4 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at commit **e1f05ec6** on 11 November 2026.
 
-!!! info "Changed in the 1.5.5 candidate"
-    The fixes marked 1.5.5 below come from the Neconyan 1.5.5 staging candidate at commit **680a05f1**, which I reviewed on 15 November 2026. Version 1.5.5 is not published yet; 1.5.4 is still the current published release. The screenshots are from 1.5.4.
+!!! info "Changed in 1.5.5"
+    I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. The fixes marked 1.5.5 below aren't in 1.5.4 or earlier. The screenshots are from 1.5.4.
 
 === "On desktop"
 
@@ -55,7 +55,7 @@ Enable **Encrypted file**, download a package from one installation, move the fi
 
 This method needs no shared online storage or incoming connection to either installation.
 
-In 1.5.4 a package larger than roughly 5 MiB could fail to import with a generic message, even though it was within the limits. The 1.5.5 candidate imports packages up to the documented limits and finishes big imports much sooner. After a plain export, **Last transfer** says **Encrypted package exported**.
+In 1.5.4 a package larger than roughly 5 MiB could fail to import with a generic message, even though it was within the limits. Version 1.5.5 imports packages up to the documented limits and finishes big imports much sooner. After a plain export, **Last transfer** says **Encrypted package exported**.
 
 An export still stops if a selected file is over 8 MiB, since a partial export would be worse, but the message now says so. Chats left behind by a deleted character stay local and are skipped, where they used to block every export.
 
@@ -79,9 +79,9 @@ Each encrypted snapshot is limited to **900 KiB**, with at most **32 retained sy
 2. On the receiver, enter its address as reachable from the sender, then press **Create pairing code**.
 3. On the sender, paste and save that code, then press **Sync now**.
 
-Both installations must be running. The sender must be able to reach the receiver. A pairing code doesn't make a private server reachable. From the 1.5.5 candidate the exchange may take up to five minutes, because the receiver imports the package before it answers. 1.5.4 gave up after 20 seconds. A refusal names the receiving installation and what to check there, such as Direct pairing being switched off, a different passphrase or an expired code. A native phone app may work only as the sender. Use HTTPS. HTTP requires an explicitly permitted local-network or loopback address.
+Both installations must be running. The sender must be able to reach the receiver. A pairing code doesn't make a private server reachable. From 1.5.5 the exchange may take up to five minutes, because the receiver imports the package before it answers. 1.5.4 gave up after 20 seconds. A refusal names the receiving installation and what to check there, such as Direct pairing being switched off, a different passphrase or an expired code. A native phone app may work only as the sender. Use HTTPS. HTTP requires an explicitly permitted local-network or loopback address.
 
-Codes last **30 days**, with at most **four active codes**. Expired codes are no longer listed as live in the 1.5.5 candidate. Revoke a code when it is no longer needed. Disabling pairing revokes all its codes. Revoking a code stops later transfer phases, but can't take back data already published.
+Codes last **30 days**, with at most **four active codes**. Expired codes are no longer listed as live in 1.5.5. Revoke a code when it is no longer needed. Disabling pairing revokes all its codes. Revoking a code stops later transfer phases, but can't take back data already published.
 
 You don't put a Neconyan basic-auth password in the pairing code. A separate reverse proxy, the service in front of your server, may need an exception for the exact pairing route. Keep other access restrictions in place. Host and IP admission checks still apply.
 
@@ -97,7 +97,7 @@ A recovery package made from preserved copies can restore content on the same in
 
 Keep the original method enabled and press **Recover** before starting another import. A recovery record is saved before publication. Edits made locally while a transfer was interrupted can become conflicts. They aren't overwritten. An active reply, reset or incompatible account operation can stop publication.
 
-Network operations time out after 20 seconds, apart from the pairing exchange in the 1.5.5 candidate, which gets five minutes. Retry manually after checking the connection. General limits are 1,000 files, 8 MiB per file, 32 MiB expanded data and a 60 MiB encrypted request. Images are limited to 64 million pixels. Local recovery storage has a 160 MiB allowance.
+Network operations time out after 20 seconds, apart from the pairing exchange in 1.5.5, which gets five minutes. Retry manually after checking the connection. General limits are 1,000 files, 8 MiB per file, 32 MiB expanded data and a 60 MiB encrypted request. Images are limited to 64 million pixels. Local recovery storage has a 160 MiB allowance.
 
 ## Passphrases and stored packages
 
