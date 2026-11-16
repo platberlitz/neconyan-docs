@@ -11,15 +11,15 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
 === "Computer"
 
     <figure class="screenshot" markdown>
-    [![Agents on desktop with Proofreader switched on](../assets/images/screenshots/desktop-agents.webp)](../assets/images/screenshots/desktop-agents.webp)
+    [![Agents on desktop, with type filters and tracker controls](../assets/images/screenshots/desktop-agents.webp)](../assets/images/screenshots/desktop-agents.webp)
     <figcaption>Start with one helper and check its Quick settings.</figcaption>
     </figure>
 
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Agents on a phone with Proofreader switched on](../assets/images/screenshots/phone-agents.webp)](../assets/images/screenshots/phone-agents.webp)
-    <figcaption>Apply to reply runs the selected helper on an existing reply.</figcaption>
+    [![Agents on a phone, with the library, helper suggestions and search](../assets/images/screenshots/phone-agents.webp)](../assets/images/screenshots/phone-agents.webp)
+    <figcaption>Browse library adds helpers. Help me choose recommends some for your chat.</figcaption>
     </figure>
 
 ## Start with one helper
@@ -110,7 +110,7 @@ Open **Agent changes** on the edited message to compare the removed and added te
     <figcaption>Check the edit and undo it from the same window.</figcaption>
     </figure>
 
-This example is staged. It sends a fixed sample response through the real Agent workflow, including working Undo and Redo. In normal use your connected model writes the edit, and each pass can cost another request. The example shortens repeated gestures and corrects 'Its' and 'should of' without changing what happens in the scene.
+This example is staged. It sends a fixed sample response through the real Agent workflow, including working Undo and Redo. In normal use your connected model writes the edit, and each pass can cost another request. The example removes repeated descriptions and shortens a gesture without changing what happens in the scene.
 
 ## Short notes before a reply
 

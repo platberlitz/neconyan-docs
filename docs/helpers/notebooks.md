@@ -18,7 +18,7 @@ Notebooks is a place to write and keep reference material inside Neconyan. Use i
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Notebooks on a phone, displaying a note in its compact editor](../assets/images/screenshots/phone-notes.webp)](../assets/images/screenshots/phone-notes.webp)
+    [![Notebooks on a phone, displaying a formatted note](../assets/images/screenshots/phone-notes.webp)](../assets/images/screenshots/phone-notes.webp)
     <figcaption>Phone tabs separate the notebook list, current note and details.</figcaption>
     </figure>
 
