@@ -23,15 +23,15 @@ Catelier is where you build character cards. Write one yourself, ask a model to 
 === "Computer"
 
     <figure class="screenshot" markdown>
-    [![Catelier's shared Writing instructions on desktop](../assets/images/screenshots/desktop-catelier.webp)](../assets/images/screenshots/desktop-catelier.webp)
-    <figcaption>Writing instructions are saved to your account and used by every Catelier draft.</figcaption>
+    [![Catelier on desktop with Mara Fenwick's character dossier](../assets/images/screenshots/desktop-catelier.webp)](../assets/images/screenshots/desktop-catelier.webp)
+    <figcaption>Keep the character's background, voice and opening scene in a draft.</figcaption>
     </figure>
 
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Catelier's shared Prefill and Stream live output settings on a phone](../assets/images/screenshots/phone-catelier.webp)](../assets/images/screenshots/phone-catelier.webp)
-    <figcaption>Prefill and Stream live output are shared too, so the same choices follow your drafts on a phone.</figcaption>
+    [![Catelier on a phone with a demonstration character dossier](../assets/images/screenshots/phone-catelier.webp)](../assets/images/screenshots/phone-catelier.webp)
+    <figcaption>Work on the dossier before filling in the rest of the card.</figcaption>
     </figure>
 
 ## Ask for help with the writing
