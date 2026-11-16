@@ -68,24 +68,26 @@ The desktop and phone lists are separate, and they are saved in this browser rat
 
 Simple Mode is opt-in. Existing accounts keep their current layout. On a new account, Nori asks **Want to keep things simple?** before the First paws tour. **Yes, keep it simple** turns on Simple Mode and shortens the tour. **No, show me everything** keeps the full sidebar. You can also use **Settings → Appearance → Simple Mode** later.
 
-Simple Mode keeps Home, Characters, Connections, Agents, Lorebooks, Notebooks, Scratchpad, Presets, Search, Settings and the composer. It hides Mewmory, Chat Archive, Extensions, the other Fine-tuning pages, the mode switcher, the reasoning-effort button, the wand and image buttons beside the composer, Guided Generations and the rarer items in **Chat tools**.
+I'd start with Simple Mode if you're new. It keeps Home, Characters, Connections, Agents, Lorebooks, Notebooks, Scratchpad, Gallery, Presets, Persona, **Find characters**, Search, Settings and the composer. **Memory** opens **Story so far**, and **Updates** opens the updater without leaving Simple Mode.
 
-The **Characters & Lore**, **Appearance** and **Troubleshooting** sidebar groups are hidden too, including Persona, Character Expressions and Quick Image Gen. **Quick Actions** stays in the sidebar, and its pen still opens the list so you can keep it to the shortcuts you use. The top-bar Extensions, Server and Console Logs tabs, Recent's Chat Archive button, and Mass delete and Auto-name controls are hidden as well. Nothing is deleted or turned off. Extensions you installed, active lore and running Agents are not removed or disabled.
+Connections shows provider, key, model, **Connect** and **Test Message**, with the rest behind **More connection options**. **Memory** keeps the summary switch, **Summarise now** and the latest summary together, with a link to Mewmory when you want more control.
+
+The other **Fine-tuning**, **Characters & Lore**, **Appearance** and **Troubleshooting** pages are hidden, along with Chat Archive, Extensions, the mode switcher and the rarer chat controls. **Quick Actions** stays in the sidebar, and its pen still opens the list so you can keep it to the shortcuts you use. Nothing is deleted or turned off. Extensions you installed, active lore and running Agents stay enabled.
 
 Press **Show all features** in the workspace sidebar to restore everything. The same switch in Settings turns Simple Mode on again, and the choice is saved for your account.
 
 === "Computer"
 
     <figure class="screenshot" markdown>
-    [![Simple Mode on desktop, with a shorter workspace sidebar](../assets/images/screenshots/desktop-simple.webp)](../assets/images/screenshots/desktop-simple.webp)
-    <figcaption>Simple Mode keeps the chat and the tools you use most. <strong>Show all features</strong> restores the full sidebar.</figcaption>
+    [![Simple Mode on desktop, showing the shorter Connections page](../assets/images/screenshots/desktop-simple.webp)](../assets/images/screenshots/desktop-simple.webp)
+    <figcaption>Connections keeps the provider, key, model, Connect and Test Message together. <strong>More connection options</strong> opens the rest.</figcaption>
     </figure>
 
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Simple Mode on a phone, with fewer composer controls](../assets/images/screenshots/phone-simple.webp)](../assets/images/screenshots/phone-simple.webp)
-    <figcaption>Fewer controls beside the message box. Your other features stay enabled.</figcaption>
+    [![Simple Mode on a phone, showing the shorter Connections page](../assets/images/screenshots/phone-simple.webp)](../assets/images/screenshots/phone-simple.webp)
+    <figcaption>The same short connection form on a phone, with OpenRouter sign-in beneath the key box.</figcaption>
     </figure>
 
 ## Search everything
