@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-I captured all twenty-four screenshots on 16 November 2026 from Neconyan at `49d60b17`, using the default Calico Dark accent. The app README uses identical copies. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+I captured all twenty-four screenshots on 16 November 2026 from Neconyan at `49d60b17`, using the default Calico Dark accent and Background Visibility at 0%. The app README uses identical copies. The Proofreader example uses a fixed sample response through the real Agent workflow, with edit, Undo and Redo checked at both widths. Capture provenance and browser settings are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 
