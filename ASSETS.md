@@ -4,11 +4,11 @@ The bundled artwork was copied from [Neconyan at 6e0269d0](https://github.com/pl
 
 ## Screenshots
 
-I captured all twenty-four screenshots on 16 November 2026 from [Neconyan at 49d60b17](https://github.com/platberlitz/Neconyan/tree/49d60b1740f00ee27a5a0b39f255f969748c2c36), the 1.5.6 staging build. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image. The app README and this handbook use identical copies.
+I captured all twenty-four screenshots on 17 November 2026 from [Neconyan at 31d628fa](https://github.com/platberlitz/Neconyan/tree/31d628fa), the 1.5.6 staging build with the tour card fix for short phone screens. Home, Roleplay, Catelier, Simple Mode, Conversation, Meower, Story Mode, Notebooks, Scratchpad, Agents, Proofreader and Device sync each have a desktop and phone image. The app README and this handbook use identical copies.
 
 The captures use disposable demonstration data: Calico Dark with its default accent, bundled assistants and staged chats, posts, notes, a character dossier and a Scratchpad discussion. I set Background Visibility to 0% for opaque reading panels. The default colours and visibility setting were checked before every capture. No personal account data was used. The Proofreader example runs the real Agent workflow with one intercepted provider request returning a fixed sample response; its edit, Undo and Redo were checked again at both widths. It isn't a live model demonstration. No external model requests were made.
 
-These replace the twenty-two images from the 1.5.4 candidate and the two Conversation images from 1.5.5 staging. Neconyan 1.5.5 remains the published release; the screenshot refresh doesn't change the guides' recorded review version.
+These replace the 16 November captures from `49d60b17`. Neconyan 1.5.5 remains the published release; the screenshot refresh doesn't change the guides' recorded review version.
 
 I used Playwright with Chromium at 1280×900 for desktop with a pixel ratio of 1, and 393×852 with touch emulation for phone at a pixel ratio of 1.5. The saved images are 1280×900 and 590×1278 pixels. These are browser viewport captures, not physical-phone or Safari verification. I converted them to WebP at quality 80, method 6, without resizing or compositing interface elements.
 

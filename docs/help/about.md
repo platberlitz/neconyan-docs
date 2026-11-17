@@ -30,7 +30,7 @@ The practical guides focus on common tasks and link to longer references when yo
 
 ## Screenshots and artwork
 
-I refreshed all twenty-four workspace screenshots on 16 November 2026 from [Neconyan at 49d60b17](https://github.com/platberlitz/Neconyan/tree/49d60b1740f00ee27a5a0b39f255f969748c2c36), the 1.5.6 staging build. They use the default Calico Dark colours, Background Visibility at 0%, demonstration content and the bundled assistants. Some details may look different in the published 1.5.5 release. The Proofreader example uses a fixed sample response through the real edit-history workflow, with edit, Undo and Redo checked at both widths. It isn't a live model conversation.
+I refreshed all twenty-four workspace screenshots on 17 November 2026 from [Neconyan at 31d628fa](https://github.com/platberlitz/Neconyan/tree/31d628fa), the 1.5.6 staging build. They use the default Calico Dark colours, Background Visibility at 0%, demonstration content and the bundled assistants. Some details may look different in the published 1.5.5 release. The Proofreader example uses a fixed sample response through the real edit-history workflow, with edit, Undo and Redo checked at both widths. It isn't a live model conversation.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is written guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 
