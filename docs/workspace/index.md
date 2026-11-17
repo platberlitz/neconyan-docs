@@ -29,6 +29,11 @@ The **Fine-tuning** area contains model presets, sampling, formatting, regex scr
 
 **Appearance** holds **Background**, **Dialogue Colors**, **Termeownal UI**, **CSS Snippets** and **Regex Agent Themes**. **Troubleshooting** holds **Server**, **Console Logs**, **Debugger** and **Report an Issue**. **Settings** includes appearance, device behaviour, account controls and import tools. **Extensions → Built-in** opens each bundled tool's settings. **Extensions → Manage extensions** controls whether extensions are enabled. A switched-off sidebar tool shows **Off** and opens **Manage extensions** to turn it on.
 
+<figure class="screenshot screenshot--phone" markdown>
+[![The phone workspace menu, with three stacked cat heads next to Extensions](../assets/images/screenshots/phone-workspace-menu.webp)](../assets/images/screenshots/phone-workspace-menu.webp)
+<figcaption>Open the workspace menu to find Extensions. The newer Catline icon shown here is a pile of cats.</figcaption>
+</figure>
+
 ## Settings {#settings}
 
 **Settings** sorts its drawers into four tabs. On a phone, a **Settings category** list replaces the tabs.
