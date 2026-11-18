@@ -12,7 +12,7 @@ quote: 'Choose what travels, save on both sides, then transfer. A newer date alo
     I've reviewed this guide against the published [Neconyan 1.5.4 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.4) at commit **e1f05ec6** on 11 November 2026.
 
 !!! info "Changed in 1.5.5"
-    I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. The fixes marked 1.5.5 below aren't in 1.5.4 or earlier. I refreshed the screenshots on 17 November from the 1.5.6 staging build; see [About these docs](about.md#screenshots-and-artwork) for the capture source.
+    I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. The fixes marked 1.5.5 below aren't in 1.5.4 or earlier. I refreshed the screenshots on 18 November from a 1.5.6 staging build; see [About these docs](about.md#screenshots-and-artwork) for the capture source.
 
 === "On desktop"
 

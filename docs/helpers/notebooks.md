@@ -11,15 +11,15 @@ Notebooks is a place to write and keep reference material inside Neconyan. Use i
 === "Computer"
 
     <figure class="screenshot" markdown>
-    [![Notebooks on desktop, with the notebook list and a written note](../assets/images/screenshots/desktop-notes.webp)](../assets/images/screenshots/desktop-notes.webp)
+    [![Notebooks on desktop, with the notebook list, a note in Read view and its properties](../assets/images/screenshots/desktop-notes.webp)](../assets/images/screenshots/desktop-notes.webp)
     <figcaption>A staged notebook. Desktop layouts can sit beside the chat or use the full width.</figcaption>
     </figure>
 
 === "Phone"
 
     <figure class="screenshot screenshot--phone" markdown>
-    [![Notebooks on a phone, displaying a formatted note](../assets/images/screenshots/phone-notes.webp)](../assets/images/screenshots/phone-notes.webp)
-    <figcaption>Phone tabs separate the notebook list, current note and details.</figcaption>
+    [![Notebooks on a phone, with a note open in Write view and Note tools closed](../assets/images/screenshots/phone-notes.webp)](../assets/images/screenshots/phone-notes.webp)
+    <figcaption>Phone tabs separate the notebook list, current note and details. Note tools stays folded until you need it.</figcaption>
     </figure>
 
 ## Create and save a note
@@ -43,6 +43,17 @@ Watch the save status:
 | **Could not save** | Read the error and keep a copy of important text |
 
 You can use ++ctrl+s++ or ++cmd+s++ to save. A recovery copy kept in your browser is useful, but it isn't an independent backup.
+
+### On a phone {#phone-layout}
+
+The 1.5.6 candidate gives the note more room on a phone. The desktop layout is unchanged. Version 1.5.6 is not published yet; in 1.5.5 these controls are all shown at once.
+
+- Search and **New note** stay above the note list. **Notebook options** holds the notebook picker, folders, favourites, recent notes and notebook tools such as Graph and Export.
+- In **Note**, **Write**, **Read** and **Outline** stay visible. **Note tools** holds formatting, folding, discussion, full screen and Trash.
+- **Exit full screen** stays visible even when **Note tools** is closed.
+- **Help** in the header shows Miso's tour invitation.
+
+These panels start closed each time you open Notebooks. Switching panes keeps your draft.
 
 ## Resolve a conflict
 

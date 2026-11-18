@@ -22,6 +22,9 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
     <figcaption>Browse library adds helpers. Help me choose recommends some for your chat.</figcaption>
     </figure>
 
+!!! info "New in the 1.5.6 candidate"
+    **Clothing Tracker**, **Skip user messages**, the **On Companions** picker for selected Agents, **Rerun agents** on a **Reply interrupted** notice, the Companion panel's jump buttons and Memory Shard's new defaults come from the Neconyan 1.5.6 staging candidate at commit **00be4b8e**, which I reviewed on 18 November 2026. Version 1.5.6 is not published yet. The current published release is [1.5.5](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5), where these won't appear.
+
 ## Start with one helper
 
 1. Open **Agents** and choose a helper. **Help me choose** asks a few questions and recommends some. **Browse library** has more.
@@ -62,6 +65,8 @@ These arrive switched off. Each enabled rewriter can add a model request after t
 
 They change the new reply, not earlier messages or the saved card. **Recent messages to read** gives a helper earlier context. Zero shares only the reply being processed. A model can still get the edit wrong, so read it before continuing.
 
+To let a rewriter read only the characters' replies, tick **Skip user messages in recent messages** in its editor. In **Quick settings** it's **Skip user messages**, beside **Recent messages to read**. With 10 messages, the helper then reads the last ten replies. It's off to begin with and saved for each Agent. The reply being processed, the card, persona and lore are unchanged.
+
 Continuity Corrector starts with twelve recent messages and can use active lore, notes, trackers and prepared Mewmory facts. When Continuity Companion is also on, they share checks and completed fixes. Knowledge Guard reads saved Secrets Tracker values without rerunning it.
 
 **Keep the original when an Agent refuses** is on to begin with, under **Connections & defaults → Context & notifications**. With it on, a helper's refusal doesn't replace your reply. If the main reply is itself a refusal, after-reply helpers are skipped.
@@ -90,9 +95,13 @@ Two bundled templates have a version 2. If you have version 1 installed, the Age
 - **Prompt Adherence Checker** also reads the active instructions that Agents and the Author's Note add before and after the main prompt, not only your enabled preset prompts. It still ignores switched-off and filtered-out prompts.
 - **Memory Shard** is a library Companion that writes a compact summary once the chat reaches about 30,000 tokens, the units of text a model counts. Version 2 uses about a third fewer tokens. When [Mewmory](mewmory.md) is on, it reads Mewmory's saved story memory so the two agree.
 
+From the 1.5.6 candidate, Memory Shard is switched on for new accounts. Older accounts switch it on in Agents. After a summary it waits until the chat has grown by about another 30,000 tokens before writing the next one, instead of running after every reply. The messages a finished summary covers are then hidden from the model. They stay readable in the chat, Mewmory still reads them, and each message's eye button shows it to the model again. Nothing is hidden when a run fails or comes back empty. In Simple Mode, **Memory** in the sidebar opens **Story so far** with the same switch and **Summarise now**.
+
 ## See Proofreader's changes
 
 Find **Proofreader** in **Manage agents**, check its **Quick settings**, then switch it on with **Agents On**. It runs after a reply. **Apply to reply** on its card lets you try it on an existing reply first.
+
+From the 1.5.6 candidate, an enabled Proofreader also checks the message an impersonation writes for you, including Guided Impersonate. The corrected draft goes into the message box, and nothing in the chat changes.
 
 Open **Agent changes** on the edited message to compare the removed and added text. **Undo** restores the previous text. **Redo** reapplies the edit. I'd read the comparison before continuing the scene.
 
@@ -133,6 +142,7 @@ Start with one. Several helpers doing the same job can add cost without improvin
 - **Vitals** tracks estimated health, hunger, thirst, energy and morale. Its latest card feeds the next reply by default. Turn off **Feed recent notes into future generations** to keep it display-only.
 - **Parallel Off-Screen (Extended)** writes short scenes about absent characters. Choose it or the shorter version, not both.
 - **Chatroom** gives the scene a reacting audience. **Send reply** asks that audience to answer without adding your line to the main chat. Poll choices fill its reply box but don't send themselves.
+- **Clothing Tracker**, new in the 1.5.6 candidate, keeps track of what your persona and everyone still in the scene is wearing. It comes installed but switched off, next to Position Tracker. After each reply it shows a **Scene wardrobe** card with one tag per garment, carries unchanged outfits forward and drops anyone who has left. Its notes aren't fed into the story by default. If you delete it, add it again from **Browse library**.
 
 Companion notes appear in the **Companion panel**. Each usually needs its own request. Their estimates are observations written by the model, not fixed game rules.
 
@@ -159,6 +169,10 @@ Sometimes a Roleplay reply is saved but its Agent work doesn't finish, for examp
 - leaves out manual, hidden and switched-off Companions
 
 The warning stays open until you choose, and **×** declines. If you've swiped or changed the reply since, Neconyan says so. Use the message menu's button instead, which reruns after-reply Agents but not Companions.
+
+From the 1.5.6 candidate, a **Reply interrupted** notice offers the same **Rerun agents** button when the text written so far was saved in the chat and you have Agents or automatic Companions that would run on it. That notice also stays open until you press the button or close it. Otherwise it's the plain notice, as before. Both buttons now also run automatic Companions when the reply's editor was open and you saved it first.
+
+If a provider's content filter blocks one Companion, the 1.5.6 candidate keeps that error on its own card. The other Companions still finish, and a Companion waiting for the blocked one says why it couldn't run. A handled refusal like this no longer brings up **Agents did not finish**.
 
 The rerun starts from the reply as it was before its earlier rewrites, and keeps your manual edits and tracker repairs. It replaces appended blocks rather than duplicating them. If you edit, swipe or leave that reply while the rerun works, its result won't overwrite the changed chat. Agent change history offers **Undo**. Rerunning can cost another request per helper.
 
@@ -189,13 +203,30 @@ A failed after-reply helper is retried once. If it still fails, the completed re
 
 Select two or more Companions in **Manage agents → Batch & connect**. **Batch in one request** groups compatible connections, models and context settings. Incompatible helpers still run separately.
 
-Sharing latest notes is different from waiting: it reads completed notes that are already available. Use a dependency when one helper needs a fresh result from another. Check each Companion's connections in **Quick settings**, save, then try a turn before building a long chain.
+Sharing latest notes is different from waiting: it reads completed notes that are already available. Use a dependency when one helper needs a fresh result from another. Check each Companion's connections in **Quick settings**, save, then try a turn before building a long chain. From the 1.5.6 candidate, choosing a Companion under **Runs after** there takes effect on the next reply in the same chat. Removing the last link stops the waiting again.
 
 [Agent placeholders](../macros/placeholders.md#agents-and-companions) can read prepared memory and group-card fields. They don't perform a new memory search.
+
+### Let selected Agents process Companion notes {#on-companions}
+
+After-reply Agents can also rewrite or add to new Companion notes. To set that up for several at once in the 1.5.6 candidate:
+
+1. Open **Manage agents**, press **Select** and tick the after-reply Agents.
+2. Choose **More changes → On Companions**.
+3. Pick **Chosen companions** and tick the Companions whose notes they should process, or **All companions** to include Companions you add later. **Keep each agent’s choices** switches processing on and leaves each Agent's saved list alone.
+4. Press **Save changes**.
+
+This only affects new notes. Saving doesn't rerun old ones or switch on a disabled Agent. The selected Agents still need instructions that rewrite or add text, or Agent Regex. Each pass can make another model request.
+
+### Read replies only {#skip-user-messages}
+
+A Companion's editor has **Skip user messages** beside **Chat messages to read**, and **Quick settings** has the same choice. With it on, the count covers replies only, so 10 means the last ten replies. It's off to begin with and works the same in the browser and on the server.
 
 ## History and visibility
 
 Open the **Companion panel** from its floating or top-bar button. **Search companions and notes** filters the view without running anything. **More tools → Companion activity** shows what ran.
+
+When the panel is long enough to scroll, the 1.5.6 candidate adds two round arrow buttons near its bottom-right corner: **Jump to top** and **Jump to bottom**. The one that has nothing left to do fades out, and both hide when the panel doesn't scroll.
 
 Completed notes appear as each helper finishes. **Live reply** marks a preview. Editing it, rerunning it and sending it to a lorebook wait until it's saved. The model label describes the completed request, not your current selection.
 

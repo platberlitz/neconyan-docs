@@ -70,6 +70,8 @@ Switch Dice Roller off in **Extensions → Manage extensions** under Built-in fe
 
 **Pawthfinder** chooses relevant lore with a separate decision model. In its settings, choose a **Jev / decision model preset**, then connect its endpoint or a saved profile. Jev scores which entries to retrieve. Summary writing still uses your chat model. **Decision protocol** must match the provider's decision endpoint or chat-completion service.
 
+From the 1.5.6 candidate, the presets include Nano-GPT's decision models, such as Jev, Kev, d3 and SubQ. A Nano-GPT preset fills in its address and model. Save your Nano-GPT key under **API key for this endpoint**. It needs Nano-GPT API access and credits.
+
 If you want Pawthfinder to choose the lore by itself, enable **Disable World Info keyword activation**. Otherwise ordinary keyword matches can add entries too. Start with the preset's threshold and change one setting at a time.
 
 **Reuse the lore when swiping** is on by default and needs **Tool Mode** or **Predictive Pipeline**. A swipe or regenerate then keeps the lore Pawthfinder already picked for the reply you're changing. You don't pay its decision model to choose that lore again. Turn it off to pick lore fresh for every swipe. Lore is still picked again after a changed message, a changed lorebook, a different chat or a failed retrieval. The reused answer is kept in the open page, so the first swipe after a reload asks again.
@@ -89,6 +91,8 @@ Several tools keep accepted work and results on the server. Closing the page onl
 **Dialogue Colors** assigns speaker colours. **Regex Agent Themes** restyles trackers and Companion panels. **CSS Snippets** manages your small visual customisations. **Termeownal UI** offers an optional terminal-style interface with its own command glossary.
 
 **Quick Image Gen** needs its own provider configuration. Its panel is built around one **Create** card, which holds status, prompt, **Style**, **Configuration** and **Generate**. **Gallery**, **History**, **Logs** and **Quick setup** sit underneath, and settings are behind tabs. It can use a manual prompt, a chat scene or supported image tags. Preparing a prompt may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short. An install still on the old default of 500 moves to the new one once.
+
+From the 1.5.6 candidate, **Gallery** also shows pictures saved in Scratchpad, and you can open it straight from the workspace. See [Open Gallery](../workspace/index.md#gallery). Its **Clear local history** button, called **Clear Gallery** in 1.5.5, clears only this device's history.
 
 **Character Expressions** uses separate sprite artwork and classification settings. A character avatar alone isn't a complete expression set.
 
@@ -135,6 +139,12 @@ These are measurements from the project's ARM test server, not promises. Backgro
 **JannyAI card blocks proxies** means the creator has hidden the definition and disabled proxy access. Logging in again won't remove that setting. If JannyAI offers a card download, download it there and import the file. Not every hidden card offers one.
 
 The JannyAI panel stays inside BotSearcher's workspace on phones and desktop, including its login and status controls.
+
+From the 1.5.6 candidate:
+
+- **Sources and logins**, beside **Filters**, opens a page inside the BotSearcher window. Tick the sites you want, sign in to BotBooru, Saucepan.ai or JannyAI, or press **All BotSearcher settings** for everything else. Back or Esc returns to the same search with your words, site and ticks kept. If you changed which sites are on, the results reload. When every site is off, **Choose sources** opens the same page.
+- A **JanitorAI** source lists JanitorAI's own **Trending 24h**, **Trending 7d**, **Popular** and **Latest** cards from its sort menu. **SFW only** switches to JanitorAI's SFW list. JanitorAI can't search by text, so it stays out of **All sources**, and its search box takes a card URL. Anyone signed in can browse the lists. Importing needs the server's JanitorAI browser window, which only an administrator can sign in, as with JannyAI. If that window is signed out or not set up, BotSearcher says which.
+- In Simple Mode, BotSearcher is called **Find characters**, and a card you add opens its chat straight away.
 
 **Debugger** provides a diagnostic report and layout snapshot. Reproduce the problem first, then open its report, read it and copy or download it. **Prompt Inspector** helps inspect supported outgoing requests. Those prompts may contain private chat material.
 
