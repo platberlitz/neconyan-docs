@@ -50,6 +50,8 @@ The main chat and background helpers can use different connections. [Scratchpad]
 
 Switching profiles can also change the model and related request settings. Check which connection is active before sending a long or expensive request.
 
+A profile you mark as a favourite appears under **★ Favorites** at the top of the profile list. From the 1.5.6 candidate it's listed only there, not twice, and unfavouriting it returns it to its folder.
+
 ## Confirm a proxy
 
 A reverse proxy is a service that sits between Neconyan and the provider. A connection profile or Chat Completion preset that carries one asks **Connecting To Proxy** when you create or update it, or when you import a preset with one. Choose **Yes** to save it, or **No** to stop. With **No**, the change isn't saved, a preset isn't saved or imported, and a message says why.

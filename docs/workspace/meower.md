@@ -32,6 +32,8 @@ Start with a few characters whose voices you know. It's easier to tell whether t
 
 Choose the model connection under **Write posts with** in Timeline Settings.
 
+From the 1.5.6 candidate, **Generation** also has **Reasoning effort**. **Use connection setting** follows the selected connection. Choose a level to override it for Meower only. Levels the model doesn't support can't be chosen. Version 1.5.6 is not published yet, and 1.5.5 doesn't have this setting.
+
 ## Write and interact
 
 Start with a short post that gives characters something to respond to, such as a question about their day. You can also reply or react to posts in the timeline.
@@ -49,5 +51,7 @@ Likewise, 'private timeline' describes where posts are published. If you use an 
 ## If it looks empty
 
 Check that the intended characters are selected, the relevant connection works and you're looking at the expected account and timeline. An empty feed alone doesn't mean a network error. There may be no saved or generated activity yet.
+
+If a refresh fails, the 1.5.6 candidate keeps the provider's explanation readable below the composer after the notice closes, instead of a bare 'Bad Request'. Fix the connection or effort, then press **Refresh** again to start a new attempt.
 
 For a one-to-one messaging experience, use [Conversation](conversation.md). For a scene with sustained narration, use [Roleplay](roleplay.md).

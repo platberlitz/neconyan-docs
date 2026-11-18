@@ -80,13 +80,15 @@ Sampler values are saved with the preset. Switching presets or connection profil
 
 Some Chat Completion models can think before writing their reply. **Reasoning Effort** asks for more or less of that thinking: **None**, **Minimum**, **Low**, **Medium**, **High**, **Extra High** or **Maximum**. More effort usually means a slower reply and more billed tokens. It doesn't guarantee a better one.
 
+From the 1.5.6 candidate, the list also starts with **Auto**, which stays selected when you reload saved settings or apply a preset. In 1.5.5 a saved Auto turned into **None**. The picker beside the message box ticks the current level, and on a phone every level fits without scrolling.
+
 Set it in **Presets → Advanced & Reasoning**, or press the brain button beside the message box and pick a short label such as **Low** or **Med**. Both change the same setting.
 
 Neconyan shows only the effort levels declared or documented for the selected model, in both the menu and the picker beside the message box. This applies to **NanoGPT**, **OpenRouter** and supported native connections (**OpenAI**, **Google AI Studio** on `v1beta`, **Google Vertex AI**, **DeepSeek**, **Moonshot**, **Z.AI**, **MiniMax**, **MistralAI**, **Groq**, **AIMLAPI** and **Fireworks**):
 
 - If the current model doesn't support your saved choice, the control warns you and lists the valid choices so you can pick one before sending.
 - When an OpenRouter model doesn't expose an effort setting, the **Reasoning Effort** selector is disabled. A note says your saved choice is kept for other models. The brain button beside the message box is hidden.
-- When a model requires reasoning, **None** isn't offered.
+- When a model requires reasoning, **None** isn't offered. From the 1.5.6 candidate, if your saved choice is **None** and the model is known to reject it, no effort is sent and the provider's default applies. Your saved choice stays for other models. NanoGPT thinking variants don't offer **None**.
 - On native **DeepSeek**, **None** turns thinking off for **DeepSeek v4 Pro** and **DeepSeek Flash**. **DeepSeek Flash** offers only **None**, **Low**, **High** and **Maximum**. With no effort sent it still thinks, so its reply keeps reasoning room. Through a reverse proxy, **None** isn't sent and DeepSeek's default applies.
 - **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. So a higher response limit allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
 - For unlisted native models or custom proxies where supported levels aren't known, the full list stays available. **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
