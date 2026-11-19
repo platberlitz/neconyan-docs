@@ -40,6 +40,8 @@ From 1.5.6, **Gallery** sits in the **Workspace** section just above **Chat Arch
 
 Gallery opens over the page you're on, and closing it leaves your draft and open page as they were. It lists this browser's Quick Image Gen history and the pictures saved in Scratchpad for your account, including older sessions. An empty Gallery offers **Generate image**, which opens Quick Image Gen's prompt without sending anything. **Clear local history** clears this device's Quick Image Gen history and keeps the saved Scratchpad pictures. If Quick Image Gen is switched off, the shortcut opens Extensions so you can turn it on.
 
+From 1.5.7, press **Delete** at the top right of a picture and confirm to remove just that picture. To remove several, choose **Batch Edit**, select the pictures, then choose **Delete selected** and confirm. **Done** leaves Batch Edit. Removing a Scratchpad picture from Gallery keeps the original in its saved reply.
+
 ## Settings {#settings}
 
 **Settings** sorts its drawers into four tabs. On a phone, a **Settings category** list replaces the tabs.
@@ -87,6 +89,22 @@ I'd start with Simple Mode if you're new. It keeps Home, Characters, Connections
 Connections shows provider, key, model, **Connect** and **Test Message**, with the rest behind **More connection options**. **Memory** keeps the summary switch, **Summarise now** and the latest summary together, with a link to Mewmory when you want more control. **Updates** has **Check for updates**, which only checks. Installing still needs **Update & Restart**, or **Update APK** in the Android app.
 
 The other **Fine-tuning**, **Characters & Lore**, **Appearance** and **Troubleshooting** pages are hidden, along with Chat Archive, Extensions, the mode switcher and the rarer chat controls. **Quick Actions** stays in the sidebar, and its pen still opens the list so you can keep it to the shortcuts you use. Nothing is deleted or turned off. Extensions you installed, active lore and running Agents stay enabled.
+
+From 1.5.7, **Guided Swipe** and **Guided Impersonate** sit next to **Switch chat**, even with the rest of the chat bar collapsed. They show when enabled in Guided Generations. **Chat tools** opens [Author's Note](roleplay.md#authors-note) without leaving Simple Mode.
+
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![Guided Swipe and Guided Impersonate beside Switch chat on desktop](../assets/images/screenshots/desktop-simple-chat.webp)](../assets/images/screenshots/desktop-simple-chat.webp)
+    <figcaption>The two guided actions sit above the composer, beside <strong>Switch chat</strong>.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![Guided Swipe and Guided Impersonate in the collapsed phone chat bar](../assets/images/screenshots/phone-simple-chat.webp)](../assets/images/screenshots/phone-simple-chat.webp)
+    <figcaption>On a phone, the two guided actions stay in place when you collapse the bar.</figcaption>
+    </figure>
 
 Press **Show all features** in the workspace sidebar to restore everything. The same switch in Settings turns Simple Mode on again, and the choice is saved for your account.
 

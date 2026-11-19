@@ -254,7 +254,9 @@ The review shows the draft as JSON, a structured text format, which you can adju
 
 **Image idea** drafts a request. **Generate image** starts the image request using Quick Image Gen settings. If prompt review is enabled, approve **Generate reviewed image** first.
 
-Generating a picture doesn't replace a portrait. **Review avatar** compares the pictures and **Save change** applies the replacement to the exact shared card. **Previous avatar** opens the preserved original PNG. It isn't a one-click undo.
+From 1.5.7, new picture and avatar requests use Quick Image Gen's **Image count**, up to ten. For an avatar batch, press **Use as avatar** under the result you want to review. The other pictures stay in the reply.
+
+Generating a picture doesn't replace a portrait. **Review avatar** compares the current portrait with the proposed one and **Save change** applies the replacement to the exact shared card. **Previous avatar** opens the preserved original PNG. It isn't a one-click undo.
 
 With **Your persona and Scenario Notes** shared, the assistant can also propose a persona avatar or one saved Scenario Note's avatar. The review shows **Current avatar** and **Proposed avatar**. **Save change** makes the picture live. A persona avatar replaces the portrait across chats and keeps the persona's saved details. A Scenario Note avatar applies while that note is active. Ask the assistant to remove its portrait to return to the normal persona picture. The note's text and activation stay as they were.
 
