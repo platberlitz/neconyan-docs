@@ -10,7 +10,7 @@ The captures use disposable demonstration data: Calico Dark with its default acc
 
 The two Notebooks images, `desktop-notes.webp` and `phone-notes.webp`, are the exception. They were retaken on 18 November 2026 for the decluttered phone layout and copied unchanged from the app README's `docs/readme/` folder, where they were added in [commit 4979d561](https://github.com/platberlitz/Neconyan/commit/4979d561). I didn't capture them for this handbook. The desktop image is 1280×900 and the phone image 393×852 pixels, so the phone image is smaller than the others.
 
-The guides are reviewed against Neconyan 1.5.6 at `RELEASE_COMMIT`, the latest published release. Version 1.5.6 replaces Background Visibility with **Settings → Appearance → Panels**, which came after these captures, so panel transparency can look slightly different in the app.
+The guides are reviewed against Neconyan 1.5.6 at `d3f33f5d`, the latest published release. Version 1.5.6 replaces Background Visibility with **Settings → Appearance → Panels**, which came after these captures, so panel transparency can look slightly different in the app.
 
 I used Playwright with Chromium at 1280×900 for desktop with a pixel ratio of 1, and 393×852 with touch emulation for phone at a pixel ratio of 1.5. The saved images are 1280×900 and 590×1278 pixels. These are browser viewport captures, not physical-phone or Safari verification. I converted them to WebP at quality 80, method 6, without resizing or compositing interface elements.
 

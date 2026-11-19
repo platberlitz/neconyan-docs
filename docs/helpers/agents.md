@@ -23,7 +23,7 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
     </figure>
 
 !!! info "New in 1.5.6"
-    **Clothing Tracker**, **Skip user messages**, the **On Companions** picker for selected Agents, **Rerun agents** on a **Reply interrupted** notice, the Companion panel's jump buttons and Memory Shard's new defaults came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **RELEASE_COMMIT** on 19 November 2026. They won't appear in 1.5.5.
+    **Clothing Tracker**, **Skip user messages**, the **On Companions** picker for selected Agents, **Rerun agents** on a **Reply interrupted** notice, the Companion panel's jump buttons and Memory Shard's new defaults came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 ## Start with one helper
 

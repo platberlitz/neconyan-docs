@@ -26,7 +26,7 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
     Quick prompts of your own, typed tools, dictation, **Read aloud**, **Read links**, session pins, branching, export choices, **Review all**, **Discuss these answers**, **Saved setups**, **Pinned note**, **Rehearse next reply** and the extra change cards are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
 !!! info "New in 1.5.6"
-    **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **RELEASE_COMMIT** on 19 November 2026. They won't appear in 1.5.5.
+    **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 ## Open a discussion
 

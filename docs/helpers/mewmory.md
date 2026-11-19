@@ -14,7 +14,7 @@ Mewmory is separate from Conversation summaries, Companion trackers and Scratchp
     The **Story** tab, the Archive tools, the in-chat controls, the estimates and the extra exports below are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
 !!! info "New in 1.5.6"
-    The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **RELEASE_COMMIT** on 19 November 2026. They won't appear in 1.5.5.
+    The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 ## Set it up for a chat
 

@@ -80,7 +80,7 @@ The desktop and phone lists are separate, and they are saved in this browser rat
 Simple Mode is opt-in. Existing accounts keep their current layout. On a new account, Nori asks **Want to keep things simple?** before the First paws tour. **Yes, keep it simple** turns on Simple Mode and shortens the tour. **No, show me everything** keeps the full sidebar. You can also use **Settings → Appearance → Simple Mode** later.
 
 !!! info "Changed in 1.5.6"
-    The Simple Mode sidebar, the short Connections page, **Memory**, **Updates** and the shorter tour below came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **RELEASE_COMMIT** on 19 November 2026. In 1.5.5, Simple Mode only hides sidebar buttons.
+    The Simple Mode sidebar, the short Connections page, **Memory**, **Updates** and the shorter tour below came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **d3f33f5d** on 19 November 2026. In 1.5.5, Simple Mode only hides sidebar buttons.
 
 I'd start with Simple Mode if you're new. It keeps Home, Characters, Connections, Agents, Lorebooks, Notebooks, Scratchpad, Gallery, Presets, Persona, **Dialogue Colors**, **Find characters**, Search, Settings and the composer. **Find characters** is BotSearcher. A card you find there is added straight away and its chat opens. **Memory** opens **Story so far**, and **Updates** opens the updater without leaving Simple Mode. The tour is three steps: connect, meet a character and say hello.
 

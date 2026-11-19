@@ -60,7 +60,7 @@ The library also includes backgrounds matched to the bundled themes. Select seve
 ### Panels {#panels}
 
 !!! info "New in 1.5.6"
-    **Panels** came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **RELEASE_COMMIT** on 19 November 2026. In 1.5.5, **Background Visibility** under **Appearance → Interface** does this job with one slider for every style.
+    **Panels** came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **d3f33f5d** on 19 November 2026. In 1.5.5, **Background Visibility** under **Appearance → Interface** does this job with one slider for every style.
 
 **Settings → Appearance → Panels**, just below **Shell Style**, sets how much of your wallpaper shows through messages, Home cards and side panels such as Settings. Each shell style starts with its own look. Windows XP, Windows 98 and Kittyless are solid. The glass styles, Windows Aero, macOS Minimal and Hypr Glow, keep their frosted panes. Calico and the flat styles sit close to solid.
 
