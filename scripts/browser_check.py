@@ -144,6 +144,21 @@ def main():
             mobile.wait_for_function('document.querySelector(".screenshot-dialog img").naturalWidth > 0')
             mobile.get_by_role('button', name='Close screenshot').click()
             mobile.screenshot(path=str(SHOTS / 'phone-catelier.png'), full_page=False)
+            for guide, suffix in [('workspace/', 'simple-chat'), ('workspace/roleplay/', 'simple-authors-note')]:
+                for viewport, tab, prefix, image_width in [(page, 'Computer', 'desktop', 1280), (mobile, 'Phone', 'phone', 590)]:
+                    viewport.goto(base + guide, wait_until='networkidle')
+                    image_name = f'{prefix}-{suffix}.webp'
+                    capture = viewport.locator(f'.screenshot a[href$="/{image_name}"]')
+                    tabs = viewport.locator('.tabbed-set').filter(has=capture)
+                    tabs.locator('.tabbed-labels label').get_by_text(tab, exact=True).click()
+                    capture.click()
+                    viewer = viewport.get_by_role('dialog', name='Screenshot viewer')
+                    picture = viewer.locator('img')
+                    expect(picture).to_have_attribute('src', __import__('re').compile(f'/{image_name}$'))
+                    viewport.wait_for_function('(width) => document.querySelector(".screenshot-dialog img").naturalWidth === width', arg=image_width)
+                    overflow(viewport)
+                    viewer.get_by_role('button', name='Close screenshot').click()
+                    expect(capture).to_be_focused()
             mobile.goto(base + 'macros/pronouns/', wait_until='networkidle')
             mobile.screenshot(path=str(SHOTS / 'phone-pronouns.png'), full_page=False)
             # Corrupt and blocked preference storage must leave usable guide controls.

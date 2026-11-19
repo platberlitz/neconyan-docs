@@ -42,6 +42,8 @@ The model can also receive the character card, persona, preset, lore, Author's N
 
 Choosing a saved swipe doesn't make another model request. Click the swipe counter on a computer, or hold it on a phone, to compare versions. Choose **Show swipe** to use one. Earlier replies can be read, copied or branched into a new chat from this view.
 
+From 1.5.7, **Guided Swipe** and **Guided Impersonate** are beside **Switch chat** in Simple Mode when enabled in Guided Generations. Type a direction before pressing either one. Swipe makes an alternative, keeps the original reply and leaves your direction in the composer. Impersonate drafts a reply as your persona in the composer without sending it. Both ask your model for a reply.
+
 An empty composer makes Guided Regenerate behave like an ordinary regeneration. Stop current work before editing the history it relies on.
 
 If the main reply has finished, **Stop** ends the remaining Agent work and keeps that reply. From 1.5.5, this also covers a server-written reply that runs in several Auto-continue parts. Stopping it keeps the parts that already finished, and a stopped reply stays stopped.
@@ -175,6 +177,8 @@ Put stable character details in the card, world facts in [lorebooks](lorebooks.m
 
 ### Author's Note {#authors-note}
 
+With a Roleplay chat open, choose **Chat tools → Author's Note** by the composer. From 1.5.7 you can do this in Simple Mode too. On a keyboard, use Enter or Space to open Chat tools and select the note; closing the editor returns focus to Chat tools.
+
 Author's Note adds a short instruction to the prompt. Its tabs choose where that instruction belongs:
 
 - **This chat:** the current chat's note. Frequency `1` sends it every turn. `0` stops regular insertion. Lore scanning is a separate setting.
@@ -183,6 +187,20 @@ Author's Note adds a short instruction to the prompt. Its tabs choose where that
 - **New chats:** defaults for chats you create later.
 
 Top notes come before the chat note, character first and persona second. Bottom notes follow it in the same order. Conversation mode has its own Author's Note settings.
+
+=== "Computer"
+
+    <figure class="screenshot" markdown>
+    [![The four Author's Note tabs in Simple Mode on desktop](../assets/images/screenshots/desktop-simple-authors-note.webp)](../assets/images/screenshots/desktop-simple-authors-note.webp)
+    <figcaption>The <strong>This chat</strong> tab holds the note and when it's sent.</figcaption>
+    </figure>
+
+=== "Phone"
+
+    <figure class="screenshot screenshot--phone" markdown>
+    [![The Author's Note editor and its four tabs in Simple Mode on a phone](../assets/images/screenshots/phone-simple-authors-note.webp)](../assets/images/screenshots/phone-simple-authors-note.webp)
+    <figcaption>All four tabs stay available in the phone editor.</figcaption>
+    </figure>
 
 ## Manage saved chats {#saved-chats}
 
