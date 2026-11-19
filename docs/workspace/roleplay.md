@@ -58,7 +58,7 @@ When the server writes the reply, swiping or regenerating empties the old reply 
 
 Version 1.5.6 smooths this further:
 
-- On a server-written swipe, including a guided one, the emptied reply shrinks to a small `...` card at once, so there's no blank gap above the new reply.
+- On a server-written swipe or **Regenerate**, including guided ones, the emptied reply shrinks to a small `...` card at once, so there's no blank gap above the new reply. A Guided Correction still keeps the old reply's height, so your place holds.
 - A swipe that fails before any text arrives keeps the existing reply in view. If you'd scrolled up while waiting, your place stays put, and reloading doesn't bring back the temporary `...` message.
 - A server-written swipe no longer drops an Agent's rewrite or skips Companion notes when a Memory Shard is set up.
 - With the model name shown in message timestamps, it sits on its own line below the date, and long names wrap instead of being cut off.
