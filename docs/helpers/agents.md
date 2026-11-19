@@ -170,11 +170,13 @@ Sometimes a Roleplay reply is saved but its Agent work doesn't finish, for examp
 
 The warning stays open until you choose, and **×** declines. If you've swiped or changed the reply since, Neconyan says so. Use the message menu's button instead, which reruns after-reply Agents but not Companions.
 
-From 1.5.6, a **Reply interrupted** notice offers the same **Rerun agents** button when the text written so far was saved in the chat and you have Agents or automatic Companions that would run on it. That notice also stays open until you press the button or close it. Otherwise it's the plain notice, as before. Both buttons now also run automatic Companions when the reply's editor was open and you saved it first.
+From 1.5.6, a **Reply interrupted** notice offers the same **Rerun agents** button when the text written so far was saved in the chat and you have Agents or automatic Companions that would run on it. That notice also stays open until you press the button or close it. Otherwise it's the plain notice, as before. Both buttons now also run automatic Companions when the reply's editor was open and you saved it first. With **Run companions at the same time as after-reply agents** switched on under **Connections & defaults → Execution rhythm**, the Companions start together with the after-reply Agents, as they do on a new reply.
 
 From 1.5.6, if a provider's content filter blocks one Companion, that error stays on its own card. The other Companions still finish, and a Companion waiting for the blocked one says why it couldn't run. A handled refusal like this no longer brings up **Agents did not finish**.
 
 The rerun starts from the reply as it was before its earlier rewrites, and keeps your manual edits and tracker repairs. It replaces appended blocks rather than duplicating them. If you edit, swipe or leave that reply while the rerun works, its result won't overwrite the changed chat. Agent change history offers **Undo**. Rerunning can cost another request per helper.
+
+From 1.5.6, reopening a chat doesn't run its after-reply Agents on the last reply again. In 1.5.5 that could happen when the Agents loaded in a different order, which repeated their paid requests.
 
 ## Choose connections deliberately
 
@@ -225,6 +227,10 @@ A Companion's editor has **Skip user messages** beside **Chat messages to read**
 ## History and visibility
 
 Open the **Companion panel** from its floating or top-bar button. **Search companions and notes** filters the view without running anything. **More tools → Companion activity** shows what ran.
+
+**Connections & defaults → Context & notifications → Companion panel button** chooses between **Floating side button**, the cat at the edge of the screen, and **Top bar button**. From 1.5.6, the floating button waits until an automatic Companion has written its first note, so it doesn't sit over the chat with nothing to show. A manual Companion brings it up straight away, because you run that one from the panel. The **Top bar button** still shows for any Companion in the panel.
+
+That's why a new account, which has Memory Shard on, has no floating button until Memory Shard writes its first summary. If you want the panel sooner, choose **Top bar button**.
 
 From 1.5.6, a panel long enough to scroll has two round arrow buttons near its bottom-right corner: **Jump to top** and **Jump to bottom**. The one that has nothing left to do fades out, and both hide when the panel doesn't scroll.
 
