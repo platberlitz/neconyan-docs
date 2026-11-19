@@ -37,6 +37,14 @@ When two browser starts in a row don't finish, the next load shows **Neconyan co
 
 On an iPhone or iPad, a startup crash loop turns low-memory mode on automatically unless you set it off. That setting is saved, so low-memory mode stays on until you change it in Settings. When automatic mode is on, the button reads **Start without low-memory mode**. Any start that finishes loading clears the failed-start count. A clean close or a new tab doesn't inherit another tab's crash loop.
 
+### If the data folder is already owned {#data-root-owned}
+
+Neconyan keeps a small ownership record, the `.neconyan-root-owner` folder inside your **data** folder, so two copies can't write to the same data at once. If the record belongs to a copy that still seems to be running, the terminal stops with `DATA_ROOT_OWNED` and 'The data folder is already owned by a running process.'
+
+In 1.5.5 this could happen on Windows after a few days off, once another program had been given the old server's process number. From 1.5.6, Neconyan checks when that process started. A program that started after the record was written can't be the old server, so the stale record is cleared and the terminal logs **Reclaimed a stale data folder lease**.
+
+If it still happens, close every copy of Neconyan first, including other terminal windows and any second installation that uses the same data folder. With Neconyan closed, deleting the `.neconyan-root-owner` folder inside the data folder clears the stale lock. Then start Neconyan again. Don't delete it while another copy might still be running.
+
 ### If a phone app stops at startup
 
 The Android and iPhone apps keep a small ownership record inside their data folder, so two copies can't write to it at once. A run that Android or iOS closed without warning can leave that record behind. Both apps now clear a record left by their own earlier run and log **Reclaimed a stale data folder lease** in `server.log`. Both still refuse when the earlier server may be running or when the record holds something the app never writes.
@@ -79,13 +87,13 @@ From Neconyan 1.5.5, an empty Roleplay reply shows **Reply failed** and leaves t
 
 If **Agents did not finish** appears instead, your reply was saved and only the helper work is missing. Use the **Rerun agents** button under the warning; see [Agents](../helpers/agents.md#rerun-agents-on-a-reply).
 
-From the 1.5.6 candidate, **Reply interrupted** offers the same button when the text written so far was saved and there are Agents to run on it.
+From 1.5.6, **Reply interrupted** offers the same button when the text written so far was saved and there are Agents to run on it.
 
-In 1.5.5, editing your persona or changing Shell Style while a server reply was running could make its after-reply Agents fail and bring up **Agents did not finish**, even though the reply itself was fine. The 1.5.6 candidate no longer counts those changes as a changed connection.
+In 1.5.5, editing your persona or changing Shell Style while a server reply was running could make its after-reply Agents fail and bring up **Agents did not finish**, even though the reply itself was fine. Version 1.5.6 no longer counts those changes as a changed connection.
 
 ## You were signed out {#session-expired}
 
-When the server uses a login and your session runs out, the 1.5.6 candidate shows a **Session expired** notice. It says: 'Your login session has expired. Copy any unsaved text, then reload this page to sign in again.' The notice stays until you close it, and your page and draft stay where they are. Copy anything you haven't sent, then reload. A refused provider key doesn't trigger this notice, and several failed requests still show it only once.
+From 1.5.6, when the server uses a login and your session runs out, Neconyan shows a **Session expired** notice. It says: 'Your login session has expired. Copy any unsaved text, then reload this page to sign in again.' The notice stays until you close it, and your page and draft stay where they are. Copy anything you haven't sent, then reload. A refused provider key doesn't trigger this notice, and several failed requests still show it only once.
 
 ## A server reply says there is no room
 

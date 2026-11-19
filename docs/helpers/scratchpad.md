@@ -25,8 +25,8 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
 !!! info "New in 1.5.5"
     Quick prompts of your own, typed tools, dictation, **Read aloud**, **Read links**, session pins, branching, export choices, **Review all**, **Discuss these answers**, **Saved setups**, **Pinned note**, **Rehearse next reply** and the extra change cards are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
-!!! info "New in the 1.5.6 candidate"
-    **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions come from the Neconyan 1.5.6 staging candidate at commit **00be4b8e**, which I reviewed on 18 November 2026. Version 1.5.6 is not published yet; 1.5.5 is still the current published release.
+!!! info "New in 1.5.6"
+    **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 ## Open a discussion
 
@@ -38,7 +38,7 @@ From Home, **General Scratchpad** starts without hidden chat context. Quick prom
 
 On a phone or a narrow desktop panel, the header buttons move below the heading when they need room, and longer headings wrap instead of covering them.
 
-If General has no persona selected, the 1.5.6 candidate shows one warning. Pick a persona in **Personas** if you want to share it, or carry on without one.
+From 1.5.6, if General has no persona selected, Scratchpad shows one warning. Pick a persona in **Personas** if you want to share it, or carry on without one.
 
 If you delete an assistant reply and your own message is left last, press **Send** with the message box empty to have it answered again. Your message and attachments stay as they were, and no copy is added.
 
@@ -114,7 +114,7 @@ In Roleplay, **Also share → Current preset** adds your preset separately, with
 
 Important boundaries:
 
-- **General** shares no chat or swipes, and no lore until you pick one book under **Share a lorebook**. You can explicitly share a selected card, persona and permitted notes. From the 1.5.6 candidate, General also offers **Also share → Current preset**, named after your equipped preset and off to begin with. There it's reference only. It doesn't change the assistant's instructions or offer edits to the preset.
+- **General** shares no chat or swipes, and no lore until you pick one book under **Share a lorebook**. You can explicitly share a selected card, persona and permitted notes. From 1.5.6, General also offers **Also share → Current preset**, named after your equipped preset and off to begin with. There it's reference only. It doesn't change the assistant's instructions or offer edits to the preset.
 - Picked messages stay tied to their original chat. Switching chats doesn't substitute different messages.
 - Scratchpad doesn't automatically read Mewmory or Companion notes. In a Roleplay chat you can tick **Mewmory** under **Also share**. See [Share saved memories or a lorebook](#share-memories-or-a-lorebook).
 - A linked note isn't automatically shared. Notebook permissions still apply.
@@ -134,7 +134,7 @@ General Scratchpad has no story, so it shares no lorebook until you choose one u
 
 A setup holds **Recent messages to read**, the **Also share** ticks, hidden-message sharing, streaming, the longest reply, Web search, Read links and reply prefills. Picked messages, lorebook entry choices, saved notes, connections, assistant prompts and the round table stay as they are.
 
-From the 1.5.6 candidate, the setup selected under **Saved setup** also applies to every new session, including temporary ones and the first session in another chat, note or General. This device remembers the selection. **Apply setup**, **Save current choices** and **Delete setup** keep your scroll position. The setup also stores the shared **Feedback tone**.
+From 1.5.6, the setup selected under **Saved setup** also applies to every new session, including temporary ones and the first session in another chat, note or General. This device remembers the selection. **Apply setup**, **Save current choices** and **Delete setup** keep your scroll position. The setup also stores the shared **Feedback tone**.
 
 ### Keep a pinned note {#pinned-note}
 
@@ -262,7 +262,7 @@ To change a picture you attached or one Scratchpad generated earlier, ask in pla
 
 Models that can see images are also shown up to four recent generated pictures on follow-up messages, so 'make the coat darker' has something to look at.
 
-From the 1.5.6 candidate, this works even with the regular chat image setting off. Custom and CometAPI models are always offered the pictures. If the provider refuses them, the reply is retried once with short text notes instead, and Scratchpad remembers that model as text-only until the server restarts. Text-only models get the picture's prompt and status, not the picture.
+From 1.5.6, this works even with the regular chat image setting off. Custom and CometAPI models are always offered the pictures. If the provider refuses them, the reply is retried once with short text notes instead, and Scratchpad remembers that model as text-only until the server restarts. Text-only models get the picture's prompt and status, not the picture.
 
 To fix a portrait, name the character, persona or Scenario Note avatar it should replace when you ask for the edit. The **Edit image** card then targets that avatar. When it finishes, **Review avatar** and **Save change** work as they do for a new portrait. The edited picture stays separate until you save it.
 

@@ -13,8 +13,8 @@ Mewmory is separate from Conversation summaries, Companion trackers and Scratchp
 !!! info "New in 1.5.5"
     The **Story** tab, the Archive tools, the in-chat controls, the estimates and the extra exports below are new in 1.5.5. I've reviewed this guide against the published [Neconyan 1.5.5 release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5) at commit **680a05f1** on 15 November 2026. These controls won't appear in 1.5.4.
 
-!!! info "New in the 1.5.6 candidate"
-    The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates come from the Neconyan 1.5.6 staging candidate at commit **00be4b8e**, which I reviewed on 18 November 2026. Version 1.5.6 is not published yet; 1.5.5 is still the current published release.
+!!! info "New in 1.5.6"
+    The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 ## Set it up for a chat
 
@@ -31,11 +31,11 @@ Settings save automatically. If a change is refused, fix the highlighted value o
 
 Choose a saved connection profile, optionally with a model override, or **Manual endpoint & API key** for a separate service. Enter keys in settings, never in chat. Start with the preset's protocol and score threshold. Choosing a preset doesn't supply model access.
 
-From the 1.5.6 candidate, the list also has Nano-GPT's 20 decision models, such as **Nano-GPT: Jev Latest (typesafe/jev-latest)**, with Kev, d3, SubQ and others. Choosing one fills in Nano-GPT's address and model, so you only enter your Nano-GPT key. **All model settings** offers the same presets for the **Recall selector** and **Recall fallback** roles. Nano-GPT still needs its own API access and credits.
+From 1.5.6, the list also has Nano-GPT's 20 decision models, such as **Nano-GPT: Jev Latest (typesafe/jev-latest)**, with Kev, d3, SubQ and others. Choosing one fills in Nano-GPT's address and model, so you only enter your Nano-GPT key. **All model settings** offers the same presets for the **Recall selector** and **Recall fallback** roles. Nano-GPT still needs its own API access and credits.
 
 ### Recall saved memories only {#recall-passages}
 
-From the 1.5.6 candidate, recall picks from saved memory entries only, which keeps each request much smaller. When the selector asks for evidence, the original passage is attached to the memory it asked about. To let recall pick raw chat, card and lorebook passages too, as before, switch on **Also offer original chat passages to recall** under **Settings → Finding relevant memories**. It costs more tokens and Embeddings calls.
+From 1.5.6, recall picks from saved memory entries only, which keeps each request much smaller. When the selector asks for evidence, the original passage is attached to the memory it asked about. To let recall pick raw chat, card and lorebook passages too, as before, switch on **Also offer original chat passages to recall** under **Settings → Finding relevant memories**. It costs more tokens and Embeddings calls.
 
 **Skip user messages in search cues**, in the same section, leaves your own messages out of the search. **Recent messages used to find matches** then counts replies only. Memory updates still read the whole chat. Both switches start off.
 
@@ -133,14 +133,14 @@ Recording and recalling memories can make model requests. **Backup connections**
 
 Background work waits briefly after server startup and can continue while after-reply Agents run. A failed job doesn't count as completed memory. Check the error before pressing **Update memories for the whole chat** again.
 
-The 1.5.6 candidate spends fewer tokens in the background:
+From 1.5.6, Mewmory spends fewer tokens in the background:
 
 - Automatic updates follow the chat you last wrote in. Your other chats catch up when you reply in them, or when you press **Update memories for the whole chat**.
 - A rate limit or busy service pauses that service for as long as it asks, or from 30 seconds up to 15 minutes. A failed automatic job waits from a minute up to 30 minutes before trying again. Fixing the model settings retries straight away.
 - Changing models, a character card, a lorebook entry, a correction or an exclusion no longer starts a full re-read. **Upkeep for this chat** shows how many messages were read before the change, with **Re-read them** and an estimate first. Editing a message still re-reads it and the messages after it.
 - New memories are written in one or two sentences, and an existing memory is updated rather than repeated.
 
-In 1.5.5, changing models can mean processing the same history again.
+In 1.5.5, changing models could mean processing the same history again.
 
 ### Check the cost first {#check-the-cost-first}
 

@@ -28,6 +28,8 @@ Notebooks is a place to write and keep reference material inside Neconyan. Use i
 2. Choose **New notebook** for a collection, or start in **Inbox**.
 3. Use **New note**, a template or **Quick note** to begin writing.
 
+From 1.5.6, the first open after an install or update no longer sits on a blank page for several seconds. The server now prepares the note editor while it starts.
+
 **Write** edits Markdown, which is plain text with simple formatting marks. **Read** shows the formatted result. **Outline** helps you move between headings. On a phone, use the Notebooks, Note and Details tabs. **Back to chat** returns to the conversation.
 
 A property block at the start of a note opens with `---` and closes with `---` or `...`. Without the closing line, Neconyan treats it as ordinary text. Lists still continue when you press Enter. Details shows a warning and leaves your text untouched so you can fix it in Write view.
@@ -46,7 +48,7 @@ You can use ++ctrl+s++ or ++cmd+s++ to save. A recovery copy kept in your browse
 
 ### On a phone {#phone-layout}
 
-The 1.5.6 candidate gives the note more room on a phone. The desktop layout is unchanged. Version 1.5.6 is not published yet; in 1.5.5 these controls are all shown at once.
+From 1.5.6, the note gets more room on a phone. The desktop layout is unchanged. In 1.5.5 these controls are all shown at once.
 
 - Search and **New note** stay above the note list. **Notebook options** holds the notebook picker, folders, favourites, recent notes and notebook tools such as Graph and Export.
 - In **Note**, **Write**, **Read** and **Outline** stay visible. **Note tools** holds formatting, folding, discussion, full screen and Trash.

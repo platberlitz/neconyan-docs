@@ -70,7 +70,7 @@ Switch Dice Roller off in **Extensions → Manage extensions** under Built-in fe
 
 **Pawthfinder** chooses relevant lore with a separate decision model. In its settings, choose a **Jev / decision model preset**, then connect its endpoint or a saved profile. Jev scores which entries to retrieve. Summary writing still uses your chat model. **Decision protocol** must match the provider's decision endpoint or chat-completion service.
 
-From the 1.5.6 candidate, the presets include Nano-GPT's decision models, such as Jev, Kev, d3 and SubQ. A Nano-GPT preset fills in its address and model. Save your Nano-GPT key under **API key for this endpoint**. It needs Nano-GPT API access and credits.
+From 1.5.6, the presets include Nano-GPT's decision models, such as Jev, Kev, d3 and SubQ. A Nano-GPT preset fills in its address and model. Save your Nano-GPT key under **API key for this endpoint**. It needs Nano-GPT API access and credits.
 
 If you want Pawthfinder to choose the lore by itself, enable **Disable World Info keyword activation**. Otherwise ordinary keyword matches can add entries too. Start with the preset's threshold and change one setting at a time.
 
@@ -92,11 +92,17 @@ Several tools keep accepted work and results on the server. Closing the page onl
 
 **Quick Image Gen** needs its own provider configuration. Its panel is built around one **Create** card, which holds status, prompt, **Style**, **Configuration** and **Generate**. **Gallery**, **History**, **Logs** and **Quick setup** sit underneath, and settings are behind tabs. It can use a manual prompt, a chat scene or supported image tags. Preparing a prompt may also call a text model. When a separate connection profile writes those prompts, its **Max Tokens** defaults to 32,000 and goes up to 64,000, so long prompts aren't cut short. An install still on the old default of 500 moves to the new one once.
 
-From the 1.5.6 candidate, **Gallery** also shows pictures saved in Scratchpad, and you can open it straight from the workspace. See [Open Gallery](../workspace/index.md#gallery). Its **Clear local history** button, called **Clear Gallery** in 1.5.5, clears only this device's history.
+From 1.5.6, **Gallery** also shows pictures saved in Scratchpad, and you can open it straight from the workspace. See [Open Gallery](../workspace/index.md#gallery). Its **Clear local history** button, called **Clear Gallery** in 1.5.5, clears only this device's history.
 
 **Character Expressions** uses separate sprite artwork and classification settings. A character avatar alone isn't a complete expression set.
 
 With the **GPT Image (OpenAI)** provider, **Model** accepts a model ID the proxy provides, and **Proxy URL** points at that proxy. When your proxy offers `gpt-image-2.6-sunburst` or `gpt-image-2.6-flare`, those names are sent through its Responses image route, as the 2.5 names already were. They then generate a picture instead of failing on the plain images endpoint.
+
+From 1.5.6, Quick Image Gen can also use **PixAI**. Under **Image Provider & Output**, set **Provider** to **PixAI** and paste your key into **PixAI API Key**. Keys need a PixAI membership. Create one under **My API Keys** in your pixai.art profile's API settings, or email api@withpixai.art. PixAI charges for every image from your PixAI balance, so check your credits before a batch.
+
+**Model** offers **Tsubaki.3 (default)**, **Tsubaki.2**, **Haruka v2** and **Hoshino v2**. For anything else, choose **Custom model version ID** and type the **Model version ID**, which is the last number in that model version's address on pixai.art. **Mode** only appears for the Tsubaki models: **Lite (fastest)**, **Standard (balanced)**, **Pro (more detail, slower)** or **Ultra (most detail, slowest)**. Some modes need a higher PixAI plan. Steps, CFG and sampler only apply to Haruka v2 and Hoshino v2, the SDXL models. A custom model gets neither. Width and height snap to the nearest size PixAI supports.
+
+**Prompt helper** starts at **Off (send my prompt as written)**. PixAI's own helper rewrites your prompt and costs extra, so it stays off unless you pick one of the other choices. Finished pictures are fetched from pixai.art and saved like any other Quick Image Gen picture. PixAI can't cancel a task, so stopping only stops Neconyan waiting for it, and the picture still finishes at PixAI. The key only goes to PixAI's API and isn't included when you export Quick Image Gen settings.
 
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't set all of them up for you.
 
@@ -140,7 +146,7 @@ These are measurements from the project's ARM test server, not promises. Backgro
 
 The JannyAI panel stays inside BotSearcher's workspace on phones and desktop, including its login and status controls.
 
-From the 1.5.6 candidate:
+From 1.5.6:
 
 - **Sources and logins**, beside **Filters**, opens a page inside the BotSearcher window. Tick the sites you want, sign in to BotBooru, Saucepan.ai or JannyAI, or press **All BotSearcher settings** for everything else. Back or Esc returns to the same search with your words, site and ticks kept. If you changed which sites are on, the results reload. When every site is off, **Choose sources** opens the same page.
 - A **JanitorAI** source lists JanitorAI's own **Trending 24h**, **Trending 7d**, **Popular** and **Latest** cards from its sort menu. **SFW only** switches to JanitorAI's SFW list. JanitorAI can't search by text, so it stays out of **All sources**, and its search box takes a card URL. Anyone signed in can browse the lists. Importing needs the server's JanitorAI browser window, which only an administrator can sign in, as with JannyAI. If that window is signed out or not set up, BotSearcher says which.

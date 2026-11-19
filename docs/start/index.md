@@ -32,7 +32,7 @@ Open **Connections** in the workspace sidebar and follow [Connect a model](conne
 
 Use **Choose a character** on Home, pick one of the bundled assistants and open a saved chat. Send something simple, such as asking Miso for a scene idea. Once you receive a reply, follow [Your first chat](first-chat.md) to learn swipes, editing and chat history.
 
-From the 1.5.6 candidate, a new account's tour asks **Who would you like to meet?** Choose Female, Male or Neutral for each of Miso, Taro and Nori, and all three move into your character list. Skipping the tour adds them as Neutral. Existing accounts aren't changed. Home also offers **Find characters online**, which searches card sites such as Chub and JannyAI, and **Import a character** for a file or a link.
+From 1.5.6, a new account's tour asks **Who would you like to meet?** Choose Female, Male or Neutral for each of Miso, Taro and Nori, and all three move into your character list. Skipping the tour adds them as Neutral. Existing accounts aren't changed. Home also offers **Find characters online**, which searches card sites such as Chub and JannyAI, and **Import a character** for a file or a link.
 
 If you choose **Start a temporary chat**, its messages aren't saved. Use it for a quick test, not a story you intend to keep.
 

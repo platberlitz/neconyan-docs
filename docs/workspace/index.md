@@ -36,7 +36,7 @@ The **Fine-tuning** area contains model presets, sampling, formatting, regex scr
 
 ### Open Gallery {#gallery}
 
-From the 1.5.6 candidate, **Gallery** sits in the **Workspace** section just above **Chat Archive**. On a phone, open the workspace menu first. You can also find it with **Search**, or choose it under **Settings → Appearance → Quick Access Shortcuts** for a top-bar button. In 1.5.5 it's only inside Quick Image Gen.
+From 1.5.6, **Gallery** sits in the **Workspace** section just above **Chat Archive**. On a phone, open the workspace menu first. You can also find it with **Search**, or choose it under **Settings → Appearance → Quick Access Shortcuts** for a top-bar button. In 1.5.5 it's only inside Quick Image Gen.
 
 Gallery opens over the page you're on, and closing it leaves your draft and open page as they were. It lists this browser's Quick Image Gen history and the pictures saved in Scratchpad for your account, including older sessions. An empty Gallery offers **Generate image**, which opens Quick Image Gen's prompt without sending anything. **Clear local history** clears this device's Quick Image Gen history and keeps the saved Scratchpad pictures. If Quick Image Gen is switched off, the shortcut opens Extensions so you can turn it on.
 
@@ -51,7 +51,7 @@ Gallery opens over the page you're on, and closing it leaves your draft and open
 | **System & Device** | **Import & Restore**, **Desktop** and **Mobile** behaviour, phone streaming options, and anything an extension adds without choosing a tab |
 | **Cache & Account** | **Account Settings**, **Cache & Storage Utilities**, and **Old defaults & recovery** for untouched files left by older installs |
 
-**Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. From the 1.5.6 candidate, a translated interface shows names you chose yourself exactly as you typed them, such as a prompt called 'Draft' or a lorebook called 'Notes'. The built-in labels around them are still translated. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
+**Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. From 1.5.6, a translated interface shows names you chose yourself exactly as you typed them, such as a prompt called 'Draft' or a lorebook called 'Notes'. The built-in labels around them are still translated. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
 
 ## Edit and reorder the sidebar {#reorder-sidebar}
 
@@ -79,8 +79,8 @@ The desktop and phone lists are separate, and they are saved in this browser rat
 
 Simple Mode is opt-in. Existing accounts keep their current layout. On a new account, Nori asks **Want to keep things simple?** before the First paws tour. **Yes, keep it simple** turns on Simple Mode and shortens the tour. **No, show me everything** keeps the full sidebar. You can also use **Settings → Appearance → Simple Mode** later.
 
-!!! info "Changed in the 1.5.6 candidate"
-    The Simple Mode sidebar, the short Connections page, **Memory**, **Updates** and the shorter tour below come from the Neconyan 1.5.6 staging candidate at commit **00be4b8e**, which I reviewed on 18 November 2026. Version 1.5.6 is not published yet. In the current published release, [1.5.5](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5), Simple Mode only hides sidebar buttons.
+!!! info "Changed in 1.5.6"
+    The Simple Mode sidebar, the short Connections page, **Memory**, **Updates** and the shorter tour below came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **d3f33f5d** on 19 November 2026. In 1.5.5, Simple Mode only hides sidebar buttons.
 
 I'd start with Simple Mode if you're new. It keeps Home, Characters, Connections, Agents, Lorebooks, Notebooks, Scratchpad, Gallery, Presets, Persona, **Dialogue Colors**, **Find characters**, Search, Settings and the composer. **Find characters** is BotSearcher. A card you find there is added straight away and its chat opens. **Memory** opens **Story so far**, and **Updates** opens the updater without leaving Simple Mode. The tour is three steps: connect, meet a character and say hello.
 

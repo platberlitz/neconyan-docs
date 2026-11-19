@@ -103,7 +103,7 @@ Use [lorebooks](lorebooks.md) for world information that should enter context se
 
 Open **Persona** to choose or edit your name, avatar and description. Write what the model needs to know about your role. Your account name alone isn't a complete character description.
 
-From the 1.5.6 candidate, each row in the bottom bar's persona picker has a pencil at its right edge, labelled **Edit** and the persona's name. It opens that persona's description in Personas and makes it the active persona, as picking it there would. Tapping the rest of the row still just switches persona. Long persona titles and Scenario Note names now wrap inside the Persona page instead of spilling out.
+From 1.5.6, each row in the bottom bar's persona picker has a pencil at its right edge, labelled **Edit** and the persona's name. It opens that persona's description in Personas and makes it the active persona, as picking it there would. Tapping the rest of the row still just switches persona. Long persona titles and Scenario Note names now wrap inside the Persona page instead of spilling out.
 
 Check the active persona when a conversation seems wrong. Each persona has its own Conversation histories, and persona information can also affect prompts in Roleplay.
 
