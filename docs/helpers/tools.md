@@ -98,6 +98,12 @@ From 1.5.6, **Gallery** also shows pictures saved in Scratchpad, and you can ope
 
 With the **GPT Image (OpenAI)** provider, **Model** accepts a model ID the proxy provides, and **Proxy URL** points at that proxy. When your proxy offers `gpt-image-2.6-sunburst` or `gpt-image-2.6-flare`, those names are sent through its Responses image route, as the 2.5 names already were. They then generate a picture instead of failing on the plain images endpoint.
 
+From 1.5.6, Quick Image Gen can also use **PixAI**. Under **Image Provider & Output**, set **Provider** to **PixAI** and paste your key into **PixAI API Key**. Keys need a PixAI membership. Create one under **My API Keys** in your pixai.art profile's API settings, or email api@withpixai.art. PixAI charges for every image from your PixAI balance, so check your credits before a batch.
+
+**Model** offers **Tsubaki.3 (default)**, **Tsubaki.2**, **Haruka v2** and **Hoshino v2**. For anything else, choose **Custom model version ID** and type the **Model version ID**, which is the last number in that model version's address on pixai.art. **Mode** only appears for the Tsubaki models: **Lite (fastest)**, **Standard (balanced)**, **Pro (more detail, slower)** or **Ultra (most detail, slowest)**. Some modes need a higher PixAI plan. Steps, CFG and sampler only apply to Haruka v2 and Hoshino v2, the SDXL models. A custom model gets neither. Width and height snap to the nearest size PixAI supports.
+
+**Prompt helper** starts at **Off (send my prompt as written)**. PixAI's own helper rewrites your prompt and costs extra, so it stays off unless you pick one of the other choices. Finished pictures are fetched from pixai.art and saved like any other Quick Image Gen picture. PixAI can't cancel a task, so stopping only stops Neconyan waiting for it, and the picture still finishes at PixAI. The key only goes to PixAI's API and isn't included when you export Quick Image Gen settings.
+
 Speech, captioning, translation, attachments and galleries each have their own settings. A working text connection doesn't set all of them up for you.
 
 ### Images in replies
