@@ -10,19 +10,21 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-I've reviewed these guides against the **Neconyan 1.5.6 staging candidate at 00be4b8e** on **18 November 2026**. This candidate is **not yet published**. [1.5.5 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5), reviewed at **680a05f1** on 15 November 2026.
+I've reviewed these guides against **Neconyan 1.5.6** (commit **RELEASE_COMMIT**) on **19 November 2026**. [1.5.6 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6).
 
 This edition adds:
 
 - Simple Mode's first run: Miso, Taro and Nori in your character list, the **Memory** and **Updates** buttons and **Dialogue Colors**
 - **Settings → Appearance → Panels**, which replaces Background Visibility, and **Scroll long labels** for the top bar
-- **Gallery** in the workspace, with saved Scratchpad pictures
+- **Gallery** in the workspace, with saved Scratchpad pictures, and **PixAI** in Quick Image Gen
 - Scratchpad's **Feedback tone**, **Current preset** in General and saved pictures for vision models
 - **Clothing Tracker**, **Skip user messages**, the bulk Companion picker and **Rerun agents** on interrupted replies
+- the floating Companion button waiting for a first note
 - Mewmory's smaller recall requests and the Nano-GPT decision models, also in Pawthfinder
 - BotSearcher's JanitorAI lists and **Sources and logins**
 - the phone Notebooks layout
-- failed swipes, the **Session expired** notice and reasoning effort fixes
+- failed swipes and regenerates, the **Session expired** notice and reasoning effort fixes
+- the Windows fix for `DATA_ROOT_OWNED` after a few days off
 
 Some controls described here won't appear in 1.5.5. The affected guides say which. The 1.5.5 edition covered Mewmory's Story tab, Scratchpad's quick prompts and branching, the Translator Agent, the reworked Presets page, the Conversation messenger layout, failed and empty replies and the Device sync fixes; those notes still describe 1.5.5.
 
@@ -32,7 +34,7 @@ The practical guides focus on common tasks and link to longer references when yo
 
 ## Screenshots and artwork
 
-I refreshed the workspace screenshots on 18 November 2026 from [Neconyan at 6b6a8696](https://github.com/platberlitz/Neconyan/tree/6b6a8696), a 1.5.6 staging build. They use the default Calico Dark colours, Background Visibility at 0%, demonstration content and the bundled assistants. The two Notebooks screenshots were retaken later that day for the new phone layout and copied from the app README. The 1.5.6 candidate replaces Background Visibility with **Panels**, so panel transparency can look slightly different. Some details, including the Catline Extensions icon, look different in the published 1.5.5 release. The Proofreader example uses a fixed sample response through the real edit-history workflow, with edit, Undo and Redo checked at both widths. It isn't a live model conversation.
+I refreshed the workspace screenshots on 18 November 2026 from [Neconyan at 6b6a8696](https://github.com/platberlitz/Neconyan/tree/6b6a8696), a 1.5.6 staging build. They use the default Calico Dark colours, Background Visibility at 0%, demonstration content and the bundled assistants. The two Notebooks screenshots were retaken later that day for the new phone layout and copied from the app README. Version 1.5.6 replaces Background Visibility with **Panels**, so panel transparency can look slightly different. Some details, including the Catline Extensions icon, look different in 1.5.5. The Proofreader example uses a fixed sample response through the real edit-history workflow, with edit, Undo and Redo checked at both widths. It isn't a live model conversation.
 
 Miso, Taro and Nori use Neconyan's existing assistant artwork, with male, female and neutral variants. Their handbook dialogue is written guidance, not a live model conversation. Gender preferences stay in the browser when storage is available.
 

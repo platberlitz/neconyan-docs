@@ -15,7 +15,7 @@ Open **Settings → Appearance** to change how Neconyan looks. Appearance contro
 | **UI Theme** | A searchable gallery of full interface themes with five-swatch palette previews, **All**, **Dark** and **Light** filters, and import, export and save controls |
 | **Accent Profiles** | Accent palettes and custom primary/secondary colours |
 | **Shell Style** | The shape and treatment of controls, panels and navigation |
-| **Panels** | How much wallpaper shows through messages, Home cards and side panels, for each shell style (1.5.6 candidate) |
+| **Panels** | How much wallpaper shows through messages, Home cards and side panels, for each shell style (new in 1.5.6) |
 | **Chat Style** | Message presentation |
 | **Simple Mode** | An optional smaller layout that hides power tools without deleting or switching them off |
 | **Desktop response controls** | Whether swipe arrows and the counter sit inside the bubble or below it on wide screens |
@@ -33,7 +33,7 @@ Calico is the familiar Neconyan look. **Kittyless** removes decorative cats, ear
 
 Other choices include Windows Aero, Windows XP, Windows 98, macOS Minimal, **Starlight Conservatory** and **Sunken Reef**. Each style shows a miniature window with a title bar and message rows, so you can compare the shape before choosing. These previews are illustrations, not your own chat. Windows 98 gives bundled assistant artwork a pixel-art treatment. It doesn't replace imported character portraits.
 
-From the 1.5.6 candidate, an accent you pick yourself also tints the Windows 98 greys, as it already did in Windows XP. Window faces, bevels, buttons and cards take a small share of the colour, and white text fields stay white. With the bundled Windows 98 theme's own accent, or Calico's, the faces stay classic silver.
+From 1.5.6, an accent you pick yourself also tints the Windows 98 greys, as it already did in Windows XP. Window faces, bevels, buttons and cards take a small share of the colour, and white text fields stay white. With the bundled Windows 98 theme's own accent, or Calico's, the faces stay classic silver.
 
 **Sunken Reef** adds an animated ocean around the interface: flowing water, ripples under a click or tap, and sea creatures behind the messages. With **Reduced Motion** on, it paints a still reef scene instead.
 
@@ -59,8 +59,8 @@ The library also includes backgrounds matched to the bundled themes. Select seve
 
 ### Panels {#panels}
 
-!!! info "New in the 1.5.6 candidate"
-    **Panels** comes from the Neconyan 1.5.6 staging candidate at commit **00be4b8e**, which I reviewed on 18 November 2026. Version 1.5.6 is not published yet. In the current published release, [1.5.5](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.5), **Background Visibility** under **Appearance → Interface** does this job with one slider for every style.
+!!! info "New in 1.5.6"
+    **Panels** came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this section against that release at commit **RELEASE_COMMIT** on 19 November 2026. In 1.5.5, **Background Visibility** under **Appearance → Interface** does this job with one slider for every style.
 
 **Settings → Appearance → Panels**, just below **Shell Style**, sets how much of your wallpaper shows through messages, Home cards and side panels such as Settings. Each shell style starts with its own look. Windows XP, Windows 98 and Kittyless are solid. The glass styles, Windows Aero, macOS Minimal and Hypr Glow, keep their frosted panes. Calico and the flat styles sit close to solid.
 
@@ -103,7 +103,7 @@ Use **Reduced Motion** to switch off interface animations and transitions, inclu
 
 ## Long top bar labels {#top-bar-label}
 
-**Settings → Appearance → Top Bar Label** chooses what the top bar shows. From the 1.5.6 candidate, **Scroll long labels** is on to begin with. A label that doesn't fit slides to show the rest, and a label that fits stays still. Turn it off to keep the dots at the end instead. **Reduced Motion**, in Neconyan or your system, keeps the label still either way. The choice is saved in this browser.
+**Settings → Appearance → Top Bar Label** chooses what the top bar shows. From 1.5.6, **Scroll long labels** is on to begin with. A label that doesn't fit slides to show the rest, and a label that fits stays still. Turn it off to keep the dots at the end instead. **Reduced Motion**, in Neconyan or your system, keeps the label still either way. The choice is saved in this browser.
 
 ## Bottom bar width on a computer
 
@@ -133,7 +133,7 @@ The list shows your regular characters and only the equipped persona. Switch per
 
 Under **Settings → Automation**, **Don't color a Narrator card** is on by default. It keeps a character card named `Narrator` in the normal text colour, even when the model wraps its lines in a colour. It also stops `Narrator` being added to the speaker list and tells the model not to colour it.
 
-Sometimes a scenario card such as `'Your Wife Wants To Divorce You'` or a titled label such as `'Leonard | Actor'` gets coloured as a speaker. From the 1.5.6 candidate, Dialogue Colors skips obvious titles like these on the current card in one-to-one chats. The title stays out of the character list and keeps the normal text colour, without an entry under **Not characters**. For a name it misses, add it under **Not characters** with **Add** or **Add this card's name**. You can also open the speaker row's **More** actions and choose **Not a character**.
+Sometimes a scenario card such as `'Your Wife Wants To Divorce You'` or a titled label such as `'Leonard | Actor'` gets coloured as a speaker. From 1.5.6, Dialogue Colors skips obvious titles like these on the current card in one-to-one chats. The title stays out of the character list and keeps the normal text colour, without an entry under **Not characters**. For a name it misses, add it under **Not characters** with **Add** or **Add this card's name**. You can also open the speaker row's **More** actions and choose **Not a character**.
 
 Listed names leave the character list. They are never added or sent to the model as speakers, and colours the model writes for them show in the normal text colour. Use the Undo notice to put one back immediately, or remove its chip from the list to let it be coloured again.
 
@@ -153,7 +153,7 @@ Search with **Search by name, colour or motion**, then filter with **All**, **Da
 
 **Previous**, **Next** and **Surprise me** only move the preview within the filtered list. **Apply this theme** makes the previewed theme the default. **Show current** returns the preview to the current default.
 
-From the 1.5.6 candidate, **Tracker overrides** has a **Search by tracker or agent name** box. It matches tracker names, template IDs and the names of your installed copies, and only hides the cards that don't match. A themed **Chatroom** feed keeps its platform's layout, such as the 4chan post boxes or the Discord reply line, in the theme's colours. The preview picker also includes **Clothing Tracker**.
+From 1.5.6, **Tracker overrides** has a **Search by tracker or agent name** box. It matches tracker names, template IDs and the names of your installed copies, and only hides the cards that don't match. A themed **Chatroom** feed keeps its platform's layout, such as the 4chan post boxes or the Discord reply line, in the theme's colours. The preview picker also includes **Clothing Tracker**.
 
 1.3.4 added 40 choices: 14 dark, 13 light and 13 animated. Animated themes stop when the operating system asks for reduced motion. Relationship and Ethereality tracker cards use their dedicated layouts, and narrow search controls and accent buttons stay readable across shell styles. To use the 115 tracker palettes as full application themes instead, pick them under **Settings → Appearance → UI Theme**.
 

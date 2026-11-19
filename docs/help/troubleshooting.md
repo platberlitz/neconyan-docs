@@ -79,13 +79,13 @@ From Neconyan 1.5.5, an empty Roleplay reply shows **Reply failed** and leaves t
 
 If **Agents did not finish** appears instead, your reply was saved and only the helper work is missing. Use the **Rerun agents** button under the warning; see [Agents](../helpers/agents.md#rerun-agents-on-a-reply).
 
-From the 1.5.6 candidate, **Reply interrupted** offers the same button when the text written so far was saved and there are Agents to run on it.
+From 1.5.6, **Reply interrupted** offers the same button when the text written so far was saved and there are Agents to run on it.
 
-In 1.5.5, editing your persona or changing Shell Style while a server reply was running could make its after-reply Agents fail and bring up **Agents did not finish**, even though the reply itself was fine. The 1.5.6 candidate no longer counts those changes as a changed connection.
+In 1.5.5, editing your persona or changing Shell Style while a server reply was running could make its after-reply Agents fail and bring up **Agents did not finish**, even though the reply itself was fine. Version 1.5.6 no longer counts those changes as a changed connection.
 
 ## You were signed out {#session-expired}
 
-When the server uses a login and your session runs out, the 1.5.6 candidate shows a **Session expired** notice. It says: 'Your login session has expired. Copy any unsaved text, then reload this page to sign in again.' The notice stays until you close it, and your page and draft stay where they are. Copy anything you haven't sent, then reload. A refused provider key doesn't trigger this notice, and several failed requests still show it only once.
+From 1.5.6, when the server uses a login and your session runs out, Neconyan shows a **Session expired** notice. It says: 'Your login session has expired. Copy any unsaved text, then reload this page to sign in again.' The notice stays until you close it, and your page and draft stay where they are. Copy anything you haven't sent, then reload. A refused provider key doesn't trigger this notice, and several failed requests still show it only once.
 
 ## A server reply says there is no room
 

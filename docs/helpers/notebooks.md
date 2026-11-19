@@ -46,7 +46,7 @@ You can use ++ctrl+s++ or ++cmd+s++ to save. A recovery copy kept in your browse
 
 ### On a phone {#phone-layout}
 
-The 1.5.6 candidate gives the note more room on a phone. The desktop layout is unchanged. Version 1.5.6 is not published yet; in 1.5.5 these controls are all shown at once.
+From 1.5.6, the note gets more room on a phone. The desktop layout is unchanged. In 1.5.5 these controls are all shown at once.
 
 - Search and **New note** stay above the note list. **Notebook options** holds the notebook picker, folders, favourites, recent notes and notebook tools such as Graph and Export.
 - In **Note**, **Write**, **Read** and **Outline** stay visible. **Note tools** holds formatting, folding, discussion, full screen and Trash.

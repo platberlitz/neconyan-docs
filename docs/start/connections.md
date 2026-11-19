@@ -50,7 +50,7 @@ The main chat and background helpers can use different connections. [Scratchpad]
 
 Switching profiles can also change the model and related request settings. Check which connection is active before sending a long or expensive request.
 
-A profile you mark as a favourite appears under **★ Favorites** at the top of the profile list. From the 1.5.6 candidate it's listed only there, not twice, and unfavouriting it returns it to its folder.
+A profile you mark as a favourite appears under **★ Favorites** at the top of the profile list. From 1.5.6 it's listed only there, not twice, and unfavouriting it returns it to its folder.
 
 ## Confirm a proxy
 
