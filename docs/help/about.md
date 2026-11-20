@@ -10,7 +10,7 @@ This is the official Neconyan handbook, built with [Material for MkDocs](https:/
 
 ## Version and scope
 
-I reviewed the changed guides against the **Neconyan 1.5.7 staging candidate** (commit **da76c549**) on **20 November 2026**. 1.5.7 isn't published yet; [1.5.6 is the latest published release](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6).
+I reviewed the changed guides for [Neconyan 1.5.7](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.7) on **20 November 2026**, released at [`a84bfbd9`](https://github.com/platberlitz/Neconyan/tree/a84bfbd9f25799137d652a4cfbb42c3320938e36).
 
 This edition adds:
 
