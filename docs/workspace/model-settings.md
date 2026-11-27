@@ -93,6 +93,8 @@ Neconyan shows only the effort levels declared or documented for the selected mo
 - **Claude** and **Gemini 2.5** models turn the level into a thinking budget, a share of **Max Response Length**. So a higher response limit allows a longer think. Newer Claude and Gemini 3 models receive the level name instead.
 - For unlisted native models or custom proxies where supported levels aren't known, the full list stays available. **Minimum** is sent as `'minimal'` where required, and **None** is only sent where supported.
 
+From 1.6.0, a **Custom** connection can do the same. Under **Available Models**, tick **Hide unsupported reasoning levels**. It's off to begin with and appears only when **Additional Parameters** sends the effort as an OpenAI-style string under a **Parameter Name**. With it on, **Reasoning Effort** hides the levels the model's maker doesn't list. **Auto** and **None** always stay, and a model Neconyan doesn't recognise keeps every level. The setting is saved with your settings and connection profiles.
+
 If a reply fails after you change the level, choose one of the model's supported levels or set it back to **None** where available. Then test again.
 
 **Request model reasoning** in the same drawer asks the provider to return the thinking so Neconyan can show it. Some providers think without returning anything you can read. **Fine-tuning → Formatting → Reasoning** controls how returned thinking is shown and whether it's added to later prompts.

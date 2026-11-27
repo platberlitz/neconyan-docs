@@ -28,7 +28,13 @@ Switch an open character to **Conversation**, or open the mode through workspace
 
 Check your persona before starting. Histories and memories belong to a persona. After you switch persona, a familiar conversation can look different or seem to be missing. It hasn't been deleted.
 
-For a group, choose the members you want. Use **Add member** later to bring in more. An **@Name** mention can give that member priority to respond.
+For a group, choose the members you want. An **@Name** mention can give that member priority to respond.
+
+From 1.6.0, **Edit members** in a group DM's header, or under **Prompt & context**, adds and removes pals in the same group. Tick or untick pals, then press **Save members**. The group keeps its messages and memory. A removed pal stops speaking but keeps their own DM, and a new pal can read what came before. A group needs at least two pals. In a solo DM, **Add member** starts a new group instead.
+
+### Lore in a conversation {#conversation-lore}
+
+**DM settings → Prompt & context → Lorebook Override** picks one lorebook for the DM or group. Its entries activate by the book's own keys and settings against recent messages. Leave it on **Character default** to load the replying character's own linked lorebooks; in a group each member loads only theirs. Chat, persona and global lorebooks stay out of Conversation. Before 1.6.0 neither choice put any entries in the prompt.
 
 ## How messages are laid out
 

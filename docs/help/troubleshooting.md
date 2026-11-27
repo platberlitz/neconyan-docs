@@ -199,6 +199,12 @@ Open **Extensions → Built-in → Debugger → Saved crash reports** to read br
 
 I keep these reports on your installation. Nothing is uploaded automatically. They record errors and a limited set of activity measurements, and don't deliberately collect chat text, prompts or credentials. An error message or system trace can still contain private text, so read it before sharing. Recent activity shows what was happening, not what caused the failure. Severe memory loss or unavailable storage can prevent a report from being saved. The [crash diagnostics reference](https://github.com/platberlitz/Neconyan/blob/staging/docs/crash-diagnostics.md) explains the limits.
 
+## The server runs out of memory {#server-memory}
+
+From 1.6.0, when Node.js stops because it ran out of memory, the saved server crash report says so and points you to **Server → Server Memory (Node.js)**. The card sits between **Updates & Restart** and **Thumbnail Quality** and is marked **Experimental**. It shows the **Current heap limit** and the **Device RAM**. Choose a **Heap cap**, then **Save memory cap** or **Save & Restart**, because the new cap only applies after a restart. **Auto** uses Node.js defaults on a computer and scales by itself on Android, such as in Termux.
+
+The card warns you before you save a cap lower than the current limit or more than half the device's RAM. If `NODE_OPTIONS` or `--max-old-space-size` already sets a cap, that one wins and the card says so. The card is hidden when Neconyan runs under Bun and in the Android and iPhone apps.
+
 ## Collect a useful report
 
 Open **Troubleshooting → Debugger** in the sidebar, reproduce the issue, then use **Diagnostic report** in **Extensions → Built-in → Debugger** to copy or download the report. Read it before sharing. The report omits several sensitive values, but screenshots and surrounding text may still include private information.

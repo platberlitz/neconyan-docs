@@ -29,6 +29,16 @@ You can use macros in fields that prepare prompts, such as character description
 
 Changing a card’s greeting affects new chats. It doesn't rewrite a greeting already saved in a transcript.
 
+### When a field warns you {#macro-warnings}
+
+From 1.6.0, fields that expand macros show a small warning under the box when one looks wrong. That covers card fields, the persona description, Author's Note, chat overrides, lorebook entries, Prompt Manager entries, templates, system prompts, Agent instructions and Catelier.
+
+- **Unknown macro:** names a macro Neconyan doesn't recognise, such as `{{chra}}` instead of `{{char}}`. It would be sent as plain text, so check the spelling.
+- **Unclosed macro:** means a `{{` has no closing `}}`.
+- **Extra closing braces:** means a `}}` has no opening `{{`.
+
+The warning clears as soon as the text is fixed and never stops you saving or sending. Macros from an extension such as Macro Enhanced count as known while it's on. The chat message box isn't checked.
+
 ## Find what you need
 
 | I want to… | Read |

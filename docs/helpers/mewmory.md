@@ -16,6 +16,9 @@ Mewmory is separate from Conversation summaries, Companion trackers and Scratchp
 !!! info "New in 1.5.6"
     The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
+!!! info "New in 1.6.0"
+    Mewmory follows the scene in Roleplay group chats, as described in [Group chats](#group-chats). I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so this won't happen in 1.5.7.
+
 ## Set it up for a chat
 
 1. Open a saved Roleplay chat, then **Mewmory**.
@@ -118,6 +121,10 @@ A message's **More** menu has **Mewmory for this message**. It opens a **This me
 - **Keep new messages off the record** is a per-chat switch on the status card, beside **Use Mewmory in this chat**. While it's on, every new message, yours and the replies, carries an **Off the record** chip and Mewmory never reads it. Earlier messages aren't touched. **Put back on the record** clears it for one message.
 
 Both leave the messages in the chat and in later prompts as usual. They only decide what Mewmory records. Simple Mode hides these in-chat controls.
+
+### Group chats {#group-chats}
+
+From 1.6.0, Mewmory follows the scene in a Roleplay group chat. Each speaker recalls only memories built from lines they heard, and what they write down comes from those lines too. A whisper stays with the people it was meant for. When a member catches up on what was said, the memories they missed open up to them as well. A memory some members didn't hear stays out of lorebooks made from the chat and out of sharing to other chats. Automatic history hiding also leaves a line in place while a member who heard it can't read the memory that replaces it. Replies written on the server follow the same rules, and solo chats work as before. [Who heard what](../workspace/roleplay.md#who-heard-what) explains how to set who heard each line.
 
 ## Source history matters
 

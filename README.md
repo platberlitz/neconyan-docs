@@ -6,7 +6,7 @@ I want you to get a reply before you need to understand every setting. The guide
 
 Miso, Taro and Nori explain things in their own voices. You can choose each guide’s male, female or neutral appearance independently. Their dialogue is written documentation; reading it doesn’t call a model.
 
-The site includes 55 pages, a reference for 201 registered macros, real demonstration screenshots and a downloadable extension starter. I reviewed the changed guides for [Neconyan 1.5.7](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.7) on 20 November 2026, released at [`a84bfbd9`](https://github.com/platberlitz/Neconyan/tree/a84bfbd9f25799137d652a4cfbb42c3320938e36). The new guides cover Author's Note and the guided actions in Simple Mode, Gallery deletion, Scratchpad picture and portrait batches, PixAI modes and LoRAs, and BotSearcher's JanitorAI backup address. They mark what needs 1.5.7. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
+The site includes 55 pages, a reference for 201 registered macros, real demonstration screenshots and a downloadable extension starter. I reviewed the changed guides against the **Neconyan 1.6.0 staging candidate** at [`73555b9c`](https://github.com/platberlitz/Neconyan/tree/73555b9c888a11d32519b179e56c860b89ec6cff) on 27 November 2026. 1.6.0 isn't published yet, and [1.5.7](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.7) is the latest published release. The new guides cover who heard what in group chats and Mewmory following the scene, Conversation members and lore, Scratchpad's checks, Try first, Undo and Talk mode, the docked Companions panel, Dice Roller auto rolls, character folder tabs, lorebook Health, macro warnings, Custom reasoning levels, Server Memory, What's new and Turkish. They mark what needs 1.6.0. The macro catalogue retains its reviewed 7 October snapshot. The Scene Note starter and extension styling guide carry the accent button guidance; the other extension examples retain their reviewed 7 October snapshots.
 
 ## Preview locally
 
@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-I captured the new Simple Mode chat and Author's Note screenshots on 20 November 2026 from Neconyan at `da76c549`, using the default Calico Dark accent and opaque panels. The app README uses identical copies of these images. Capture sources for the older workspace screenshots, including Notebooks and Proofreader, are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+I retook every workspace screenshot on 27 November 2026 from the Neconyan 1.6.0 release branch, whose app code matches `73555b9c`, using the default Calico Dark accent and opaque panels. The app README uses identical copies of these images. Capture sources and the demonstration data are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 

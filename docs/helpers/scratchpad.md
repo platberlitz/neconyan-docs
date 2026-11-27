@@ -28,6 +28,9 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
 !!! info "New in 1.5.6"
     **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
+!!! info "New in 1.6.0"
+    The **Sharing**, **Replies** and **Setup** tabs under **Context**, problem checks, `/check` and `/why`, **App diagnostics**, **Neconyan source code**, **Share with the assistant**, **Try first**, **Undo** and **Change history**, **Queue follow-up**, **Talk mode**, **Compare with a second connection** and up to eight lorebooks in General are new in 1.6.0. I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so these won't appear in 1.5.7.
+
 ## Open a discussion
 
 1. Open **Scratchpad** from the workspace or chat tools, or **Ask Scratchpad** from a notebook note.
@@ -42,9 +45,11 @@ From 1.5.6, if General has no persona selected, Scratchpad shows one warning. Pi
 
 If you delete an assistant reply and your own message is left last, press **Send** with the message box empty to have it answered again. Your message and attachments stay as they were, and no copy is added.
 
+From 1.6.0 you don't have to wait for a reply to finish. While one is being written, the button is **Stop** while the box is empty. Type something and it becomes **Queue follow-up** (Enter does the same on a computer). Queued messages wait in a **Queued next** strip, up to five per session, and go out in order once the replies finish. You can edit or remove one before it goes. The queue pauses if you stop a reply, a reply fails or you switch chats; press **Send now** when you're ready to carry on. It only lives in that browser tab.
+
 ### Choose how honest the feedback is {#feedback-tone}
 
-The **Feedback tone** slider under the assistant picker sets how hard the assistants judge your writing and ideas. Drag it, use the arrow keys, or press a stop under **Context → Feedback tone**:
+The **Feedback tone** slider under the assistant picker sets how hard the assistants judge your writing and ideas. Drag it, use the arrow keys, or press a stop under **Context → Replies → Feedback tone**:
 
 - **Nicer** leads with what works and suggests one or two gentle fixes.
 - **Neutral** is each assistant's usual honest feedback. New sessions start here, and older sessions stay here.
@@ -53,7 +58,7 @@ The **Feedback tone** slider under the assistant picker sets how hard the assist
 
 The mockery is aimed at the writing, never at you. If you sound genuinely upset or ask them to stop, they drop the act. Each assistant keeps their own voice at every stop, and facts, app help and change cards stay accurate.
 
-In a round table everyone uses the shared tone. **Context → Feedback tone → Give one assistant its own tone** lets one assistant differ, such as a kind Miso beside an unreasonably critical Taro. **Same as shared** follows the slider again. When the shared tone isn't **Neutral**, the folded **Talking with** bar shows it as a badge. The tone is saved with the session, and rehearsals ignore it.
+In a round table everyone uses the shared tone. **Context → Replies → Feedback tone → Give one assistant its own tone** lets one assistant differ, such as a kind Miso beside an unreasonably critical Taro. **Same as shared** follows the slider again. When the shared tone isn't **Neutral**, the folded **Talking with** bar shows it as a badge. The tone is saved with the session, and rehearsals ignore it.
 
 ### Save your own quick prompts {#quick-prompts}
 
@@ -83,9 +88,11 @@ The rest of the message is sent as typed, and lines inside a code block are left
 
 Press **Dictate**, the microphone button beside Send, speak, then press **Stop and transcribe**. The words are added after anything already in the message box, and nothing is sent until you press Send. A recording stops by itself after two minutes. The button only appears in browsers that can record from a microphone.
 
-**Context → Dictation → Transcription service** chooses who turns the recording into text. **This server (Whisper, no key needed)** is slow the first time while it fetches its speech model. OpenAI, Groq and Mistral use the key saved for that service and receive the recording.
+**Context → Setup → Dictation and voice → Transcription service** chooses who turns the recording into text. **This server (Whisper, no key needed)** is slow the first time while it fetches its speech model. OpenAI, Groq and Mistral use the key saved for that service and receive the recording.
 
 To listen instead, open an assistant reply's message actions and press **Read aloud**. It uses the text to speech voice mapped to that assistant's name. If there isn't one, it uses the default voice. It skips change cards, code blocks and link addresses. **Stop reading** stops it. Text to speech must be switched on with a voice chosen. If it isn't, the button says what's missing.
+
+From 1.6.0, **Talk mode** sits between **Dictate** and **Send** for a spoken back-and-forth. It shows **Listening…** and then **Hearing you…**. When you pause, your turn is transcribed with the same transcription service and sent, the reply is read aloud, and it listens again. **Send now** ends your turn early, **Interrupt** cuts a reply short and **End talk** stops. The microphone is released between turns, and talk mode stops by itself after 20 seconds without speech or three empty turns. **Talk mode pause** under **Context → Setup → Dictation and voice** picks how long a pause ends your turn: **Short**, **Normal** or **Patient**. With text to speech off, replies just appear as text.
 
 ## Add files and images {#scratchpad-attachments}
 
@@ -108,15 +115,23 @@ Open **Assistants → Your assistants**. **Add a new assistant** takes a name an
 
 ## Check exactly what it will read
 
+From 1.6.0, **Context** opens with **What Scratchpad will read**, a short line of labels such as the number of messages, the card, your persona and any lorebooks, plus **Show preview**. Below it are three tabs:
+
+- **Sharing** holds **Chat messages**, **Story and lore** (cards, **Your persona and Scenario Notes**, Author's Note, Mewmory, lorebook entries and **Current preset**, which used to sit under **Also share**), **Saved notes**, **Diagnostics**, **Tools and styling** and **Saved setups**.
+- **Replies** holds each assistant's connection and prompt, **Compare with a second connection**, **Feedback tone**, reply length and streaming, **Automatic summary** and **Reply prefills**.
+- **Setup** holds your global user instructions, **Web search** and **Dictation and voice**. It works without a chat open.
+
+The tab you used last opens next time on that device.
+
 **Show preview** lists the current context. Choose recent or selected messages and optional cards, **Your persona and Scenario Notes**, lore or Author's Note. Shared character cards are included as saved, including their greetings, examples and instructions.
 
-In Roleplay, **Also share → Current preset** adds your preset separately, with prompts marked on or off. It starts off. Sharing it also lets the assistant propose edits to the selected preset. [Review a proposed change](#review-a-proposed-change) covers that. Conversation doesn't use these presets.
+**Sharing → Story and lore → Current preset** adds your preset separately, with prompts marked on or off. It starts off. In Roleplay and, from 1.6.0, Conversation, sharing it also lets the assistant propose edits to the selected preset. In Conversation it reads the active preset with your account's prompt order, and prompt order edits go there. [Review a proposed change](#review-a-proposed-change) covers that.
 
 Important boundaries:
 
-- **General** shares no chat or swipes, and no lore until you pick one book under **Share a lorebook**. You can explicitly share a selected card, persona and permitted notes. From 1.5.6, General also offers **Also share → Current preset**, named after your equipped preset and off to begin with. There it's reference only. It doesn't change the assistant's instructions or offer edits to the preset.
+- **General** shares no chat or swipes, and no lore until you pick a book under **Share a lorebook**. You can explicitly share a selected card, persona and permitted notes. From 1.5.6, General also offers **Current preset**, named after your equipped preset and off to begin with. There it's reference only. It doesn't change the assistant's instructions or offer edits to the preset.
 - Picked messages stay tied to their original chat. Switching chats doesn't substitute different messages.
-- Scratchpad doesn't automatically read Mewmory or Companion notes. In a Roleplay chat you can tick **Mewmory** under **Also share**. See [Share saved memories or a lorebook](#share-memories-or-a-lorebook).
+- Scratchpad doesn't automatically read Mewmory or Companion notes. In a Roleplay chat you can tick **Mewmory** under **Sharing → Story and lore**, and **Companion notes** under **Sharing → Tools and styling**. See [Share saved memories or a lorebook](#share-memories-or-a-lorebook).
 - A linked note isn't automatically shared. Notebook permissions still apply.
 - **Ask Scratchpad** from a note shares that note or selection for 30 minutes after confirmation. It doesn't add the story beside it. Tick **Allow proposed edits to the shared text** for suggestions, or use **Stop sharing** to end access.
 
@@ -124,15 +139,15 @@ Context and note permissions are checked again when you send. Removing permissio
 
 ### Share saved memories or a lorebook {#share-memories-or-a-lorebook}
 
-In a Roleplay chat, tick **Mewmory** under **Context → Also share** to let the assistant read that chat's saved [Mewmory](mewmory.md) records. It starts off. Pinned memories come first, then recent ones, up to 128 records and 96 KiB. **Show preview** lists exactly which were sent and how many were left out. Reading never extracts new memories, runs recall or edits a record. Conversation, General and note discussions don't read Mewmory.
+In a Roleplay chat, tick **Mewmory** under **Context → Sharing → Story and lore** to let the assistant read that chat's saved [Mewmory](mewmory.md) records. It starts off. Pinned memories come first, then recent ones, up to 128 records and 96 KiB. **Show preview** lists exactly which were sent and how many were left out. Reading never extracts new memories, runs recall or edits a record. Conversation, General and note discussions don't read Mewmory.
 
-General Scratchpad has no story, so it shares no lorebook until you choose one under **Context → Share a lorebook**. The pick belongs to that session. Always-active entries are shared. Other entries are shared when their keywords appear in the Scratchpad conversation. Entries hidden from assistants stay hidden. The assistant can then suggest adding, editing or deleting entries in that book only.
+General Scratchpad has no story, so it shares no lorebook until you choose one under **Context → Share a lorebook**. From 1.6.0 you can pick up to eight from the **Add a lorebook** list, and **Remove** takes one off again. The picks belong to that session. Always-active entries are shared. Other entries are shared when their keywords appear in the Scratchpad conversation. Entries hidden from assistants stay hidden. The assistant can then suggest adding, editing or deleting entries in those books only.
 
 ### Reuse your Context choices {#saved-setups}
 
-**Context → Saved setups → Save current choices** keeps a session's Context choices under a name. In any other session, pick it under **Saved setup** and press **Apply setup**. Saving under an existing name replaces it, and **Delete setup** removes one. You can keep up to 24.
+**Context → Sharing → Saved setups → Save current choices** keeps a session's Context choices under a name. In any other session, pick it under **Saved setup** and press **Apply setup**. Saving under an existing name replaces it, and **Delete setup** removes one. You can keep up to 24.
 
-A setup holds **Recent messages to read**, the **Also share** ticks, hidden-message sharing, streaming, the longest reply, Web search, Read links and reply prefills. Picked messages, lorebook entry choices, saved notes, connections, assistant prompts and the round table stay as they are.
+A setup holds **Recent messages to read**, the **Story and lore** ticks, hidden-message sharing, streaming, the longest reply, Web search, Read links and reply prefills. Picked messages, lorebook entry choices, saved notes, connections, assistant prompts and the round table stay as they are.
 
 From 1.5.6, the setup selected under **Saved setup** also applies to every new session, including temporary ones and the first session in another chat, note or General. This device remembers the selection. **Apply setup**, **Save current choices** and **Delete setup** keep your scroll position. The setup also stores the shared **Feedback tone**.
 
@@ -144,13 +159,29 @@ New sessions start blank. Branches, copied sessions and exports keep a copy. The
 
 ### Summarise a long discussion {#automatic-summary}
 
-Under **Context → Automatic summary**, tick **Summarise older discussion**. It starts off. Once a discussion passes 50 usable messages or its history allowance, the first replying assistant summarises the older turns with its own connection. The latest 20 messages usually stay in full. **Last saved summary** shows the text and how many messages it covers.
+Under **Context → Replies → Automatic summary**, tick **Summarise older discussion**. It starts off. Once a discussion passes 50 usable messages or its history allowance, the first replying assistant summarises the older turns with its own connection. The latest 20 messages usually stay in full. **Last saved summary** shows the text and how many messages it covers.
 
 Every saved message stays in the session. Summarising makes extra model requests, can miss details and doesn't look at attached images. If it fails, the reply stops with an explanation rather than quietly dropping history.
 
+## Check a card, preset or lorebook {#check-a-card-preset-or-lorebook}
+
+From 1.6.0, Scratchpad can check your work and help when something in Neconyan goes wrong. Everything here sits under **Context → Sharing → Diagnostics**, starts off and is saved with the session.
+
+- **Problem checks** runs fixed checks in your browser on the shared card, the shared **Current preset** and each shared lorebook. These aren't model guesses. **Show preview** adds a **Checks** list naming each problem, where it is and why it matters. The quick prompts **Check my card**, **Check my preset** and **Check my lorebook** switch on what they need and fill the message box.
+- With a lorebook shared, Problem checks also traces why entries wouldn't fire, one reason per entry, without any model request. Ask **Why didn't an entry trigger?** and the assistant can suggest new keys or activation settings as a change card.
+- **App diagnostics** gathers your version, recent browser errors, crash reports, failed requests and, for an admin, server crash reports. Keys, tokens and chat text are removed first. The quick prompt is **What went wrong in Neconyan?**
+- **Neconyan source code** lets the assistant read Neconyan's own code, read-only, to find a bug. Your config, secrets and data folder are never readable. It cites the files it checked and can write a **Bug report draft** with **Copy bug report**. Nothing is submitted for you.
+- **Last prompt sent** (Roleplay and Conversation) shares the exact prompt behind the last reply, with secrets redacted.
+
+You can also type these as shortcuts at the start of a message: `/check card`, `/check preset`, `/check lorebook`, `/check app`, `/check source` or `/check prompt`, or `/why` followed by an entry's name or key. Scratchpad switches on only what that check needs and sends the plain request. `/check` alone lists what you can check right now. If something is missing, a **Nothing was sent** notice says what to share, and your text stays in the box.
+
+When an assistant can't answer properly without something you haven't shared, its reply can show a **Share with the assistant** card with its reason and a ticked box per item. **Share & continue** switches those on and carries on, **Turn on** only switches them on, and **Not now** leaves everything as it was. Untick anything you'd rather keep private.
+
+The diagnostics go to the provider behind your Scratchpad connection, so I'd only switch them on with a provider you trust with that information.
+
 ## Search the web
 
-Choose a provider under **Context → Web search**. Brave, Exa and Tavily need their own keys. NanoGPT uses your saved key. SearXNG needs an instance with JSON output enabled. Custom search addresses must return supported JSON results.
+Choose a provider under **Context → Setup → Web search**. Brave, Exa and Tavily need their own keys. NanoGPT uses your saved key. SearXNG needs an instance with JSON output enabled. Custom search addresses must return supported JSON results.
 
 Open **+** (Message options) beside the message box and turn on **Web search**. The choice is saved with the session.
 
@@ -172,11 +203,13 @@ Turn on **Round table** and select up to three assistants. Each answers with its
 
 Once at least two assistants have answered your latest message, **Discuss these answers** appears under the round. Each selected assistant reads the others' answers and replies again: where they agree, where they disagree and what they'd change. Anything typed in the message box goes along as the point to focus on. The button is absent in Random mode, and a discussion round never runs a web search or reads links. It costs another request per assistant.
 
+From 1.6.0, **Context → Replies → Assistant connections → Compare with a second connection** asks the same assistant twice, through two different connections, for every message. Pick **Same connection as the chat** or a saved connection profile. The two connections must differ, or Scratchpad won't send. The header says **Compare: 2 connections**, each reply carries its connection's name, and **Keep only this reply** keeps the one you prefer. It's off while **Round table** is on, and it's saved with the session and in Saved setups. Each message then costs two requests.
+
 ## Keep alternative replies
 
 **Try again** saves a new version of that assistant's reply instead of discarding the previous one. From 1.5.5 it works on any reply to one of your messages, not only the latest, and later messages stay as they are. Use the arrows and version counter below the reply to choose an alternative. A reply can keep up to 50 versions. Other round-table answers stay as they were.
 
-Under **Context → Reply prefills**, **Reply prefill** starts the assistant's answer with text you supply. It applies to every assistant in the session, including new reply versions, and needs a connection that supports prefills. Leave it empty for normal replies. **Kimi K3 / K3.1 partial prefill** takes precedence for those models. An unclosed `<think>` only starts the thinking and isn't added to the saved reply.
+Under **Context → Replies → Reply prefills**, **Reply prefill** starts the assistant's answer with text you supply. It applies to every assistant in the session, including new reply versions, and needs a connection that supports prefills. Leave it empty for normal replies. **Kimi K3 / K3.1 partial prefill** takes precedence for those models. An unclosed `<think>` only starts the thinking and isn't added to the saved reply.
 
 ## Try the next story reply first {#rehearse}
 
@@ -206,18 +239,18 @@ The preview is static. Scripts, external resources and links are blocked, macros
 
 ## Review a proposed change
 
-An assistant can propose changes to supported cards, lorebooks, Roleplay messages, the shared preset and notebook notes. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
+An assistant can propose changes to supported cards, lorebooks, chat messages, the shared preset and notebook notes. Open **Review**, compare **Now** with **Proposed text**, then choose **Save change**. A proposal appearing is not a save.
 
 With **Your persona and Scenario Notes** shared, it can also change the persona's name, description or title, or an existing note's name or text. Persona edits change the saved base fields in every chat. Note edits affect every chat using that note and keep its activation. It can also draft a brand-new persona or note. [Create a persona or Scenario Note](#create-a-persona-or-scenario-note) covers that.
 
-With **Current preset** shared in Roleplay, the assistant can replace one field in the selected preset:
+With **Current preset** shared in Roleplay or Conversation, the assistant can replace one field in the selected preset:
 
 - For Chat Completion, that can be one prompt module's text, name, role, on/off state, in-chat position or depth. A slot filled from the card, chat or persona can only be switched on or off.
 - For Text Completion, it can be one field from the saved system prompt, context template or instruct template.
 
 Review the change as usual. **Save change** writes the selected preset, including its current settings, so other chats using that preset get the change too. Sampler, connection and other preset settings aren't available to the proposal, and each proposal changes one field. If the original preset is no longer selected or shared, the review refuses to save.
 
-Version 1.5.5 adds more kinds of change card. Each needs its box ticked under **Context → Also share**, starts off, and stays ticked while you review:
+Version 1.5.5 adds more kinds of change card. Each needs its box ticked under **Context → Sharing**, starts off, and stays ticked while you review:
 
 | Share | The assistant can suggest… | It can't… |
 | --- | --- | --- |
@@ -234,7 +267,15 @@ When one reply holds two or more open cards that edit something existing, **Revi
 
 You can adjust supported non-notebook proposals before saving. Notebook changes save the exact reviewed proposal, so ask for a revision if needed. If the original changed meanwhile, reopen or regenerate the proposal rather than overwriting newer work.
 
-Message and preset edits apply to Roleplay, not Conversation. Return to the original chat to review them. **Use as draft in the chat box** fills the composer without sending.
+Message edits apply to the chat they came from, so return to it to review them. Roleplay can rewrite, add, hide, unhide or delete messages. From 1.6.0, Conversation can rewrite, add or delete messages in the open branch, but never hides them, and it waits while a Conversation reply is being written. **Use as draft in the chat box** fills the composer without sending.
+
+### Try a change first, or undo it {#try-or-undo}
+
+From 1.6.0, **Try first** sits beside **Review** and **Dismiss** on a change card. It rehearses the next story reply with the change already in place and saves nothing. In the review, **Try before saving** does the same with your edited text. The reply is labelled **Rehearsal · Unsaved change**, and the card stays open, so you can save it once you like the result. It works in Roleplay and Conversation for card text, persona text, lorebook entries, preset fields and messages, plus Author's Note in Roleplay.
+
+After a save, **Undo** appears beside **Saved**. It puts the previous text back, the card says **Undone**, and **Review again** reopens the suggestion. Undo first checks nothing else has changed the target since. If you've edited it, Undo stops so your later work stays, and **Copy previous text** lets you restore the old text by hand.
+
+**Sessions → Change history** lists the last 50 saved changes, newest first, each marked **Saved**, **Undone** or **Recorded**, with **View before & after**, **Copy previous text** and **Undo**. New characters, pictures and notebook changes are only recorded. The history survives a reload but isn't part of a session export.
 
 ## Create a character
 

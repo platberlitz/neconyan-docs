@@ -83,7 +83,24 @@ Use **Scene** to set the location and mark who is present. **Whisper** reaches m
 
 ??? info "Scene Director requests"
 
-    The director reads the last eight messages and chooses up to three speakers. Its separate request has a three-second limit and can use a saved connection profile.
+    The director reads the member cards and up to eight recent messages, then chooses up to three speakers. It never picks you. From 1.6.0 it waits up to 30 seconds by default; change **Director timeout** under **Group Controls**, anywhere from 1 to 300 seconds. If it gives no usable answer, the usual order picks instead and a warning says so once per chat. The **Scene** panel shows its last pick and why.
+
+### Who heard what {#who-heard-what}
+
+From 1.6.0, each group member only remembers the lines they were there to hear. Someone who was away, or who wasn't in a whisper, doesn't get that line in their prompt.
+
+- Every message can show a badge such as **Heard by 1 of 3**. Tap it, or choose **More → Who heard this**, to tick or untick members, then **Save**. Apply it to **This message** or **From here on**.
+- Switch on **Everyone hears this** in the same editor for a line that every member should know, including members who are away now or join later.
+- Long-press a member and open **Memory** to choose what they keep: **What they heard** (the default), **Only with the group**, which keeps a line only while someone else who heard it is in the scene, or **Everything**, which gives them every line except other people's whispers. **Catch up on what was said** fills in a member who missed something, and **Forget everything so far** clears what they heard.
+- **Remember from message** in the **Scene** panel sets a memory starting point for the chat. Members forget everything before that message number.
+
+[Mewmory](../helpers/mewmory.md) follows the same rules, so each speaker recalls and saves only what they heard. Group chats from SillyTavern's Presence extension keep who heard what when you bring them over.
+
+??? info "Scene commands and macros"
+
+    Slash commands change who heard what without opening the editor: `/heard-forget Kit 4-9`, `/heard-remember`, `/heard-all`, `/heard-none`, `/heard-everyone 4-9`, `/heard-copy from=3 to=8`, `/heard-transfer name=Kit to=Mira`, `/heard-get 12` and `/heard-from 12`. `/away Kit`, `/back Kit` and `/scene-location The inn` change the scene. Presence command names such as `/presenceForget` still work.
+
+    Prompts and cards can read the scene with `{{groupPresent}}`, `{{groupAway}}`, `{{sceneLocation}}` and `{{groupHeard::12}}`.
 
 ## Images in replies
 
@@ -187,6 +204,8 @@ Author's Note adds a short instruction to the prompt. Its tabs choose where that
 - **New chats:** defaults for chats you create later.
 
 Top notes come before the chat note, character first and persona second. Bottom notes follow it in the same order. Conversation mode has its own Author's Note settings.
+
+From 1.6.0, the **Full screen** button beside each note opens a larger editor, which helps with a long note on a phone.
 
 === "Computer"
 
