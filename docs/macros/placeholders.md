@@ -61,6 +61,21 @@ A slash-command script can use:
 
 `pipe` reads the previous command’s output. `var` reads a variable in that script’s scope, with an optional index. These are script values, separate from the ordinary chat and global stores. Script closures can also supply additional local macro names.
 
+From 1.6.0, slash-command suggestions in the message box have a details button. It shows a command's arguments and examples without losing what you've typed. `/help slash` opens a searchable list of every command. **All**, **Core** and **Extensions** filter it by where the command comes from, and **Back to commands** returns from a command's details to your results.
+
+## Group scenes
+
+From 1.6.0, these four only fill in inside an open Roleplay group chat. Anywhere else they're empty.
+
+```text
+{{groupPresent}}
+{{groupAway}}
+{{sceneLocation}}
+{{groupHeard::12}}
+```
+
+`groupPresent` lists the members in the scene now, muted ones included. `groupAway` lists the members marked away. `sceneLocation` is the location set in the **Scene** panel. `groupHeard::12` lists the members who heard message 12, and stays empty when the member speaking didn't hear it. [Who heard what](../workspace/roleplay.md#who-heard-what) explains the scene rules behind them. The macro catalogue keeps its 7 October snapshot, so these aren't in its lists yet.
+
 ## Image caption templates
 
 ```text

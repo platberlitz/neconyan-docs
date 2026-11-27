@@ -69,7 +69,7 @@ Replies get a short system note telling the model to write that outcome as settl
 - **Auto roll** rolls fresh dice after every reply, so a roll is always waiting for your next message.
 - **Auto send** adds the waiting roll as a 🎲 line after each message you send, without putting it in the message box. A message that already has a roll from **Add to message** keeps that one. Slash commands, continues and empty sends get no roll.
 
-With **Auto send** on, a choice from **CYOA Choices with Skill Checks** or **Doors with Fate Checks** gets its own d100 roll against that choice's target. Tap the choice in the reply or the **Companion panel**, or start your message with its number. A 1 is a critical success and 100 a critical failure. Rolling 10 or more under the target succeeds, and up to 10 over is a partial success.
+With **Auto send** on, a choice from **CYOA Choices with Skill Checks** or **Doors with Fate Checks** gets its own d100 roll against that choice's target. Tap the choice in the reply or the **Companion panel**, or start your message with its number. A 1 is a critical success and 100 a critical failure. Rolling 10 or more under the target succeeds. Anything closer, from 9 under the target to 10 over it, is a partial success, and further over is a failure.
 
 ## Lore and saved work
 
