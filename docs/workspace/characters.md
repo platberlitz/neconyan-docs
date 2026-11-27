@@ -143,6 +143,17 @@ At the top of **Tag Management**:
 
 After a delete, merge or prune, the **Undo** banner at the top of the window restores the previous state.
 
+### Folder tabs and sorting {#folder-tabs}
+
+From 1.6.0, the folder button in the **Characters** tool row opens **Organise folders**. Folders stay off until you turn them on, so the list keeps its space. Under **Show**:
+
+- **Folders page** moves folders onto their own page. The folder button opens it, and **All characters** takes you back.
+- **Folder tabs** adds a **Folders** row above the list, with **All characters** and one tab per folder tag. **Tabs** picks which folders appear there.
+
+**Sort imports by site** files each new import under the site it came from, such as JanitorAI, Chub or RisuRealm. Tick **Sort imported characters by site**, then choose **Make a folder for a site the first time** or **Choose a folder for each site**.
+
+**Sort with AI** asks your connected model to suggest folders, one request per batch. Pick a prompt under **How to sort**, from **Ready-made** or **My prompts** (**New prompt** saves your own rule), then press **Suggest folders**. Nothing moves until you press **Apply**, so read the suggestions first.
+
 ## Move and copy a card
 
 Characters' **Import** action accepts supported card files, including PNG files with embedded card data. Use **Duplicate Character** when you want a separate version to experiment with.

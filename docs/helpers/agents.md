@@ -25,6 +25,9 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
 !!! info "New in 1.5.6"
     **Clothing Tracker**, **Skip user messages**, the **On Companions** picker for selected Agents, **Rerun agents** on a **Reply interrupted** notice, the Companion panel's jump buttons and Memory Shard's new defaults came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
+!!! info "New in 1.6.0"
+    The docked **Companions** panel, each Companion's own stop button, the Memory Shard editor, Plot Compass's numbered directions and the themed Level Up and stats cards come in Neconyan 1.6.0. I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so these won't appear in 1.5.7.
+
 ## Start with one helper
 
 1. Open **Agents** and choose a helper. **Help me choose** asks a few questions and recommends some. **Browse library** has more.
@@ -97,6 +100,8 @@ Two bundled templates have a version 2. If you have version 1 installed, the Age
 
 From 1.5.6, Memory Shard is switched on for new accounts. Older accounts switch it on in Agents. After a summary it waits until the chat has grown by about another 30,000 tokens before writing the next one, instead of running after every reply. The messages a finished summary covers are then hidden from the model. They stay readable in the chat, Mewmory still reads them, and each message's eye button shows it to the model again. Nothing is hidden when a run fails or comes back empty. In Simple Mode, **Memory** in the sidebar opens **Story so far** with the same switch and **Summarise now**.
 
+From 1.6.0, you can edit a Memory Shard note by hand. Editing opens it section by section, and **Raw Markdown** shows the whole note as plain text. Its card also follows your **Regex Agent Themes**, with a live preview and per-tracker overrides.
+
 ## See Proofreader's changes
 
 Find **Proofreader** in **Manage agents**, check its **Quick settings**, then switch it on with **Agents On**. It runs after a reply. **Apply to reply** on its card lets you try it on an existing reply first.
@@ -144,6 +149,8 @@ Start with one. Several helpers doing the same job can add cost without improvin
 - **Chatroom** gives the scene a reacting audience. **Send reply** asks that audience to answer without adding your line to the main chat. Poll choices fill its reply box but don't send themselves.
 - **Clothing Tracker**, new in 1.5.6, keeps track of what your persona and everyone still in the scene is wearing. It comes installed but switched off, next to Position Tracker. After each reply it shows a **Scene wardrobe** card with one tag per garment, carries unchanged outfits forward and drops anyone who has left. Its notes aren't fed into the story by default. If you delete it, add it again from **Browse library**.
 
+From 1.6.0, **Level Up Companion** and **User-based Stats Generator** use your **Regex Agent Themes**. On a turn where nothing changes they answer with one short line instead of a whole sheet, which costs far fewer tokens, and your last stat sheet stays on screen.
+
 Companion notes appear in the **Companion panel**. Each usually needs its own request. Their estimates are observations written by the model, not fixed game rules.
 
 ## Give Plot Compass a direction
@@ -151,6 +158,8 @@ Companion notes appear in the **Companion panel**. Each usually needs its own re
 **Plot Compass** is a Companion that proposes possible developments and a next move. It keeps planning notes instead of writing the next story reply, and feeds its latest note into future replies by default.
 
 Its **Plot Objectives** have separate **Global**, **This character card** (or **This group**) and **This chat only** fields. Enabled objectives add together. Untick one to stop using it without deleting the text. Empty fields add nothing. Press **Save and run** to save the objectives and request a fresh note. If you edit them in the Agent's full editor, save the Agent instead.
+
+From 1.6.0, the newest Plot Compass note numbers its possible developments. Tap one to make it **Your pick** for the next reply, and tap it again to clear it. If you don't pick, the next reply follows the direction marked **Suggested**. Picking makes no model request. The card follows your **Regex Agent Themes** too.
 
 An objective is a desired direction, not a guaranteed ending. You can ask for a slow investigation without deciding every choice the characters will make.
 
@@ -227,6 +236,8 @@ A Companion's editor has **Skip user messages** beside **Chat messages to read**
 ## History and visibility
 
 Open the **Companion panel** from its floating or top-bar button. **Search companions and notes** filters the view without running anything. **More tools → Companion activity** shows what ran.
+
+From 1.6.0, the panel docks beside the chat on a computer instead of covering it, and the chat narrows to make room. Drag its inner edge to resize it, or focus the divider and use the Left and Right arrow keys. Neconyan remembers the width, and the panel reopens on the card you were reading. Phones keep the panel over the chat. While a Companion writes, its card has its own **Stop this companion** button, so you can stop one without stopping the rest.
 
 **Connections & defaults → Context & notifications → Companion panel button** chooses between **Floating side button**, the cat at the edge of the screen, and **Top bar button**. From 1.5.6, the floating button waits until an automatic Companion has written its first note, so it doesn't sit over the chat with nothing to show. A manual Companion brings it up straight away, because you run that one from the panel. The **Top bar button** still shows for any Companion in the panel.
 

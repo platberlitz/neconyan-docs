@@ -39,6 +39,14 @@ Scanning settings decide which recent text is checked. Budget and ordering setti
 
 A constant or always-active entry behaves differently from a keyword-triggered one. Use it only for information that belongs in every relevant request, because it takes up space every time.
 
+[Scratchpad](../helpers/scratchpad.md#check-a-card-preset-or-lorebook) can explain why a particular entry didn't fire. Start a message there with `/why` and the entry's name or key.
+
+### Health and missing books {#lorebook-health}
+
+**Health**, beside **History** in the lorebook editor, lists duplicate keys, entries that can never activate, recursion loops, invalid patterns and other problems. From 1.6.0 it also lists **Damaged entries**, records the editor can't open because their data or ID is broken. Opening Health only checks; it doesn't rewrite anything. The lorebook editor now scrolls with the whole page instead of inside its own small box.
+
+Also from 1.6.0, when a chat links a lorebook that no longer exists, a **Missing lorebook links** notice names each one and says where the link comes from. Nothing loads from a missing book. Renaming or deleting a book in Lorebooks updates or removes every link to it, so the notice shouldn't follow your own changes.
+
 ## Inclusion groups {#inclusion-groups}
 
 An inclusion group lets only one of several related entries in at a time. Use it for alternatives that would contradict each other, such as three versions of the weather or a character's moods.

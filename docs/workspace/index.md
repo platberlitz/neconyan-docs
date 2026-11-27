@@ -44,7 +44,7 @@ From 1.5.7, press **Delete** at the top right of a picture and confirm to remove
 
 ## Settings {#settings}
 
-**Settings** sorts its drawers into four tabs. On a phone, a **Settings category** list replaces the tabs.
+**Settings** sorts its drawers into five tabs. On a phone, a **Settings category** list replaces the tabs.
 
 | Tab | What it holds |
 | --- | --- |
@@ -52,8 +52,9 @@ From 1.5.7, press **Delete** at the top right of a picture and confirm to remove
 | **Chat & Writing** | **Chat & messages**, **Characters**, **Auto-swipe & auto-continue**, **Autocomplete** and **Fine-tuning** |
 | **System & Device** | **Import & Restore**, **Desktop** and **Mobile** behaviour, phone streaming options, and anything an extension adds without choosing a tab |
 | **Cache & Account** | **Account Settings**, **Cache & Storage Utilities**, and **Old defaults & recovery** for untouched files left by older installs |
+| **Device sync** | Moving chosen libraries between separate installations, covered in [Device sync](../help/device-sync.md) |
 
-**Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. From 1.5.6, a translated interface shows names you chose yourself exactly as you typed them, such as a prompt called 'Draft' or a lorebook called 'Notes'. The built-in labels around them are still translated. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
+**Find a setting** searches every tab at once, so you don't need to know where something lives. The top of the panel holds the **Language** list, the version number and the **Account** button. From 1.5.6, a translated interface shows names you chose yourself exactly as you typed them, such as a prompt called 'Draft' or a lorebook called 'Notes'. The built-in labels around them are still translated. From 1.6.0, the **Language** list includes **Türkçe (Turkish)**, thanks to YusufErenGoc. It holds 17 languages plus **Follow browser**, the login page has the same list, and changing it reloads the page. The choice belongs to this browser, so another device keeps its own. **Admin Panel** appears there too when the server uses user accounts and you're an administrator.
 
 ## Edit and reorder the sidebar {#reorder-sidebar}
 
@@ -133,6 +134,8 @@ Selecting a result opens its page, item or chat. A chat result opens the chat. I
 Search doesn't make a model request or give an assistant permission to read your notes. It searches saved content, not unsaved drafts or other accounts. Settings results depend on which controls and extensions are currently loaded. If some saved content couldn't be searched, treat that warning as an incomplete result, not proof that the item is missing.
 
 ## Tours and everyday navigation
+
+From 1.6.0, **What's new** at the end of **Home → Home layout** shows what changed in the version you're running, read from the changelog on your own server, with every merged change listed underneath. A small dot appears when there's something you haven't read yet. A staging build says it's a preview that isn't released yet. Opening it makes no model requests.
 
 Home offers **Replay First paws tour**. Several full-page tools also have a character-led Tour. Follow the highlighted controls yourself. The tour explains the next action while you keep control of the page.
 

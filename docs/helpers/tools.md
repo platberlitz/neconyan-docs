@@ -54,7 +54,7 @@ The builder refuses a button that doesn't fit the selected set. A set with **Put
 
 ### Dice Roller
 
-**Dice Roller** is on by default, and its dice button sits first beside the message box. Tap it to open the dice. It rolls straight away unless **Roll as soon as the dice open** is off. **Roll dice** is also in the wand menu.
+**Dice Roller** is a Companion. Every account has it installed but switched off. Turn it on under **Agents → Companions**, then open the **Companion panel** to find the dice. Choose **Notes under replies** in its editor if you'd rather have the dice card under the newest message. The roll happens in your browser and makes no model request.
 
 1. Type what you're attempting.
 2. Pick a **Die** from d4 to d100, and up to four **Dice**.
@@ -64,7 +64,12 @@ The builder refuses a button that doesn't fit the selected set. A set with **Put
 
 Replies get a short system note telling the model to write that outcome as settled fact without mentioning dice or numbers. Continuing or swiping keeps it. It works with browser and server replies.
 
-Switch Dice Roller off in **Extensions → Manage extensions** under Built-in features. Adjust the dice button, **Roll as soon as the dice open**, critical rolls and partial successes in **Extensions → Dice Roller**.
+**Roll options** holds **Critical rolls**, **Partial successes** and **Roll when the Companion panel opens**. From 1.6.0 it also has two switches, both off to begin with:
+
+- **Auto roll** rolls fresh dice after every reply, so a roll is always waiting for your next message.
+- **Auto send** adds the waiting roll as a 🎲 line after each message you send, without putting it in the message box. A message that already has a roll from **Add to message** keeps that one. Slash commands, continues and empty sends get no roll.
+
+With **Auto send** on, a choice from **CYOA Choices with Skill Checks** or **Doors with Fate Checks** gets its own d100 roll against that choice's target. Tap the choice in the reply or the **Companion panel**, or start your message with its number. A 1 is a critical success and 100 a critical failure. Rolling 10 or more under the target succeeds, and up to 10 over is a partial success.
 
 ## Lore and saved work
 
