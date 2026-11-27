@@ -119,6 +119,6 @@ It uses more battery, shows a media notification and can pause music in other ap
 
 ## Away from home
 
-The local address above won't work from mobile data. Use HTTPS hosting that requires a sign-in, or a private network connection to your server. Don't open the example HTTP port directly to the internet. This local-network setup doesn't configure encrypted public hosting.
+The local address above won't work from mobile data. Use HTTPS hosting that requires a sign-in, or a private network connection to your server. Don't open the example HTTP port directly to the internet. This local-network setup doesn't configure encrypted public hosting. If you reach the server through your own domain or a tunnel, add that name to [the allowed host list](../help/troubleshooting.md#host-not-allowed) first.
 
 If the page loads but replies fail, your phone connection is working. Continue with [model connection troubleshooting](../help/troubleshooting.md#the-page-opens-but-the-model-wont-reply).
