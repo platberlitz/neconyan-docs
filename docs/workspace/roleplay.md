@@ -122,7 +122,9 @@ Start with **Settings → Chat & Writing**:
 - **Chat & messages → Messages → Block external media** sets the default for loading images, audio and video from other websites. The character or group's external-media dialog also has **Block external media by default**. **Always allowed** and **Always forbidden** override that default for the selected character or group. Outside sites can see your IP address when their media loads.
 - **Replies → Where replies are written** chooses **In the browser** or **On the server**. See [leaving the page](#when-you-leave-the-page) before changing it.
 
-Automatic chat naming makes a model request once a date-named chat has enough messages and you've sent one. The default is six messages, including the greeting. You can change that number or turn naming off. Assistant chats, temporary chats and Conversation mode aren't named this way.
+**Name chats automatically** makes a model request once a date-named chat has enough messages and you've sent one. The default is six messages, including the greeting. You can change that number under **Messages before naming** or turn naming off. Assistant chats, temporary chats and Conversation mode aren't named this way.
+
+From 1.6.0, thinking models get room to finish reasoning before they write the title. If naming fails, a **Could not name this chat automatically** message shows the reason once. That chat keeps its dated name and isn't tried again until the page reloads, so name it from the wand button in the chat bar or **Label current** in Chat History instead.
 
 The message timer stops when the main reply finishes. It doesn't count Agent work afterwards. A cut-off reply keeps any text or thinking it received. It doesn't start after-reply Agents as though the answer had completed.
 
