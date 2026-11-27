@@ -20,6 +20,22 @@ If another program is using that port, the terminal should report it. Stop the c
 
 On a phone, use the **computer's network address**, not localhost. Check that both devices share a network, the server is listening for network connections and the firewall permits access. Follow [the phone guide](../start/phone.md) for authentication and address allow-list settings.
 
+### If the address isn't on the allowed host list {#host-not-allowed}
+
+If a **Forbidden** page says Neconyan only opens at addresses on its allowed host list, the server turned away the name you typed. The check stops other websites reaching your server by pointing a name of theirs at it. `localhost`, `127.0.0.1` and your computer's IP address always open.
+
+If you open Neconyan through your own domain, a reverse proxy, a tunnel or a local network name, add that name to your actual **config.yaml** and restart:
+
+```yaml
+hostWhitelist:
+  hosts:
+    - st.example.com
+```
+
+The page shows these lines with the name it refused. A leading dot, such as `.example.com`, also covers its subdomains. The file is the one on the **Using config path** line Neconyan prints when it starts.
+
+If your configuration came from an older version, where host checking was off, the first start after updating switches it on once and keeps the old file, comments included, beside it as **config.yaml.before-host-check**. To keep the check off, set `enabled: false` under `hostWhitelist`. It stays off after that.
+
 ### If Neconyan cannot finish loading {#if-neconyan-cannot-finish-loading}
 
 When startup fails in a way the page can catch, Neconyan shows **Neconyan could not finish loading** with the recorded error, **Retry startup** and **Read report**. **Retry startup** reloads the page and keeps saved browser data. It doesn't clear the cache or start a reload loop. **Read report** opens the saved error even though the app didn't finish starting.
