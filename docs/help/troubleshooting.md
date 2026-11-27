@@ -32,7 +32,7 @@ hostWhitelist:
     - st.example.com
 ```
 
-The page shows these lines with the name it refused. A leading dot, such as `.example.com`, also covers its subdomains. The file is the one on the **Using config path** line Neconyan prints when it starts. In Docker that line says `./config.yaml`, which is inside the container: the file to edit on your computer is `config/config.yaml` in the folder you mounted as the config folder.
+The page shows these lines with the name it refused. A leading dot, such as `.example.com`, also covers its subdomains. The file is the one on the **Using config path** line Neconyan prints when it starts. In Docker that line says `./config.yaml`, which is inside the container: the file to edit on your computer is `config.yaml` in the folder you mounted as the config folder (`docker/config/config.yaml` with the bundled `docker-compose.yml`).
 
 If your configuration came from an older version, where host checking was off, the first start after updating switches it on once and keeps the old file, comments included, beside it as **config.yaml.before-host-check**. To keep the check off, set `enabled: false` under `hostWhitelist`. It stays off after that, because the updated file also records the switch as `upgraded: true` under `hostWhitelist`. The copy doesn't have that line, so if you put the copy back and want the check to stay off, add `upgraded: true` under `hostWhitelist` in it, or set `enabled: false` in the updated file instead.
 
