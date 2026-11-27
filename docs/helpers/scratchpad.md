@@ -29,7 +29,7 @@ Scratchpad is a side conversation for ideas, continuity checks and proposed edit
     **Feedback tone**, **Current preset** in General, saved pictures for vision models, answering your last message with an empty **Send**, and Saved setups for new sessions came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 !!! info "New in 1.6.0"
-    The **Sharing**, **Replies** and **Setup** tabs under **Context**, problem checks, `/check` and `/why`, **App diagnostics**, **Neconyan source code**, **Share with the assistant**, **Try first**, **Undo** and **Change history**, **Queue follow-up**, **Talk mode**, **Compare with a second connection** and up to eight lorebooks in General are new in 1.6.0. I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so these won't appear in 1.5.7.
+    The **Sharing**, **Replies** and **Setup** tabs under **Context**, problem checks, `/check` and `/why`, **App diagnostics**, **Neconyan source code**, **Share with the assistant**, **Try first**, **Undo** and **Change history**, **Queue follow-up**, **Talk mode**, **Compare with a second connection** and up to eight lorebooks in General are new in 1.6.0. I've reviewed this guide against [Neconyan 1.6.0](https://github.com/platberlitz/Neconyan/releases/tag/v1.6.0) at commit **f03401f3** on 27 November 2026. They won't appear in 1.5.7.
 
 ## Open a discussion
 

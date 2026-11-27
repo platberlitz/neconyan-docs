@@ -26,7 +26,7 @@ Agents do recurring jobs around a reply: add instructions, rewrite prose or keep
     **Clothing Tracker**, **Skip user messages**, the **On Companions** picker for selected Agents, **Rerun agents** on a **Reply interrupted** notice, the Companion panel's jump buttons and Memory Shard's new defaults came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 !!! info "New in 1.6.0"
-    The docked **Companions** panel, each Companion's own stop button, the Memory Shard editor, Plot Compass's numbered directions and the themed Level Up and stats cards come in Neconyan 1.6.0. I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so these won't appear in 1.5.7.
+    The docked **Companions** panel, each Companion's own stop button, the Memory Shard editor, Plot Compass's numbered directions and the themed Level Up and stats cards come in Neconyan 1.6.0. I've reviewed this guide against [Neconyan 1.6.0](https://github.com/platberlitz/Neconyan/releases/tag/v1.6.0) at commit **f03401f3** on 27 November 2026. They won't appear in 1.5.7.
 
 ## Start with one helper
 
