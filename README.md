@@ -43,7 +43,7 @@ Avoid repeated 'same X' phrasing and three-item lists written for rhythm. Keep a
 
 Use demonstration data for screenshots. Desktop captures are 1280×900 and phone captures are 393×852. Keep verification captures in `screenshots/`; that directory is ignored. Images published in the handbook belong in `docs/assets/images/screenshots/`.
 
-I retook every workspace screenshot on 27 November 2026 from the Neconyan 1.6.0 release branch, whose app code matches `73555b9c`, using the default Calico Dark accent and opaque panels. The app README uses identical copies of these images. Capture sources and the demonstration data are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
+I retook every workspace screenshot on 27 November 2026 from the Neconyan 1.6.0 release branch, whose app code matched `73555b9c` apart from a later Conversation save fix that doesn't change these screens, using the default Calico Dark accent and opaque panels. The app README uses identical copies of these images. Capture sources and the demonstration data are in [ASSETS.md](ASSETS.md). When replacing screenshots, update that record and check the affected guides and screenshot zoom at both widths.
 
 ## Update the macro reference
 
