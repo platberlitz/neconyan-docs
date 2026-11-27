@@ -17,7 +17,7 @@ Mewmory is separate from Conversation summaries, Companion trackers and Scratchp
     The Nano-GPT decision models, saved-memory-only recall, **Skip user messages in search cues** and the lighter background updates came in [Neconyan 1.5.6](https://github.com/platberlitz/Neconyan/releases/tag/v1.5.6). I've reviewed this guide against that release at commit **d3f33f5d** on 19 November 2026. They won't appear in 1.5.5.
 
 !!! info "New in 1.6.0"
-    Mewmory follows the scene in Roleplay group chats, as described in [Group chats](#group-chats). I've reviewed this guide against the **1.6.0 staging candidate** at commit **73555b9c** on 27 November 2026. 1.6.0 isn't published yet, so this won't happen in 1.5.7.
+    Mewmory follows the scene in Roleplay group chats, as described in [Group chats](#group-chats). I've reviewed this guide against [Neconyan 1.6.0](https://github.com/platberlitz/Neconyan/releases/tag/v1.6.0) at commit **f03401f3** on 27 November 2026. This doesn't happen in 1.5.7.
 
 ## Set it up for a chat
 
