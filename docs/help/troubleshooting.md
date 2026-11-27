@@ -24,7 +24,7 @@ On a phone, use the **computer's network address**, not localhost. Check that bo
 
 If a **Forbidden** page says Neconyan only opens at addresses on its allowed host list, the server turned away the name you typed. The check stops other websites reaching your server by pointing a name of theirs at it. `localhost`, `127.0.0.1` and your computer's IP address always open.
 
-If you open Neconyan through your own domain, a reverse proxy, a tunnel or a local network name, add that name to your actual **config.yaml** and restart:
+If you open Neconyan through your own domain, a reverse proxy, a tunnel or a local network name such as a Tailscale MagicDNS name, add that name to your actual **config.yaml** and restart:
 
 ```yaml
 hostWhitelist:
@@ -32,9 +32,11 @@ hostWhitelist:
     - st.example.com
 ```
 
-The page shows these lines with the name it refused. A leading dot, such as `.example.com`, also covers its subdomains. The file is the one on the **Using config path** line Neconyan prints when it starts.
+The page shows these lines with the name it refused. A leading dot, such as `.example.com`, also covers its subdomains. The file is the one on the **Using config path** line Neconyan prints when it starts. In Docker that line says `./config.yaml`, which is inside the container: the file to edit on your computer is `config/config.yaml` in the folder you mounted as the config folder.
 
-If your configuration came from an older version, where host checking was off, the first start after updating switches it on once and keeps the old file, comments included, beside it as **config.yaml.before-host-check**. To keep the check off, set `enabled: false` under `hostWhitelist`. It stays off after that.
+If your configuration came from an older version, where host checking was off, the first start after updating switches it on once and keeps the old file, comments included, beside it as **config.yaml.before-host-check**. To keep the check off, set `enabled: false` under `hostWhitelist`. It stays off after that, because the updated file also records the switch as `upgraded: true` under `hostWhitelist`. The copy doesn't have that line, so if you put the copy back and want the check to stay off, add `upgraded: true` under `hostWhitelist` in it, or set `enabled: false` in the updated file instead.
+
+If the `SILLYTAVERN_HOSTWHITELIST_ENABLED` environment variable is set, it decides whether host checking is on, whatever the file says, and the one-time switch waits. Once you remove the variable, the next start switches an old file on as above.
 
 ### If Neconyan cannot finish loading {#if-neconyan-cannot-finish-loading}
 
